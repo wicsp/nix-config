@@ -34,6 +34,7 @@
     neofetch
     atuin
     oh-my-zsh
+    lazygit
 
     # archives
 
