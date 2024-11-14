@@ -1,0 +1,5 @@
+flake.lock
+.git
+lxd.nix
+orbstack.nix
+result/
