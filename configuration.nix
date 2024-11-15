@@ -15,6 +15,7 @@
       ./orbstack.nix
     ];
   nix.settings.experimental-features=[ "nix-command" "flakes"];
+  services.openssh.enable = true;
   # do not need to keep too much generations
   boot.loader.systemd-boot.configurationLimit = 10;
   # boot.loader.grub.configurationLimit = 10;
