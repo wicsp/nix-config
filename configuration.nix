@@ -34,12 +34,13 @@
   nix.settings.auto-optimise-store = true;
 
   environment.systemPackages = with pkgs; [
-git
-vim
-wget
-curl
-];
-environment.variables.EDITOR = "vim";
+    git
+    vim
+    wget
+    curl
+  ];
+
+  environment.variables.EDITOR = "vim";
 
   users.users.wicsp = {
     uid = 501;

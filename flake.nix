@@ -16,9 +16,47 @@
 
   };
 
-  outputs = inputs@{self, nixpkgs, nixpkgs-stable, home-manager, ... }: {
+  outputs = inputs@{self, nixpkgs, nixpkgs-stable, home-manager, ... 
+  }: let
+    username = "wicsp";
+    useremail = "wicspa@gmail.com";
 
-    nixosConfigurations = {
+    x64_system = "x86_64-linux";
+    aarch64_system = "aarch64-linux";
+    aarch64_darwin = "aarch64-darwin";
+    allSystems = [ x64_system aarch64_system aarch64_darwin ];
+
+    nixosSystem = import ./lib/nixosSystem.nix;
+    macosSystem = import ./lib/macosSystem.nix;
+
+  in {
+
+    nixosConfigurations =  let
+      # 星野 アイ, Hoshino Ai
+      nixorb_modules = {
+        nixos-modules = [
+          ./hosts/idols/ai
+        ];
+        home-module = import ./home/linux/desktop-i3.nix;
+      };
+      specialArgs =
+        {
+          inherit username useremail;
+          # use unstable branch for some packages to get the latest updates
+          pkgs-unstable = import nixpkgs-unstable {
+            system = x64_system; # refer the `system` parameter form outer scope recursively
+            # To use chrome, we need to allow the installation of non-free software
+            config.allowUnfree = true;
+          };
+        }
+        // inputs;
+      base_args = {
+        inherit home-manager nixos-generators system specialArgs;
+      };
+      stable_args = base_args // {inherit nixpkgs;};
+      unstable_args = base_args // {nixpkgs = nixpkgs-unstable;};
+    in
+    {
       # 这里的 my-nixos 替换成你的主机名称
       nixorb = nixpkgs.lib.nixosSystem rec{
         system = "aarch64-linux";
