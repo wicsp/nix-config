@@ -4,6 +4,7 @@
     zip
     xz
     unzip
+    p7zip
 
     # utils
     ripgrep # recursively searches directories for a regex pattern

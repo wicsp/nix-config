@@ -1,5 +1,4 @@
-{ ... }:{
-
+{username, ...}: {
   # import sub modules
   imports = [
     # ./shell.nix
@@ -7,12 +6,12 @@
     # ./git.nix
     # ./starship.nix
   ];
-  
-  home = {
-    homeDirectory = /. + builtins.getEnv("HOME");
-    stateVersion = "24.05";
-  };
 
+  home = {
+    inherit username;
+    homeDirectory = "/Users/${username}";
+    stateVersion = "24.11";
+  };
 
   programs.home-manager.enable = true;
 }
