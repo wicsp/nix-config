@@ -10,19 +10,31 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      # The `follows` keyword in inputs is used for inheritance.
+      # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
+      # to avoid problems caused by different versions of nixpkgs dependencies.
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+
   };
 
-  outputs = inputs@{ self, darwin, nixpkgs, ... }:
+  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }:
   let
     username = "wicsp";
+    useremail = "wicspa@gmail.com";
     hostname = "macsp";
     specialArgs =
       inputs
       // {
-        inherit username hostname;
+        inherit username useremail hostname;
       };
   in
   {
