@@ -31,6 +31,7 @@
     username = "wicsp";
     useremail = "wicspa@gmail.com";
     hostname = "macsp";
+    system = "aarch64-darwin";
     specialArgs =
       inputs
       // {
@@ -40,11 +41,21 @@
   {
     system.configurationRevision = self.rev or self.dirtyRev or null;
     darwinConfigurations."macsp" = darwin.lib.darwinSystem {
-      inherit specialArgs;
+      inherit system specialArgs;
       modules = [ 
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
+
+        # home manager
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.wicsp = import ./home;
+        }
+
       ];
     };
   };
