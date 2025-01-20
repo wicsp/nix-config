@@ -44,22 +44,13 @@
   };
 
   nix.package = pkgs.nix;
-  nix.gc = {
-    automatic = lib.mkDefault true;
-    dates = lib.mkDefault "weekly";
-    options = lib.mkDefault "--delete-older-than 7d";
-  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
-
-
-
-
-
 
   environment.systemPackages = with pkgs; [
     vim 

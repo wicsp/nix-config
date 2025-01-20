@@ -1,10 +1,15 @@
 {
   pkgs,
   lib,
+  username,
   ...
 }:{ 
 
-
+  nix.gc = {
+    automatic = lib.mkDefault true;
+    dates = lib.mkDefault "weekly";
+    options = lib.mkDefault "--delete-older-than 7d";
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -25,6 +30,7 @@
     #media-session.enable = true;
   };
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel"];
