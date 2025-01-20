@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs,  ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -12,7 +12,7 @@
     ];
 
   networking.hostName = "macsp"; # Define your hostname.
-  networking.computerName = hostname;
+  networking.computerName = "macsp";
 
 
   system = {
@@ -25,7 +25,7 @@
     '';
 
     defaults = {
-   smb.NetBIOSName = hostname;
+      smb.NetBIOSName = "macsp";
     };
   };
 
