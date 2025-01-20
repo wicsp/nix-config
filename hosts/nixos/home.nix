@@ -1,5 +1,9 @@
 { config, pkgs, username, ... }:
 {
+   imports = [
+    ../../home/common.nix
+    ../../home/kitty.nix
+  ];
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
@@ -8,10 +12,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
- imports = [
-    ../../home/common.nix
-    ../../home/kitty.nix
-  ];
+
 
   # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
