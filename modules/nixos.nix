@@ -24,7 +24,14 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.${username} = {
+    isNormalUser = true;
+    description = username;
+    home = "/home/${username}";  # 指定家目录路径
+    createHome = true;  # 自动创建家目录
+    extraGroups = ["networkmanager" "wheel"];
+  };
   security.sudo.wheelNeedsPassword = true;
     # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
