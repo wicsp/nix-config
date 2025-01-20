@@ -18,7 +18,6 @@
     ];
   };
 
-  security.sudo.wheelNeedsPassword = true;
 
   # customise /etc/nix/nix.conf declaratively via `nix.settings`
   nix.settings = {
