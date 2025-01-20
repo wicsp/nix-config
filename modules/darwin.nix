@@ -3,11 +3,7 @@
   lib,
   ...
 }:{  
-   nix.gc = {
-    automatic = lib.mkDefault true;
-    interval = lib.mkDefault "weekly";
-    options = lib.mkDefault "--delete-older-than 7d";
-  }; 
+
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # Add ability to used TouchID for sudo authentication
