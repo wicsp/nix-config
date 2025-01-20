@@ -1,6 +1,7 @@
   {
   pkgs,
   lib,
+  username,
   ...
 }:{
   # Auto upgrade nix package and the daemon service.
