@@ -13,7 +13,7 @@
 
   networking.hostName = "macsp"; # Define your hostname.
   networking.computerName = hostname;
-  system.defaults.smb.NetBIOSName = hostname;
+
 
   system = {
     stateVersion = 5;
@@ -25,9 +25,7 @@
     '';
 
     defaults = {
-    #   menuExtraClock.Show24Hour = true;  # show 24 hour clock
-      # other macOS's defaults configuration.
-      # ......
+   smb.NetBIOSName = hostname;
     };
   };
 
