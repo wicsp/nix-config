@@ -7,7 +7,7 @@
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = false;
+  security.pam.enableSudoTouchIdAuth = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh

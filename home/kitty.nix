@@ -16,8 +16,7 @@
 
     # consistent with other terminal emulators
     keybindings = {
-      "ctrl+shift+m" = "toggle_maximized";
-      "ctrl+shift+f" = "show_scrollback"; # search in the current window
+     # "ctrl+shift+f" = "show_scrollback"; # search in the current window
     };
 
     settings = {
@@ -61,22 +60,9 @@ font_features        MapleMono-NF-CN-Italic +zero
 font_features        MapleMono-NF-CN-BoldItalic +zero
 
 # vim key mapping
-map cmd+s send_text all \e:w\r
-map cmd+p send_text all :Telescope find_files\r
-map cmd+shift+f send_text all :Telescope live_grep\r
-map cmd+b send_text all :Neotree toggle\r
+# map cmd+s send_text all \e:w\r
 
-
-# tmux key mapping
-map cmd+1 combine : send_key ctrl+a : send_key 1
-map cmd+2 combine : send_key ctrl+a : send_key 2
-map cmd+3 combine : send_key ctrl+a : send_key 3
-map cmd+4 combine : send_key ctrl+a : send_key 4
-map cmd+5 combine : send_key ctrl+a : send_key 5
-map cmd+6 combine : send_key ctrl+a : send_key 6
-map cmd+7 combine : send_key ctrl+a : send_key 7
-map cmd+8 combine : send_key ctrl+a : send_key 8
-map cmd+9 combine : send_key ctrl+a : send_key 9";
+";
     # macOS specific settings
     darwinLaunchOptions = ["--start-as=maximized"];
   };

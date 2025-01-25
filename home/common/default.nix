@@ -1,8 +1,15 @@
-{config, pkgs, ...}:{ 
-    
+{ config, pkgs, ... }:
+{
+  imports =
+    [
+      ./common.nix
+      ./atuin.nix
+    ];
+   
   home.packages = with pkgs;[
     atuin
     nushell
+    neovim
     # 如下是我常用的一些命令行工具，你可以根据自己的需要进行增删
     # archives
     zip
@@ -24,7 +31,6 @@
     # with more details log output
     # nix-output-monitor
     glow # markdown previewer in terminal
-
     btop 
     lsof 
   ];
@@ -33,7 +39,6 @@
 
     ssh = {
       enable = true; 
-
     };
 
       # git 相关配置
@@ -54,7 +59,7 @@
         ".DS_Store"
       ];
     };
-       # modern vim
+    # modern vim
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -120,5 +125,4 @@
     };
 
   };
-
 }

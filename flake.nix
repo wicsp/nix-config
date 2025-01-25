@@ -22,6 +22,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
+    agenix.url = "github:ryantm/agenix";
     vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 

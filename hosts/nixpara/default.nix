@@ -11,6 +11,7 @@
       ../../modules/nixos.nix
       ../../modules/ssh.nix
       ../../modules/gui.nix
+      ../../modules/font.nix
       ./hardware-configuration.nix
     ];
 

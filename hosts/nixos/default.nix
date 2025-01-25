@@ -10,6 +10,7 @@
       ../../modules/core.nix
       ../../modules/nixos.nix
       ../../modules/ssh.nix
+      ../../modules/font.nix
       ./hardware-configuration.nix
     ];
   # Bootloader.
