@@ -43,6 +43,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = inputs // specialArgs;
             home-manager.users.${username} = import ./hosts/nixpara/home.nix;
+            home-manager.backupFileExtension = "backup";
           }
           vscode-server.nixosModules.default
           ({ config, pkgs, ... }: {
@@ -62,6 +63,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = inputs // specialArgs;
             home-manager.users.${username} = import ./hosts/nixos/home.nix;
+                        home-manager.backupFileExtension = "backup";
           }
           vscode-server.nixosModules.default
           ({ config, pkgs, ... }: {
@@ -83,6 +85,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs =  specialArgs;
             home-manager.users.${username} = import ./hosts/macsp/home.nix;
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };

@@ -4,7 +4,6 @@
   username,
   ...
 }:{ 
-
   nix.gc = {
     automatic = lib.mkDefault true;
     dates = lib.mkDefault "weekly";

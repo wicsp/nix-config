@@ -3,7 +3,7 @@
 
 
  imports = [
-    ../../home/base
+    ../../home/common
     ../../home/kitty.nix
   ];
   home = {
