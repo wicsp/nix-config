@@ -1,8 +1,9 @@
-{ config, pkgs, ... }:let
-    nvimPath = "${config.home.homeDirectory}/.nixos/home/configs/nvim";
-in
+{ config, pkgs, ... }:
 {
-    xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
+    imports =
+        [
+        ../configs/nvim.nix
+        ];
     home.packages = with pkgs;[
         atuin
         nushell
