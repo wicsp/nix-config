@@ -1,5 +1,5 @@
 { config, pkgs, ... }:let
-    nvimPath = "${config.home.homeDirectory}/.nixos/home/common/nvim";
+    nvimPath = "${config.home.homeDirectory}/.nixos/home/configs/nvim";
 in
 {
     xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
@@ -22,13 +22,13 @@ in
         cowsay
         file
         which
-        tree    # nix related
-        #
+        tree   # nix related
         # it provides the command `nom` works just like `nix`
         # with more details log output
         # nix-output-monitor
         glow # markdown previewer in terminal
         btop 
         lsof 
+        zellij
     ];
 }
