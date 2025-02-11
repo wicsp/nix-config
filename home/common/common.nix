@@ -8,11 +8,9 @@
         atuin
         nushell
         neovim
-        # 如下是我常用的一些命令行工具，你可以根据自己的需要进行增删
         # archives
         zip
         unzip
-        # p7zip
         # utils
         ripgrep # recursively searches directories for a regex pattern
         jq # A lightweight and flexible command-line JSON processor
@@ -31,5 +29,6 @@
         btop 
         lsof 
         zellij
+        lua-language-server
     ];
 }
