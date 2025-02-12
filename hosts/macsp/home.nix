@@ -4,6 +4,7 @@
 
  imports = [
     ../../home/common
+    ../../home/darwin
     ../../home/kitty.nix
   ];
   home = {
