@@ -57,6 +57,9 @@
       enableCompletion = true;
       bashrcExtra = ''
         export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/go/bin"
+        export PATH="$PATH:/usr/local/bin:/opt/homebrew/bin"
+
+        
 
         # Golang
         export PATH=$PATH:/usr/local/go/bin
