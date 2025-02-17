@@ -49,15 +49,25 @@
       enable = true;
       enableCompletion = true;
       # TODO 在这里添加你的自定义 bashrc 内容
-      # bashrcExtra = ''
-      #   export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-      # '';
+      bashrcExtra = ''
+        export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/go/bin"
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+      '';
 
       # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
       shellAliases = {
         nixupdate = "sudo nixos-rebuild switch";
         nixclear = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
         lzg = "lazygit";
+        lzd="lazydocker";
+        python = "python3";
+        pip="pip3";
+        sampler="sampler -c ~/.config/sampler/config.yml";
+        tf="tmuxifier";
+        vim="nvim";
       #   k = "kubectl";
       #   urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       #   urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
