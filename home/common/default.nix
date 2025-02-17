@@ -79,6 +79,8 @@
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
         export BARK_ID="j7kb5DDBxSbMdr44T2qbyS"
+        export EDITOR="nvim"
+
         
       '';
 
