@@ -1,7 +1,7 @@
 __build_info:
   rime_version: 1.13.0
   timestamps:
-    default: 1739342525
+    default: 1739762914
     default.custom: 0
 ascii_composer:
   good_old_caps_lock: true
@@ -9,7 +9,6 @@ ascii_composer:
     Caps_Lock: commit_code
     Control_L: noop
     Control_R: noop
-    Shift_L: commit_code
     Shift_R: inline_ascii
 config_version: 24.03.24
 key_binder:
