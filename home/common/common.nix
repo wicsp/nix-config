@@ -31,5 +31,6 @@
         zellij
         lua-language-server
         lazygit
+        lazydocker
     ];
 }
