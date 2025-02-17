@@ -48,12 +48,30 @@
     bash = {
       enable = true;
       enableCompletion = true;
-      # TODO 在这里添加你的自定义 bashrc 内容
       bashrcExtra = ''
         export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/go/bin"
+
+        # Golang
+        export PATH=$PATH:/usr/local/go/bin
+        export GOPATH=$HOME/Projects/go 
+        export PATH=$PATH:$GOPATH/bin
+
+        # MacTeX
+        export PATH=$PATH:/Library/TeX/texbin
+
+        # pnpm
+        export PNPM_HOME="/Users/wicsp/Library/pnpm"
+        case ":$PATH:" in
+          *":$PNPM_HOME:"*) ;;
+          *) export PATH="$PNPM_HOME:$PATH" ;;
+        esac
+        # pnpm end
+
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+        export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+        export BARK_ID="j7kb5DDBxSbMdr44T2qbyS"
 
       '';
 
@@ -66,7 +84,6 @@
         python = "python3";
         pip="pip3";
         sampler="sampler -c ~/.config/sampler/config.yml";
-        tf="tmuxifier";
         vim="nvim";
       #   k = "kubectl";
       #   urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
