@@ -30,5 +30,6 @@
         lsof 
         zellij
         lua-language-server
+        lazygit
     ];
 }
