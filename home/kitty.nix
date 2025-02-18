@@ -37,7 +37,9 @@
       # https://www.bilibili.com
       detect_urls = true;
       mouse_hide_wait  = "0.5";
-      cursor_trail ="3";  # Neovide Like Cursor
+      cursor_trail ="5";  # Neovide Like Cursor
+      cursor_trail_decay  = "0.1 0.4";
+
 
       #other settings
       enable_audio_bell = false;
