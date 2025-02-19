@@ -1,182 +1,217 @@
-![样式](https://www.mintimate.cc/image/demo/guide.webp)
+# 说明
 
-- [中文 - 简体简介](README.md)
-- [中文 - 繁體簡介](README_zh-CHT.md)
-- [English - Brief](README_en.md)
+重磅发布：墨奇音形，支持自然码、小鹤、搜狗、微软双拼。墨奇音形是一个基于字形描述信息、递归拆分，最后取首末双形音托的码表开源的方案。详见[墨奇码拆分规则](https://github.com/gaboolic/rime-shuangpin-fuzhuma/wiki/%E5%A2%A8%E5%A5%87%E7%A0%81%E6%8B%86%E5%88%86%E8%A7%84%E5%88%99)。[墨奇码](https://github.com/gaboolic/moqima-tables)的拆分码表已开源，目前已经拆分完成全部的通用规范汉字、常用繁体字，总计支持4万字（方案选单中支持大字集和小字集切换）。未来准备支持gb18030-2022标准的8万字。墨奇音形的方案支持ctrl+p开关显示墨奇辅助码+首末字形，ctrl+l开关显示墨奇拆字的拆分。
 
-一套快速初始化rime的模板方案，因为平时我使用`oh-my-zsh`，希望大家在用这个模板的时候，有种用`omz`的感觉；所以我给它取名叫`oh-my-rime`，你也可以叫它`薄荷输入法`，亦或者`Mint Input`。
+重磅发布2：现在词库独立演进维护，改为使用745396750字的高质量语料，进行分词，重新统计字频、词频，归一化的[白霜词库](https://github.com/gaboolic/rime-frost)，白霜词库是目前rime方案下最好的词库，在不使用智能模型的情况下可以超越使用智能模型的词库方案。
 
-如果你下载遇到困难，使用GitHub Action推送的镜像仓库：
+重磅发布3：墨奇万象词库版，通过拼写运算实现的各种双拼和辅助码排列组合。例如小鹤双拼+虎码首末，微软双拼+墨奇码，自然码双拼+五笔前两码，紫光双拼+仓颉首末码等等。支持的双拼、辅助码运算规则在<https://github.com/gaboolic/rime-shuangpin-fuzhuma/blob/main/moqi_speller.yaml>。让天下双拼用户人人用得上辅助码。
 
-- [oh-my-rime: https://gitlab.mintimate.cn/Mintimate/oh-my-rime](https://gitlab.mintimate.cn/Mintimate/oh-my-rime)
+更新日志：[更新日志.md](md/update-log.md)
 
-## Oh-my-rime指南
+在线试用：[墨奇音形顶屏版](https://my-rime.vercel.app/?plum=gaboolic/rime-shuangpin-fuzhuma@master:moqi_single_xh)
 
-Rime 配置教程：
+[墨奇音形大词库版](https://my-rime.vercel.app/?plum=gaboolic/rime-shuangpin-fuzhuma@master:moqi_xh,moqi_zrm) (词库多，加载较慢)
 
-- [跨平台的开源输入法Rime定制指南，打造强大的个性化输入法](https://www.mintimate.cn/2023/03/18/rimeQuickInit)
-- [Bilibili视频(macOS/Windows/Linux): https://www.bilibili.com/video/BV12M411T7gf](https://www.bilibili.com/video/BV12M411T7gf)
-- [Bilibili视频(iOS/Android): https://www.bilibili.com/video/BV1Mr42137Ns](https://www.bilibili.com/video/BV1Mr42137Ns)
-- [Youtube視頻: https://www.youtube.com/watch?v=yc4AivDDpMM](https://www.youtube.com/watch?v=yc4AivDDpMM)
+- [此仓库](https://github.com/gaboolic/rime-shuangpin-fuzhuma)为rime配置文件,词库使用基于[雾凇拼音](https://github.com/iDvel/rime-ice)的最强简体词库——[白霜词库](https://github.com/gaboolic/rime-frost)，实现自然码双拼、小鹤双拼、搜狗双拼、微软双拼等多种双拼，以及墨奇码（原创拆分开源支持4万字）、自然码部首辅、小鹤音形（鹤形辅）多种辅助码。本人日常用的是此仓库的方案，高强度使用，所以更新有保证。
+- 配置文件参考[小鹤双拼+自然快手/小鹤双形辅助码](https://github.com/functoreality/rime-flypy-zrmfast)
+- [魔改自然碼 Rime 方案 (自然碼雙拼+輔助碼+外語混輸+簡繁方案+emoji)](https://github.com/ksqsf/rime-moran)
+- 主要配置文件:
+  - schema: moqi_xh # 墨奇辅助码 鹤拼版 大词库版本 非自动上屏，支持4万字
+  - schema: moqi_zrm # 墨奇辅助码 自然双拼版 大词库版本 非自动上屏，支持4万字
+  - schema: flypy_flypy # 鹤形+鹤拼, 小鹤官方就只有8000字左右
+  - schema: zrm_zrm # 自然码+自然码部首辅助码
+  - schema: moqi_single_xh # 墨奇码·顶屏版·小鹤双拼，为了4码自动上屏 只收录了8000字
+  - schema: moqi_sogou # 墨奇辅助码搜狗双拼版 大词库版本 非自动上屏，支持4万字
+  - schema: moqi_ms # 墨奇辅助码微软双拼版 大词库版本 非自动上屏，支持4万字
+- 写给选择困难症：如果第一次接触双拼，直接使用`moqi_xh.schema.yaml`，墨奇辅助码 鹤拼版，这是作者用的方案；如果以前接触过双拼没有接触过形并且熟练掌握双拼，使用moqi_xx.schema.yaml；如果熟练小鹤音形，使用`flypy_flypy.schema.yaml`;如果追求类似五笔的4码自动上屏体验，则使用`moqi_single_xh`墨奇码·顶屏版
+- 词库文件分别为`moqi.extended.dict.yaml`（墨奇音形）、`flypy_flypy.extended.dict.yaml`（鹤拼鹤形）和`zrm_zrm.extended.dict.yaml`（自然码拼+自然码部首辅），默认只开启了我用[雾凇词库](https://github.com/iDvel/rime-ice)转换的词典文件。此外还有从其他地方获取的细胞词库，例如历史类、地名类、古诗文、计算机、动漫、电影、游戏、电商等，可自行打开注释或从[细胞词库](https://github.com/Bambooin/rimerc/tree/master/luna_pinyin)获取。如无特殊需求，词典文件只配置词即可，rime引擎会自动计算编码。
+- 注意：默认关了用户词库（为了固定词频），如有需要，修改`你使用的方案.schema.yaml enable_user_dict: true`开启
+- 默认固定词频，编辑`cn_dicts_common/user.dict.yaml`来添加自定义的词；推荐在用户词库关闭的情况下使用ac引导造词，这样自造词是在系统词库后面，不会影响系统词的字频和词序。
+- 默认显示单字的辅助码编码，可在`你使用的方案.schema.yaml`中`translator/spelling_hints`调整为更多或不显示
+- 超级简拼：1码、2码、3码时，按下Tab（或者是/，或者是。都可以）自动上屏1字、2字词、3字词，不和空格上屏的单字冲突
+- 三字词，用e引导简码，简码取声母，如：阿波罗 eabl,差不多 eibd,巴不得 ebbd。
+- 四字词、多字词，用e引导简码，简码取前3个字+末字声母，如：兵败如山倒 ebbrd,霸王硬上弓 ebwyg,天有不测风云 etyby,当仁不让 edrbr
+- `changcijian`、`changcijian3`文件是自动从雾凇词库里取的
 
-如果你有QQ帐号，可以加入群聊（禁止广告）: 703260572
+### FAQ（常见问题）q羣696353204/10885687
 
-**强烈建议[配合文档: https://www.mintimate.cc](https://www.mintimate.cc)进行操作!!!**
+  更多配置及功能请看：[FAQ.md](md/FAQ.md)
 
-本输入方案内包含：
+### 如何安装&配置文件路径
 
-- 薄荷拼音-全拼输入: 全拼输入，适合的人群最多，所以也是默认的输入；
-- 小鹤双拼-薄荷定制: 基于小鹤双拼，添加定制内容。支持输入音形(形码)、自然码辅助码或墨奇辅助码作为辅助输入；
-- 薄荷拼音-小鹤混输: 全拼输入的同时，支持小鹤双拼；
-- 地球拼音-薄荷定制: 基于地球拼音，添加定制内容，扩展海量词库；
-- 五笔98-五笔小筑: 基于[98wubi](https://github.com/yanhuacuo/98wubi)的精简版本，期待大家的PR。如果想要更好的体验(五笔、拼音混输入等)，欢迎使用五笔98团队做的[五笔98](https://github.com/yanhuacuo/98wubi)；
-- 五笔86-极点五笔: 基于[wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)的精简版本，期待大家的PR。如果想要更好的体验(五笔、拼音混输入等)，欢迎使用[rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)；
-- 仓九宫格-全拼输入: 基于「薄荷拼音-全拼输入」，适用于在iOS仓输入法内使用九宫格；如果有其他方案的九宫格需求，可以基于本方案修改。
+下载本仓库的压缩包Code - Download ZIP（或者下载[releases](https://github.com/gaboolic/rime-shuangpin-fuzhuma/releases)最新的source-code.zip），解压到如下路径即可
 
-你可以在安装后，使用『Ctrl』+『~』进行切换。（默认激活的是『薄荷拼音-全拼输入』）。
+- windows：%APPDATA%\Rime
+- mac
+  - [鼠须管](https://github.com/rime/squirrel)路径为~/Library/Rime
+  - [fcitx5-mac版](https://github.com/fcitx-contrib/fcitx5-macos)路径为~/.local/share/fcitx5/rime
+- linux
+  - [fcitx5-rime](https://github.com/fcitx/fcitx5-rime)路径为~/.local/share/fcitx5/rime
+  - fcitx5 flatpak版的路径~/.var/app/org.fcitx.Fcitx5/data/fcitx5/rime
+  - [ibus-rime](https://github.com/rime/ibus-rime)路径为~/.config/ibus/rime
+- android
+  - [fcitx5-安卓版](https://github.com/fcitx5-android/fcitx5-android)路径为 /Android/data/org.fcitx.fcitx5.android/files/data/rime
+  - [同文](https://github.com/osfans/trime)路径为 /rime
+- ios [仓输入法](https://github.com/imfuxiao/Hamster) 目前已内置，也可以通过【输入方案设置 - 右上角加号 - 方案下载 - 覆盖并部署】来更新墨奇音形。
 
-目前薄荷内自带两套皮肤： 水鸭系列、青涩系列。大家可以在鼠须管和小狼毫的个性化配置内自由选择激活，也可以使用自己的配色（推荐[使用 custom 对薄荷配置进行覆写](https://www.mintimate.cc/zh/guide/configurationOverride.html#%E4%BF%AE%E6%94%B9%E8%96%84%E8%8D%B7%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E9%85%8D%E7%BD%AE)）。
+如果会使用git基本操作，可以直接用git管理配置，首次：例如mac可以打开~/Library文件夹，然后`git clone --depth 1 https://github.com/gaboolic/rime-shuangpin-fuzhuma Rime`  后面在Rime文件夹执行`git pull`即可
 
-![显示效果](https://www.mintimate.cc/image/demo/themeOfOhMyRime.webp)
+现在也支持[东风破](https://github.com/rime/plum)，选择配方（recipes/*.recipe.yaml）来进行安装或更新：
 
-### 安装
+- ℞ 安装或更新全部文件 执行`bash rime-install gaboolic/rime-shuangpin-fuzhuma:recipes/full`
+- ℞ 安装或更新所有的词库文件 执行`bash rime-install gaboolic/rime-shuangpin-fuzhuma:recipes/all_dicts`
 
-以下教程，适用于Linux、macOS和Windows（Xp~）
+### 输入效果
 
-1. 安装[Rime输入法](https://rime.im/)并注销或重启电脑；
-2. 下载本仓库所有配置文件到本地rime配置文件；
-3. 重新部署Rime
-4. 开始使用
-5. 根据自己习惯，进行二次修改
+- 整句输入插入字辅：
 
-> 需要注意: Windows 7 和 Windows Xp只能使用 0.14.3 版本的Weasel，无法使用本输入方案的全部功能，需要手动更新librime支援库：[WinXP和Win7使用薄荷输入法](https://www.mintimate.cc/zh/guide/faQ.html#winxp%E5%92%8Cwin7%E4%BD%BF%E7%94%A8%E8%96%84%E8%8D%B7%E8%BE%93%E5%85%A5%E6%B3%95)
+![醉洛阳](readmeimg/qimhzly.png)
 
-## Tips
+- 打词时插入辅助码：
 
-本地rime配置文件默认地址，如下
+![寄宿](readmeimg/jisub.png)
 
-- Windows
-  - Weasel: `%APPDATA%\Rime`
-- Mac OS X
-  - Squirrel: `~/Library/Rime`
-  - Fcitx5 macOS: `~/.local/share/fcitx5/rime`
-- Linux
-  - iBus:`~/.config/ibus/rime`
-  - Fcitx5: `~/.local/share/fcitx5/rime`
-- Fctix5 Android(小企鹅入法): `/storage/emulated/0/Android/data/org.fcitx.fcitx5.android/files/data/rime/`
+![极速](readmeimg/jimsu.png)
 
-本地rime日志文件默认地址如下：
+- 整句输入时增强单字性能，增加syffo或者syff/ 5码上屏单字的功能
+![zssr](readmeimg/zssr.png)
 
-- Windows
-  - Weasel: `%TEMP%`
-- Mac OS X
-  - Squirrel: `$TMPDIR`
-- Linux
-  - iBus:`/tmp`
+- 不认识的字可以笔画输入 `ab`引导 hspnz横竖撇捺折
+
+![笔画](readmeimg/bihua.png)
+
+- 也可以部件组字输入 `az`引导
+
+![部件](readmeimg/bujian.png)
+
+![部件](readmeimg/bujian2.png)
+
+- 也可以输入仓颉码 `acj`引导
+
+![仓颉](readmeimg/cangjie5.png)
+
+- 通过opencc支持繁简转换、火星文、首末拆分字形(墨奇音形)
+
+![繁体](readmeimg/fantizi.png)
+
+![火星文](readmeimg/huoxingwen.png)
+
+![拆分](readmeimg/shoumo-chai.png)
+
+![全拆](readmeimg/quanchai.png)
+
+- 超级简拼：1码、2码、3码时，按下Tab（或者是/，或者是。都可以）自动上屏1字、2字词、3字词，不和空格上屏的单字冲突
+![等-蛋糕](readmeimg/dg-蛋糕.png)
+
+墨奇音形的方案支持ctrl+p开关显示墨奇辅助码+首末字形,ctrl+l开关显示墨奇拆字的拆分
+
+- 日期时间相关输入：`date time week` `datetime` `timestamp`
+
+  ![datetime](readmeimg/datetime.png)
+
+- 快捷日期输入：N开头
+
+  - ![Nmoshi](readmeimg/Nmoshi.png)
+
+- 符号输入`/fh`，更多符号查看`symbols_caps_v.yaml`
+
+  - ![fh](readmeimg/fh.png)
+
+- 大写数字：`R开头`
+  ![R123456](readmeimg/R123456.png)
+
+- 直接输入unicode：U开头
+  ![u2ffb](readmeimg/u2ffb.png)
+
+- 计算器功能(V模式) 感谢[ChaosAlphard](https://github.com/ChaosAlphard)的[pr](https://github.com/gaboolic/rime-shuangpin-fuzhuma/pull/41)
+  ![alt text](readmeimg/v_jsq.png)
+
+  - [计算器功能介绍](md/calc.md)
+  - ![1](md/assets/1.png)
   
-仓输入法 Hamster 内如何使用九宫格输入？
+- 英文输入：aw开头
 
-薄荷方案内，基于[Hamster](https://github.com/imfuxiao/Hamster/) 九宫格布局和[雾凇九宫格](https://github.com/iDvel/rime-ice/blob/main/t9.schema.yaml)移植了九宫格。需要同时启用九宫格方案（输入方案设置）和九宫格布局（键盘设置 - 键盘布局 - 中文 9 键）。
+  - ![aw](readmeimg/aw.png)
 
-如果你喜欢使用 Rime 打一些长句，那么强烈建议配合语言模型来使用。参考教程:
-- [Rime 内如何配置语言模型 -- 薄荷输入配置教程](https://www.mintimate.cc/zh/guide/languageModel.html)
+- 日文输入：aj开头
 
-## 配置文件说明
+  - ![aj](readmeimg/aj.png)
 
-- `default.yaml` 设置输入法、如何切换输入法、翻页等；建议自行创建`default.custom.yaml`来覆写薄荷配置的`default.yaml`.
-- `squirrel.yaml` 鼠须管( Mac 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`squirrel.custom.yaml`来覆写。
-- `weasel.yaml` 小狼毫( Win 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`weasel.custom.yaml`来覆写。
+- 翻译功能：ctrl + E开启英汉、汉英互译。
+  
+  - ![ink](readmeimg/ink.png)
+  - ![奇特](readmeimg/qite.png)
 
-配置文件中大部分都有注释，配合教程：[配置覆写](https://www.mintimate.cc/zh/guide/configurationOverride.html)
+- O符快符：o开头，快速输入各种符号偏旁部件，可以参考[快符](md/fuhao.md)      [部件](md/bujian.md)
 
-## 词库定制以及更新
+  - ![ofu2](readmeimg/ofu2.png)
+  - ![ofu](readmeimg/ofu.png)
 
-本仓库的词库目录[dicts](dicts)，主要有：
+- 分号符：
 
-- [雾凇拼音词库](https://github.com/iDvel/rime-ice)
-- [白霜词库词库](https://github.com/gaboolic/rime-frost)
-- [98五笔词库](https://github.com/yanhuacuo/98wubi-tables)
-- [86五笔词库](https://github.com/KyleBing/rime-wubi86-jidian)
+  - 因为实现分号符后，分号无法自动上屏，如果希望能使用分号符，可以进行以下操作 [分号符](md/fenhaofu.md)
 
-详细说明：
+### 飞键 模糊音相关
 
-```txt
-dicts
-├── custom_simple.dict.yaml    # 自定义词库（建议自己添加的词库可以放这里）
-├── other_emoji.dict.yaml      # emoji 词库
-├── other_kaomoji.dict.yaml    # 颜文字词库（按vv进行激活）
-├── rime_ice.41448.dict.yaml   # 白霜词库（GitHub action自动更新）
-├── rime_ice.8105.dict.yaml    # 白霜词库（GitHub action自动更新）
-├── rime_ice.base.dict.yaml    # 白霜词库（GitHub action自动更新）
-├── rime_ice.ext.dict.yaml     # 白霜词库（GitHub action自动更新）
-├── rime_ice.cn_en.txt         # 白霜词库（GitHub action自动更新）
-├── rime_ice.en.dict.yaml      # 白霜词库（GitHub action自动更新）
-├── rime_ice.en_ext.dict.yaml  # 白霜词库（GitHub action自动更新）
-├── rime_ice.others.dict.yaml  # 白霜词库（GitHub action自动更新）
-├── terra_pinyin_base.dict.yaml     # 地球拼音自带词库
-├── terra_pinyin_ext.dict.yaml      # 地球拼音自带词库
-├── terra_rime_ice.base.dict.yaml   # 基于Python脚本自动转换词库，Action自动更新
-├── wubi86_core.dict.yaml           # 86版五笔基础词库
-└── wubi98_base.dict.yaml           # 98版五笔基础词库
+```
+# `你使用的方案.shema.yaml` 里飞键 可选择性开启
+- derive/^([yh])j/$1q/    # yj hj就可以打yq hq
+- derive/^qx/qw/  # qx就可以打qw
+模糊音同理，也是使用derive把平舌音翘舌音互转、前后鼻音互转，详见issue中的faq
 ```
 
-后续更新词库；可以下载本仓库`dicts`内的文件，除了`custom_simple.dict.yaml`的文件，其他都进行覆盖替换即可。
+### 并击相关
 
-如果想自己扩展词库，可以在输入法的字典配置文件内进行导入，比如「薄荷拼音-全拼输入」的字典配置文件[rime_mint.dict.yaml](rime_mint.dict.yaml)内：
+- [并击原理](https://github.com/gaboolic/rime-shuangpin-fuzhuma/wiki/%E5%B9%B6%E5%87%BB%E5%8E%9F%E7%90%86)
 
-```yaml
----
-name: rime_mint                  # 注意name和文件名一致
-version: "2024.02.11"
-sort: by_weight
-# 此处为 输入法所用到的词库，既补充拓展词库的地方
-# 词库，由Github Robot自动更新
-import_tables:
-  - dicts/custom_simple          # 自定义
-  - dicts/rime_ice.8105          # 白霜词库 常用字集合
-  - dicts/rime_ice.41448         # 白霜词库 完整字集合
-  - dicts/rime_ice.base          # 白霜词库 https://github.com/gaboolic/rime-frost
-  - dicts/rime_ice.ext           # 白霜词库 https://github.com/gaboolic/rime-frost
-  - dicts/other_kaomoji          # 颜文字表情（按`VV`呼出)
-  - dicts/other_emoji            # Emoji(已禁用，目前Emoji是OpenCC生效)
-  - dicts/rime_ice.others        # 白霜词库 others词库（用于自动纠错）
-...
+### todo
+
 ```
 
-------
+4字成语的码表优化 补全
 
-## 支持
+简码回显 - doing
 
-- [Mintimate's Blog: https://www.mintimate.cn](https://www.mintimate.cn)
-- [Mintimate的爱发电: 加入电圈，支持创造!](https://afdian.net/a/mintimate)
-- [Bilibili：@Mintimate](https://space.bilibili.com/355567627)
-- [Youtube：@Mintimate](https://www.youtube.com/channel/UCI7LLdUGNzkcKOE7grAqCoA)
+墨奇音形自然码下 e简码问题修复
 
-## 参考/致谢
+墨奇音形自动上屏版，4码为词，4码+/自动上屏单字，a-z顶词
 
-1. [Rime-RimeWithSchemata](https://github.com/rime/home/wiki/RimeWithSchemata)
-2. [Rime/小狼豪/鼠须管 输入法配置记](https://chenhe.me/post/oh-my-rime)
-3. [rime-setting](https://github.com/Iorest/rime-setting)
-4. [雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
-5. [rime-radical-pinyin | Rime 部件拆字输入方案（全拼双拼）](https://github.com/mirtlecn/rime-radical-pinyin)
-6. [86五笔极点码表](https://github.com/KyleBing/rime-wubi86-jidian)
-7. [Extending RIME with Lua scripts](https://github.com/hchunhui/librime-lua/wiki/Scripting)
-8. [白霜词库 | 基于雾凇拼音重制的，更纯净、词频准确、智能的词库](https://github.com/gaboolic/rime-frost)
+置顶词、删除词
 
-## 推荐项目
+出简让全的开关、tab提示的开关
 
-- [98五笔，十分好用的98五笔输入方案](https://wubi98.github.io/)
-- [86五笔极点码表，rime上的86五笔方案](https://github.com/KyleBing/rime-wubi86-jidian)
-- [雾凇拼音，很优秀的中文词库](https://github.com/iDvel/rime-ice)
+字典功能，反查时生僻字显示读音和释义
 
-> 尤其是雾凇拼音，本方案配置中，大量参考参考了雾凇拼音。词库部分，在`2024-07-29`起，拼音词库使用白霜词库，此前使用雾凇拼音词库。
+```
 
-## ⭐⭐⭐
+### 鸣谢
+
+雾凇拼音 <https://github.com/iDvel/rime-ice> 参考了其中很多配置
+
+白霜词库 <https://github.com/gaboolic/rime-frost> 本项目使用的词库和词频来自白霜词库
+
+墨奇码码表 <https://github.com/gaboolic/moqima-tables> 墨奇音形的拆分
+
+小鹤双拼+辅助码 <https://gitee.com/functoreality/rime-flypy-zrmfast>
+
+魔然（自然码双拼辅助码）：<https://github.com/ksqsf/rime-moran>
+
+细胞词库&各个发行版配置 <https://github.com/Bambooin/rimerc>
+
+az部件组字模式使用的词典 <https://github.com/mirtlecn/rime-radical-pinyin>
+
+声笔输入法 <https://github.com/sbsrf/sbsrf> 使用了其中的lua脚本，参考了tab上屏简拼功能
+
+星空键道：<https://github.com/xkinput/Rime_JD>
+
+英汉/汉英字典 <https://github.com/lxs602/Chinese-Mandarin-Dictionaries>
+
+墨奇本猫：
+
+<img src="readmeimg/moqi1.jpg" width=30%>
+
+<img src="readmeimg/moqi2.jpg" width=30%>
 
 ## Star History
 
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Mintimate/oh-my-rime&type=Timeline&theme=dark" />
-<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Mintimate/oh-my-rime&type=Timeline" />
-<img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Mintimate/oh-my-rime&type=Timeline" />
-</picture>
+[![Star History Chart](https://api.star-history.com/svg?repos=gaboolic/rime-shuangpin-fuzhuma&type=Date)](https://star-history.com/#gaboolic/rime-shuangpin-fuzhuma&Date)
