@@ -26,7 +26,7 @@
       background_opacity = "0.93";
       background_blur = "64";
       remember_window_size = true;
-      
+
       # tab bar settings
       tab_bar_edge = "top"; # tab bar on top
       tab_bar_style = "powerline"; # normal tab bar style powerline
@@ -42,6 +42,7 @@
 
 
       #other settings
+      enabled_layouts = "tall stack full";
       enable_audio_bell = false;
       macos_option_as_alt = true; # Option key acts as Alt on macOS
       disable_ligatures  = "cursor"; # disable ligatures for cursor
@@ -50,9 +51,9 @@
       #    1. https://github.com/ryan4yin/nix-config/issues/26
       #    2. https://github.com/ryan4yin/nix-config/issues/8
       #  Spawn a nushell in login mode via `bash`s
-      
+
     };
-    extraConfig = 
+    extraConfig =
 "bold_font            Maple Mono NF CN Bold
 italic_font          Maple Mono NF CN Italic
 bold_italic_font     Maple Mono NF CN Bold Italic

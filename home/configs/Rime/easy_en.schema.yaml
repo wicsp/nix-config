@@ -1,16 +1,22 @@
 ﻿# Rime schema
-# vim: set sw=2 sts=2 et:
 # encoding: utf-8
+# CC-BY-4.0
 
 schema:
   schema_id: easy_en
-  name: Easy English
+  name: '智能英文'
   version: "0.9.1"
   author:
     - Patrick <ipatrickmac@gmail.com>
     - BlindingDark <blindingdark@outlook.com>
   description:
-    Easy English
+    智能英文
+
+__include: tiger:/emoji_filter                 # Emoji 滤镜
+__include: tiger:/cn_en_filter                 # 中英滤镜
+
+easy_en:
+  split_sentence: true
 
 switches:
   - name: ascii_mode
@@ -37,38 +43,37 @@ engine:
     - table_translator
     - punct_translator
   filters:
+    - simplifier@chinese_english
     - uniquifier
+    - lua_filter@*hertz.easy_en*enhance_filter
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"
-  algebra:
-    # 只打前后2个字母 例如beul -> beautiful
-    - derive/^(\w)(\w).+(\w)(\w)$/$1$2$3$4/
-    - xform/^a/!/
-    - xform/^e/@/
-    - xform/^i/,/
-    - xform/^o/:/
-    - xform/^u/;/
-    - derive/[aeiou]//
-    - xlit/!@,:;/aeiou/
-    # 全小写
-    # - derive/^.+$/\L$0/
-    # 全大写
-    # - derive/^.+$/\U$0/
-    # 首字母大写
-    - derive/^./\U$0/
-    - derive/^([a-z]{2})/\U$1/
-    - erase/^.$/
 
 translator:
   dictionary: easy_en
-  spelling_hints: 9
+  user_dict: easy_en
+  enable_sentence: true
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: true
+  enable_user_dict: false
+  preedit_format:
+    - xlit|_| |
   comment_format:
-    - xform/^.+$//
+    - xlit|~| |
 
 key_binder:
   import_preset: default
+  custom_bindings:
+    __append:
+      # 在這裏添加只在本方案中生效的按鍵綁定
+  bindings:
+    __patch:
+      - tiger:/keys/page_up_down
+      - tiger:/keys/selector
+      - tiger:/keys/options_toggle
 
 recognizer:
   import_preset: default

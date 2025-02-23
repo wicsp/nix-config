@@ -1,215 +1,74 @@
 # Rime default settings
 # encoding: utf-8
+# CC-BY-4.0
 
 config_version: '0.40'
 
 schema_list:
-  - schema: moqi_wan_flypymo # 墨奇万象·小鹤+墨奇形
-  - schema: moqi_wan_zrm # 墨奇万象·自然码+自然码部首辅助码
-  - schema: moqi_wan_flypy # 墨奇万象·小鹤+鹤形 鹤形+鹤拼, 小鹤官方就只有8000字左右
-  - schema: moqi_single_xh # 墨奇码·顶屏版·小鹤双拼，为了4码自动上屏 只收录了8000字
-
-  #- schema: moqi_xh # 墨奇辅助码 鹤拼版 大词库版本 非自动上屏，支持4万字
-  #- schema: moqi_zrm # 墨奇辅助码 自然双拼版 大词库版本 非自动上屏，支持4万字
-  # - schema: moqi_sogou # 墨奇辅助码搜狗双拼版 大词库版本 非自动上屏，支持4万字
-  # - schema: moqi_ms # 墨奇辅助码微软双拼版 大词库版本 非自动上屏，支持4万字
-
-  # - schema: moqi_wan_zrm_hx # 墨奇万象·自然码+汉心码辅助码
-  # - schema: moqi_wan_ms_wb # 墨奇万象·微软+五笔
-  # - schema: moqi_wan_sogou # 墨奇万象·搜狗+墨奇形
-  # - schema: moqi_wan_flypyhu # 墨奇万象·小鹤+虎形
-  
-  # - schema: moqi_wan_jdh  # 墨奇万象·小鹤+简单鹤
-  # - schema: moqi_wan_quanpin_moqi  # 墨奇万象·全拼+墨奇形
-  # - schema: moqi_wan_abc_mo # 墨奇万象+智能abc双拼·墨奇
+  - schema: tiger_code          # 🐯·单·官方
+  - schema: tiger_chord_popping # 🐯·单·并击·顶功
+  - schema: tiger_code_52p      # 🐯·单·五二顶
+  - schema: tiger_code_53p      # 🐯·单·五三顶
+  - schema: tiger_codes         # 🐯·词·官方
+  - schema: tiger_oni           # 🐯·词·鬼虎
+  - schema: tiger_phrase        # 🐯·单句
+  - schema: tiger_phrase_chord  # 🐯·单句·并击
+  - schema: tiger_phrases       # 🐯·词句
+  - schema: easy_en             # 智能英文
 
 switcher:
-  caption: 〔方案選單〕
+  caption: "〔方案選單〕"
   hotkeys:
-    - Control+grave
-    - Control+Shift+grave
-    - F4
+    - "Control+grave"
+    - "Control+F8"
   save_options:
-    - ascii_mode
     - full_shape
+    - ascii_punct
     - traditionalization
     - emoji
-    - chaifen
-    - big_char_set # 大字集 小字集
+    - extended_char
     - mars
-    - ascii_punct
+    - prediction
+    - tiger_spelling.off
+    - tiger_spelling.lv1
+    - tiger_spelling.lv2
+    - tiger_spelling.lv3
+    - tiger_spelling.lv4
   fold_options: true
   abbreviate_options: true
   option_list_separator: '／'
 
 menu:
-  page_size: 9 #候选项数
-  
-style:
-  horizontal: false #横排为true
+  #alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
+  alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩, 〸 ]
+  #alternative_select_labels: [ α, β, γ, δ, ε, ζ, η, θ, ι, κ ]
+  page_size: 5
 
 punctuator:
-  full_shape:
-    ' ' : { commit: '　' }
-    ',' : { commit: ， }
-    '.' : { commit: 。 }
-    '<' : [ 《, 〈, «, ‹ ]
-    '>' : [ 》, 〉, », › ]
-    '/' : [ ／, ÷ ]
-    '?' : { commit: ？ }
-    ';' : { commit: ； }
-    ':' : { commit: ： }
-    '''' : { pair: [ '‘', '’' ] }
-    '"' : { pair: [ '“', '”' ] }
-    '\' : [ 、, ＼ ]
-    '|' : [ ·, ｜, '§', '¦' ]
-    '`' : ｀
-    '~' : ～
-    '!' : { commit: ！ }
-    '@' : [ ＠, ☯ ]
-    '#' : [ ＃, ⌘ ]
-    '%' : [ ％, '°', '℃' ]
-    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
-    '^' : { commit: …… }
-    '&' : ＆
-    '*' : [ ＊, ·, ・, ×, ※, ❂ ]
-    '(' : （
-    ')' : ）
-    '-' : －
-    '_' : ——
-    '+' : ＋
-    '=' : ＝
-    '[' : [ 「, 【, 〔, ［ ]
-    ']' : [ 」, 】, 〕, ］ ]
-    '{' : [ 『, 〖, ｛ ]
-    '}' : [ 』, 〗, ｝ ]
-  half_shape:
-    ',' : '，'
-    '.' : '。'
-    '<' : '《'
-    '>' : '》'
-    '/' : [ /, ÷ ]
-    '?' : '？'
-    ';' : '；'
-    ':' : '：'
-    '''' : { pair: [ '‘', '’' ] }
-    '"' : { pair: [ '“', '”' ] }
-    # '"' : { commit: '“”' } # 直接输出一对引号
-    '\' : '、'
-    "|": ["·", "|", "｜", "§", "¦"]
-    '`' : '、'
-    '~' : '~'
-    '!' : '！'
-    '@' : '@'
-    '#' : '#'
-    '%' : '%'
-    '$' : '¥'
-    '^' : '……'
-    '&' : '&'
-    '*' : '*'
-    '(' : '（'
-    ')' : '）'
-    '-' : '-'
-    '_' : ——
-    '+' : '+'
-    '=' : '='
-    '[' : '【'
-    ']' : '】'
-    '{' : '「'
-    '}' : '」'
+  __include: tiger:/punctuator
 
 key_binder:
+  import_preset: default
   bindings:
-    # Tab / Shift+Tab 切换光标至下/上一个拼音
-    - { when: composing, accept: Shift+Tab, send: Shift+Left }
-    - { when: composing, accept: Tab, send: Shift+Right }
-    # Tab / Shift+Tab 翻页
-    # - { when: has_menu, accept: Shift+Tab, send: Page_Up }
-    # - { when: has_menu, accept: Tab, send: Page_Down }
-
-    # Option/Alt + ←/→ 切换光标至下/上一个拼音
-    - { when: composing, accept: Alt+Left, send: Shift+Left }
-    - { when: composing, accept: Alt+Right, send: Shift+Right }
-
-    # 翻页 - =
-    - { when: has_menu, accept: minus, send: Page_Up }
-    - { when: has_menu, accept: equal, send: Page_Down }
-
-    # 翻页 , .
-    # - { when: paging, accept: comma, send: Page_Up }
-    # - { when: has_menu, accept: period, send: Page_Down }
-
-    # 翻页 [ ]
-    # - { when: paging, accept: bracketleft, send: Page_Up }
-    # - { when: has_menu, accept: bracketright, send: Page_Down }
-
-    # 两种按键配置，鼠须管 Control+Shift+4 生效，小狼毫 Control+Shift+dollar 生效，都写上了。
-    # numbered_mode_switch:
-    # - { when: always, select: .next, accept: Control+Shift+1 }                  # 在最近的两个方案之间切换
-    # - { when: always, select: .next, accept: Control+Shift+exclam }             # 在最近的两个方案之间切换
-    # - { when: always, toggle: ascii_mode, accept: Control+Shift+2 }             # 切换中英
-    # - { when: always, toggle: ascii_mode, accept: Control+Shift+at }            # 切换中英
-    - { when: always, toggle: ascii_punct, accept: Control+Shift+3 }              # 切换中英标点
-    - { when: always, toggle: ascii_punct, accept: Control+Shift+numbersign }     # 切换中英标点
-    - { when: always, toggle: traditionalization, accept: Control+Shift+4 }       # 切换简繁
-    - { when: always, toggle: traditionalization, accept: Control+Shift+dollar }  # 切换简繁
-    # - { when: always, toggle: full_shape, accept: Control+Shift+5 }             # 切换全半角
-    # - { when: always, toggle: full_shape, accept: Control+Shift+percent }       # 切换全半角
-
-    # emacs_editing:
-    # - { when: composing, accept: Control+p, send: Up }
-    # - { when: composing, accept: Control+n, send: Down }
-    # - { when: composing, accept: Control+b, send: Left }
-    # - { when: composing, accept: Control+f, send: Right }
-    # - { when: composing, accept: Control+a, send: Home }
-    # - { when: composing, accept: Control+e, send: End }
-    # - { when: composing, accept: Control+d, send: Delete }
-    - { when: composing, accept: Control+k, send: Shift+Delete }
-    # - { when: composing, accept: Control+h, send: BackSpace }
-    # - { when: composing, accept: Control+g, send: Escape }
-    # - { when: composing, accept: Control+bracketleft, send: Escape }
-    # - { when: composing, accept: Control+y, send: Page_Up }
-    # - { when: composing, accept: Alt+v, send: Page_Up }
-    # - { when: composing, accept: Control+v, send: Page_Down }
-
-    # optimized_mode_switch:
-    # - { when: always, accept: Control+Shift+space, select: .next }
-    # - { when: always, accept: Shift+space, toggle: ascii_mode }
-    # - { when: always, accept: Control+comma, toggle: full_shape }
-    # - { when: always, accept: Control+period, toggle: ascii_punct }
-    # - { when: always, accept: Control+slash, toggle: traditionalization }
-
-    # 将小键盘 0~9 . + - * / 映射到主键盘
-    # 使计算器(V1+2*3)可使用小键盘输入
-    # 数字金额大写的 Lua 如 R1234.5678 可使用小键盘输入
-    - {accept: KP_0, send: 0, when: composing}
-    - {accept: KP_1, send: 1, when: composing}
-    - {accept: KP_2, send: 2, when: composing}
-    - {accept: KP_3, send: 3, when: composing}
-    - {accept: KP_4, send: 4, when: composing}
-    - {accept: KP_5, send: 5, when: composing}
-    - {accept: KP_6, send: 6, when: composing}
-    - {accept: KP_7, send: 7, when: composing}
-    - {accept: KP_8, send: 8, when: composing}
-    - {accept: KP_9, send: 9, when: composing}
-    - {accept: KP_Decimal,  send: period  , when: composing}
-    - {accept: KP_Multiply, send: asterisk, when: composing}
-    - {accept: KP_Add,      send: plus,     when: composing}
-    - {accept: KP_Subtract, send: minus,    when: composing}
-    - {accept: KP_Divide,   send: slash,    when: composing}
+    __patch:
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
+      - tiger:/keys/page_up_down
+      #- tiger:/keys/selector
+      - tiger:/keys/options_toggle
 
 recognizer:
   patterns:
-    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+    #email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    #uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    #url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
 
 ascii_composer:
   good_old_caps_lock: true
   switch_key:
-    Shift_L: commit_code
-    Shift_R: commit_code
+    Caps_Lock: noop
     Control_L: noop
     Control_R: noop
-    Caps_Lock: clear
     Eisu_toggle: clear
+    # Shift_L: commit_code
+    # Shift_R: commit_text

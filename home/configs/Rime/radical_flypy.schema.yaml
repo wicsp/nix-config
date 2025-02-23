@@ -1,5 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
+# CC-BY-4.0
 
 schema:
   schema_id: radical_flypy
@@ -36,4 +37,10 @@ speller:
 
 translator:
   dictionary: radical_flypy
+  enable_user_dict: false
+  enable_charset_filter: false
+  enable_encoder: false
+  enable_sentence: false
+  encode_commit_history: false
+  enable_completion: true
 
