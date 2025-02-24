@@ -5,10 +5,6 @@
   ...
 }: {
 
-
-
-
-
   # customise /etc/nix/nix.conf declaratively via `nix.settings`
   nix.settings = {
     trusted-users = [username];
