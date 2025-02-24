@@ -26,11 +26,12 @@
         # with more details log output
         # nix-output-monitor
         glow # markdown previewer in terminal
-        btop 
-        lsof 
+        btop
+        lsof
         zellij
         lua-language-server
         lazygit
         lazydocker
+        dust
     ];
 }

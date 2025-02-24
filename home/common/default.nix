@@ -5,7 +5,7 @@
       ./common.nix
       ./atuin.nix
     ];
-  
+
   programs = {
     eza = {
       enable = true;
@@ -32,7 +32,7 @@
       enable = true;
       enableBashIntegration = true;
     };
-    
+
     # zoxide
     zoxide = {
       enable = true;
@@ -59,11 +59,11 @@
         export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/go/bin"
         export PATH="$PATH:/usr/local/bin:/opt/homebrew/bin"
 
-        
+
 
         # Golang
         export PATH=$PATH:/usr/local/go/bin
-        export GOPATH=$HOME/Projects/go 
+        export GOPATH=$HOME/Projects/go
         export PATH=$PATH:$GOPATH/bin
 
         # MacTeX
@@ -84,7 +84,7 @@
         export BARK_ID="j7kb5DDBxSbMdr44T2qbyS"
         export EDITOR="nvim"
 
-        
+         bind 'set completion-ignore-case on'
       '';
 
       # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
