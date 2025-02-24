@@ -33,6 +33,6 @@
         lazygit
         lazydocker
         dust
-
+        clash-meta
     ];
 }
