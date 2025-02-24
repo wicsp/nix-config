@@ -33,5 +33,6 @@
         lazygit
         lazydocker
         dust
+        openssl
     ];
 }
