@@ -14,7 +14,6 @@
       ./hardware-configuration.nix
     ];
 
-
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
   users.users.root.openssh.authorizedKeys.keys = [''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHLcIEvYtDrPUs2jES+1zPtBw2nrtHqwOxyDZqpmUlP9 wicsp@macsp'' ];
