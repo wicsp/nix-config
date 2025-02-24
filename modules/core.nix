@@ -50,6 +50,7 @@
     curl
     git
     neofetch
+    openssl
   ];
 
 
