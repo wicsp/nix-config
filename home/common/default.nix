@@ -89,8 +89,10 @@
 
       # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
       shellAliases = {
-        nixupdate = "sudo nixos-rebuild switch";
-        nixclear = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
+        nixud = "sudo nixos-rebuild switch";
+        nixcl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
+        macud = "darwin-rebuild switch --flake ~/.nixos";
+        maccl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
         lzg = "lazygit";
         lzd="lazydocker";
         python = "python3";

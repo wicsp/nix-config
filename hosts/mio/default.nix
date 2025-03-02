@@ -16,18 +16,6 @@
 
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
-  users.users.root.openssh.authorizedKeys.keys = [''ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHLcIEvYtDrPUs2jES+1zPtBw2nrtHqwOxyDZqpmUlP9 wicsp@macsp'' ];
-  security.sudo.extraRules = [
-    {
-      users = [ "wicsp" ];
-      commands = [
-        {
-          command = "ALL";
-          options = [ "SETENV" "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; 
   networking.hostName = "mio"; 
