@@ -16,7 +16,8 @@ proxy-providers:
 ipv6: true
 allow-lan: true
 mixed-port: 7890
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090
+external-ui: /etc/mihomo/ui
 profile:
   store-selected: true
   store-fake-ip: true

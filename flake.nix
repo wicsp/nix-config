@@ -10,16 +10,28 @@
   };
 
   inputs = {
-    # NixOS 官方软件源，这里使用 nixos-24.11 分支
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
+    # Official NixOS package source, using nixos's unstable branch by default
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    # for macos
+    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     # home-manager, used for managing user configuration
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      # url = "github:nix-community/home-manager/release-24.11";
+
+      # The `follows` keyword in inputs is used for inheritance.
+      # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
+      # to avoid problems caused by different versions of nixpkgs dependencies.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
     agenix.url = "github:ryantm/agenix";
@@ -99,7 +111,7 @@
         system = "aarch64-darwin";
         modules = [
           ./hosts/macsp
-          home-manager-darwin.darwinModules.home-manager
+          home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
