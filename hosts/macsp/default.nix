@@ -8,6 +8,7 @@
     [
       ../../modules/core.nix
       ../../modules/darwin.nix
+      ../../secrets/darwin.nix
     ];
 
   networking.hostName = "macsp"; # Define your hostname.

@@ -35,6 +35,6 @@
         lazydocker
         dust
         clash-meta
-        rye
+        uv
     ];
 }

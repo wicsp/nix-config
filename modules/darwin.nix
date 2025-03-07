@@ -16,8 +16,9 @@ users.users.${username} = {
     description = username;
     home = "/Users/${username}";  # 指定家目录路径
   }; 
+
   homebrew = {
-    enable = true;
+    enable = false;
 
     onActivation = {
       autoUpdate = false;

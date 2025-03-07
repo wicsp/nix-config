@@ -5,6 +5,8 @@
     substituters = [
       # Query the mirror of USTC first, and then the official cache.
       "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirror.sjtu.edu.cn/nix-channels/store"
       "https://cache.nixos.org"
     ];
   };
@@ -34,7 +36,12 @@
     };
     home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
-    agenix.url = "github:ryantm/agenix";
+    ragenix.url = "github:yaxitech/ragenix";
+
+    mysecrets = {
+      url = "git+ssh://git@github.com/wicsp/nix-secrets.git?shallow=1";
+      flake = false;
+    };
     vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
