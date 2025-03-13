@@ -33,12 +33,7 @@
       enableBashIntegration = true;
     };
 
-    # zoxide
-    zoxide = {
-      enable = true;
 
-      enableBashIntegration = true;
-    };
 
     # 启用 starship，这是一个漂亮的 shell 提示符
     starship = {
@@ -93,16 +88,23 @@
         nixcl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
         macud = "darwin-rebuild switch --flake ~/.nixos";
         maccl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
-        lzg = "lazygit";
-        lzd="lazydocker";
-        python = "python3";
+        g = "lazygit";
+        d="lazydocker";
+        p = "python";
         pip="pip3";
         sampler="sampler -c ~/.config/sampler/config.yml";
-        vim="nvim";
+        v="nvim";
       #   k = "kubectl";
       #   urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       #   urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
       };
+    };
+
+    # zoxide
+    zoxide = {
+      enable = true;
+
+      enableBashIntegration = true;
     };
 
   };

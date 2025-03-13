@@ -9,7 +9,7 @@
   nix.settings = {
     trusted-users = [username];
     # enable flakes globally
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = ["nix-command" "flakes" "recursive-nix"];
 
     substituters = [
       # cache mirror located in China

@@ -42,7 +42,7 @@
 
 
       #other settings
-      enabled_layouts = "tall stack full";
+      # enabled_layouts = "tall stack full";
       enable_audio_bell = false;
       macos_option_as_alt = true; # Option key acts as Alt on macOS
       disable_ligatures  = "cursor"; # disable ligatures for cursor

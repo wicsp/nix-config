@@ -6,8 +6,8 @@
       # Query the mirror of USTC first, and then the official cache.
       "https://mirrors.ustc.edu.cn/nix-channels/store"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      "https://mirror.sjtu.edu.cn/nix-channels/store"
-      "https://cache.nixos.org"
+      # "https://mirror.sjtu.edu.cn/nix-channels/store"
+      "https://cache.nixos.org/"
     ];
   };
 
@@ -36,7 +36,7 @@
     };
     home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
-    ragenix.url = "github:yaxitech/ragenix";
+    agenix.url = "github:yaxitech/ragenix";
 
     mysecrets = {
       url = "git+ssh://git@github.com/wicsp/nix-secrets.git?shallow=1";

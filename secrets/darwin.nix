@@ -2,22 +2,22 @@
 {
   config,
   pkgs,
-  ragenix,
+  agenix,
   mysecrets,
   ...
 }: {
   imports = [
-    ragenix.darwinModules.default
+    agenix.darwinModules.default
   ];
 
   # enable logs for debugging
-  launchd.daemons."activate-ragenix".serviceConfig = {
-    StandardErrorPath = "/Library/Logs/org.nixos.activate-ragenix.stderr.log";
-    StandardOutPath = "/Library/Logs/org.nixos.activate-ragenix.stdout.log";
+  launchd.daemons."activate-agenix".serviceConfig = {
+    StandardErrorPath = "/Library/Logs/org.nixos.activate-agenix.stderr.log";
+    StandardOutPath = "/Library/Logs/org.nixos.activate-agenix.stdout.log";
   };
 
   environment.systemPackages = [
-    ragenix.packages."${pkgs.system}".default
+    agenix.packages."${pkgs.system}".default
   ];
 
   # if you changed this key, you need to regenerate all encrypt files from the decrypt contents!
@@ -82,6 +82,12 @@
         file = "${mysecrets}/test.age";
       }
       // user_readable;
+
+    "secrets_env" =
+      {
+        file = "${mysecrets}/secrets_env.age";
+      }
+      // user_readable;
     # "ssh-key-romantic" =
     #   {
     #     file = "${mysecrets}/ssh-key-romantic.age";
@@ -103,7 +109,7 @@
   };
 
   # place secrets in /etc/
-  # NOTE: this will fail for the first time. cause it's running before "activate-ragenix"
+  # NOTE: this will fail for the first time. cause it's running before "activate-agenix"
   environment.etc = {
     # # wireguard config used with `wg-quick up wg-business`
     # # Fix DNS for WireGuard on macOS: https://github.com/ryan4yin/nix-config/issues/5
@@ -111,40 +117,43 @@
     #   source = config.age.secrets."wg-business.conf".path;
     # };
 
-    # "ragenix/rclone.conf" = {
+    # "agenix/rclone.conf" = {
     #   source = config.age.secrets."rclone.conf".path;
     # };
 
-    # "ragenix/ssh-key-romantic" = {
+    # "agenix/ssh-key-romantic" = {
     #   source = config.age.secrets."ssh-key-romantic".path;
     # };
 
-    # "ragenix/ryan4yin-gpg-subkeys.priv.age" = {
+    # "agenix/ryan4yin-gpg-subkeys.priv.age" = {
     #   source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
     # };
 
     # # The following secrets are used by home-manager modules
     # # But nix-darwin doesn't support environment.etc.<name>.mode
     # # So we need to change its mode manually
-    # "ragenix/alias-for-work.nushell" = {
+    # "agenix/alias-for-work.nushell" = {
     #   source = config.age.secrets."alias-for-work.nushell".path;
     # };
-    # "ragenix/alias-for-work.bash" = {
+    # "agenix/alias-for-work.bash" = {
     #   source = config.age.secrets."alias-for-work.bash".path;
     # };
-    "ragenix/test" = {
+    "agenix/test" = {
       source = config.age.secrets."test".path;
+    };
+    "agenix/secrets_env" = {
+      source = config.age.secrets."secrets_env".path;
     };
   };
 
   # both the original file and the symlink should be readable and executable by the user
-  #
+  
   # activationScripts are executed every time you run `nixos-rebuild` / `darwin-rebuild` or boot your system
-#   system.activationScripts.postActivation.text = ''
-#     ${pkgs.nushell}/bin/nu -c '
-#       if (ls /etc/ragenix/ | length) > 0 {
-#         sudo chown ${myvars.username} /etc/ragenix/*
-#       }
-#     '
-#   '';
+  system.activationScripts.postActivation.text = ''
+    ${pkgs.nushell}/bin/nu -c '
+      if (ls /etc/agenix/ | length) > 0 {
+        sudo chown wicsp /etc/agenix/*
+      }
+    '
+  '';
 }
