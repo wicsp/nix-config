@@ -4,7 +4,6 @@
   username,
   ...
 }: {
-
   # customise /etc/nix/nix.conf declaratively via `nix.settings`
   nix.settings = {
     trusted-users = [username];
@@ -33,7 +32,6 @@
 
   nix.package = pkgs.nix;
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -41,7 +39,7 @@
   time.timeZone = "Asia/Shanghai";
 
   environment.systemPackages = with pkgs; [
-    vim 
+    vim
     wget
     curl
     git

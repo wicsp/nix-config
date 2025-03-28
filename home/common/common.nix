@@ -26,7 +26,7 @@
         # it provides the command `nom` works just like `nix`
         # with more details log output
         # nix-output-monitor
-        glow # markdown previewer in terminal
+        # glow  # markdown previewer in terminal 
         btop
         lsof
         zellij
