@@ -35,6 +35,7 @@
 
 
 
+
     # 启用 starship，这是一个漂亮的 shell 提示符
     starship = {
       enable = true;
@@ -79,7 +80,8 @@
         export BARK_ID="j7kb5DDBxSbMdr44T2qbyS"
         export EDITOR="nvim"
 
-         bind 'set completion-ignore-case on'
+        bind 'set completion-ignore-case on'
+        source /etc/agenix/secrets_env
       '';
 
       # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
@@ -94,10 +96,18 @@
         pip="pip3";
         sampler="sampler -c ~/.config/sampler/config.yml";
         v="nvim";
+        y="yazi";
+        c="cursor";
       #   k = "kubectl";
       #   urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       #   urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
       };
+    };
+
+
+    direnv = {
+      enable = true;
+      enableBashIntegration = true; # see note on other shells below
     };
 
     # zoxide
