@@ -1,13 +1,9 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, ... }:let
+    sketchybarPath = "${config.home.homeDirectory}/.nixos/home/configs/sketchybar";
+in
 {
   home.packages = with pkgs; [
     sketchybar
   ];
-
-  # 启用 sketchybar 服务
-  services.sketchybar = {
-    enable = true;
-    # 这里可以添加更多 sketchybar 的具体配置
-  };
+  xdg.configFile."sketchybar".source = config.lib.file.mkOutOfStoreSymlink sketchybarPath;
 }

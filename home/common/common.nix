@@ -5,10 +5,9 @@
         ../configs/nvim.nix
         ../configs/mihomo.nix
         ];
+
     home.packages = with pkgs;[
-        atuin
         nushell
-        neovim
         # archives
         zip
         unzip
@@ -34,7 +33,6 @@
         lazygit
         lazydocker
         dust
-        clash-meta
         uv
     ];
 }

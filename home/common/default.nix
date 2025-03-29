@@ -4,6 +4,7 @@
     [
       ./common.nix
       ./atuin.nix
+      ./thefuck.nix
     ];
 
   programs = {
