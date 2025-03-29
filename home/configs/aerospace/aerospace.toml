@@ -65,7 +65,7 @@ vertical = 9
 [gaps.outer]
 left = 7
 bottom = 7
-top = 22
+top = 7
 right = 7
 
 # 'main' binding mode declaration

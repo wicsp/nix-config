@@ -51,6 +51,25 @@
   specialArgs = inputs // {inherit username usermail;};
   in{
     nixosConfigurations = {
+      cs = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/cs
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = inputs // specialArgs;
+            home-manager.users.${username} = import ./hosts/cs/home.nix;
+            home-manager.backupFileExtension = "backup";
+          }
+          vscode-server.nixosModules.default
+          ({ config, pkgs, ... }: {
+            services.vscode-server.enable = true;
+          })
+        ];
+      };
 
       mio= nixpkgs.lib.nixosSystem {
         inherit specialArgs;
