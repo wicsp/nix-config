@@ -34,5 +34,6 @@
         lazydocker
         dust
         uv
+        ifstat-legacy
     ];
 }

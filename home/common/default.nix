@@ -40,13 +40,18 @@
     # 启用 starship，这是一个漂亮的 shell 提示符
     starship = {
       enable = true;
+
       # 自定义配置
       settings = {
-        add_newline = false;
+        add_newline = true;
         aws.disabled = true;
         gcloud.disabled = true;
         line_break.disabled = true;
       };
+    };
+
+    fish = {
+      enable = true;
     };
 
     bash = {
@@ -55,8 +60,6 @@
       bashrcExtra = ''
         export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/go/bin"
         export PATH="$PATH:/usr/local/bin:/opt/homebrew/bin"
-
-
 
         # Golang
         export PATH=$PATH:/usr/local/go/bin
@@ -83,6 +86,7 @@
 
         bind 'set completion-ignore-case on'
         source /etc/agenix/secrets_env
+
       '';
 
       # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删

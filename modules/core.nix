@@ -45,6 +45,8 @@
     git
     neofetch
     openssl
+    gcc
+    rustup
   ];
 
 

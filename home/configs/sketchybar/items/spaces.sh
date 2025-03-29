@@ -1,35 +1,81 @@
-#!/bin/bash
+#!/bin/sh
 
-##### Adding Mission Control Space Indicators #####
-# Let's add some mission control spaces:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces.
+# Destroy space on right click, focus space on left click.
+# New space by left clicking separator (>)
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-for i in "${!SPACE_ICONS[@]}"; do
-	sid="$(($i + 1))"
-	space=(
-		space="$sid"
-		icon="${SPACE_ICONS[i]}"
-		icon.padding_left=7
-		icon.padding_right=7
-		background.color=0x40ffffff
-		background.corner_radius=5
-		background.height=25
-		label.font="sketchybar-app-font:Regular:16.0"
-		label.padding_right=20
-		label.y_offset=-1
-		script="$PLUGIN_DIR/space.sh"
-		click_script="yabai -m space --focus $sid"
-	)
-	sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+sketchybar --add event aerospace_workspace_change
+#echo $(aerospace list-workspaces --monitor 1 --visible no --empty no) >> ~/aaaa
+
+current_monitor=$(aerospace list-monitors | awk 'NR==1{print $1}')
+for i in $(aerospace list-workspaces --monitor $current_monitor); do
+  sid=$i
+  if ! [[ "$sid" =~ ^[0-9]+$ ]]; then
+    space=(
+      space="$sid"
+      icon="$sid"
+      icon.highlight_color=0x9940e0d0
+      icon.padding_left=10
+      icon.padding_right=10
+      display=$current_monitor
+      padding_left=2
+      padding_right=2
+      label.padding_right=20
+      label.color=$GREY
+      label.highlight_color=$WHITE
+      label.font="sketchybar-app-font:Regular:16.0"
+      label.y_offset=-1
+      background.color=$BACKGROUND_1
+      background.border_color=$BACKGROUND_2
+      script="$PLUGIN_DIR/space.sh"
+    )
+
+    sketchybar --add space space.$sid left \
+               --set space.$sid "${space[@]}" \
+               --subscribe space.$sid mouse.clicked
+
+    apps=$(aerospace list-windows --workspace $sid | awk -F'|' '{gsub(/^ *| *$/, "", $2); print $2}')
+
+    icon_strip=" "
+    if [ "${apps}" != "" ]; then
+      while read -r app
+      do
+        icon_strip+=" $($CONFIG_DIR/plugins/icon_map.sh "$app")"
+      done <<< "${apps}"
+    else
+      icon_strip=" —"
+    fi
+
+    sketchybar --set space.$sid label="$icon_strip"
+  fi
 done
 
-##### Adding Left Items #####
-# We add some regular items to the left side of the bar, where
-# only the properties deviating from the current defaults need to be set
+for i in $(aerospace list-workspaces --monitor $current_monitor --empty); do
+  if ! [[ "$i" =~ ^[0-9]+$ ]]; then
+    sketchybar --set space.$i display=0
+  fi
+done
 
-sketchybar --add item chevron left \
-	--set chevron icon=􀆊 label.drawing=off \
-	--set chevron script="$PLUGIN_DIR/space_windows.sh" \
-	--subscribe chevron space_windows_change
+space_creator=(
+  icon=􀆊
+  icon.font="$FONT:Heavy:16.0"
+  padding_left=5
+  padding_right=5
+  label.drawing=off
+  display=active
+  #click_script='yabai -m space --create'
+  script="$PLUGIN_DIR/space_windows.sh"
+  #script="$PLUGIN_DIR/aerospace.sh"
+  icon.color=$WHITE
+  icon.drawing=off
+)
+
+# sketchybar --add item space_creator left               \
+#            --set space_creator "${space_creator[@]}"   \
+#            --subscribe space_creator space_windows_change
+sketchybar --add item space_creator left               \
+           --set space_creator "${space_creator[@]}"   \
+           --subscribe space_creator aerospace_workspace_change
+
+# sketchybar  --add item change_windows left \
+#             --set change_windows script="$PLUGIN_DIR/change_windows.sh" \
+#             --subscribe change_windows space_changes
