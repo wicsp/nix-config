@@ -2,7 +2,7 @@
 {
 
  imports = [
-    ../../home/common
+    ../../home
   ];
   home = {
     inherit username;

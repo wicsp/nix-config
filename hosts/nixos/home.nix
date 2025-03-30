@@ -1,7 +1,7 @@
 { config, pkgs, username, ... }:
 {
    imports = [
-    ../../home/common
+    ../../home
     ../../home/kitty.nix
   ];
   home = {

@@ -50,27 +50,17 @@
   usermail = "wicspa@gmail.com";
   specialArgs = inputs // {inherit username usermail;};
   in{
-    nixosConfigurations = {
-      cs = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        system = "x86_64-linux";
+    homeConfigurations = {
+      wicsp = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = specialArgs;
         modules = [
-          ./hosts/cs
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs // specialArgs;
-            home-manager.users.${username} = import ./hosts/cs/home.nix;
-            home-manager.backupFileExtension = "backup";
-          }
-          vscode-server.nixosModules.default
-          ({ config, pkgs, ... }: {
-            services.vscode-server.enable = true;
-          })
+          ./hosts/cs/home.nix
         ];
       };
+    };
 
+    nixosConfigurations = {
       mio= nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         system = "x86_64-linux";
