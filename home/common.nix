@@ -1,10 +1,5 @@
 { config, pkgs, ... }:
 {
-    imports =
-        [
-        ../configs/nvim.nix
-        ];
-
     home.packages = with pkgs;[
         nushell
         # archives

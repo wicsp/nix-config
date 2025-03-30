@@ -1,5 +1,5 @@
 { config, pkgs, ... }:let
-    nvimPath = "${config.home.homeDirectory}/.nixos/home/configs/nvim";
+    nvimPath = "${config.home.homeDirectory}/.nix/home/configs/nvim";
 in
 {
     home.packages = with pkgs; [

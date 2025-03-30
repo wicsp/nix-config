@@ -1,5 +1,5 @@
 { config, pkgs, ... }:let
-    sketchybarPath = "${config.home.homeDirectory}/.nixos/home/configs/sketchybar";
+    sketchybarPath = "${config.home.homeDirectory}/.nix/home/configs/sketchybar";
 in
 {
   home.packages = with pkgs; [

@@ -2,8 +2,8 @@
 {
   imports =
     [
-      ./common/common.nix
-      ./configs/atuin.nix
+      ./configs/nvim.nix
+      ./common.nix
     ];
 
   programs = {
@@ -13,7 +13,17 @@
       icons = "auto";
       enableZshIntegration = true;
     };
-
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      enableBashIntegration = true;
+      settings = {
+          auto_sync = true;
+          sync_frequency = "5m";
+          sync_address = "https://api.atuin.sh";
+      };
+    };
     # terminal file manager
     yazi = {
       enable = true;

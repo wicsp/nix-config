@@ -1,5 +1,5 @@
 { config, pkgs, ... }:let
-    mihomoPath = "${config.home.homeDirectory}/.nixos/home/configs/mihomo";
+    mihomoPath = "${config.home.homeDirectory}/.nix/home/configs/mihomo";
 in
 {
     home.packages = with pkgs; [
