@@ -13,6 +13,18 @@
       icons = "auto";
       enableZshIntegration = true;
     };
+
+    git = {
+        enable = true;
+        lfs.enable = true;
+        userName = "wicsp";
+        userEmail = "wicspa@gmail.com";
+        extraConfig = {
+          init.defaultBranch = "main";
+          pull.rebase = true;
+        };
+    };
+
     atuin = {
       enable = true;
       enableZshIntegration = true;

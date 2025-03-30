@@ -47,6 +47,7 @@
     openssl
     gcc
     rustup
+    git-lfs
   ];
 
 
