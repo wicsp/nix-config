@@ -2,6 +2,18 @@
   description = "A simple NixOS flake";
 
   nixConfig = {
+    # substituers will be appended to the default substituters when fetching packages
+    extra-substituters = [
+      "https://anyrun.cachix.org"
+      # "https://nix-gaming.cachix.org"
+      # "https://nixpkgs-wayland.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
+      # "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+      # "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+    ];
+
     substituters = [
       # Query the mirror of USTC first, and then the official cache.
       "https://mirrors.ustc.edu.cn/nix-channels/store"
@@ -17,6 +29,7 @@
     # nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+
     # for macos
     # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -24,6 +37,9 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -36,13 +52,38 @@
     };
     home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
     home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
+
+      # community wayland nixpkgs
+    # nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
+    # anyrun - a wayland launcher
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix.url = "github:yaxitech/ragenix";
+
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
+    # add git hooks to format nix code before commit
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
 
     mysecrets = {
       url = "git+ssh://git@github.com/wicsp/nix-secrets.git?shallow=1";
       flake = false;
     };
+
     vscode-server.url = "github:nix-community/nixos-vscode-server";
+
   };
 
   outputs = { self, nixpkgs, nixpkgs-darwin, darwin, home-manager, home-manager-darwin, vscode-server, ... } @ inputs: let 
