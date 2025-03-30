@@ -89,12 +89,21 @@
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+     
+        if [ -f /etc/profile.d/clash.sh ]; then 
+          source /etc/profile.d/clash.sh
+          source /opt/clash/script/common.sh && source /opt/clash/script/clashctl.sh
+        fi
+
         export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
         export BARK_ID="j7kb5DDBxSbMdr44T2qbyS"
         export EDITOR="nvim"
 
         bind 'set completion-ignore-case on'
         source /etc/agenix/secrets_env
+
+        # if [ -e /home/wicsp/.nix-profile/etc/profile.d/nix.sh ]; then . /home/wicsp/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer 
 
       '';
 
