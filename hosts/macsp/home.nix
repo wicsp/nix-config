@@ -3,10 +3,9 @@
 
 
  imports = [
-    ../../home/common
+    ../../home
     ../../home/darwin
-    ../../home/kitty.nix
-  ];
+  ]; 
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";

@@ -2,9 +2,8 @@
 {
   imports =
     [
-      ./common.nix
-      ./atuin.nix
-      ./thefuck.nix
+      ./common/common.nix
+      ./configs/atuin.nix
     ];
 
   programs = {
@@ -93,7 +92,7 @@
       shellAliases = {
         nixud = "sudo nixos-rebuild switch";
         nixcl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
-        macud = "darwin-rebuild switch --flake ~/.nixos";
+        macud = "darwin-rebuild switch --flake ~/.nix";
         maccl = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
         g = "lazygit";
         d="lazydocker";

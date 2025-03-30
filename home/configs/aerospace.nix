@@ -1,5 +1,5 @@
 { config, pkgs,... }:let
-    aerospacePath = "${config.home.homeDirectory}/.nixos/home/configs/aerospace";
+    aerospacePath = "${config.home.homeDirectory}/.nix/home/configs/aerospace";
 in
 {
     home.packages = with pkgs; [

@@ -3,7 +3,6 @@
     imports =
         [
         ../configs/nvim.nix
-        ../configs/mihomo.nix
         ];
 
     home.packages = with pkgs;[
