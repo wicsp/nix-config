@@ -29,13 +29,13 @@ columns:
 太菜	mi lye	10000
 太菜了	mi lye r	10000
 太菜啦	mi lye duil	10000
-太萌了	mi love r	10000
+太萌了	mi lov r	10000
 太酷了	mi yqd r	10000
 太酷啦	mi yqd duil	10000
-好萌	bh love	10000
-好萌啊	bh love dt	10000
+好萌	bh lov	10000
+好萌啊	bh lov dt	10000
 小鹤	yx wux	10000
-小鹤音形	yx wux xy file	10000
+小鹤音形	yx wux xy fle	10000
 弹窗	bhq et	10000
 快符	hn rjk	10000
 模式	elo pug	10000
@@ -59,8 +59,8 @@ columns:
 大语言	m sw sy	2000
 避障	cdnu txn	2000
 硬啃	mfo dsvy	1111
-音形	xy file	1000
-音形码	xy file mn	1000
+音形	xy fle	1000
+音形码	xy fle mn	1000
 顶屏	awy chl	1000
 诺奖	sln alm	1000
 云输入	by yjv ju	1000
@@ -524,7 +524,7 @@ columns:
 不足与谋	c pu fa sze	1
 不通风	c kt obi	1
 不达目的	c mu qm u	1
-不遭人妒是庸才	c you j bmh o xbt nt	1
+不遭人妒是庸才	c fyou j bmh o xbt nt	1
 不都	c q	1
 不离开	c zb fl	1
 不难想象	c rui eqh wx	1
@@ -606,7 +606,7 @@ columns:
 乳黄色	yha nh xm	1
 乱世用重典	aae la ty ldl ihb	1
 乱世重典	aae la ldl ihb	1
-乱乎	aae then	1
+乱乎	aae thn	1
 乱了心神	aae r hx fog	1
 乱了方寸	aae r lf kc	1
 乱了阵脚	aae r tyc vg	1
@@ -665,8 +665,8 @@ columns:
 五颗星	wu qew ol	1
 井然不紊	qj vm c vis	1
 井蛙不可语海	qj cgg c z sw kek	1
-亘古不灭	for cg c fch	1
-亘古不变	for cg c zc	1
+亘古不灭	fof cg c fch	1
+亘古不变	fof cg c zc	1
 亚非拉	fcy rf ui	1
 亟盼	rdr qhpd	1
 亡妻	fw fbb	1
@@ -838,7 +838,7 @@ columns:
 作何打算	jw jz ua rql	1
 作何决定	jw jz wnj wt	1
 作何准备	jw jz wui hqt	1
-作何评价	jw jz she jjp	1
+作何评价	jw jz seh jjp	1
 作何选择	jw jz qpu uru	1
 作息制度	jw ohx qrp xlr	1
 作甚	jw zha	1
@@ -903,7 +903,7 @@ columns:
 个体主义	jg jef in ib	1
 倒也罢了	jy e ygk r	1
 倒了八辈子霉	jy r hb ryc hi tek	1
-倒卵形	jy bl file	1
+倒卵形	jy bl fle	1
 倒吸一口凉气	jy dcj f dk wg vq	1
 倒吸了一口凉气	jy dcj r f dk wg vq	1
 倒垂	jy llg	1
@@ -961,7 +961,7 @@ columns:
 偷奸耍滑	jjv beg lb kf	1
 偷学	jjv kw	1
 偷换概念	jjv ux eidu jah	1
-偷越	jjv on	1
+偷越	jjv pn	1
 傍水	jiw ks	1
 备受煎熬	hqt ywr hvpc aphc	1
 备受关注	hqt ywr hmd ki	1
@@ -984,7 +984,7 @@ columns:
 传言非虚	jm sy rf zcy	1
 传道授业	jm h uyw cy	1
 传道授业解惑	jm h uyw cy xt pdfh	1
-传音入密	jm xy ju what	1
+传音入密	jm xy ju wht	1
 债务链	jaob hs zyu	1
 债额	jaob wsw	1
 伤势未愈	jes ukis aw jvph	1
@@ -1044,7 +1044,7 @@ columns:
 免伤和气	wp jes x vq	1
 免费午餐	wp to en gr	1
 兜兜转转	ubn ubn ym ym	1
-兜头盖脸	ubn wm game vjk	1
+兜头盖脸	ubn wm gam vjk	1
 入圈	ju rhh	1
 入国问禁	ju rn adk eef	1
 入坑	ju gzo	1
@@ -1056,7 +1056,7 @@ columns:
 内息	mj ohx	1
 内愧	mj hag	1
 内招	mj upd	1
-内接多边形	mj uib ll su file	1
+内接多边形	mj uib ll su fle	1
 内果皮	mj qem rp	1
 内框	mj ennw	1
 内气	mj vq	1
@@ -1065,7 +1065,7 @@ columns:
 内聘	mj qdf	1
 内聚	mj qrt	1
 内卫	mj zfi	1
-全乎	jn then	1
+全乎	jn thn	1
 全胜时期	jn vls ok zhv	1
 全国第一	jn rn rt f	1
 全委会	jn xbn jb	1
@@ -1075,7 +1075,7 @@ columns:
 全票通过	jn vf kt ku	1
 全色片	jn xm ap	1
 全让	jn syf	1
-全音形	jn xy file	1
+全音形	jn xy fle	1
 两三个字	ml ts jg whi	1
 两三个钟	ml ts jg zdg	1
 两三句话	ml ts gj sa	1
@@ -1208,7 +1208,7 @@ columns:
 切削工具	rpd yvp ug qhb	1
 切回	rpd rd	1
 切实有力	rpd ww nv sl	1
-切形	rpd file	1
+切形	rpd fle	1
 刊播	epd utp	1
 初中校	tpd d eab	1
 初始阶段	tpd bkd tjp uf	1
@@ -1299,7 +1299,7 @@ columns:
 功在千秋	usl n lq xch	1
 加一下	sd f fy	1
 加州理工	sd oo ndl ug	1
-加形	sd file	1
+加形	sd fle	1
 加枝添叶	sd eci kfm dns	1
 加气水泥	sd vq ks kcvb	1
 加绒	sd ipn	1
@@ -1307,7 +1307,7 @@ columns:
 助耕	fsl aqj	1
 助记词	fsl svj saf	1
 努努嘴	br br dsv	1
-勃郎宁	nwhs it wad	1
+勃郎宁	nwhs iit wad	1
 勇挑重担	kts upw ldl uof	1
 勇气可嘉	kts vq z hsd	1
 勇斗	kts jd	1
@@ -1355,7 +1355,7 @@ columns:
 匪窟	nrf ecs	1
 汇缴	kn iul	1
 匹拉米洞	npe ui pm kmf	1
-匿影潜形	nln og khh file	1
+匿影潜形	nln og khh fle	1
 匿迹海外	nln zcu kek lyb	1
 区区此心	nb nb sv hx	1
 区队	nb tjr	1
@@ -1509,9 +1509,9 @@ columns:
 可惊可叹	z hgy z dry	1
 史巴克	db mb cp	1
 史波克	db krp cp	1
-右勾拳	and nks hhu	1
-右肋	and vsl	1
-右胸	and vnb	1
+右勾拳	nd nks hhu	1
+右肋	nd vsl	1
+右胸	nd vnb	1
 叵测之心	ndk ko ri hx	1
 司法部部长	afd kg id id pc	1
 吁了口气	dfn r dk vq	1
@@ -1566,12 +1566,12 @@ columns:
 吸引眼球	dcj bgs qi nfk	1
 吸筹	dcj rak	1
 吸顶灯	dcj awy ca	1
-吹乎	deq then	1
+吹乎	deq thn	1
 吹弹可破	deq bhq z mr	1
 吹牛逼	deq qn fdqu	1
 吹尽黄沙始到金	deq ciw nh kyt bkd y zj	1
 吹破	deq mr	1
-吻兽	done hqf	1
+吻兽	dne hqf	1
 吾之砒霜	wdk ri mvvb teq	1
 吾日三省	wdk or ts ytq	1
 吾日三省吾身	wdk or ts ytq wdk zs	1
@@ -1780,7 +1780,7 @@ columns:
 四五点	ys wu yd	1
 四十不惑	ys ns c pdfh	1
 四大洋	ys m kgy	1
-四方形	ys lf file	1
+四方形	ys lf fle	1
 四目交投	ys qm ab urs	1
 四目相对	ys qm eqm rk	1
 四码上屏	ys mn yf chl	1
@@ -1796,7 +1796,7 @@ columns:
 回个话	rd jg sa	1
 回删	rd ipd	1
 回去再说	rd gk fmg s	1
-回春妙手	rd aio byte us	1
+回春妙手	rd aio byt us	1
 回缩	rd iwj	1
 回聘	rd qdf	1
 回茬	rd lngg	1
@@ -1942,7 +1942,7 @@ columns:
 壮士一去兮不复返	ags gs f gk hfa c eoh xru	1
 壮歌	ags zze	1
 壮行	ags p	1
-壶盖	gwc game	1
+壶盖	gwc gam	1
 寿与天齐	akc fa fm qq	1
 夏收作物	foh ih jw qne	1
 夏耘	foh aby	1
@@ -2044,7 +2044,7 @@ columns:
 大藏	m lnq	1
 大衣呢	m ti dcv	1
 大谱儿	m shc pe	1
-大象无形	m wx du file	1
+大象无形	m wx du fle	1
 大赦令	m gchp jks	1
 大道同源	m h mf kxu	1
 大道至简	m h yi ra	1
@@ -2067,7 +2067,7 @@ columns:
 天堂有路你不走	fm sgt nv psg jx c pz	1
 天妒红颜	fm bmh iug ix	1
 天子脚下	fm hi vg fy	1
-天将破晓	fm alk mr of	1
+天将破晓	fm alk mr opf	1
 天崩地陷	fm vvv ge txp	1
 天打五雷轰	fm ua wu tqt yrr	1
 天文历	fm vw xsl	1
@@ -2126,14 +2126,14 @@ columns:
 套圈	mpc rhh	1
 套裁	mpc npt	1
 奢谈	mqor sc	1
-奥妙无穷	tmpm byte du esl	1
+奥妙无穷	tmpm byt du esl	1
 奥申委	tmpm ogs xbn	1
 夺人所好	mk j mt bh	1
 夺人所爱	mk j mt yw	1
 夺占	mk ydk	1
 夺路而逃	mk psg l pw	1
 女大不由娘	bn m c dy bi	1
-女怕嫁错郎	bn hub bwj zl it	1
+女怕嫁错郎	bn hub bwj zl iit	1
 女魔	bn za	1
 奶油小生	bv kdy yx ls	1
 奶疮	bv ajz	1
@@ -2180,8 +2180,8 @@ columns:
 如花似朵	b lj jvj oe	1
 如花美眷	b lj gm hhqm	1
 妄下断语	fbn fy pat sw	1
-妙手仁心	byte us jme hx	1
-妙文	byte vw	1
+妙手仁心	byt us jme hx	1
+妙文	byt vw	1
 妞儿	bagt pe	1
 妥否	ybn cd	1
 妥妥	ybn ybn	1
@@ -2287,8 +2287,8 @@ columns:
 宿娼狎妓	wjf boo msj bci	1
 宿雨餐风	wjf tv gr obi	1
 寄望于	wmz fv fn	1
-密度板	what xlr exr	1
-密纹唱片	what ivw doo ap	1
+密度板	wht xlr exr	1
+密纹唱片	wht ivw doo ap	1
 富不过三代	wfd c ku ts jp	1
 富国兴邦	wfd rn khb ate	1
 富强发达	wfd bd sr mu	1
@@ -2307,7 +2307,7 @@ columns:
 实轴	ww ydy	1
 宁做鸡头	wad jc rx wm	1
 宁可食无肉	wad z qs du mjj	1
-宁有种乎	wad nv xd then	1
+宁有种乎	wad nv xd thn	1
 宁缺不滥	wad an c kpr	1
 审听	wo dtj	1
 写错了	wf zl r	1
@@ -2321,7 +2321,7 @@ columns:
 寸刻	kc kp	1
 封停	ggk jga	1
 封建把头	ggk bu umb wm	1
-封盖	ggk game	1
+封盖	ggk gam	1
 封闭型	ggk ant flpg	1
 封闭系统	ggk ant tis ibp	1
 专座	ma xjj	1
@@ -2371,7 +2371,7 @@ columns:
 小赌怡情	yx oqo hkd ha	1
 小酌怡情	yx yni hkd ha	1
 小隐隐于野	yx tx tx fn div	1
-小鬼遭殃	yx ag you gmm	1
+小鬼遭殃	yx ag fyou gmm	1
 小鲵	yx wpp	1
 小鹿乱撞	yx xl aae uid	1
 小黑屋	yx ph cyi	1
@@ -2455,8 +2455,8 @@ columns:
 工作手册	ug jw us ic	1
 工商大学	ug im m kw	1
 左勾拳	nu nks hhu	1
-左问右问	nu adk and adk	1
-左等右等	nu rg and rg	1
+左问右问	nu adk nd adk	1
+左等右等	nu rg nd rg	1
 左联	nu qhm	1
 左肋	nu vsl	1
 巧笑嫣然	ufae rtm bfs vm	1
@@ -2529,10 +2529,10 @@ columns:
 年首	ev ho	1
 干松	eg ehk	1
 干活不累	eg ka c qis	1
-幺蛾子	it ctu hi	1
+幺蛾子	iy ctu hi	1
 幼嫩	isl bxh	1
 幼畜	isl ziq	1
-几乎为零	oj then i tjks	1
+几乎为零	oj thn i tjks	1
 几个回合	oj jg rd jdk	1
 几个钟	oj jg zdg	1
 几个钟头	oj jg zdg wm	1
@@ -2549,7 +2549,7 @@ columns:
 底气不足	xbi vq c pu	1
 底气十足	xbi vq ns pu	1
 店外	xyd lyb	1
-座上宾	xjj yf with	1
+座上宾	xjj yf wth	1
 库锦	xyc zur	1
 康拜因	xbk ufa rm	1
 康乐球	xbk byx nfk	1
@@ -2599,12 +2599,12 @@ columns:
 弹跳力	bhq ppw sl	1
 弹道式导弹	bhq h pug vk bhq	1
 弯弯绕	zcb zcb ipf	1
-形削骨立	file yvp fgg il	1
-形如枯木	file b ecg em	1
-形式参数	file pug kme pb	1
-形槁心灰	file egg hx nch	1
-形神兼备	file fog hbc hqt	1
-形音码	file xy mn	1
+形削骨立	fle yvp fgg il	1
+形如枯木	fle b ecg em	1
+形式参数	fle pug kme pb	1
+形槁心灰	fle egg hx nch	1
+形神兼备	fle fog hbc hqt	1
+形音码	fle xy mn	1
 彩桥	yee etm	1
 彪炳史册	zes cfm db ic	1
 往来款	win a gf	1
@@ -2622,7 +2622,7 @@ columns:
 很努力	wi br sl	1
 很多年前	wi ll ev hv	1
 很多很多	wi ll wi ll	1
-很妙	wi byte	1
+很妙	wi byt	1
 很富	wi wfd	1
 很有个性	wi nv jg hls	1
 很有帮助	wi nv at fsl	1
@@ -2637,7 +2637,7 @@ columns:
 很难想象	wi rui eqh wx	1
 很难理解	wi rui ndl xt	1
 律所	wbv mt	1
-后下手遭殃	xf fy us you gmm	1
+后下手遭殃	xf fy us fyou gmm	1
 后勤组	xf lda if	1
 后半辈子	xf hu ryc hi	1
 后厦	xf xfo	1
@@ -2667,7 +2667,7 @@ columns:
 从内	jj mj	1
 从南	jj nmg	1
 从南到北	jj nmg y av	1
-从右到左	jj and y nu	1
+从右到左	jj nd y nu	1
 从奢入俭难	jj mqor ju jjk rui	1
 从快	jj hn	1
 从明天起	jj ov fm pv	1
@@ -2706,7 +2706,7 @@ columns:
 心有所属	hx nv mt ct	1
 心有独钟	hx nv mc zdg	1
 心凉	hx wg	1
-心潮翻腾	hx know tp vhh	1
+心潮翻腾	hx kno tp vhh	1
 心狠手毒	hx mig us akm	1
 心理分析	hx ndl hp etj	1
 心理安慰	hx ndl wb cfkh	1
@@ -2762,7 +2762,7 @@ columns:
 思想境界	qh eqh gx qjp	1
 思想改造	qh eqh vh qdu	1
 思想材料	qh eqh ent pj	1
-思潮澎湃	qh know khes kuf	1
+思潮澎湃	qh kno khes kuf	1
 思考一下	qh qf f fy	1
 急三火四	xbh ts ch ys	1
 急人所急	xbh j mt xbh	1
@@ -2804,7 +2804,7 @@ columns:
 惜时如金	hlo ok b zj	1
 恶狠狠地	fchx mig mig ge	1
 恶苗病	fchx lqt afm	1
-恶评	fchx she	1
+恶评	fchx seh	1
 想不到吧	eqh c y dmb	1
 想也没想	eqh e kr eqh	1
 想到哪说到哪	eqh y dau s y dau	1
@@ -2953,7 +2953,7 @@ columns:
 扛鼎之作	uug qaa ri jw	1
 扣还	udk cu	1
 扭力天平	uagt sl fm eh	1
-扭转形变	uagt ym file zc	1
+扭转形变	uagt ym fle zc	1
 扮酷	uhp yqd	1
 扯动	usi bs	1
 扯断	usi pat	1
@@ -2963,8 +2963,8 @@ columns:
 扶弱	uhf bw	1
 扶摇万里	uhf uyaf fp dl	1
 批条子	uvv he hi	1
-批评指正	uvv she uv fsi	1
-批评教育	uvv she qhh bvy	1
+批评指正	uvv seh uv fsi	1
+批评教育	uvv seh qhh bvy	1
 找下	up fy	1
 找不到北	up c y av	1
 找份	up jh	1
@@ -3004,12 +3004,12 @@ columns:
 抗震棚	uzo tfc evv	1
 折伞	utj jhn	1
 披红挂绿	urp iug uggt ibk	1
-披针形	urp zn file	1
+披针形	urp zn fle	1
 抬不起头	ukd c pv wm	1
 抬扛	ukd uug	1
 抱委屈	unv xbn csm	1
 抱朴守拙	unv eyb wkc usm	1
-抱柱对儿	unv in rk pe	1
+抱柱对儿	unv ein rk pe	1
 抱头乱串	unv wm aae ddg	1
 抵港	ubi klhv	1
 押往	usj win	1
@@ -3028,7 +3028,7 @@ columns:
 拆墙	uti ggh	1
 拈阄儿	uyd awg pe	1
 拉不下脸	ui c fy vjk	1
-拉伸形变	ui jog file zc	1
+拉伸形变	ui jog fle zc	1
 拉偏手儿	ui jmi us pe	1
 拉呱	ui dyg	1
 拉抬	ui ukd	1
@@ -3037,7 +3037,7 @@ columns:
 拉胯	ui vmma	1
 拉花	ui lj	1
 拉货	ui jvo	1
-拉郎配	ui it yv	1
+拉郎配	ui iit yv	1
 拉黑	ui ph	1
 抛之脑后	uksl ri vzb xf	1
 抛妻弃子	uksl fbb blc hi	1
@@ -3208,7 +3208,7 @@ columns:
 推刨	uu nvp	1
 推射	uu zk	1
 推杯换盏	uu ecb ux fpa	1
-掩住面孔	umo jin bm have	1
+掩住面孔	umo jin bm hae	1
 掩过饰非	umo ku qer rf	1
 掩饰不住	umo qer c jin	1
 揉了揉	uit r uit	1
@@ -3275,7 +3275,7 @@ columns:
 摘棉机	uim eur eo	1
 摘发	uim sr	1
 摘菜	uim lye	1
-搂头盖脸	upb wm game vjk	1
+搂头盖脸	upb wm gam vjk	1
 摧垮	uvu gmma	1
 摧城拔寨	uvu gna unr wqhe	1
 摩氏硬度表	zu bss mfo xlr ati	1
@@ -3390,7 +3390,7 @@ columns:
 放歌纵酒	lh zze ijj ky	1
 放流	lh kb	1
 放牛娃	lh qn bgg	1
-放牛郎	lh qn it	1
+放牛郎	lh qn iit	1
 放声歌唱	lh gc zze doo	1
 放长假	lh pc jcm	1
 政企不分	fsh jsi c hp	1
@@ -3419,9 +3419,9 @@ columns:
 散弹	lv bhq	1
 散摊	lv urui	1
 散放	lv lh	1
-敬如上宾	lgh b yf with	1
+敬如上宾	lgh b yf wth	1
 敬畏之心	lgh qft ri hx	1
-敬请期待	lgh save zhv wgk	1
+敬请期待	lgh sav zhv wgk	1
 敬贤爱士	lgh prob yw gs	1
 敬陪末席	lgh tidk fem xlrj	1
 整儿	xhf pe	1
@@ -3511,7 +3511,7 @@ columns:
 早教	on qhh	1
 早有预谋	on nv iw sze	1
 早期白话	on zhv ub sa	1
-早潮	on know	1
+早潮	on kno	1
 早生华发	on ls jvn sr	1
 旬报	nor uz	1
 旱区	oeg nb	1
@@ -3529,7 +3529,7 @@ columns:
 星光灿烂	ol mg cvs cht	1
 星光闪闪	ol mg aj aj	1
 星汉灿烂	ol kry cvs cht	1
-星级宾馆	ol icj with qwk	1
+星级宾馆	ol icj wth qwk	1
 春初	aio tpd	1
 春宵一刻	aio wyv f kp	1
 春末	aio fem	1
@@ -3548,7 +3548,7 @@ columns:
 是非功过	o rf usl ku	1
 是骡子是马	o nqi hi o nm	1
 时久天长	ok xi fm pc	1
-时代潮流	ok jp know kb	1
+时代潮流	ok jp kno kb	1
 时冷时热	ok wjk ok uk	1
 时刻准备着	ok kp wui hqt gq	1
 时快时慢	ok hn ok hoyr	1
@@ -3567,7 +3567,7 @@ columns:
 晋绥	fco iyb	1
 晚一步	owp f ssi	1
 晚婚率	owp bbo zi	1
-晚潮	owp know	1
+晚潮	owp kno	1
 晚高峰	owp gg vha	1
 晦涩难懂	oek kpi rui hll	1
 晨曲	of yq	1
@@ -3584,8 +3584,8 @@ columns:
 智能整句	odo k xhf gj	1
 智能狂拼	odo k mnw uhl	1
 智能双拼	odo k rr uhl	1
-晕乎	owy then	1
-晕晕乎乎	owy owy then then	1
+晕乎	owy thn	1
+晕晕乎乎	owy owy thn thn	1
 晕染	owy kke	1
 晕血	owy tam	1
 暖棚	oyf evv	1
@@ -3600,16 +3600,16 @@ columns:
 暗绿	ox ibk	1
 暗藏杀机	ox lnq bem eo	1
 暗亏	ox mae	1
-暂住人口	to jin j dk	1
-暂免	to wp	1
-暂列	to gp	1
-暂告	to qd	1
-暂按	to uwb	1
+暂住人口	yto jin j dk	1
+暂免	yto wp	1
+暂列	yto gp	1
+暂告	yto qd	1
+暂按	yto uwb	1
 暮冬	lomo hw	1
 暴力抗法	olh sl uzo kg	1
 暴恐	olh uoih	1
-晓之以理	of ri vj ndl	1
-晓岚	of vobi	1
+晓之以理	opf ri vj ndl	1
+晓岚	opf vobi	1
 曱甴	sj dy	1
 曲种	yq xd	1
 曲线救国	yq ifp fki rn	1
@@ -3798,7 +3798,7 @@ columns:
 柞蚕丝	ewa fmc iis	1
 查下	eof fy	1
 查了查	eof r eof	1
-查形	eof file	1
+查形	eof fle	1
 柳木	eb em	1
 柳条帽	eb he ro	1
 柳梢	eb eyv	1
@@ -3884,7 +3884,7 @@ columns:
 横扫而过	enh ubj l ku	1
 横比	enh vv	1
 横道	enh h	1
-横遭	enh you	1
+横遭	enh fyou	1
 检验报告	ejk nj uz qd	1
 柜面	enn bm	1
 权倾朝野	er jvw no div	1
@@ -4040,7 +4040,7 @@ columns:
 江段	kug uf	1
 江湖儿女	kug kcv pe bn	1
 江湖救急	kug kcv fki xbh	1
-江潮	kug know	1
+江潮	kug kno	1
 池中之物	key d ri qne	1
 沁入心扉	khx ju hx mrf	1
 沁润	khx kan	1
@@ -4073,7 +4073,7 @@ columns:
 没有功劳有苦劳	kr nv usl lws nv lcg lws	1
 没有好果子吃	kr nv bh qem hi de	1
 没有把握	kr nv umb ucy	1
-没有规矩不成方圆	kr nv hej on c na lf rdo	1
+没有规矩不成方圆	kr nv hej onn c na lf rdo	1
 没滋没味	kr khi kr da	1
 没由分说	kr dy hp s	1
 没当回事	kr yb rd fd	1
@@ -4115,7 +4115,7 @@ columns:
 治虫	kk cc	1
 法不容情	kg c whg ha	1
 法不责众	kg c aob jjj	1
-法国法郎	kg rn kg it	1
+法国法郎	kg rn kg iit	1
 法度森严	kg xlr eee fcx	1
 法律条文	kg wbv he vw	1
 法律面前	kg wbv bm hv	1
@@ -4177,7 +4177,7 @@ columns:
 海魂	kek bag	1
 消防通道	kyv tlf kt h	1
 涉外婚姻	kssi lyb bbo brm	1
-涉密	kssi what	1
+涉密	kssi wht	1
 涉诉	kssi st	1
 涮涮	kcr kcr	1
 涮肉	kcr mjj	1
@@ -4320,7 +4320,7 @@ columns:
 潜亏	khh mae	1
 润肠	kan vae	1
 润色润色	kan xm kan xm	1
-潮涨潮落	know kbp know lk	1
+潮涨潮落	kno kbp kno lk	1
 溃口	kco dk	1
 溃堤	kco got	1
 浇洒	kpf kvx	1
@@ -4367,7 +4367,7 @@ columns:
 无一不知	du f c od	1
 无不是	du c o	1
 无事可做	du fd z jc	1
-无人知晓	du j od of	1
+无人知晓	du j od opf	1
 无人能及	du j k cj	1
 无人能敌	du j k ah	1
 无以为报	du vj i uz	1
@@ -4386,8 +4386,8 @@ columns:
 无可辩驳	du z nsn nbb	1
 无商不奸	du im c beg	1
 无奈之下	du mfs ri fy	1
-无形威压	du file nfb xgi	1
-无从知晓	du jj od of	1
+无形威压	du fle nfb xgi	1
+无从知晓	du jj od opf	1
 无从选择	du jj qpu uru	1
 无心之失	du hx ri th	1
 无悔无怨	du hek du lzh	1
@@ -4419,8 +4419,8 @@ columns:
 无色无臭	du xm du omq	1
 无药可医	du li z nos	1
 无处躲藏	du hy zo lnq	1
-无处遁形	du hy xnqu file	1
-无规矩不成方圆	du hej on c na lf rdo	1
+无处遁形	du hy xnqu fle	1
+无规矩不成方圆	du hej onn c na lf rdo	1
 无话不说	du sa c s	1
 无语凝噎	du sw wvo dgw	1
 无遮无拦	du xlcu du uht	1
@@ -4452,7 +4452,7 @@ columns:
 熟练技术	ghk iry uci eid	1
 熬不过去	aphc c ku gk	1
 热不热	uk c uk	1
-热乎劲	uk then rus	1
+热乎劲	uk thn rus	1
 热压釜	uk xgi hbzj	1
 热字	uk whi	1
 热情好客	uk ha bh ws	1
@@ -4574,7 +4574,7 @@ columns:
 玄而又玄	ziy l ry ziy	1
 玉璞	ni ncg	1
 玉砌雕阑	ni mrp mgdu axh	1
-王侯将相宁有种乎	nw jno alk eqm wad nv xd then	1
+王侯将相宁有种乎	nw jno alk eqm wad nv xd thn	1
 王炸	nw cw	1
 王道乐土	nw h byx gt	1
 玩不玩	nmp c nmp	1
@@ -4975,11 +4975,11 @@ columns:
 社稷次之	fg xqh we ri	1
 祖传配方	ffq jm yv lf	1
 祖屋	ffq cyi	1
-神乎	fog then	1
+神乎	fog thn	1
 神仙眷侣	fog jvs hhqm jdd	1
 神仙精怪	fog jvs pa hrg	1
 神兵利器	fog thb xp dd	1
-神妙莫测	fog byte lom ko	1
+神妙莫测	fog byt lom ko	1
 神憎鬼厌	fog hhr ag xmq	1
 神目如电	fog qm b oa	1
 神秘兮兮	fog xht hfa hfa	1
@@ -5063,7 +5063,7 @@ columns:
 窘状	ebt amq	1
 窝边	ed su	1
 窝边草	ed su lo	1
-穷形极相	esl file ec eqm	1
+穷形极相	esl fle ec eqm	1
 穷期	esl zhv	1
 穷根	esl ei	1
 穷游	esl kle	1
@@ -5341,7 +5341,7 @@ columns:
 才有可能	nt nv z k	1
 纤毫毕现	ilq gvm vvns ne	1
 纤秀	ilq xvn	1
-缸盖	aug game	1
+缸盖	aug gam	1
 缺员	an do	1
 缺肢少腿	an vc yt viu	1
 缺词	an saf	1
@@ -5594,7 +5594,7 @@ columns:
 旧框框	gor ennw ennw	1
 旧貌换新颜	gor mup ux ie ix	1
 舌绽春雷	as iwt aio tqt	1
-舍宾	jas with	1
+舍宾	jas wth	1
 舔了舔	afmh r afmh	1
 舔犊情深	afmh qna ha kwh	1
 舞台监督	elfv kd pra yfyq	1
@@ -5607,7 +5607,7 @@ columns:
 船艇	iod itgu	1
 艘次	ipg we	1
 舱内	ijz mj	1
-舱盖	ijz game	1
+舱盖	ijz gam	1
 良师诤友	ii pf sxbv nr	1
 色不异空	xm c vl eu	1
 色值	xm jnq	1
@@ -5739,8 +5739,8 @@ columns:
 蒹霞苍苍	lhbc tcm ljz ljz	1
 苍天在上	ljz fm n yf	1
 蒿子秆儿	lgg hi xeg pe	1
-盖布	game nrj	1
-盖帘	game erj	1
+盖布	gam nrj	1
+盖帘	gam erj	1
 蓬勃向上	lha nwhs tm yf	1
 蓬勃朝气	lha nwhs no vq	1
 蓬勃生机	lha nwhs ls eo	1
@@ -5845,9 +5845,9 @@ columns:
 衣袂飘飘	ti tnj vfo vfo	1
 表内	ati mj	1
 表外	ati lyb	1
-表形	ati file	1
-表形码	ati file mn	1
-表形码	ati file mn	1
+表形	ati fle	1
+表形码	ati fle mn	1
+表形码	ati fle mn	1
 表面上看	ati bm yf uq	1
 表面现象	ati bm ne wx	1
 表页	ati wy	1
@@ -5906,7 +5906,7 @@ columns:
 亲戚朋友	iem nyf vvy nr	1
 亲肤	iem vhf	1
 观其行	rej zh p	1
-观潮派	rej know kx	1
+观潮派	rej kno kx	1
 解放勋章	xt lh dos xns	1
 解决一下	xt wnj f fy	1
 解决了	xt wnj r	1
@@ -5930,9 +5930,9 @@ columns:
 讷口少言	smj dk yt sy	1
 许可法	se z kg	1
 诈捐	swa udv	1
-评功摆好	she usl uyg bh	1
-评功论赏	she usl sjl sob	1
-评荐	she lng	1
+评功摆好	seh usl uyg bh	1
+评功论赏	seh usl sjl sob	1
+评荐	seh lng	1
 词组量	saf if ofd	1
 词量	saf ofd	1
 试了一下	sp r f fy	1
@@ -5979,9 +5979,9 @@ columns:
 谈吐不凡	sc dg c oid	1
 谈的上	sc u yf	1
 谈锋甚健	sc zhaf zha jbu	1
-请多指教	save ll uv qhh	1
-请教下	save qhh fy	1
-请见谅	save ej sgyx	1
+请多指教	sav ll uv qhh	1
+请教下	sav qhh fy	1
+请见谅	sav ej sgyx	1
 谅解备忘录	sgyx xt hqt fh bk	1
 谐星	svv ol	1
 诸多不便	sqo ll c jfo	1
@@ -6125,21 +6125,21 @@ columns:
 起锅	pv zdm	1
 趁此机会	pje sv eo jb	1
 趁现在	pje ne n	1
-超乎想象	ppd then eqh wx	1
+超乎想象	ppd thn eqh wx	1
 超凡绝伦	ppd oid ixm jjl	1
 超脱性	ppd vhd hls	1
 超买	ppd awm	1
 超卖	ppd naw	1
-越来越像	on a on jwx	1
-越来越难	on a on rui	1
-越坏	on gcb	1
-越少越好	on yt on bh	1
-越战越勇	on ydp on kts	1
-越扯越远	on usi on mp	1
-越挫越勇	on ujjg on kts	1
-越描越黑	on ulq on ph	1
-越走越偏	on pz on jmi	1
-越走越远	on pz on mp	1
+越来越像	pn a pn jwx	1
+越来越难	pn a pn rui	1
+越坏	pn gcb	1
+越少越好	pn yt pn bh	1
+越战越勇	pn ydp pn kts	1
+越扯越远	pn usi pn mp	1
+越挫越勇	pn ujjg pn kts	1
+越描越黑	pn ulq pn ph	1
+越走越偏	pn pz pn jmi	1
+越走越远	pn pz pn mp	1
 赶奔	peg mnl	1
 赶早不赶晚	peg on c peg owp	1
 赶早儿	peg on pe	1
@@ -6367,7 +6367,7 @@ columns:
 遇佛杀佛	qv jtf bem jtf	1
 遇剌	qv xpd	1
 游转	kle ym	1
-游乡郎中	kle ixx it d	1
+游乡郎中	kle ixx iit d	1
 运指如飞	buc uv b cf	1
 运载工具	buc npy ug qhb	1
 过了这个村就没这个店	ku r vu jg ekc g kr vu jg xyd	1
@@ -6449,7 +6449,7 @@ columns:
 那阵儿	au tyc pe	1
 那阵子	au tyc hi	1
 那么回事	au tk rd fd	1
-郎情妾意	it ha ibn xh	1
+郎情妾意	iit ha ibn xh	1
 部首优先	id ho joy qp	1
 邮迷	dte puc	1
 都不一样	q c f egy	1
@@ -6657,7 +6657,7 @@ columns:
 闲饭	ae qx	1
 间种	ao xd	1
 闸皮	asj rp	1
-阅批	had uvv	1
+阅批	ahd uvv	1
 阖家幸福	agka wj ggy ff	1
 关心则乱	hmd hx op aae	1
 关注一下	hmd ki f fy	1
@@ -6715,7 +6715,7 @@ columns:
 随手拈来	tn us uyd a	1
 随调	tn smg	1
 随迁	tn luc	1
-险乎	tjkf then	1
+险乎	tjkf thn	1
 险死还生	tjkf gv cu ls	1
 只字未提	dh whi aw uo	1
 雀儿	yui pe	1
@@ -6730,10 +6730,10 @@ columns:
 虽好	dc bh	1
 虽然没有	dc vm kr nv	1
 虽远必诛	dc mp ht sta	1
-双形	rr file	1
-双拼加形	rr uhl sd file	1
+双形	rr fle	1
+双拼加形	rr uhl sd fle	1
 双拼整句	rr uhl xhf gj	1
-双拼双形	rr uhl rr file	1
+双拼双形	rr uhl rr fle	1
 双排	rr ur	1
 双曲面	rr yq bm	1
 双眉紧蹙	rr cq pr nyfp	1
@@ -6910,7 +6910,7 @@ columns:
 颜面尽失	ix bm ciw th	1
 愿赌服输	xuy oqo vz yjv	1
 颠三颠四	nqh ts nqh ys	1
-类乎	pmd then	1
+类乎	pmd thn	1
 显著提高	ocy lqo uo gg	1
 风光大葬	obi mg m lgv	1
 风光片	obi mg ap	1
@@ -6964,7 +6964,7 @@ columns:
 首开风气	ho fl obi vq	1
 香气扑鼻	xor vq uyb oql	1
 香烟缭绕	xor cr imh ipf	1
-香蕉苹果	xor lunch leh qem	1
+香蕉苹果	xor luch leh qem	1
 香附子	xor tjk hi	1
 马上回来	nm yf rd a	1
 马倌	nm jwk	1
@@ -6996,7 +6996,7 @@ columns:
 骨肉深情	fgg mjj kwh ha	1
 骨雕	fgg mgdu	1
 脏不拉叽	vxg c ui doj	1
-脏乎乎	vxg then then	1
+脏乎乎	vxg thn thn	1
 脏乱差	vxg aae gu	1
 脏活	vxg ka	1
 体工队	jef ug tjr	1
@@ -7067,7 +7067,7 @@ columns:
 鹅肠	tup vae	1
 鹊桥相会	lox etm eqm jb	1
 鹤嘴镐	wux dsv zgg	1
-鹤形	wux file	1
+鹤形	wux fle	1
 鹤发松姿	wux sr ehk web	1
 鸬鹚	ycx hiix	1
 咸吃萝卜淡操心	nfd de lyl ybb kcch udd hx	1
@@ -7142,9 +7142,9 @@ columns:
 充电桩	bpe oa exg	1
 甄嬛	vgr byft	1
 甄嬛传	vgr byft jm	1
-耙耙橘	amb amb it	1
+耙耙橘	amb amb eit	1
 耙耙柑	amb amb ezg	1
-丑橘	agt it	1
+丑橘	agt eit	1
 充电宝	bpe oa wni	1
 鸡扒	rx uhb	1
 扒鸡	uhb rx	1
@@ -7164,7 +7164,7 @@ columns:
 精清从心邪	pa kav jj hx lte	1
 照穿床审禅	opd el xe wo fhq	1
 见溪群疑	ej kyi bt vo	1
-影喻晓匣	og djv of nsj	1
+影喻晓匣	og djv opf nsj	1
 古无舌上音	cg du as yf xy	1
 齁得慌	oqlg w hlf	1
 过审	ku wo	1
@@ -7335,7 +7335,7 @@ columns:
 海豚湾模式	kek vjs kzc elo pug	1
 现象级事件	ne wx icj fd jq	1
 沉浸式体验	kwo kbw pug jef nj	1
-自媒体矩阵	oi bze jef on tyc	1
+自媒体矩阵	oi bze jef onn tyc	1
 风口上的猪	obi dk yf u mqo	1
 战略性投资	ydp qsg hls urs weo	1
 战略性亏损	ydp qsg hls mae udo	1
@@ -7347,7 +7347,7 @@ columns:
 非理性异动	rf ndl hls vl bs	1
 方言化认知	lf sy jvb sj od	1
 不跟风要造风	c pig obi v qdu obi	1
-多维矩阵闭环	ll iu on tyc ant nc	1
+多维矩阵闭环	ll iu onn tyc ant nc	1
 打开销售通路	ua fl zyv ud kt psg	1
 向下传递寒气	tm fy jm htu wq vq	1
 绝对损失函数	ixm rk udo th akmk pb	1
@@ -7364,8 +7364,8 @@ columns:
 加性模型	sd hls elo flpg	1
 对抗网络	rk uzo mbb is	1
 仿射层	jlf zk cb	1
-亲和矩阵	iem x on tyc	1
-几乎必然收敛	oj then ht vm ih jkfh	1
+亲和矩阵	iem x onn tyc	1
+几乎必然收敛	oj thn ht vm ih jkfh	1
 选择性剪接数据集	qpu uru hls hvp uib pb uc ue	1
 解析梯度	xt etj ehtf xlr	1
 原始采样	xu bkd ye egy	1
@@ -7430,7 +7430,7 @@ columns:
 伯努利输出分布	jub br xp yjv sm hp nrj	1
 最优臂问题	oq joy cdnv adk ot	1
 贝塔分布	ob glj hp nrj	1
-类间散度矩阵	pmd ao lv xlr on tyc	1
+类间散度矩阵	pmd ao lv xlr onn tyc	1
 双向长短期记忆	rr tm pc oz zhv svj hai	1
 偏置偏移	jmi yn jmi xll	1
 有偏重要采样	nv jmi ldl v ye egy	1
@@ -7477,7 +7477,7 @@ columns:
 共现	lhb ne	1
 共现词频	lhb ne saf ssw	1
 码书学习	mn aa kw zx	1
-编码矩阵	imi mn on tyc	1
+编码矩阵	imi mn onn tyc	1
 收缩的吉布斯抽样	ih iwj u gdk nrj zht udy egy	1
 国际学习理论会议	rn tfs kw zx ndl sjl jb sib	1
 列空间	gp eu ao	1
@@ -7499,7 +7499,7 @@ columns:
 条件独立	he jq mc il	1
 条件语言模型	he jq sw sy elo flpg	1
 条件互信息	he jq fb js ohx	1
-条件概率密度函数	he jq eidu zi what xlr akmk pb	1
+条件概率密度函数	he jq eidu zi wht xlr akmk pb	1
 条件概率分布	he jq eidu zi hp nrj	1
 条件概率表	he jq eidu zi ati	1
 条件风险	he jq obi tjkf	1
@@ -7539,11 +7539,11 @@ columns:
 共父	lhb hbi	1
 余弦衰减	jxh bzi tdf wnf	1
 代价曲线	jp jjp yq ifp	1
-代价矩阵	jp jjp on tyc	1
+代价矩阵	jp jjp onn tyc	1
 代价敏感	jp jjp ekhp nf	1
 协变量偏移	nsh zc ofd jmi xll	1
 贡献度分配问题	uob nmgm xlr hp yv adk ot	1
-评价网络	she jjp mbb is	1
+评价网络	seh jjp mbb is	1
 交叉熵损失函数	ab rid cim udo th akmk pb	1
 累积函数	qis xdh akmk pb	1
 维数灾难	iu pb wc rui	1
@@ -7573,9 +7573,9 @@ columns:
 去噪自编码器	gk ddde oi imi mn dd	1
 去躁分数匹配	gk pdd hp pb npe yv	1
 分母布局	hp km nrj cad	1
-密度估计	what xlr jcg sn	1
-密度聚类	what xlr qrt pmd	1
-设计矩阵	srs sn on tyc	1
+密度估计	wht xlr jcg sn	1
+密度聚类	wht xlr qrt pmd	1
+设计矩阵	srs sn onn tyc	1
 细致平衡	iq yh eh pwv	1
 细致平衡方程	iq yh eh pwv lf xdn	1
 探测级	uwh ko icj	1
@@ -7594,7 +7594,7 @@ columns:
 有向模型	nv tm elo flpg	1
 有向分离	nv tm hp zb	1
 方向导数	lf tm vk pb	1
-狄利克雷分布	much xp cp tqt hp nrj	1
+狄利克雷分布	mch xp cp tqt hp nrj	1
 不合度量	c jdk xlr ofd	1
 基于分歧的方法	zhg fn hp sci u lf kg	1
 衰减系数	tdf wnf tis pb	1
@@ -7611,11 +7611,11 @@ columns:
 主特征向量	in qg wfsi tm ofd	1
 占优策略	ydk joy remk qsg	1
 双反向传播	rr xr tm jm utp	1
-双重分块循环矩阵	rr ldl hp gn wxn nc on tyc	1
+双重分块循环矩阵	rr ldl hp gn wxn nc onn tyc	1
 下游任务	fy kle jt hs	1
-暂退法	to iuc kg	1
-暂退掩码	to iuc umo mn	1
-暂退法	to iuc kg	1
+暂退法	yto iuc kg	1
+暂退掩码	yto iuc umo mn	1
+暂退法	yto iuc kg	1
 对偶算法	rk jqv rql kg	1
 对偶问题	rk jqv adk ot	1
 哑结点	dfc igd yd	1
@@ -7680,7 +7680,7 @@ columns:
 相消解释	eqm kyv xt tpr	1
 相消解释作用	eqm kyv xt tpr jw ty	1
 解释因子	xt tpr rm hi	1
-显式密度模型	ocy pug what xlr elo flpg	1
+显式密度模型	ocy pug wht xlr elo flpg	1
 梯度爆炸	ehtf xlr col cw	1
 指数衰减	uv pb tdf wnf	1
 指数线性单元	uv pb ifp hls hq mpe	1
@@ -7697,7 +7697,7 @@ columns:
 假负例	jcm xo jgp	1
 假正例	jcm fsi jgp	1
 假正例率	jcm fsi jgp zi	1
-快速暂退法	hn xuc to iuc kg	1
+快速暂退法	hn xuc yto iuc kg	1
 快速持续性对比散度	hn xuc ugk ina hls rk vv lv xlr	1
 容错异步训练	whg zl vl ssi so iry	1
 特征提取器	qg wfsi uo qr dd	1
@@ -7761,7 +7761,7 @@ columns:
 生成式对抗框架	ls na pug rk uzo ennw sde	1
 生成式模型	ls na pug elo flpg	1
 生成式建模	ls na pug bu elo	1
-生成矩匹配网络	ls na on npe yv mbb is	1
+生成矩匹配网络	ls na onn npe yv mbb is	1
 生成式预训练	ls na pug iw so iry	1
 生成随机网络	ls na tn eo mbb is	1
 生成权重	ls na er ldl	1
@@ -7810,8 +7810,8 @@ columns:
 豪斯多夫距离	gjs zht ll hf pnn zb	1
 赫布法则	gcg nrj kg op	1
 赫布理论	gcg nrj ndl sjl	1
-海赛矩阵	kek wqh on tyc	1
-黑塞矩阵	ph wqhg on tyc	1
+海赛矩阵	kek wqh onn tyc	1
+黑塞矩阵	ph wqhg onn tyc	1
 异质信息网络	vl xno js ohx mbb is	1
 异方差	vl lf gu	1
 隐动态模型	tx bs mih elo flpg	1
@@ -7833,7 +7833,7 @@ columns:
 图像还原	rhw jwx cu xu	1
 模仿学习	elo jlf kw zx	1
 不完美信息	c wmp gm js ohx	1
-隐式密度模型	tx pug what xlr elo flpg	1
+隐式密度模型	tx pug wht xlr elo flpg	1
 重要性采样	ldl v hls ye egy	1
 改进的迭代尺度法	vh qu u thu jp cid xlr kg	1
 相互独立的	eqm fb mc il u	1
@@ -7872,12 +7872,12 @@ columns:
 各向同性高斯分布	sg tm mf hls gg zht hp nrj	1
 迭代二分器	thu jp me hp dd	1
 雅克比	lu cp vv	1
-雅可比矩阵	lu z vv on tyc	1
-联合概率密度函数	qhm jdk eidu zi what xlr akmk pb	1
+雅可比矩阵	lu z vv onn tyc	1
+联合概率密度函数	qhm jdk eidu zi wht xlr akmk pb	1
 联合概率分布	qhm jdk eidu zi hp nrj	1
 联合树算法	qhm jdk erk rql kg	1
 核机器	ekh eo dd	1
-核矩阵	ekh on tyc	1
+核矩阵	ekh onn tyc	1
 核方法	ekh lf kg	1
 核回归	ekh rd pbj	1
 核技巧	ekh uci ufae	1
@@ -7897,7 +7897,7 @@ columns:
 拉普拉斯修正	ui hco ui zht jgh fsi	1
 大学习步骤	m kw zx ssi nqr	1
 拉斯维加斯方法	ui zht iu sd zht lf kg	1
-潜在狄利克雷分配	khh n much xp cp tqt hp yv	1
+潜在狄利克雷分配	khh n mch xp cp tqt hp yv	1
 潜层	khh cb	1
 潜在语义分析	khh n sw ib hp etj	1
 潜在语义索引	khh n sw ib nwi bgs	1
@@ -7975,7 +7975,7 @@ columns:
 长期依赖	pc zhv jti xxo	1
 长期记忆	pc zhv svj hai	1
 环状信念传播	nc amq js jah jm utp	1
-低秩矩阵近似	jbi xth on tyc tu jvj	1
+低秩矩阵近似	jbi xth onn tyc tu jvj	1
 机器学习模型	eo dd kw zx elo flpg	1
 宏平均	wnk eh gnw	1
 宏查准率	wnk eof wui zi	1
@@ -7983,9 +7983,9 @@ columns:
 马哈拉诺比斯距离	nm dj ui sln vv zht pnn zb	1
 绝对多数投票	ixm rk ll pb urs vf	1
 多数表决规则	ll pb ati wnj hej op	1
-流形假设	kb file jcm srs	1
-流形学习	kb file kw zx	1
-流形正切分类器	kb file fsi rpd hp pmd dd	1
+流形假设	kb fle jcm srs	1
+流形学习	kb fle kw zx	1
+流形正切分类器	kb fle fsi rpd hp pmd dd	1
 间隔理论	ao tng ndl sjl	1
 边缘分布	su ibj hp nrj	1
 边缘独立性	su ibj mc il hls	1
@@ -8002,9 +8002,9 @@ columns:
 掩码语言模型化	umo mn sw sy elo flpg jvb	1
 掩蔽自注意力	umo lfh oi ki xh sl	1
 数学优化	pb kw joy jvb	1
-矩阵微积分	on tyc wvf xdh hp	1
-矩阵补全	on tyc tyb jn	1
-矩阵乘积	on tyc xav xdh	1
+矩阵微积分	onn tyc wvf xdh hp	1
+矩阵补全	onn tyc tyb jn	1
+矩阵乘积	onn tyc xav xdh	1
 最大范数	oq m lkz pb	1
 最大汇聚	oq m kn qrt	1
 最大后验	oq m xf nj	1
@@ -8040,7 +8040,7 @@ columns:
 极小极大博弈	ec yx ec m nnk zcl	1
 闵可夫斯基距离	avw z hf zht zhg pnn zb	1
 误分类代价	sdf hp pmd jp jjp	1
-混合密度网络	kov jdk what xlr mbb is	1
+混合密度网络	kov jdk wht xlr mbb is	1
 混合分布	kov jdk hp nrj	1
 混合专家模型	kov jdk ma wj elo flpg	1
 高斯混合	gg zht kov jdk	1
@@ -8056,7 +8056,7 @@ columns:
 基于模型的强化学习	zhg fn elo flpg u bd jvb kw zx	1
 免模型学习	wp elo flpg kw zx	1
 模型无关的强化学习	elo flpg du hmd u bd jvb kw zx	1
-矩匹配	on npe yv	1
+矩匹配	onn npe yv	1
 动量法	bs ofd kg	1
 蒙特卡罗估计	lwf qg yfy yl jcg sn	1
 蒙特卡罗积分	lwf qg yfy yl xdh hp	1
@@ -8106,14 +8106,14 @@ columns:
 净活性值	wxb ka hls jnq	1
 净输入	wxb yjv ju	1
 神经架构搜索	fog ir sde enk upg nwi	1
-神经自回归密度估计器	fog ir oi rd pbj what xlr jcg sn dd	1
+神经自回归密度估计器	fog ir oi rd pbj wht xlr jcg sn dd	1
 神经自回归网络	fog ir oi rd pbj mbb is	1
 神经语言模型	fog ir sw sy elo flpg	1
 神经机器翻译	fog ir eo dd tp sru	1
 神经模型	fog ir elo flpg	1
 神经图灵机	fog ir rhw bch eo	1
 神经动力学	fog ir bs sl kw	1
-神经形态计算	fog ir file mih sn rql	1
+神经形态计算	fog ir fle mih sn rql	1
 没有免费午餐定理	kr nv wp to en gr wt ndl	1
 噪声分布	ddde gc hp nrj	1
 噪声对比估计	ddde gc rk vv jcg sn	1
@@ -8125,7 +8125,7 @@ columns:
 非线性振荡	rf ifp hls ufc lka	1
 非线性支持向量机	rf ifp hls ci ugk tm ofd eo	1
 非度量距离	rf xlr ofd pnn zb	1
-非负矩阵分解	rf xo on tyc hp xt	1
+非负矩阵分解	rf xo onn tyc hp xt	1
 无序属性	du xiv ct hls	1
 非参数化模型	rf kme pb jvb elo flpg	1
 非概率模型	rf eidu zi elo flpg	1
@@ -8137,7 +8137,7 @@ columns:
 非线性共轭梯度	rf ifp hls lhb yxz ehtf xlr	1
 非线性独立成分估计	rf ifp hls mc il na hp jcg sn	1
 非线性规划	rf ifp hls hej pp	1
-非参数密度估计	rf kme pb what xlr jcg sn	1
+非参数密度估计	rf kme pb wht xlr jcg sn	1
 范数保持性	lkz pb jde ugk hls	1
 规范化因子	hej lkz jvb rm hi	1
 规范化的	hej lkz jvb u	1
@@ -8159,7 +8159,7 @@ columns:
 独热	mc uk	1
 在线推断	n ifp uu pat	1
 最佳容量	oq jgg whg ofd	1
-优化地形	joy jvb ge file	1
+优化地形	joy jvb ge fle	1
 带序规则	lw xiv hej op	1
 有序属性	nv xiv ct hls	1
 正交初始化	fsi ab tpd bkd jvb	1
@@ -8178,7 +8178,7 @@ columns:
 参数服务器	kme pb vz hs dd	1
 参数共享	kme pb lhb ghi	1
 有参情况	nv kme ha wd	1
-参数密度估计	kme pb what xlr jcg sn	1
+参数密度估计	kme pb wht xlr jcg sn	1
 参数化模型	kme pb jvb elo flpg	1
 解析树	xt etj erk	1
 部分可观测马尔可夫决策过程	id hp z rej ko nm xyx z hf wnj remk ku xdn	1
@@ -8195,7 +8195,7 @@ columns:
 相对多数投票	eqm rk ll pb urs vf	1
 指针网络	uv zn mbb is	1
 极性检测	ec hls ejk ko	1
-策略评估	remk qsg she jcg	1
+策略评估	remk qsg seh jcg	1
 策略梯度	remk qsg ehtf xlr	1
 策略改进	remk qsg vh qu	1
 策略迭代	remk qsg thu jp	1
@@ -8208,11 +8208,11 @@ columns:
 位置嵌入	ji yn vze ju	1
 位置编码	ji yn imi mn	1
 正定核函数	fsi wt ekh akmk pb	1
-正定矩阵	fsi wt on tyc	1
+正定矩阵	fsi wt onn tyc	1
 正部函数	fsi id akmk pb	1
 正常返的	fsi srj xru u	1
 半正定	hu fsi wt	1
-半正定矩阵	hu fsi wt on tyc	1
+半正定矩阵	hu fsi wt onn tyc	1
 后续检验	xf ina ejk nj	1
 后剪枝	xf hvp eci	1
 后验分布	xf nj hp nrj	1
@@ -8221,7 +8221,7 @@ columns:
 幂法	wom kg	1
 预训练初始化	iw so iry tpd bkd jvb	1
 预训练	iw so iry	1
-精度矩阵	pa xlr on tyc	1
+精度矩阵	pa xlr onn tyc	1
 预测稀疏分解	iw ko xbnr tbo hp xt	1
 预剪枝	iw hvp eci	1
 预训练语言模型	iw so iry sw sy elo flpg	1
@@ -8233,7 +8233,7 @@ columns:
 先验偏移	qp nj jmi xll	1
 优先级规则	joy qp icj hej op	1
 概率上下文无关文法	eidu zi yf fy vw du hmd vw kg	1
-概率密度估计	eidu zi what xlr jcg sn	1
+概率密度估计	eidu zi wht xlr jcg sn	1
 概率生成模型	eidu zi ls na elo flpg	1
 概率潜在语义分析	eidu zi khh n sw ib hp etj	1
 概率潜在语义索引	eidu zi khh n sw ib nwi bgs	1
@@ -8269,7 +8269,7 @@ columns:
 受试者工作特征	ywr sp qo ug jw qg wfsi	1
 认知权重	sj od er ldl	1
 重构误差	ldl enk sdf gu	1
-矩形对角矩阵	on file rk xty on tyc	1
+矩形对角矩阵	onn fle rk xty onn tyc	1
 整流线性	xhf kb ifp hls	1
 整流线性变换	xhf kb ifp hls zc ux	1
 整流网络	xhf kb mbb is	1
@@ -8304,8 +8304,8 @@ columns:
 可逆马尔可夫链	z hsu nm xyx z hf zyu	1
 奖励函数	alm xfps akmk pb	1
 黎曼积分	xpj oyr xdh hp	1
-右特征向量	and qg wfsi tm ofd	1
-右奇异向量	and mzk vl tm ofd	1
+右特征向量	nd qg wfsi tm ofd	1
+右奇异向量	nd mzk vl tm ofd	1
 风险函数	obi tjkf akmk pb	1
 规则学习	hej op kw zx	1
 无鞍牛顿法	du twb qn fsw kg	1
@@ -8315,9 +8315,9 @@ columns:
 样本方差	egy ef lf gu	1
 饱和函数	qnv x akmk pb	1
 尺度不变性	cid xlr c zc hls	1
-散布矩阵	lv nrj on tyc	1
+散布矩阵	lv nrj onn tyc	1
 计划采样	sn pp ye egy	1
-评分函数	she hp akmk pb	1
+评分函数	seh hp akmk pb	1
 分数匹配	hp pb npe yv	1
 二阶导数测试	me tjp vk pb ko sp	1
 二阶方法	me tjp lf kg	1
@@ -8343,7 +8343,7 @@ columns:
 序列标注	xiv gp efs ki	1
 序列到序列学习	xiv gp y xiv gp kw zx	1
 序列到序列	xiv gp y xiv gp	1
-序贯覆盖	xiv kob vwe game	1
+序贯覆盖	xiv kob vwe gam	1
 序列最小最优化	xiv gp oq yx oq joy jvb	1
 时序模型优化	ok xiv elo flpg joy jvb	1
 顺序分区	ow xiv hp nb	1
@@ -8415,7 +8415,7 @@ columns:
 随机动力系统	tn eo bs sl tis ibp	1
 随机梯度上升	tn eo ehtf xlr yf tlc	1
 带热重启的随机梯度下降	lw uk ldl md u tn eo ehtf xlr fy thv	1
-随机矩阵	tn eo on tyc	1
+随机矩阵	tn eo onn tyc	1
 随机最大似然	tn eo oq m jvj vm	1
 随机近邻嵌入	tn eo tu jkt vze ju	1
 随机神经网络	tn eo fog ir mbb is	1
@@ -8434,7 +8434,7 @@ columns:
 学生网络	kw ls mbb is	1
 次最优	we oq joy	1
 子采样层	hi ye egy cb	1
-子集评价	hi ue she jjp	1
+子集评价	hi ue seh jjp	1
 子集搜索	hi ue upg nwi	1
 逐次减半	juc we wnf hu	1
 求和法则	fk x kg op	1
@@ -8488,14 +8488,14 @@ columns:
 直推学习	nqf uu kw zx	1
 直推迁移学习	nqf uu luc xll kw zx	1
 转移核	ym xll ekh	1
-状态转移矩阵	amq mih ym xll on tyc	1
+状态转移矩阵	amq mih ym xll onn tyc	1
 转移概率	ym xll eidu zi	1
 转置卷积	ym yn hh xdh	1
 树结构的长短期记忆模型	erk igd enk u pc oz zhv svj hai elo flpg	1
 树库	erk xyc	1
 三角循环学习率	ts xty wxn nc kw zx zi	1
-三角形化	ts xty file jvb	1
-三角形化图	ts xty file jvb rhw	1
+三角形化	ts xty fle jvb	1
+三角形化图	ts xty fle jvb rhw	1
 三元语法	ts mpe sw kg	1
 真负例	nq xo jgp	1
 真正例	nq fsi jgp	1
@@ -8523,7 +8523,7 @@ columns:
 单位范数	hq ji lkz pb	1
 单位方差	hq ji lf gu	1
 单位阶跃函数	hq ji tjp pt akmk pb	1
-酉矩阵	yy on tyc	1
+酉矩阵	yy onn tyc	1
 单变量决策树	hq zc ofd wnj remk erk	1
 通用近似定理	kt ty tu jvj wt ndl	1
 通用近似器	kt ty tu jvj dd	1
@@ -8554,7 +8554,7 @@ columns:
 变分贝叶斯	zc hp ob dns zht	1
 变分导数	zc hp vk pb	1
 变分分布	zc hp hp nrj	1
-变分暂退法	zc hp to iuc kg	1
+变分暂退法	zc hp yto iuc kg	1
 变分自由能	zc hp oi dy k	1
 变分推断	zc hp uu pat	1
 版本空间	ax ef eu ao	1
@@ -8578,7 +8578,7 @@ columns:
 加权投票	sd er urs vf	1
 宽卷积	wl hh xdh	1
 胜者通吃	vls qo kt de	1
-类内散度矩阵	pmd mj lv xlr on tyc	1
+类内散度矩阵	pmd mj lv xlr onn tyc	1
 词义消歧	saf ib kyv sci	1
 单词向量空间模型	hq saf tm ofd eu ao elo flpg	1
 包裹式方法	nvs tq pug lf kg	1
@@ -8596,14 +8596,14 @@ columns:
 主动机器学习	in bs eo dd kw zx	1
 自适应模糊神经网络	oi auc xk elo pcv fog ir mbb is	1
 自适应采样	oi auc xk ye egy	1
-毒性评估	akm hls she jcg	1
+毒性评估	akm hls seh jcg	1
 阿尔法狗	tz xyx kg mgj	1
 自适应神经模糊推理系统	oi auc xk fog ir elo pcv uu ndl tis ibp	1
 近似概率模型	tu jvj eidu zi elo flpg	1
 人工突触	j ug emq xtc	1
 自动化综合规划	oi bs jvb iwf jdk hej pp	1
 平衡精度	eh pwv pa xlr	1
-带隙能量	lw to k ofd	1
+带隙能量	lw tyo k ofd	1
 贝叶斯归纳	ob dns zht pbj imj	1
 贝叶斯马尔可夫链蒙特卡洛方法	ob dns zht nm xyx z hf zyu lwf qg yfy ksg lf kg	1
 贝叶斯先验	ob dns zht qp nj	1
@@ -8629,7 +8629,7 @@ columns:
 复合数据	eoh jdk pb uc	1
 计算优化	sn rql joy jvb	1
 计算毒理学	sn rql akm ndl kw	1
-库仑矩阵	xyc jl on tyc	1
+库仑矩阵	xyc jl onn tyc	1
 耦合簇预测	aqv jdk rle iw ko	1
 交叉验证的决定系数	ab rid nj sf u wnj wt tis pb	1
 截断径向函数	npu pat wru tm akmk pb	1
@@ -8644,7 +8644,7 @@ columns:
 数据驱动的方法	pb uc nnb bs u lf kg	1
 数据驱动的光谱分析	pb uc nnb bs u mg shc hp etj	1
 差分进化算法	gu hp qu jvb rql kg	1
-密度泛函理论	what xlr ktr akmk ndl sjl	1
+密度泛函理论	wht xlr ktr akmk ndl sjl	1
 戴斯	npq zht	1
 戴斯相似度	npq zht eqm jvj xlr	1
 差分进化	gu hp qu jvb	1
@@ -8665,7 +8665,7 @@ columns:
 激发态能量	kul sr mih k ofd	1
 符合预期的失真减少	rjk jdk iw zhv u th nq wnf yt	1
 实验验证数据	ww nj nj sf pb uc	1
-扩展连接环形指纹	uxg cl yu uib nc file uv ivw	1
+扩展连接环形指纹	uxg cl yu uib nc fle uv ivw	1
 特征二值化	qg wfsi me jnq jvb	1
 特征变换	qg wfsi zc ux	1
 前馈神经网络	hv qco fog ir mbb is	1
@@ -8685,14 +8685,14 @@ columns:
 图卷积	rhw hh xdh	1
 图模型	rhw elo flpg	1
 图神经网络	rhw fog ir mbb is	1
-基于图形	zhg fn rhw file	1
+基于图形	zhg fn rhw fle	1
 基于图的模型	zhg fn rhw u elo flpg	1
 基于图的神经网络	zhg fn rhw u fog ir mbb is	1
 基于图的表示	zhg fn rhw u ati fs	1
 图卷积神经网络	rhw hh xdh fog ir mbb is	1
 比重聚合度	vv ldl qrt jdk xlr	1
-哈密顿矩阵	dj what fsw on tyc	1
-哈密顿算符	dj what fsw rql rjk	1
+哈密顿矩阵	dj wht fsw onn tyc	1
+哈密顿算符	dj wht fsw rql rjk	1
 隐藏层	tx lnq cb	1
 高数据吞吐量	gg pb uc fmd dg ofd	1
 高通量筛选	gg kt ofd rpf qpu	1
@@ -8748,7 +8748,7 @@ columns:
 机器学习驱动的最优化	eo dd kw zx nnb bs u oq joy jvb	1
 多层感知机神经模型	ll cb nf od eo fog ir elo flpg	1
 模型构建	elo flpg enk bu	1
-模型评估	elo flpg she jcg	1
+模型评估	elo flpg seh jcg	1
 模型性能	elo flpg hls k	1
 模型统计	elo flpg ibp sn	1
 模型训练	elo flpg so iry	1
@@ -8794,8 +8794,8 @@ columns:
 菲勒斯	lr tsl zht	1
 特朗普	qg iivy hco	1
 巨弱	nn bw	1
-交领右衽	ab jkw and ttgs	1
-束发右衽	xs sr and ttgs	1
+交领右衽	ab jkw nd ttgs	1
+束发右衽	xs sr nd ttgs	1
 构造主义	enk qdu in ib	1
 复音	eoh xy	1
 复音口琴	eoh xy dk nnj	1
@@ -8859,8 +8859,8 @@ columns:
 星猫键道	ol mlq zbu h	1
 键道	zbu h	1
 哲哲豆	utd utd zd	1
-哲哲豆音形	utd utd zd xy file	1
-哲豆音形	utd zd xy file	1
+哲哲豆音形	utd utd zd xy fle	1
+哲豆音形	utd zd xy fle	1
 朱重八	ta ldl hb	1
 小心地滑	yx hx ge kf	1
 体重称	jef ldl xxy	1

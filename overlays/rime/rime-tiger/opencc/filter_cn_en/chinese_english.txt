@@ -1757,7 +1757,7 @@
 两相	两相 diphase two-phase
 两码事	两码事 two issues
 两端	两端 beginning and end
-两组	两组 To groups
+两组	两组 Tto groups
 两翼	两翼 two wings
 两老	两老 the two elderly parents
 两者	两者 both sides both things
@@ -1916,7 +1916,7 @@
 中国画展	中国画展 Chinese art exhibition
 中国矿业大学	中国矿业大学 Chinese Mining Industry University
 中国社会科学院	中国社会科学院 Chinese Academy of Social Sciences
-中国科学院	中国科学院 Chinese Academy of Science
+中国科学院	中国科学院 Chinese Acadamy of Science
 中国科技大学	中国科技大学 Chinese Scientific and Technical University
 中国籍	中国籍 Chinese nationality
 中国结	中国结 Chinese knot
@@ -1968,7 +1968,7 @@
 中山医院	中山医院 Zhongshan hospital
 中山大学	中山大学 Zhongshan University
 中山装	中山装 Chinese tunic suit
-中山陵	中山陵 Zhongshan Cemetery
+中山陵	中山陵 Zhongshan Cemetary
 中州	中州 Central Plains
 中常	中常 average
 中平	中平 Zhongping
@@ -2139,7 +2139,7 @@
 临床	临床 clinical
 临摹	临摹 copy
 临时	临时 temporary interim
-临时代办	临时代办 Temporary charge d'affairs
+临时代办	临时代办 Temporary charge d'affaires
 临时工	临时工 temporary worker
 临时抱佛脚	临时抱佛脚 embrace Buddha's feet in one's hour of need seek help at the last moment
 临时政府	临时政府 provisional government
@@ -3694,7 +3694,7 @@
 代代	代代 all the generations
 代价	代价 price cost
 代偿	代偿 compensate compensation
-代办	代办 charge d'affairs
+代办	代办 charge d'affaires
 代办处	代办处 agency
 代劳	代劳 do ... for somebody
 代号	代号 code number
@@ -8751,7 +8751,7 @@
 努美阿	努美阿 Noumea
 劫	劫 plunder
 劫夺	劫夺 seize by force
-劫持	劫持 hijack hijack hijacking
+劫持	劫持 hijack highjack hijacking
 劫掠	劫掠 plunder loot maraud
 劫机	劫机 hijack airplane skyjacking
 劬	劬 labor
@@ -9983,7 +9983,7 @@
 危	危 danger endanger
 危亡	危亡 at stake in peril
 危及	危及 endanger
-危地马拉	危地马拉 Guatemala Guatemala Guatemala City
+危地马拉	危地马拉 Guatamala Guatemala Guatemala City
 危害	危害 jeopardize harm endanger
 危害性	危害性 perniciousness harmfulness
 危局	危局 perilous situation
@@ -11256,7 +11256,7 @@
 司法权	司法权 jurisdiction
 司法独立	司法独立 jurisdiction independence
 司法界	司法界 judicial world
-司法部	司法部 Justice Department
+司法部	司法部 Justice Deparment
 司法部长	司法部长 judicature minister
 司法院长	司法院长 judicature chief
 司炉	司炉 stoker fireman
@@ -13055,7 +13055,7 @@
 回转	回转 revolve rotate rotation
 回转半径	回转半径 radius of gyration
 回避	回避 avoid sidestep skirt
-回采	回采 stope stopping
+回采	回采 stope stoping
 回锅肉	回锅肉 twice-cooked pork
 回音	回音 echo
 回顾	回顾 look back review
@@ -13625,7 +13625,7 @@
 圣诞	圣诞 Christmas
 圣诞岛	圣诞岛 Christmas Island
 圣诞树	圣诞树 Christmas tree
-圣诞老人	圣诞老人 Santa Clause
+圣诞老人	圣诞老人 Santa Claus
 圣诞节	圣诞节 Christmas time Christmas season Christmas
 圣贝纳迪诺	圣贝纳迪诺 San Bernardino
 圣贤	圣贤 sage man of virtue
@@ -15584,7 +15584,7 @@
 天意	天意 God's will
 天成	天成 Tiancheng
 天才	天才 talent gift genius talented gifted
-天才论	天才论 theory that talented heroes determine history
+天才论	天才论 theory that talented heros determine history
 天授	天授 inborn endowed by natural
 天敌	天敌 natural enemy
 天数	天数 fate
@@ -16651,7 +16651,7 @@
 嬷	嬷 ma mamma
 嬷嬷	嬷嬷 wet nurse
 孀	孀 widow
-子	子 child midnight son seed egg small thing 1st earthly branch 11 p.m. to 1 a.m. (diminutive noun suffix)
+子	子 child midnight son seed egg small thing 1st earthly branch 11 p.m. to 1 a.m. (dimunitive noun suffix)
 子代	子代 filial generation
 子儿	子儿 see egg
 子公司	子公司 subsidiary company
@@ -17923,7 +17923,7 @@
 导热	导热 heat conduction
 导电	导电 electric conduction
 导盘	导盘 godet
-导管	导管 catheter conduit was
+导管	导管 catheter conduit vas
 导线	导线 wire
 导致	导致 lead to create cause bring about
 导致死亡	导致死亡 lead to death result in death
@@ -18539,7 +18539,7 @@
 居首	居首 rank first
 居高临下	居高临下 occupy a commanding position
 屈	屈 bent feel wronged
-屈从	屈从 submit to yield to compliance
+屈从	屈从 submit to yield to compliancy
 屈伸	屈伸 bend and stretch flexible pliant
 屈原	屈原 Qu Yuan
 屈指可数	屈指可数 can be counted on one's finger very few
@@ -18984,7 +18984,7 @@
 工程队	工程队 engineer brigade
 工程项目	工程项目 engineering project
 工笔	工笔 painting very precisely executed
-工艺	工艺 craft techniques
+工艺	工艺 craft technics
 工艺品	工艺品 handicraft piece
 工艺性能	工艺性能 shop characteristics
 工艺流程	工艺流程 technical process
@@ -19010,7 +19010,7 @@
 左右手	左右手 right-hand assistant
 左岸	左岸 left bank
 左手	左手 left hand
-左撇子	左撇子 left-handler left-handed lefty
+左撇子	左撇子 left-hander left-handed lefty
 左派	左派 leftist left-winger the left
 左翼	左翼 left wing
 左耳	左耳 left ear
@@ -19136,7 +19136,7 @@
 巴拉戈湖	巴拉戈湖 Lake Baringo
 巴拉科亚	巴拉科亚 Baracoa
 巴拉迪尔	巴拉迪尔 Balladur
-巴拉那	巴拉那 Piranha
+巴拉那	巴拉那 Parana
 巴拿马	巴拿马 Panama
 巴拿马运河	巴拿马运河 Panama Canal
 巴掌	巴掌 palm hand
@@ -20432,7 +20432,7 @@
 弁	弁 cap
 异	异 different unusual strange raise stop
 异乎寻常	异乎寻常 unusual
-异体	异体 variant form allow-
+异体	异体 variant form allo-
 异军突起	异军突起 sudden appearance of a new force
 异化	异化 dissimilate dissimilation
 异化作用	异化作用 catabolism dissimilation
@@ -20442,7 +20442,7 @@
 异国	异国 foreign land
 异国情调	异国情调 exotic atmosphere
 异地	异地 different land strange land
-异型	异型 allow-type heteromorphosis
+异型	异型 allo-type heteromorphosis
 异己	异己 dissident
 异常	异常 exceptional
 异乡	异乡 foreign land
@@ -23196,7 +23196,7 @@
 技术革命	技术革命 technological revolution
 技术革新	技术革新 technological innovation
 技校	技校 professional school
-技法	技法 techniques
+技法	技法 technics
 技能	技能 skill
 技艺	技艺 skill technique artistry
 抄	抄 copy plagiarize search and seize go transcribe take a shortcut search and confiscate
@@ -25970,7 +25970,7 @@
 斯特拉斯堡	斯特拉斯堡 Strasbourg
 斯特拉特福	斯特拉特福 Stratford
 斯特拉班	斯特拉班 Strabane
-斯特朗	斯特朗 Strong Strange Strawn
+斯特朗	斯特朗 Strong Strang Strawn
 斯特灵	斯特灵 Sterling Stirling
 斯特金湾	斯特金湾 Sturgeon Bay
 斯瓦希里	斯瓦希里 Swahili
@@ -26008,7 +26008,7 @@
 新军	新军 Xinjun
 新几内亚	新几内亚 New Guinea
 新制	新制 new policy
-新加坡	新加坡 Singapore Singapore
+新加坡	新加坡 Singapore Signapore
 新加坡人	新加坡人 Singaporean person
 新化	新化 Xinhua
 新华社	新华社 Xinhua News Agency
@@ -28381,7 +28381,7 @@
 林肯	林肯 Licoln Lincoln
 林肯港	林肯港 Port Lincoln
 林肯郡	林肯郡 Lincolnshire
-林茨	林茨 Lines
+林茨	林茨 Linz
 林虑山	林虑山 Lin Lushan
 林贝	林贝 Limbe
 林雪平	林雪平 Lin Xueping
@@ -28981,8 +28981,8 @@
 桌面	桌面 desktop tabletop
 桌面系统	桌面系统 desktop system
 桎	桎 fetters
-桐	桐 tongue tree
-桐油	桐油 tongue oil
+桐	桐 tung tree
+桐油	桐油 tung oil
 桑	桑 mulberry tree
 桑切斯	桑切斯 Sanchez
 桑叶	桑叶 mulberry leaf
@@ -29591,7 +29591,7 @@
 欧布纳	欧布纳 Aubebas
 欧文	欧文 Irving Owen Erwin
 欧文思伯勒	欧文思伯勒 Owensboro
-欧洲	欧洲 Europe European
+欧洲	欧洲 Europe Europen
 欧洲人	欧洲人 European
 欧洲共同体	欧洲共同体 European Community
 欧洲大陆	欧洲大陆 Europe continent
@@ -31142,7 +31142,7 @@
 油料作物	油料作物 oil-bearing crops
 油条	油条 fried dough sticks
 油松	油松 Chinese pine
-油桐	油桐 oil tongue tree
+油桐	油桐 oil tung tree
 油桶	油桶 oil drum
 油棕	油棕 oil palm
 油槽	油槽 fuel tank
@@ -32826,7 +32826,7 @@
 滔滔	滔滔 flowing smoothly
 滔滔不绝	滔滔不绝 talk on and on
 滕	滕 Teng
-滕南特克里克	滕南特克里克 Tenants Creek
+滕南特克里克	滕南特克里克 Tennants Creek
 滟	滟 tossing of billows
 滠	滠 She River
 满	满 Manchurian full fulfill filled packed
@@ -39933,7 +39933,7 @@
 纳赛尔	纳赛尔 Nasyr
 纳闷	纳闷 wonder
 纳闽岛	纳闽岛 Labuan
-纳韦尔	纳韦尔 Never
+纳韦尔	纳韦尔 Nevers
 纳马塔奈	纳马塔奈 Namatanai
 纵	纵 vertical even if release
 纵令	纵令 albeit
@@ -41746,7 +41746,7 @@
 肮脏	肮脏 dirty filthy
 肯	肯 agree consent ready willing
 肯亚	肯亚 Kenya
-肯他基大学	肯他基大学 University of Kentucky
+肯他基大学	肯他基大学 Univeristy of Kentucky
 肯塔基	肯塔基 Kentucky
 肯定	肯定 sure certain definite confirm affirm affirmative
 肯尼亚	肯尼亚 Kenya
@@ -41936,7 +41936,7 @@
 脉动电流	脉动电流 pulsation current
 脉搏	脉搏 pulse stroll
 脉石	脉石 matrix gangue veinstone
-脉管	脉管 was
+脉管	脉管 vas
 脉络	脉络 arteries and veins logical arrangement
 胭	胭 rouge
 胭脂	胭脂 rouge
@@ -43135,7 +43135,7 @@
 英武	英武 martial-looking
 英汉	英汉 English Chinese
 英灵	英灵 spirit of a martyr
-英烈	英烈 heroes
+英烈	英烈 heros
 英特尔	英特尔 Intel
 英石	英石 Yingshi
 英联邦	英联邦 British Commonwealth of Nations
@@ -43803,7 +43803,7 @@
 董事长	董事长 chairman of the board chairman
 董卓	董卓 Dong Zhuo
 董存瑞	董存瑞 Dong Cunrui
-董建华	董建华 Tongue Chee-hwa
+董建华	董建华 Tung Chee-hwa
 董必武	董必武 Dong Biwu
 葩	葩 corolla of flower
 葫	葫 Allium scorodoprasum bottle gourd
@@ -46863,7 +46863,7 @@
 赫尔松	赫尔松 Kherson
 赫尔辛基	赫尔辛基 Helsinki
 赫尔辛堡	赫尔辛堡 Helsingborg
-赫德	赫德 Herder Header Heard
+赫德	赫德 Herder Heder Heard
 赫斯	赫斯 Hess
 赫斯廷斯	赫斯廷斯 Hastings
 赫本	赫本 Hofn
@@ -49453,7 +49453,7 @@
 醋	醋 vinegar
 醋酸	醋酸 acetic acid
 醋酸纤维	醋酸纤维 acetate fiber
-醑	醑 strain spirits spirits
+醑	醑 strain spirits spiritus
 醒	醒 wake up awake
 醒悟	醒悟 come to realize
 醒来	醒来 waken
@@ -49764,7 +49764,7 @@
 金橘	金橘 kumquat
 金正日	金正日 Kim Jong Il
 金水	金水 Jinshui
-金永南	金永南 Kim Yong Name
+金永南	金永南 Kim Yong Nam
 金沙	金沙 Jinsha
 金沙江	金沙江 Jinsha River
 金沙萨	金沙萨 Kinshasa
@@ -50483,7 +50483,7 @@
 长子的名份	长子的名份 the status of being the eldest son
 长存	长存 exist forever
 长孙	长孙 eldest grandson
-长宁	长宁 Changing
+长宁	长宁 Changning
 长安	长安 Chang-an
 长安街	长安街 Chang'an Street
 长官	长官 senior official
@@ -51147,7 +51147,7 @@
 阿贝马马环礁	阿贝马马环礁 Abemama Atoll
 阿赫内斯	阿赫内斯 Aggeneys
 阿里	阿里 Ali
-阿里卡	阿里卡 Africa
+阿里卡	阿里卡 Arica
 阿里斯蒂德	阿里斯蒂德 Aristede
 阿雅丘	阿雅丘 Ajaccio
 阿雷基帕	阿雷基帕 Arequipa

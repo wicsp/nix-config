@@ -622,14 +622,14 @@ end
 
 ---候選詞
 ---@param memory Memory
----@param typo string
+---@param typ string
 ---@param start integer
 ---@param _end integer
 ---@param entry DictEntry
 ---@return Phrase
-function rime.Phrase(memory, typo, start, _end, entry)
+function rime.Phrase(memory, typ, start, _end, entry)
     ---@diagnostic disable-next-line: undefined-global, no-unknown
-    return Phrase(memory, typo, start, _end, entry)
+    return Phrase(memory, typ, start, _end, entry)
 end
 
 ---Opencc

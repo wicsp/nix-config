@@ -1,4 +1,4 @@
--- embedded_cands.lua
+-- embeded_cands.lua
 -- encoding: utf-8
 -- CC-BY-4.0
 
@@ -356,7 +356,7 @@ local data = {
     ev = "年",
     wx = "象",
     nt = "才",
-    and = "右",
+    nd = "右",
     hu = "半",
     dg = "吐",
     kr = "没",
@@ -409,7 +409,7 @@ local data = {
     ez = "柯",
     gi = "养",
     bd = "强",
-    on = "越",
+    pn = "越",
     po = "踢",
     de = "吃",
     ya = "爪",
@@ -434,7 +434,7 @@ local data = {
     kb = "流",
     mh = "户",
     yi = "至",
-    it = "幺",
+    iy = "幺",
     yh = "致",
     kk = "治",
     ux = "换",
@@ -688,20 +688,20 @@ local data = {
 
 }
 -- 將要被返回的過濾器對象
-local embedded_cands_filter = {}
+local embeded_cands_filter = {}
 
 --[[
 # xxx.schema.yaml
 switches:
-  - name: embedded_cands
+  - name: embeded_cands
     states: [ 普通, 嵌入 ]
     reset: 1
 engine:
   filters:
-    - lua_filter@*smyh.embedded_cands
+    - lua_filter@*smyh.embeded_cands
 key_binder:
   bindings:
-    - { when: always, accept: "Control+Shift+E", toggle: embedded_cands }
+    - { when: always, accept: "Control+Shift+E", toggle: embeded_cands }
 --]]
 
 -- 候選序號標記
@@ -714,7 +714,7 @@ local next_format = "${候選}${Comment}${Seq}"
 local separator = " "
 
 -- 讀取 schema.yaml 開關設置:
-local option_name = "embedded_cands"
+local option_name = "embeded_cands"
 
 -- 從方案配置中讀取字符串
 local function parse_conf_str(env, path, default)
@@ -816,7 +816,7 @@ function namespaces:config(env)
     return namespaces[env.name_space] and namespaces[env.name_space].config
 end
 
-function embedded_cands_filter.init(env)
+function embeded_cands_filter.init(env)
     -- 讀取配置項
     local ok = pcall(namespaces.init, namespaces, env)
     if not ok then
@@ -883,7 +883,7 @@ local function render_cand(env, seq, code, text, comment)
 end
 
 -- 過濾器
-function embedded_cands_filter.func(input, env)
+function embeded_cands_filter.func(input, env)
     if not env.option[namespaces:config(env).option_name] then
         for cand in input:iter() do
             yield(cand)
@@ -969,7 +969,7 @@ function embedded_cands_filter.func(input, env)
     end
 end
 
-function embedded_cands_filter.fini(env)
+function embeded_cands_filter.fini(env)
 end
 
-return embedded_cands_filter
+return embeded_cands_filter

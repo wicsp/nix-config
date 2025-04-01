@@ -30,7 +30,7 @@ columns:
 安全措施	wb jn ulo le	1
 安全等级	wb jn rg icj	1
 安全电子交易	wb jn oa hi ab one	1
-安全功能评估	wb jn usl k she jcg	1
+安全功能评估	wb jn usl k seh jcg	1
 安全过滤器	wb jn ku kzh dd	1
 安全检查	wb jn ejk eof	1
 安全控制	wb jn ueu qrp	1
@@ -57,14 +57,14 @@ columns:
 按序	uwb xiv	1
 按序检测	uwb xiv ejk ko	1
 按序提交	uwb xiv uo ab	1
-按需知密	uwb tle od what	1
+按需知密	uwb tle od wht	1
 按序执行	uwb xiv uki p	1
 按照指令	uwb opd uv jks	1
 安装处理控制	wb agti hy ndl ueu qrp	1
 安装和检验阶段	wb agti x ejk nj tjp uf	1
 安装技术	wb agti uci eid	1
 奥伯丁武器试验场	tmpm jub ad fps dd sp nj ga	1
-凹多边形	mfi ll su file	1
+凹多边形	mfi ll su fle	1
 凹体	mfi jef	1
 奥汀	tmpm kad	1
 傲游浏览器	jap kle kvp pre dd	1
@@ -136,7 +136,7 @@ columns:
 保护地	jde umh ge	1
 保护队列区	jde umh tjr gp nb	1
 保护方式	jde umh lf pug	1
-包加密	nvs sd what	1
+包加密	nvs sd wht	1
 包交换	nvs ab ux	1
 包交换公用数据网	nvs ab ux hk ty pb uc mbb	1
 包交换数据网	nvs ab ux pb uc mbb	1
@@ -153,7 +153,7 @@ columns:
 保留站	jde bq iyd	1
 保留字	jde bq whi	1
 暴露	olh tps	1
-保密	jde what	1
+保密	jde wht	1
 薄膜	lkn vlom	1
 薄膜磁盘	lkn vlom mhi ia	1
 薄膜磁头	lkn vlom mhi wm	1
@@ -165,12 +165,12 @@ columns:
 包围盒	nvs rgw jda	1
 包围盒测试	nvs rgw jda ko sp	1
 报文	uz vw	1
-报文加密	uz vw sd what	1
+报文加密	uz vw sd wht	1
 报文鉴别	uz vw prz ds	1
 报文鉴别码	uz vw prz ds mn	1
 报文交换	uz vw ab ux	1
 报文摘译	uz vw uim sru	1
-保形插值	jde file ulp jnq	1
+保形插值	jde fle ulp jnq	1
 包装拆器	nvs agti uti dd	1
 背包问题	avv nvs adk ot	1
 被测变量	tr ko zc ofd	1
@@ -187,7 +187,7 @@ columns:
 贝济埃曲线	ob kqq gko yq ifp	1
 备件	hqt jq	1
 背景色	avv ogy xm	1
-倍密度软盘	jid what xlr yeq ia	1
+倍密度软盘	jid wht xlr yeq ia	1
 贝赛尔	ob wqh xyx	1
 贝赛尔曲线	ob wqh xyx yq ifp	1
 贝叶斯定理	ob dns zht wt ndl	1
@@ -247,7 +247,7 @@ columns:
 编程语言	imi xdn sw sy	1
 编程只读存储器	imi xdn dh snam ng jsq dd	1
 变度	zc xlr	1
-边覆盖	su vwe game	1
+边覆盖	su vwe gam	1
 变更转储	zc fo ym jsq	1
 变化检测	zc jvb ejk ko	1
 变换	zc ux	1
@@ -288,7 +288,7 @@ columns:
 编码方法	imi mn lf kg	1
 编码器	imi mn dd	1
 编码效率	imi mn abh zi	1
-编码形式	imi mn file pug	1
+编码形式	imi mn fle pug	1
 编码字符	imi mn whi rjk	1
 编码字符集	imi mn whi rjk ue	1
 变频器	zc ssw dd	1
@@ -302,7 +302,7 @@ columns:
 变迁子网	zc luc hi mbb	1
 边写边读	su wf su snam	1
 便携式计算机	jfo uuv pug sn rql eo	1
-变形	zc file	1
+变形	zc fle	1
 边沿触发	su kod xtc sr	1
 变异	zc vl	1
 编译	imi sru	1
@@ -349,7 +349,7 @@ columns:
 标记变量	efs svj zc ofd	1
 标记类型	efs svj pmd flpg	1
 标记流路	efs svj kb psg	1
-标记阅读机	efs svj had snam eo	1
+标记阅读机	efs svj ahd snam eo	1
 表决器	ati wnj dd	1
 表决系统	ati wnj tis ibp	1
 标量	efs ofd	1
@@ -386,12 +386,12 @@ columns:
 标准速度带	efs wui xuc xlr lw	1
 标准通用置标语言	efs wui kt ty yn efs sw sy	1
 标准文件	efs wui vw jq	1
-标准形式下推自动机	efs wui file pug fy uu oi bs eo	1
+标准形式下推自动机	efs wui fle pug fy uu oi bs eo	1
 标准语言	efs wui sw sy	1
 标准中断	efs wui d pat	1
 别名	ds ld	1
 别名分析	ds ld hp etj	1
-宾夕法尼亚大学	with lx kg cvb fcy m kw	1
+宾夕法尼亚大学	wth lx kg cvb fcy m kw	1
 并串行转换器	hl ddg p ym ux dd	1
 并定理	hl wt ndl	1
 病毒	afm akm	1
@@ -451,9 +451,9 @@ columns:
 并行数据库	hl p pb uc xyc	1
 并行搜索	hl p upg nwi	1
 并行算法	hl p rql kg	1
-饼形图	qhl file rhw	1
+饼形图	qhl fle rhw	1
 并行图论算法	hl p rhw sjl rql kg	1
-并行图形算法	hl p rhw file rql kg	1
+并行图形算法	hl p rhw fle rql kg	1
 并行推理机	hl p uu ndl eo	1
 并行外排序	hl p lyb ur xiv	1
 并行性	hl p hls	1
@@ -470,8 +470,8 @@ columns:
 伯努利盘	jub br xp ia	1
 波斯特系统	krp zht qg tis ibp	1
 波特	krp qg	1
-波形	krp file	1
-波形流水线	krp file kb ks ifp	1
+波形	krp fle	1
+波形流水线	krp fle kb ks ifp	1
 博弈	nnk zcl	1
 博弈论	nnk zcl sjl	1
 博弈树	nnk zcl erk	1
@@ -518,7 +518,7 @@ columns:
 不可抵赖	c z ubi xxo	1
 不可分页动态区	c z hp wy bs mih nb	1
 不可靠进程	c z qdr qu xdn	1
-不可逆加密	c z hsu sd what	1
+不可逆加密	c z hsu sd wht	1
 不可判定问题	c z hup wt adk ot	1
 补码	tyb mn	1
 补码器	tyb mn dd	1
@@ -546,8 +546,8 @@ columns:
 裁剪曲面	npt hvp yq bm	1
 彩色打印机	yee xm ua bfz eo	1
 彩色图像	yee xm rhw jwx	1
-彩色图形适配器	yee xm rhw file auc yv dd	1
-彩色图形阵列	yee xm rhw file tyc gp	1
+彩色图形适配器	yee xm rhw fle auc yv dd	1
+彩色图形阵列	yee xm rhw fle tyc gp	1
 彩色显示	yee xm ocy fs	1
 彩色显示器	yee xm ocy fs dd	1
 财务一体化软件	ont hs f jef jvb yeq jq	1
@@ -614,7 +614,7 @@ columns:
 测试程序	ko sp xdn xiv	1
 测试存取端口	ko sp ng qr ivl dk	1
 测试点	ko sp yd	1
-测试覆盖	ko sp vwe game	1
+测试覆盖	ko sp vwe gam	1
 测试规约	ko sp hej ini	1
 测试过程	ko sp ku xdn	1
 测试环路	ko sp nc psg	1
@@ -685,15 +685,15 @@ columns:
 差分电压信号	gu hp oa xgi js df	1
 差分方式	gu hp lf pug	1
 差分脉码调制	gu hp vik mn smg qrp	1
-差分密码分析	gu hp what mn hp etj	1
+差分密码分析	gu hp wht mn hp etj	1
 差分双绞线	gu hp rr iab ifp	1
 叉积	rid xdh	1
 插件	ulp jq	1
 插件导轨	ulp jq vk ykj	1
 插件架	ulp jq sde	1
 插接兼容计算机	ulp uib hbc whg sn rql eo	1
-插孔	ulp have	1
-插孔板	ulp have exr	1
+插孔	ulp hae	1
+插孔板	ulp hae exr	1
 查讫符号	eof sea rjk df	1
 插入排序	ulp ju ur xiv	1
 插入异常	ulp ju vl srj	1
@@ -726,7 +726,7 @@ columns:
 场地自治	ga ge oi kk	1
 唱碟	doo mla	1
 长度域	pc xlr gpd	1
-常规密码体制	srj hej what mn jef qrp	1
+常规密码体制	srj hej wht mn jef qrp	1
 常规信息系统	srj hej js ohx tis ibp	1
 常见问题	srj ej adk ot	1
 长距离依存关系	pc pnn zb jti ng hmd tis	1
@@ -759,7 +759,7 @@ columns:
 超级服务器	ppd icj vz hs dd	1
 超级计算	ppd icj sn rql	1
 超级计算机	ppd icj sn rql eo	1
-超级视频图形适配器	ppd icj fe ssw rhw file auc yv dd	1
+超级视频图形适配器	ppd icj fe ssw rhw fle auc yv dd	1
 超级小型计算机	ppd icj yx flpg sn rql eo	1
 超级巡警	ppd icj ou lg	1
 超级影碟	ppd icj og mla	1
@@ -795,7 +795,7 @@ columns:
 成本效益分析	na ef abh kam hp etj	1
 乘法器	xav kg dd	1
 成分语义学	na hp sw ib kw	1
-乘积密码	xav xdh what mn	1
+乘积密码	xav xdh wht mn	1
 乘积曲面	xav xdh yq bm	1
 承诺	ak sln	1
 乘商寄存器	xav im wmz ng dd	1
@@ -848,7 +848,7 @@ columns:
 程序验证器	xdn xiv nj sf dd	1
 程序优先级	xdn xiv joy qp icj	1
 程序员作业	xdn xiv do jw cy	1
-程序暂停	xdn xiv to jga	1
+程序暂停	xdn xiv yto jga	1
 程序正确性	xdn xiv fsi mx hls	1
 程序正确性证明	xdn xiv fsi mx hls sf ov	1
 程序纸	xdn xiv ibs	1
@@ -888,7 +888,7 @@ columns:
 重构	ldl enk	1
 重建	ldl bu	1
 重建滤波器	ldl bu kzh krp dd	1
-虫孔寻径	cc have bkc wru	1
+虫孔寻径	cc hae bkc wru	1
 重码	ldl mn	1
 重码字词数	ldl mn whi saf pb	1
 重入监督码	ldl ju pra yfyq mn	1
@@ -920,7 +920,7 @@ columns:
 重组	ldl if	1
 重做	ldl jc	1
 丑恶报文	agt fchx uz vw	1
-稠密性	xmg what hls	1
+稠密性	xmg wht hls	1
 抽象层次	udy wx cb we	1
 抽象窗口工具箱	udy wx et dk ug qhb req	1
 抽象方法	udy wx lf kg	1
@@ -998,7 +998,7 @@ columns:
 串行线路网际协议	ddg p ifp psg mbb tfs nsh sib	1
 串化器	ddg jvb dd	1
 串级控制	ddg icj ueu qrp	1
-穿孔卡	el have yfy	1
+穿孔卡	el hae yfy	1
 串联端接	ddg qhm ivl uib	1
 串联端接线	ddg qhm ivl uib ifp	1
 串联匹配	ddg qhm npe yv	1
@@ -1027,7 +1027,7 @@ columns:
 串行加法	ddg p sd kg	1
 串行任务	ddg p jt hs	1
 串行鼠标	ddg p ps efs	1
-穿越序列	el on xiv gp	1
+穿越序列	el pn xiv gp	1
 传值	jm jnq	1
 创建日期	jzp bu or zhv	1
 创建原语	jzp bu xu sw	1
@@ -1087,7 +1087,7 @@ columns:
 词类	saf pmd	1
 词流通频度	saf kb kt ssw xlr	1
 词码表	saf mn ati	1
-次密钥	we what zvy	1
+次密钥	we wht zvy	1
 磁膜	mhi vlom	1
 磁盘	mhi ia	1
 磁盘操作系统	mhi ia udd jw tis ibp	1
@@ -1105,11 +1105,11 @@ columns:
 词使用频度	saf jf ty ssw xlr	1
 词素	saf ais	1
 磁条	mhi he	1
-磁条阅读机	mhi he had snam eo	1
+磁条阅读机	mhi he ahd snam eo	1
 磁头	mhi wm	1
 磁头定位机构	mhi wm wt ji eo enk	1
 磁头读写槽	mhi wm snam wf efy	1
-磁头缝隙	mhi wm iha to	1
+磁头缝隙	mhi wm iha tyo	1
 磁头加载机构	mhi wm sd npy eo enk	1
 磁头加载区	mhi wm sd npy nb	1
 磁头起落区	mhi wm pv lk nb	1
@@ -1134,18 +1134,18 @@ columns:
 存储保护	ng jsq jde umh	1
 存储带宽	ng jsq lw wl	1
 存储单元	ng jsq hq mpe	1
-存储覆盖	ng jsq vwe game	1
-存储覆盖区	ng jsq vwe game nb	1
+存储覆盖	ng jsq vwe gam	1
+存储覆盖区	ng jsq vwe gam nb	1
 存储干扰	ng jsq eg uoy	1
 存储管理	ng jsq rwk ndl	1
 存储管理部件	ng jsq rwk ndl id jq	1
 存储管理策略	ng jsq rwk ndl remk qsg	1
 存储管理服务	ng jsq rwk ndl vz hs	1
 存储过程	ng jsq ku xdn	1
-存储矩阵	ng jsq on tyc	1
+存储矩阵	ng jsq onn tyc	1
 存储空间	ng jsq eu ao	1
 存储媒体	ng jsq bze jef	1
-存储密度	ng jsq what xlr	1
+存储密度	ng jsq wht xlr	1
 存储模块	ng jsq elo gn	1
 存储模块驱动器接口	ng jsq elo gn nnb bs dd uib dk	1
 存储配置	ng jsq yv yn	1
@@ -1195,7 +1195,7 @@ columns:
 存取级别	ng qr icj ds	1
 存取机构	ng qr eo enk	1
 存取拒绝	ng qr unn ixm	1
-存取矩阵	ng qr on tyc	1
+存取矩阵	ng qr onn tyc	1
 存取控制	ng qr ueu qrp	1
 存取控制机制	ng qr ueu qrp eo qrp	1
 存取类型	ng qr pmd flpg	1
@@ -1208,7 +1208,7 @@ columns:
 存取许可	ng qr se z	1
 存在量词	ng n ofd saf	1
 错接	zl uib	1
-错乱密码	zl aae what mn	1
+错乱密码	zl aae wht mn	1
 错误	zl sdf	1
 错误捕获例程	zl sdf unf lmm jgp xdn	1
 错误传播受限码	zl sdf jm utp ywr tig mn	1
@@ -1293,7 +1293,7 @@ columns:
 淡出	kcch sm	1
 单处理器	hq hy ndl dd	1
 单纯词	hq ifs saf	1
-单纯形	hq ifs file	1
+单纯形	hq ifs fle	1
 单地址计算机	hq ge gsi sn rql eo	1
 单点故障	hq yd chp txn	1
 单点控制	hq yd ueu qrp	1
@@ -1322,7 +1322,7 @@ columns:
 单片系统	hq ap tis ibp	1
 淡入	kcch ju	1
 单入口点	hq ju dk yd	1
-单色图形适配器	hq xm rhw file auc yv dd	1
+单色图形适配器	hq xm rhw fle auc yv dd	1
 单色显示	hq xm ocy fs	1
 单色显示适配器	hq xm ocy fs auc yv dd	1
 单事件翻转	hq fd jq tp ym	1
@@ -1338,13 +1338,13 @@ columns:
 单向工作	hq tm ug jw	1
 单向故障	hq tm chp txn	1
 单向函数	hq tm akmk pb	1
-单向密码	hq tm what mn	1
+单向密码	hq tm wht mn	1
 单向通信	hq tm kt js	1
 单向栈自动机	hq tm efp oi bs eo	1
 单校双检	hq eab rr ejk	1
 单选按钮	hq qpu uwb zag	1
 单眼立体	hq qi il jef	1
-单钥密码系统	hq zvy what mn tis ibp	1
+单钥密码系统	hq zvy wht mn tis ibp	1
 单页纸	hq wy ibs	1
 单义	hq ib	1
 单一编址空间	hq f imi gsi eu ao	1
@@ -1372,7 +1372,7 @@ columns:
 倒焊	jy coe	1
 导航	vk izo	1
 道间串扰	h ao ddg uoy	1
-道密度	h what xlr	1
+道密度	h wht xlr	1
 倒排索引	jy ur nwi bgs	1
 导入规约	vk ju hej ini	1
 导数估计	vk pb jcg sn	1
@@ -1573,11 +1573,11 @@ columns:
 叠加	rrr sd	1
 叠片式磁头	rrr ap pug mhi wm	1
 蝶式排列	clae pug ur gp	1
-蝶形	clae file	1
+蝶形	clae fle	1
 叠印	rrr bfz	1
 定比变换	wt vv zc ux	1
 定长的	wt pc u	1
-顶点覆盖	awy yd vwe game	1
+顶点覆盖	awy yd vwe gam	1
 顶点混合	awy yd kov jdk	1
 定点计算机	wt yd sn rql eo	1
 定点数	wt yd pb	1
@@ -1686,7 +1686,7 @@ columns:
 读数据线	snam pb uc ifp	1
 读锁	snam zyo	1
 读写	snam wf	1
-读写孔	snam wf have	1
+读写孔	snam wf hae	1
 读写控制电路	snam wf ueu qrp oa psg	1
 读写周期	snam wf mgd zhv	1
 读信号	snam js df	1
@@ -1699,10 +1699,10 @@ columns:
 端点	ivl yd	1
 端点编码	ivl yd imi mn	1
 断点开关	pat yd fl hmd	1
-端端加密	ivl ivl sd what	1
-端端密钥	ivl ivl what zvy	1
+端端加密	ivl ivl sd wht	1
+端端密钥	ivl ivl wht zvy	1
 端对端传送	ivl rk ivl jm hm	1
-段覆盖	uf vwe game	1
+段覆盖	uf vwe gam	1
 段号	uf df	1
 端记号	ivl svj df	1
 端接	ivl uib	1
@@ -1735,8 +1735,8 @@ columns:
 对策论	rk remk sjl	1
 对称操作系统	rk xxy udd jw tis ibp	1
 对称传输线	rk xxy jm yjv ifp	1
-对称密码	rk xxy what mn	1
-对称密码系统	rk xxy what mn tis ibp	1
+对称密码	rk xxy wht mn	1
+对称密码系统	rk xxy wht mn tis ibp	1
 对等	rk rg	1
 对地平衡	rk ge eh pwv	1
 对话控制块	rk sa ueu qrp gn	1
@@ -1769,7 +1769,7 @@ columns:
 对象连接	rk wx yu uib	1
 对象链接与嵌入	rk wx zyu uib fa vze ju	1
 对象模型	rk wx elo flpg	1
-对象请求代理	rk wx save fk jp ndl	1
+对象请求代理	rk wx sav fk jp ndl	1
 对象式	rk wx pug	1
 对象式编程语言	rk wx pug imi xdn sw sy	1
 对象式程序设计	rk wx pug xdn xiv srs sn	1
@@ -1785,12 +1785,12 @@ columns:
 多八位编码字符集	ll hb ji imi mn whi rjk ue	1
 多变量控制器	ll zc ofd ueu qrp dd	1
 多遍排序	ll miu ur xiv	1
-多边形裁剪	ll su file npt hvp	1
-多边形窗口	ll su file et dk	1
-多边形分解	ll su file hp xt	1
-多边形面片	ll su file bm ap	1
-多边形取向	ll su file qr tm	1
-多边形凸分解	ll su file vfi hp xt	1
+多边形裁剪	ll su fle npt hvp	1
+多边形窗口	ll su fle et dk	1
+多边形分解	ll su fle hp xt	1
+多边形面片	ll su fle bm ap	1
+多边形取向	ll su fle qr tm	1
+多边形凸分解	ll su fle vfi hp xt	1
 多标记树	ll efs svj erk	1
 多播	ll utp	1
 多播主干网	ll utp in eg mbb	1
@@ -1940,7 +1940,7 @@ columns:
 多主体处理环境	ll in jef hy ndl nc gx	1
 多主体推理	ll in jef uu ndl	1
 多主体系统	ll in jef tis ibp	1
-多字节图形字符集	ll whi lz rhw file whi rjk ue	1
+多字节图形字符集	ll whi lz rhw fle whi rjk ue	1
 多总线	ll hd ifp	1
 多作业	ll jw cy	1
 多作业处理	ll jw cy hy ndl	1
@@ -1961,7 +1961,7 @@ columns:
 二分搜索	me hp upg nwi	1
 二分图	me hp rhw	1
 二级高速缓存	me icj gg xuc iyf ng	1
-二级密钥	me icj what zvy	1
+二级密钥	me icj wht zvy	1
 二阶参数连续	me tjp kme pb yu ina	1
 二阶几何连续	me tjp oj jz yu ina	1
 二阶逻辑	me tjp ylu ydq	1
@@ -2062,7 +2062,7 @@ columns:
 访问级别	slf adk icj ds	1
 访问局部性	slf adk cad id hls	1
 访问局守性	slf adk cad wkc hls	1
-访问矩阵	slf adk on tyc	1
+访问矩阵	slf adk onn tyc	1
 访问控制	slf adk ueu qrp	1
 访问控制列表	slf adk ueu qrp gp ati	1
 访问控制字段	slf adk ueu qrp whi uf	1
@@ -2075,7 +2075,7 @@ columns:
 方向向量	lf tm tm ofd	1
 防信息泄漏	tlf js ohx kla kct	1
 防信息泄漏控制范围	tlf js ohx kla kct ueu qrp lkz rgw	1
-仿形控制器	jlf file ueu qrp dd	1
+仿形控制器	jlf fle ueu qrp dd	1
 方言学	lf sy kw	1
 防疫程序	tlf ars xdn xiv	1
 仿真	jlf nq	1
@@ -2091,8 +2091,8 @@ columns:
 非传统计算机	rf jm ibp sn rql eo	1
 非单调推理	rf hq smg uu ndl	1
 非对称	rf rk xxy	1
-非对称密码	rf rk xxy what mn	1
-非对称密码系统	rf rk xxy what mn tis ibp	1
+非对称密码	rf rk xxy wht mn	1
+非对称密码系统	rf rk xxy wht mn tis ibp	1
 非对称选择网	rf rk xxy qpu uru mbb	1
 费尔托斯特	to xyx utr zht qg	1
 非过程语言	rf ku xdn sw sy	1
@@ -2103,17 +2103,17 @@ columns:
 非均匀存储器存取	rf gnw nwb ng jsq dd ng qr	1
 非均匀对象模型	rf gnw nwb rk wx elo flpg	1
 非均匀有理	rf gnw nwb nv ndl	1
-非流形	rf kb file	1
-非流形造型	rf kb file qdu flpg	1
+非流形	rf kb fle	1
+非流形造型	rf kb fle qdu flpg	1
 非门	rf am	1
-非秘密性	rf xht what hls	1
+非秘密性	rf xht wht hls	1
 非抹除栈自动机	rf ufe tjx efp oi bs eo	1
 非屏蔽双绞线	rf chl lfh rr iab ifp	1
 非平凡函数依赖	rf eh oid akmk pb jti xxo	1
 非平衡树	rf eh pwv erk	1
 非抢先调度	rf ujz qp smg xlr	1
 非抢先多任务处理	rf ujz qp ll jt hs hy ndl	1
-非请求分页	rf save fk hp wy	1
+非请求分页	rf sav fk hp wy	1
 非确保操作	rf mx jde udd jw	1
 非确定计算	rf mx wt sn rql	1
 非确定空间复杂性	rf mx wt eu ao eoh ke hls	1
@@ -2235,9 +2235,9 @@ columns:
 分析模型	hp etj elo flpg	1
 分析属性	hp etj ct hls	1
 分析学习	hp etj kw zx	1
-分形	hp file	1
-分形编码	hp file imi mn	1
-分形几何	hp file oj jz	1
+分形	hp fle	1
+分形编码	hp fle imi mn	1
+分形几何	hp fle oj jz	1
 分页	hp wy	1
 分页程序	hp wy xdn xiv	1
 分支	hp ci	1
@@ -2252,7 +2252,7 @@ columns:
 分组交换公用数据网	hp if ab ux hk ty pb uc mbb	1
 分组交换数据网	hp if ab ux pb uc mbb	1
 分组交换网	hp if ab ux mbb	1
-分组密码	hp if what mn	1
+分组密码	hp if wht mn	1
 分组式终端	hp if pug ihw ivl	1
 分组装拆器	hp if agti uti dd	1
 封闭安全环境	ggk ant wb jn nc gx	1
@@ -2265,7 +2265,7 @@ columns:
 峰位漂移	vha ji kvf xll	1
 风险分析	obi tjkf hp etj	1
 风险接受	obi tjkf uib ywr	1
-风险评估	obi tjkf she jcg	1
+风险评估	obi tjkf seh jcg	1
 风险容忍	obi tjkf whg pih	1
 风险指数	obi tjkf uv pb	1
 风行网络电影	obi p mbb is oa og	1
@@ -2284,9 +2284,9 @@ columns:
 幅度分割	rfd xlr hp wadp	1
 幅度检测	rfd xlr ejk ko	1
 付费电视	jk to oa fe	1
-覆盖	vwe game	1
-覆盖标识	vwe game efs sdh	1
-覆盖测试	vwe game ko sp	1
+覆盖	vwe gam	1
+覆盖标识	vwe gam efs sdh	1
+覆盖测试	vwe gam ko sp	1
 符号编码	rjk df imi mn	1
 符号操纵语言	rjk df udd ijj sw sy	1
 符号分析	rjk df hp etj	1
@@ -2331,17 +2331,17 @@ columns:
 服务例程	vz hs jgp xdn	1
 服务器	vz hs dd	1
 服务器模型	vz hs dd elo flpg	1
-服务请求块	vz hs save fk gn	1
-服务请求中断	vz hs save fk d pat	1
+服务请求块	vz hs sav fk gn	1
+服务请求中断	vz hs sav fk d pat	1
 服务数据单元	vz hs pb uc hq mpe	1
 服务性程序	vz hs hls xdn xiv	1
 服务原语	vz hs xu sw	1
 服务质量	vz hs xno ofd	1
-复形	eoh file	1
+复形	eoh fle	1
 负沿	xo kod	1
 复用库互操作组织	eoh ty xyc fb udd jw if idh	1
 复用器	eoh ty dd	1
-复原请求	eoh xu save fk	1
+复原请求	eoh xu sav fk	1
 负跃变	xo pt zc	1
 复杂事务	eoh ke fd hs	1
 复杂适应性系统	eoh ke auc xk hls tis ibp	1
@@ -2379,11 +2379,11 @@ columns:
 概率分析	eidu zi hp etj	1
 概率函数	eidu zi akmk pb	1
 概率弧	eidu zi byg	1
-概率加密	eidu zi sd what	1
+概率加密	eidu zi sd wht	1
 概率校正	eidu zi eab fsi	1
 概率逻辑	eidu zi ylu ydq	1
-概率密度	eidu zi what xlr	1
-概率密度函数	eidu zi what xlr akmk pb	1
+概率密度	eidu zi wht xlr	1
+概率密度函数	eidu zi wht xlr akmk pb	1
 概率模型	eidu zi elo flpg	1
 概率松弛法	eidu zi ehk bey kg	1
 概率算法	eidu zi rql kg	1
@@ -2407,7 +2407,7 @@ columns:
 概念依赖	eidu jah jti xxo	1
 概念因素	eidu jah rm ais	1
 改善性维护	vh ghd hls iu umh	1
-盖写	game wf	1
+盖写	gam wf	1
 概要设计	eidu v srs sn	1
 改正性活动	vh fsi hls ka bs	1
 干扰信号	eg uoy js df	1
@@ -2432,9 +2432,9 @@ columns:
 高阶逻辑	gg tjp ylu ydq	1
 高阶语言	gg tjp sw sy	1
 高宽比	gg wl vv	1
-高密度软盘	gg what xlr yeq ia	1
-高密度装配	gg what xlr agti yv	1
-高密度组装	gg what xlr if agti	1
+高密度软盘	gg wht xlr yeq ia	1
+高密度装配	gg wht xlr agti yv	1
+高密度组装	gg wht xlr if agti	1
 高能效处理	gg k abh hy ndl	1
 高频	gg ssw	1
 高清晰度电视	gg kav oet xlr oa fe	1
@@ -2519,7 +2519,7 @@ columns:
 工具箱	ug qhb req	1
 公理复杂性	hk ndl eoh ke hls	1
 公理语义	hk ndl sw ib	1
-功率密度	usl zi what xlr	1
+功率密度	usl zi wht xlr	1
 共模扼流程	lhb elo uxz kb xdn	1
 功能部件	usl k id jq	1
 功能测试	usl k ko sp	1
@@ -2540,7 +2540,7 @@ columns:
 功能语言学	usl k sw sy kw	1
 公平网	hk eh mbb	1
 公平性	hk eh hls	1
-共生矩阵	lhb ls on tyc	1
+共生矩阵	lhb ls onn tyc	1
 共享白板	lhb ghi ub exr	1
 共享变量	lhb ghi zc ofd	1
 共享操作系统	lhb ghi udd jw tis ibp	1
@@ -2567,8 +2567,8 @@ columns:
 公有域	hk nv gpd	1
 公钥	hk zvy	1
 公钥构架	hk zvy enk sde	1
-公钥加密	hk zvy sd what	1
-公钥密码	hk zvy what mn	1
+公钥加密	hk zvy sd wht	1
+公钥密码	hk zvy wht mn	1
 工作存储器	ug jw ng jsq dd	1
 工作存储区	ug jw ng jsq nb	1
 工作队列	ug jw tjr gp	1
@@ -2645,14 +2645,14 @@ columns:
 故障冻结	chp txn wry igd	1
 故障访问	chp txn slf adk	1
 故障分析	chp txn hp etj	1
-故障覆盖	chp txn vwe game	1
-故障覆盖率	chp txn vwe game zi	1
+故障覆盖	chp txn vwe gam	1
+故障覆盖率	chp txn vwe gam zi	1
 故障隔离	chp txn tng zb	1
 故障恢复	chp txn hnc eoh	1
 故障记录	chp txn svj bk	1
 故障检测	chp txn ejk ko	1
 故障禁闭	chp txn eef ant	1
-故障矩阵	chp txn on tyc	1
+故障矩阵	chp txn onn tyc	1
 故障控制	chp txn ueu qrp	1
 故障类别	chp txn pmd ds	1
 故障模拟	chp txn elo uvj	1
@@ -2706,7 +2706,7 @@ columns:
 管理员登陆	rwk ndl do hz tum	1
 关联处理机	hmd qhm hy ndl eo	1
 关联规则	hmd qhm hej op	1
-关联矩阵	hmd qhm on tyc	1
+关联矩阵	hmd qhm onn tyc	1
 关联失效	hmd qhm th abh	1
 关系代数	hmd tis jp pb	1
 关系逻辑	hmd tis ylu ydq	1
@@ -2716,7 +2716,7 @@ columns:
 关系网	hmd tis mbb	1
 关系系统	hmd tis tis ibp	1
 关系演算	hmd tis kwfh rql	1
-惯性矩	hko hls on	1
+惯性矩	hko hls onn	1
 惯用型词典	hko ty flpg saf ihb	1
 光笔	mg rv	1
 光标	mg efs	1
@@ -2838,14 +2838,14 @@ columns:
 过渡效果	ku kxlr abh qem	1
 国际权威认证	rn tfs er nfb sj sf	1
 国家信息基础设施	rn wj js ohx zhg msm srs le	1
-过孔	ku have	1
+过孔	ku hae	1
 过零检测器	ku tjks ejk ko dd	1
 过期检查点	ku zhv ejk eof yd	1
 过期数据	ku zhv pb uc	1
 哈佛结构	dj jtf igd enk	1
-哈密顿回路	dj what fsw rd psg	1
-哈密顿回路问题	dj what fsw rd psg adk ot	1
-哈密顿路径	dj what fsw psg wru	1
+哈密顿回路	dj wht fsw rd psg	1
+哈密顿回路问题	dj wht fsw rd psg adk ot	1
+哈密顿路径	dj wht fsw psg wru	1
 海量存储器	kek ofd ng jsq dd	1
 汉卡	kry yfy	1
 汉明距离	kry ov pnn zb	1
@@ -2929,8 +2929,8 @@ columns:
 汉字样本库	kry whi egy ef xyc	1
 汉字针式打印机	kry whi zn pug ua bfz eo	1
 汉字终端	kry whi ihw ivl	1
-汉字字形库	kry whi whi file xyc	1
-汉字字形码	kry whi whi file mn	1
+汉字字形库	kry whi whi fle xyc	1
+汉字字形码	kry whi whi fle mn	1
 行地址	p ge gsi	1
 行地址选通	p ge gsi qpu kt	1
 行频	p ssw	1
@@ -3100,8 +3100,8 @@ columns:
 换名缓冲器	ux ld iyf wdg dd	1
 唤醒	dx yo	1
 唤醒等待	dx yo rg wgk	1
-环形盒式磁带	nc file jda pug mhi lw	1
-环形缓冲	nc file iyf wdg	1
+环形盒式磁带	nc fle jda pug mhi lw	1
+环形缓冲	nc fle iyf wdg	1
 唤醒原语	dx yo xu sw	1
 唤醒字符	dx yo whi rjk	1
 环氧黏合剂	nc vgy xjkd jdk qpd	1
@@ -3129,7 +3129,7 @@ columns:
 恢复删除	hnc eoh ipd tjx	1
 回归测试	rd pbj ko sp	1
 会话层	jb sa cb	1
-会话密钥	jb sa what zvy	1
+会话密钥	jb sa wht zvy	1
 会话式分时	jb sa pug hp ok	1
 会话型业务	jb sa flpg cy hs	1
 回叫	rd di	1
@@ -3196,7 +3196,7 @@ columns:
 基本规程	zhg ef hej xdn	1
 基本集	zhg ef ue	1
 基本块	zhg ef gn	1
-基本密钥	zhg ef what zvy	1
+基本密钥	zhg ef wht zvy	1
 基本平台	zhg ef eh kd	1
 基本输入输出系统	zhg ef yjv ju yjv sm tis ibp	1
 基本网系统	zhg ef mbb tis ibp	1
@@ -3247,7 +3247,7 @@ columns:
 机柜	eo enn	1
 基函数	zhg akmk pb	1
 几何变换	oj jz zc ux	1
-几何变形	oj jz zc file	1
+几何变形	oj jz zc fle	1
 几何校正	oj jz eab fsi	1
 几何连续性	oj jz yu ina hls	1
 几何平均	oj jz eh gnw	1
@@ -3265,9 +3265,9 @@ columns:
 计量语言学	sn ofd sw sy kw	1
 记录方式	svj bk lf pug	1
 记录块	svj bk gn	1
-记录密度	svj bk what xlr	1
+记录密度	svj bk wht xlr	1
 记录锁定	svj bk zyo wt	1
-机密级	eo what icj	1
+机密级	eo wht icj	1
 积木世界	xdh em la qjp	1
 奇偶	mzk jqv	1
 奇偶归并排序	mzk jqv pbj hl ur xiv	1
@@ -3276,7 +3276,7 @@ columns:
 机器词典	eo dd saf ihb	1
 机器发现	eo dd sr ne	1
 机器翻译	eo dd tp sru	1
-机器翻译评价	eo dd tp sru she jjp	1
+机器翻译评价	eo dd tp sru seh jjp	1
 机器检查中断	eo dd ejk eof d pat	1
 机器浪费时间	eo dd kii to ok ao	1
 机器码	eo dd mn	1
@@ -3317,7 +3317,7 @@ columns:
 计算复杂度	sn rql eoh ke xlr	1
 计算复杂性	sn rql eoh ke hls	1
 计算机安全	sn rql eo wb jn	1
-计算机安全与保密	sn rql eo wb jn fa jde what	1
+计算机安全与保密	sn rql eo wb jn fa jde wht	1
 计算机病毒	sn rql eo afm akm	1
 计算机病毒对抗	sn rql eo afm akm rk uzo	1
 计算机操作指导	sn rql eo udd jw uv vk	1
@@ -3368,7 +3368,7 @@ columns:
 计算机类型	sn rql eo pmd flpg	1
 计算机理解	sn rql eo ndl xt	1
 计算机乱用	sn rql eo aae ty	1
-计算机密码学	sn rql eo what mn kw	1
+计算机密码学	sn rql eo wht mn kw	1
 计算机软件	sn rql eo yeq jq	1
 计算机视觉	sn rql eo fe kwe	1
 计算机实现	sn rql eo ww ne	1
@@ -3376,7 +3376,7 @@ columns:
 计算机数据	sn rql eo pb uc	1
 计算机数控	sn rql eo pb ueu	1
 计算机体系结构	sn rql eo jef tis igd enk	1
-计算机图形学	sn rql eo rhw file kw	1
+计算机图形学	sn rql eo rhw fle kw	1
 计算机网络	sn rql eo mbb is	1
 计算机维护与管理	sn rql eo iu umh fa rwk ndl	1
 计算机系统	sn rql eo tis ibp	1
@@ -3384,7 +3384,7 @@ columns:
 计算机下棋	sn rql eo fy ezh	1
 计算机显示	sn rql eo ocy fs	1
 计算机性能	sn rql eo hls k	1
-计算机性能评价	sn rql eo hls k she jjp	1
+计算机性能评价	sn rql eo hls k seh jjp	1
 计算机型谱	sn rql eo flpg shc	1
 计算机疫苗	sn rql eo ars lqt	1
 计算机艺术	sn rql eo lai eid	1
@@ -3485,10 +3485,10 @@ columns:
 夹具	hhb qhb	1
 加亮	sd go	1
 假冒攻击	jcm oqm uh um	1
-加密	sd what	1
-加密法	sd what kg	1
-加密算法	sd what rql kg	1
-加密协议	sd what nsh sib	1
+加密	sd wht	1
+加密法	sd wht kg	1
+加密算法	sd wht rql kg	1
+加密协议	sd wht nsh sib	1
 加权	sd er	1
 加权同步距离	sd er mf ssi pnn zb	1
 加权图	sd er rhw	1
@@ -3500,7 +3500,7 @@ columns:
 加速键	sd xuc zbu	1
 加速器	sd xuc dd	1
 加速时间	sd xuc ok ao	1
-加速图形端口	sd xuc rhw file ivl dk	1
+加速图形端口	sd xuc rhw fle ivl dk	1
 加锁	sd zyo	1
 家态	wj mih	1
 家庭版	wj xtg ax	1
@@ -3538,7 +3538,7 @@ columns:
 检错码	ejk zl mn	1
 检错停机	ejk zl jga eo	1
 简单安全特性	ra hq wb jn qg hls	1
-简单多边形	ra hq ll su file	1
+简单多边形	ra hq ll su fle	1
 简单链表	ra hq zyu ati	1
 简单网	ra hq mbb	1
 简单网关监视协议	ra hq mbb hmd pra fe nsh sib	1
@@ -3589,7 +3589,7 @@ columns:
 键位	zbu ji	1
 键位表	zbu ji ati	1
 键位布局	zbu ji nrj cad	1
-间隙定理	ao to wt ndl	1
+间隙定理	ao tyo wt ndl	1
 间歇故障	ao onfe chp txn	1
 间协议	ao nsh sib	1
 检验板测试	ejk nj exr ko sp	1
@@ -3650,7 +3650,7 @@ columns:
 交互式语言	ab fb pug sw sy	1
 交互式证明	ab fb pug sf ov	1
 交互式证明协议	ab fb pug sf ov nsh sib	1
-交互图形系统	ab fb rhw file tis ibp	1
+交互图形系统	ab fb rhw fle tis ibp	1
 交互型业务	ab fb flpg cy hs	1
 交互运作	ab fb buc jw	1
 交互主体	ab fb in jef	1
@@ -3720,7 +3720,7 @@ columns:
 揭露	uon tps	1
 解码	xt mn	1
 解码器	xt mn dd	1
-解密	xt what	1
+解密	xt wht	1
 截面	npu bm	1
 界面	qjp bm	1
 截面曲线	npu bm yq ifp	1
@@ -3776,9 +3776,9 @@ columns:
 紧急开头	pr xbh fl wm	1
 尽力投递	ciw sl urs htu	1
 近邻	tu jkt	1
-紧密一致性	pr what f yh hls	1
+紧密一致性	pr wht f yh hls	1
 金属粉末磁带	zj ct php fem mhi lw	1
-金属化孔	zj ct jvb have	1
+金属化孔	zj ct jvb hae	1
 近似算法	tu jvj rql kg	1
 近似推理	tu jvj uu ndl	1
 进位	qu ji	1
@@ -3903,8 +3903,8 @@ columns:
 聚类	qrt pmd	1
 聚类分析	qrt pmd hp etj	1
 距离向量	pnn zb tm ofd	1
-矩描述子	on ulq eiu hi	1
-橘皮书	it rp aa	1
+矩描述子	onn ulq eiu hi	1
+橘皮书	eit rp aa	1
 句型	gj flpg	1
 巨型计算机	nn flpg sn rql eo	1
 局域网	cad gpd mbb	1
@@ -3930,7 +3930,7 @@ columns:
 决策过程	wnj remk ku xdn	1
 决策函数	wnj remk akmk pb	1
 决策计划	wnj remk sn pp	1
-决策矩阵	wnj remk on tyc	1
+决策矩阵	wnj remk onn tyc	1
 决策空间	wnj remk eu ao	1
 决策控制	wnj remk ueu qrp	1
 决策论	wnj remk sjl	1
@@ -3945,14 +3945,14 @@ columns:
 绝对地址	ixm rk ge gsi	1
 绝对分辨率	ixm rk hp npn zi	1
 绝对机器代码	ixm rk eo dd jp mn	1
-绝密级	ixm what icj	1
+绝密级	ixm wht icj	1
 角色模型	xty xm elo flpg	1
 均衡器	gnw pwv dd	1
 均匀存储器访问	gnw nwb ng jsq dd slf adk	1
 卡尔曼滤波	yfy xyx oyr kzh krp	1
 卡洛变换	yfy ksg zc ux	1
 卡诺图	yfy sln rhw	1
-卡片穿孔	yfy ap el have	1
+卡片穿孔	yfy ap el hae	1
 卡片读入机	yfy ap snam ju eo	1
 卡普可归约性	yfy hco z pbj ini hls	1
 卡式磁带	yfy pug mhi lw	1
@@ -3970,7 +3970,7 @@ columns:
 开发周期	fl sr mgd zhv	1
 开放安全环境	fl lh wb jn nc gx	1
 开放的数据库连接	fl lh u pb uc xyc yu uib	1
-开放式图形库	fl lh pug rhw file xyc	1
+开放式图形库	fl lh pug rhw fle xyc	1
 开放体系结构框架	fl lh jef tis igd enk ennw sde	1
 开放系统	fl lh tis ibp	1
 开放系统互连	fl lh tis ibp fb yu	1
@@ -4037,8 +4037,8 @@ columns:
 可分页动态区	z hp wy bs mih nb	1
 可分页分区	z hp wy hp nb	1
 可分页区域	z hp wy nb gpd	1
-可覆盖树	z vwe game erk	1
-可覆盖图	z vwe game rhw	1
+可覆盖树	z vwe gam erk	1
+可覆盖图	z vwe gam rhw	1
 可服务时间	z vz hs ok ao	1
 可服务性	z vz hs hls	1
 可复用构件	z eoh ty enk jq	1
@@ -4058,7 +4058,7 @@ columns:
 课件	sqe jq	1
 可检测性	z ejk ko hls	1
 可见点	z ej yd	1
-可见多边形	z ej ll su file	1
+可见多边形	z ej ll su fle	1
 可见性	z ej hls	1
 可见性问题	z ej hls adk ot	1
 可靠性	z qdr hls	1
@@ -4066,7 +4066,7 @@ columns:
 可靠性分析	z qdr hls hp etj	1
 可靠性工程	z qdr hls ug xdn	1
 可靠性模型	z qdr hls elo flpg	1
-可靠性评价	z qdr hls she jjp	1
+可靠性评价	z qdr hls seh jjp	1
 可靠性认证	z qdr hls sj sf	1
 可靠性设计	z qdr hls srs sn	1
 可靠性数据	z qdr hls pb uc	1
@@ -4154,7 +4154,7 @@ columns:
 空气过滤器	eu vq ku kzh dd	1
 空气流	eu vq kb	1
 空气流速	eu vq kb xuc	1
-孔斯曲面	have zht yq bm	1
+孔斯曲面	hae zht yq bm	1
 空闲信道状态	eu ae js h amq mih	1
 空心字	eu hx whi	1
 空栈	eu efp	1
@@ -4165,7 +4165,7 @@ columns:
 控制策略	ueu qrp remk qsg	1
 控制冲突	ueu qrp wdg emq	1
 控制顶点	ueu qrp awy yd	1
-控制多边形	ueu qrp ll su file	1
+控制多边形	ueu qrp ll su fle	1
 控制工程	ueu qrp ug xdn	1
 控制关系	ueu qrp hmd tis	1
 控制柜	ueu qrp enn	1
@@ -4235,7 +4235,7 @@ columns:
 框架语法	ennw sde sw kg	1
 框架知识表示	ennw sde od sdh ati fs	1
 框图	ennw rhw	1
-窥孔优化	ehe have joy jvb	1
+窥孔优化	ehe hae joy jvb	1
 困难问题	rem rui adk ot	1
 扩充	uxg bpe	1
 扩充槽	uxg bpe efy	1
@@ -4247,7 +4247,7 @@ columns:
 扩展	uxg cl	1
 扩展操作	uxg cl udd jw	1
 扩展器	uxg cl dd	1
-扩展视频图形适配器	uxg cl fe ssw rhw file auc yv dd	1
+扩展视频图形适配器	uxg cl fe ssw rhw fle auc yv dd	1
 扩展随机佩特里网	uxg cl tn eo jof qg dl mbb	1
 扩展语义网络	uxg cl sw ib mbb is	1
 扩张规则	uxg bp hej op	1
@@ -4364,7 +4364,7 @@ columns:
 连接装配区	yu uib agti yv nb	1
 连接装入程序	yu uib agti ju xdn xiv	1
 链路管理	zyu psg rwk ndl	1
-链路加密	zyu psg sd what	1
+链路加密	zyu psg sd wht	1
 链路控制规程	zyu psg ueu qrp hej xdn	1
 链轮输纸	zyu yj yjv ibs	1
 联络	qhm is	1
@@ -4407,7 +4407,7 @@ columns:
 量化	ofd jvb	1
 量化知识复杂度	ofd jvb od sdh eoh ke xlr	1
 量子计算机	ofd hi sn rql eo	1
-量子密码	ofd hi what mn	1
+量子密码	ofd hi wht mn	1
 列表	gp ati	1
 列地址	gp ge gsi	1
 列地址选通	gp ge gsi qpu kt	1
@@ -4417,7 +4417,7 @@ columns:
 邻接表结构	jkt uib ati igd enk	1
 临界负载线	pro qjp xo npy ifp	1
 邻接关系	jkt uib hmd tis	1
-邻接矩阵	jkt uib on tyc	1
+邻接矩阵	jkt uib onn tyc	1
 临界控制	pro qjp ueu qrp	1
 临界路径	pro qjp psg wru	1
 临界区	pro qjp nb	1
@@ -4646,55 +4646,55 @@ columns:
 门阵列	am tyc gp	1
 蒙古文	lwf cg vw	1
 蒙塔古语法	lwf glj cg sw kg	1
-密度比率	what xlr vv zi	1
-密封	what ggk	1
-密封胶	what ggk vab	1
-密封连接器	what ggk yu uib dd	1
-密封器	what ggk dd	1
-密级	what icj	1
-密级数据	what icj pb uc	1
-密级信息	what icj js ohx	1
+密度比率	wht xlr vv zi	1
+密封	wht ggk	1
+密封胶	wht ggk vab	1
+密封连接器	wht ggk yu uib dd	1
+密封器	wht ggk dd	1
+密级	wht icj	1
+密级数据	wht icj pb uc	1
+密级信息	wht icj js ohx	1
 米利机	pm xp eo	1
-密码保密	what mn jde what	1
-密码传真	what mn jm nq	1
-密码分析	what mn hp etj	1
-密码分析攻击	what mn hp etj uh um	1
-密码检验和	what mn ejk nj x	1
-密码界	what mn qjp	1
-密码模件	what mn elo jq	1
-密码设施	what mn srs le	1
-密码师	what mn pf	1
-密码术	what mn eid	1
-密码体制	what mn jef qrp	1
-密码系统	what mn tis ibp	1
-密码学	what mn kw	1
-密码员	what mn do	1
-秘密级	xht what icj	1
-秘密密钥	xht what what zvy	1
-秘密性	xht what hls	1
+密码保密	wht mn jde wht	1
+密码传真	wht mn jm nq	1
+密码分析	wht mn hp etj	1
+密码分析攻击	wht mn hp etj uh um	1
+密码检验和	wht mn ejk nj x	1
+密码界	wht mn qjp	1
+密码模件	wht mn elo jq	1
+密码设施	wht mn srs le	1
+密码师	wht mn pf	1
+密码术	wht mn eid	1
+密码体制	wht mn jef qrp	1
+密码系统	wht mn tis ibp	1
+密码学	wht mn kw	1
+密码员	wht mn do	1
+秘密级	xht wht icj	1
+秘密密钥	xht wht wht zvy	1
+秘密性	xht wht hls	1
 迷你快车	puc jx hn yc	1
-密切平面	what rpd eh bm	1
+密切平面	wht rpd eh bm	1
 迷失消息	puc th kyv ohx	1
-密文	what vw	1
-密文反馈	what vw xr qco	1
-密文分组链接	what vw hp if zyu uib	1
-密钥流	what zvy kb	1
-密钥	what zvy	1
-密钥长度	what zvy pc xlr	1
-密钥短语	what zvy oz sw	1
-密钥对	what zvy rk	1
-密钥分配中心	what zvy hp yv d hx	1
-密钥服务器	what zvy vz hs dd	1
-密钥公证	what zvy hk sf	1
-密钥管理	what zvy rwk ndl	1
-密钥环	what zvy nc	1
-密钥恢复	what zvy hnc eoh	1
-密钥加密密钥	what zvy sd what what zvy	1
-密钥建立	what zvy bu il	1
-密钥交换	what zvy ab ux	1
-密钥搜索攻击	what zvy upg nwi uh um	1
-密钥托管	what zvy utr rwk	1
-密钥证书	what zvy sf aa	1
+密文	wht vw	1
+密文反馈	wht vw xr qco	1
+密文分组链接	wht vw hp if zyu uib	1
+密钥流	wht zvy kb	1
+密钥	wht zvy	1
+密钥长度	wht zvy pc xlr	1
+密钥短语	wht zvy oz sw	1
+密钥对	wht zvy rk	1
+密钥分配中心	wht zvy hp yv d hx	1
+密钥服务器	wht zvy vz hs dd	1
+密钥公证	wht zvy hk sf	1
+密钥管理	wht zvy rwk ndl	1
+密钥环	wht zvy nc	1
+密钥恢复	wht zvy hnc eoh	1
+密钥加密密钥	wht zvy sd wht wht zvy	1
+密钥建立	wht zvy bu il	1
+密钥交换	wht zvy ab ux	1
+密钥搜索攻击	wht zvy upg nwi uh um	1
+密钥托管	wht zvy utr rwk	1
+密钥证书	wht zvy sf aa	1
 面表	bm ati	1
 面伺服	bm jaf vz	1
 免费版	wp to ax	1
@@ -4703,7 +4703,7 @@ columns:
 免费网	wp to mbb	1
 面光源	bm mg kxu	1
 面检索	bm ejk nwi	1
-面密度	bm what xlr	1
+面密度	bm wht xlr	1
 面向比特协议	bm tm vv qg nsh sib	1
 面向代数语言	bm tm jp pb sw sy	1
 面向对话模型	bm tm rk sa elo flpg	1
@@ -4905,7 +4905,7 @@ columns:
 内裁剪	mj npt hvp	1
 内存	mj ng	1
 内存保护	mj ng jde umh	1
-内存分配覆盖	mj ng hp yv vwe game	1
+内存分配覆盖	mj ng hp yv vwe gam	1
 内存模块	mj ng elo gn	1
 内存碎片	mj ng mzj ap	1
 内存条	mj ng he	1
@@ -4961,7 +4961,7 @@ columns:
 年在	ev n	1
 粘着位	pyd gq ji	1
 凝聚	wvo qrt	1
-诺尔形式	sln xyx file pug	1
+诺尔形式	sln xyx fle pug	1
 诺亚效应	sln fcy abh xk	1
 诺依曼	sln jti oyr	1
 诺依曼结构	sln jti oyr igd enk	1
@@ -4987,7 +4987,7 @@ columns:
 排队规则	ur tjr hej op	1
 排队进程	ur tjr qu xdn	1
 排队模型	ur tjr elo flpg	1
-排队注册请求	ur tjr ki ic save fk	1
+排队注册请求	ur tjr ki ic sav fk	1
 排列	ur gp	1
 派生	kx ls	1
 排它锁	ur wv zyo	1
@@ -5068,17 +5068,17 @@ columns:
 屏蔽寄存器	chl lfh wmz ng dd	1
 屏蔽双绞线	chl lfh rr iab ifp	1
 屏蔽向量	chl lfh tm ofd	1
-评测规则	she ko hej op	1
+评测规则	seh ko hej op	1
 平凡函数依赖	eh oid akmk pb jti xxo	1
 平方非剩余	eh lf rf xa jxh	1
 平方剩余	eh lf xa jxh	1
-评估	she jcg	1
+评估	seh jcg	1
 平衡归并排序	eh pwv pbj hl ur xiv	1
 平衡树	eh pwv erk	1
 平衡型链路接入规程	eh pwv flpg zyu psg uib ju hej xdn	1
 平滑	eh kf	1
-评价	she jjp	1
-评价函数	she jjp akmk pb	1
+评价	seh jjp	1
+评价函数	seh jjp akmk pb	1
 平均存取时间	eh gnw ng qr ok ao	1
 平均等待时间	eh gnw rg wgk ok ao	1
 平均访问时间	eh gnw slf adk ok ao	1
@@ -5101,11 +5101,11 @@ columns:
 屏幕	chl lomr	1
 屏幕共享	chl lomr lhb ghi	1
 屏幕显示	chl lomr ocy fs	1
-屏幕显示字形	chl lomr ocy fs whi file	1
+屏幕显示字形	chl lomr ocy fs whi fle	1
 屏幕座标	chl lomr xjj efs	1
 乒乓过程	tftp tfid ku xdn	1
 乒乓模式	tftp tfid elo pug	1
-评审	she wo	1
+评审	seh wo	1
 平台	eh kd	1
 平行束卷积法	eh p xs hh xdh kg	1
 平行投影	eh p urs og	1
@@ -5160,7 +5160,7 @@ columns:
 启用	md ty	1
 欺诈	zhe swa	1
 起止式传输	pv si pug jm yjv	1
-恰当覆盖问题	hj yb vwe game adk ot	1
+恰当覆盖问题	hj yb vwe gam adk ot	1
 前端处理器	hv ivl hy ndl dd	1
 潜伏时间	khh jmq ok ao	1
 前集	hv ue	1
@@ -5235,7 +5235,7 @@ columns:
 窃听	erp dtj	1
 情报检索语言	ha uz ejk nwi sw sy	1
 清除	kav tjx	1
-清除请求	kav tjx save fk	1
+清除请求	kav tjx sav fk	1
 情感符号	ha nf rjk df	1
 情感建模	ha nf bu elo	1
 清洁盘	kav kgd ia	1
@@ -5247,12 +5247,12 @@ columns:
 情景自动机	ha ogy oi bs eo	1
 情况	ha wd	1
 情况语句	ha wd sw gj	1
-请求	save fk	1
-请求参数表	save fk kme pb ati	1
-请求处理	save fk hy ndl	1
-请求分时处理	save fk hp ok hy ndl	1
-请求分页	save fk hp wy	1
-请求评论	save fk she sjl	1
+请求	sav fk	1
+请求参数表	sav fk kme pb ati	1
+请求处理	sav fk hy ndl	1
+请求分时处理	sav fk hp ok hy ndl	1
+请求分页	sav fk hp wy	1
+请求评论	sav fk seh sjl	1
 青松汽车衡称重管理软件	avy ehk kv yc pwv xxy ldl rwk ndl yeq jq	1
 情态公理	ha mih hk ndl	1
 情态集	ha mih ue	1
@@ -5383,7 +5383,7 @@ columns:
 缺失损失	an th udo th	1
 缺陷	an txp	1
 缺陷管理	an txp rwk ndl	1
-缺陷跳越	an txp ppw on	1
+缺陷跳越	an txp ppw pn	1
 确信度	mx js xlr	1
 缺页	an wy	1
 缺页频率	an wy ssw zi	1
@@ -5495,7 +5495,7 @@ columns:
 任务执行区	jt hs uki p nb	1
 任务终止	jt hs ihw si	1
 任选用户设施	jt qpu ty mh srs le	1
-任意多边形	jt xh ll su file	1
+任意多边形	jt xh ll su fle	1
 认证	sj sf	1
 认证机构	sj sf eo enk	1
 认证链	sj sf zyu	1
@@ -5537,7 +5537,7 @@ columns:
 入侵者	ju jbw qo	1
 入射电压	ju zk oa xgi	1
 入事件	ju fd jq	1
-如影随形学英语	b og tn file kw lm sw	1
+如影随形学英语	b og tn fle kw lm sw	1
 软差错	yeq gu zl	1
 软磁盘	yeq mhi ia	1
 软故障	yeq chp txn	1
@@ -5592,7 +5592,7 @@ columns:
 软件轮廓	yeq jq yj xgh	1
 软件配置	yeq jq yv yn	1
 软件配置管理	yeq jq yv yn rwk ndl	1
-软件评测	yeq jq she ko	1
+软件评测	yeq jq seh ko	1
 软件平台	yeq jq eh kd	1
 软件潜行分析	yeq jq khh p hp etj	1
 软件区	yeq jq nb	1
@@ -5620,7 +5620,7 @@ columns:
 软件再工程	yeq jq fmg ug xdn	1
 软件质量	yeq jq xno ofd	1
 软件质量保证	yeq jq xno ofd jde sf	1
-软件质量评判准则	yeq jq xno ofd she hup wui op	1
+软件质量评判准则	yeq jq xno ofd seh hup wui op	1
 软件中断	yeq jq d pat	1
 软件注册员	yeq jq ki ic do	1
 软件主体	yeq jq in jef	1
@@ -5647,12 +5647,12 @@ columns:
 瑞星杀毒软件	nvl ol bem akm yeq jq	1
 弱方法	bw lf kg	1
 弱连通图	bw yu kt rhw	1
-弱密钥	bw what zvy	1
+弱密钥	bw wht zvy	1
 弱位	bw ji	1
 弱一致性模型	bw f yh hls elo flpg	1
 撒播	ulv utp	1
 三层交换	ts cb ab ux	1
-三重数据加密标准	ts ldl pb uc sd what efs wui	1
+三重数据加密标准	ts ldl pb uc sd wht efs wui	1
 三点透视	ts yd xvu fe	1
 三段论	ts uf sjl	1
 三级网络	ts icj mbb is	1
@@ -5681,7 +5681,7 @@ columns:
 三足网络	ts pu mbb is	1
 扫成曲面	ubj na yq bm	1
 扫描	ubj ulq	1
-扫描多边形	ubj ulq ll su file	1
+扫描多边形	ubj ulq ll su fle	1
 扫描模式	ubj ulq elo pug	1
 扫描平面	ubj ulq eh bm	1
 扫瞄器	ubj qlq dd	1
@@ -5706,7 +5706,7 @@ columns:
 色粉盒	xm php jda	1
 色集	xm ue	1
 色键	xm zbu	1
-色矩	xm on	1
+色矩	xm onn	1
 色空间	xm eu ao	1
 色模型	xm elo flpg	1
 色匹配	xm npe yv	1
@@ -5733,7 +5733,7 @@ columns:
 闪速存储器	aj xuc ng jsq dd	1
 熵编码	cim imi mn	1
 上标	yf efs	1
-上标越界	yf efs on qjp	1
+上标越界	yf efs pn qjp	1
 上播状态	yf utp amq mih	1
 上的多协议	yf u ll nsh sib	1
 上的网际协议	yf u mbb tfs nsh sib	1
@@ -5788,7 +5788,7 @@ columns:
 设计阶段	srs sn tjp uf	1
 设计库	srs sn xyc	1
 射极耦合逻辑	zk ec aqv jdk ylu ydq	1
-设计评审	srs sn she wo	1
+设计评审	srs sn seh wo	1
 设计审查	srs sn wo eof	1
 设计需求	srs sn tle fk	1
 设计验证	srs sn nj sf	1
@@ -5796,19 +5796,19 @@ columns:
 设计约束	srs sn ini xs	1
 设计自动化	srs sn oi bs jvb	1
 设计走查	srs sn pz eof	1
-涉密范畴	kssi what lkz qak	1
+涉密范畴	kssi wht lkz qak	1
 舍入	jas ju	1
 舍入误差	jas ju sdf gu	1
 设施	srs le	1
 设施分配	srs le hp yv	1
 设施管理	srs le rwk ndl	1
-设施请求	srs le save fk	1
+设施请求	srs le sav fk	1
 设施主体	srs le in jef	1
 设陷方式	srs txp lf pug	1
 摄像管	uqr jwx rwk	1
 摄像机	uqr jwx eo	1
 摄像机标定	uqr jwx eo efs wt	1
-蛇形行主编号	cwv file p in imi df	1
+蛇形行主编号	cwv fle p in imi df	1
 设置	srs yn	1
 深层格	kwh cb es	1
 审查	wo eof	1
@@ -5835,9 +5835,9 @@ columns:
 神经元模型	fog ir mpe elo flpg	1
 神经元网络	fog ir mpe mbb is	1
 神经专家系统	fog ir ma wj tis ibp	1
-申请令牌帧	ogs save jks aut ryo	1
-申请权标帧	ogs save er efs ryo	1
-申请栈	ogs save efp	1
+申请令牌帧	ogs sav jks aut ryo	1
+申请权标帧	ogs sav er efs ryo	1
+申请栈	ogs sav efp	1
 渗入测试	kkm ju ko sp	1
 申述性语言	ogs eiu hls sw sy	1
 生产线方法	ls ixc ifp lf kg	1
@@ -5956,7 +5956,7 @@ columns:
 视频卡	fe ssw yfy	1
 视频模式	fe ssw elo pug	1
 视频随机存储器	fe ssw tn eo ng jsq dd	1
-视频图形阵列	fe ssw rhw file tyc gp	1
+视频图形阵列	fe ssw rhw fle tyc gp	1
 视频消息	fe ssw kyv ohx	1
 视平面	fe eh bm	1
 视区	fe nb	1
@@ -6009,8 +6009,8 @@ columns:
 事务驱动系统	fd hs nnb bs tis ibp	1
 事务时间	fd hs ok ao	1
 事务消息传递	fd hs kyv ohx jm htu	1
-时隙	ok to	1
-时隙间隔	ok to ao tng	1
+时隙	ok tyo	1
+时隙间隔	ok tyo ao tng	1
 实线	ww ifp	1
 视线	fe ifp	1
 实现阶段	ww ne tjp uf	1
@@ -6169,9 +6169,9 @@ columns:
 数据寄存器	pb uc wmz ng dd	1
 数据集市	pb uc ue zr	1
 数据集中器	pb uc ue d dd	1
-数据加密标准	pb uc sd what efs wui	1
-数据加密密钥	pb uc sd what what zvy	1
-数据加密算法	pb uc sd what rql kg	1
+数据加密标准	pb uc sd wht efs wui	1
+数据加密密钥	pb uc sd wht wht zvy	1
+数据加密算法	pb uc sd wht rql kg	1
 数据交换机	pb uc ab ux eo	1
 数据结构	pb uc igd enk	1
 数据局部性	pb uc cad id hls	1
@@ -6179,7 +6179,7 @@ columns:
 数据控制语言	pb uc ueu qrp sw sy	1
 数据库	pb uc xyc	1
 数据库安全	pb uc xyc wb jn	1
-数据库保密	pb uc xyc jde what	1
+数据库保密	pb uc xyc jde wht	1
 数据库重构	pb uc xyc ldl enk	1
 数据库重组	pb uc xyc ldl if	1
 数据库管理系统	pb uc xyc rwk ndl tis ibp	1
@@ -6288,7 +6288,7 @@ columns:
 数学发现	pb kw sr ne	1
 数学公式	pb kw hk pug	1
 数学归纳	pb kw pbj imj	1
-数学形态学	pb kw file mih kw	1
+数学形态学	pb kw fle mih kw	1
 树压缩技术	erk xgi iwj uci eid	1
 术语	eid sw	1
 术语抽取	eid sw udy qr	1
@@ -6297,7 +6297,7 @@ columns:
 数制	pb qrp	1
 数值积分	pb jnq xdh hp	1
 数值精度	pb jnq pa xlr	1
-输纸孔	yjv ibs have	1
+输纸孔	yjv ibs hae	1
 输纸器	yjv ibs dd	1
 数值数据	pb jnq pb uc	1
 树状网	erk amq mbb	1
@@ -6309,7 +6309,7 @@ columns:
 数字电路	pb whi oa psg	1
 数字段	pb whi uf	1
 数字对象	pb whi rk wx	1
-数字仿形控制	pb whi jlf file ueu qrp	1
+数字仿形控制	pb whi jlf fle ueu qrp	1
 数字光驱	pb whi mg nnb	1
 数字化	pb whi jvb	1
 数字化仪	pb whi jvb jib	1
@@ -6349,7 +6349,7 @@ columns:
 双边闭合用户群	rr su ant jdk ty mh bt	1
 双边网络	rr su mbb is	1
 双重口令	rr ldl dk jks	1
-双重数据加密标准	rr ldl pb uc sd what efs wui	1
+双重数据加密标准	rr ldl pb uc sd wht efs wui	1
 双处理器	rr hy ndl dd	1
 双带图灵机	rr lw rhw bch eo	1
 双带有穷自动机	rr lw nv esl oi bs eo	1
@@ -6395,7 +6395,7 @@ columns:
 双向有穷自动机	rr tm nv esl oi bs eo	1
 双向总线	rr tm hd ifp	1
 双校三验	rr eab ts nj	1
-双钥密码系统	rr zvy what mn tis ibp	1
+双钥密码系统	rr zvy wht mn tis ibp	1
 双语对齐	rr sw rk qq	1
 双语机器可读词典	rr sw eo dd z snam saf ihb	1
 双元小波变换	rr mpe yx krp zc ux	1
@@ -6489,7 +6489,7 @@ columns:
 速率控制	xuc zi ueu qrp	1
 宿主系统	wjf in tis ibp	1
 算法	rql kg	1
-算法保密	rql kg jde what	1
+算法保密	rql kg jde wht	1
 算法分析	rql kg hp etj	1
 算法类	rql kg pmd	1
 算法语言	rql kg sw sy	1
@@ -6553,7 +6553,7 @@ columns:
 锁演绎	zyo kwfh iru	1
 索引	nwi bgs	1
 索引标志	nwi bgs efs gh	1
-索引孔	nwi bgs have	1
+索引孔	nwi bgs hae	1
 索引图像	nwi bgs rhw jwx	1
 缩址呼叫	iwj gsi dth di	1
 踏步测试	pk ssi ko sp	1
@@ -6603,7 +6603,7 @@ columns:
 特征提取	qg wfsi uo qr	1
 特征选择	qg wfsi qpu uru	1
 替代攻击	hho jp uh um	1
-替代密码	hho jp what mn	1
+替代密码	hho jp wht mn	1
 替代选择	hho jp qpu uru	1
 梯格图	ehtf es rhw	1
 提供数据	uo jlh pb uc	1
@@ -6614,7 +6614,7 @@ columns:
 提交	uo ab	1
 提交单元	uo ab hq mpe	1
 提交状态	uo ab amq mih	1
-体矩阵	jef on tyc	1
+体矩阵	jef onn tyc	1
 体可视化	jef z fe jvb	1
 体模型	jef elo flpg	1
 提取	uo qr	1
@@ -6624,7 +6624,7 @@ columns:
 体问题	jef adk ot	1
 体系结构	jef tis igd enk	1
 体系结构建模	jef tis igd enk bu elo	1
-梯形图	ehtf file rhw	1
+梯形图	ehtf fle rhw	1
 体元	jef mpe	1
 填充	gnq bpe	1
 填充区	gnq bpe nb	1
@@ -6642,7 +6642,7 @@ columns:
 条件项重写系统	he jq uw ldl wf tis ibp	1
 条码	he mn	1
 条码扫描器	he mn ubj ulq dd	1
-条码阅读器	he mn had snam dd	1
+条码阅读器	he mn ahd snam dd	1
 调频	smg ssw	1
 调色板	smg xm exr	1
 调试	smg sp	1
@@ -6652,7 +6652,7 @@ columns:
 调试例程	smg sp jgp xdn	1
 调试模型	smg sp elo flpg	1
 调相	smg eqm	1
-条形图	he file rhw	1
+条形图	he fle rhw	1
 调整	smg xhf	1
 调整用软盘	smg xhf ty yeq ia	1
 调整用硬盘	smg xhf ty mfo ia	1
@@ -6712,7 +6712,7 @@ columns:
 统计推理	ibp sn uu ndl	1
 统计语言学	ibp sn sw sy kw	1
 统计仲裁	ibp sn jdg npt	1
-通孔	kt have	1
+通孔	kt hae	1
 桶链算法	ekt zyu rql kg	1
 通路	kt psg	1
 通路敏化	kt psg ekhp jvb	1
@@ -6738,9 +6738,9 @@ columns:
 通信协议	kt js nsh sib	1
 通信性	kt js hls	1
 通信子网	kt js hi mbb	1
-同形词	mf file saf	1
-桶形失真	ekt file th nq	1
-同形异义词	mf file vl ib saf	1
+同形词	mf fle saf	1
+桶形失真	ekt fle th nq	1
+同形异义词	mf fle vl ib saf	1
 统一建模语言	ibp f bu elo sw sy	1
 统一资源定位地址	ibp f weo kxu wt ji ge gsi	1
 通用安装程序	kt ty wb agti xdn xiv	1
@@ -6793,7 +6793,7 @@ columns:
 图的非同构	rhw u rf mf enk	1
 图的着色	rhw u gq xm	1
 图段	rhw uf	1
-凸多边形	vfi ll su file	1
+凸多边形	vfi ll su fle	1
 突发传输	emq sr jm yjv	1
 突发噪声	emq sr ddde gc	1
 凸分解	vfi hp xt	1
@@ -6842,35 +6842,35 @@ columns:
 图像元	rhw jwx mpe	1
 图像增强	rhw jwx ghr bd	1
 图像质量	rhw jwx xno ofd	1
-图形	rhw file	1
-图形包	rhw file nvs	1
-图形保真	rhw file jde nq	1
-图形处理	rhw file hy ndl	1
-图形打印机	rhw file ua bfz eo	1
-图形符号	rhw file rjk df	1
-图形工作站	rhw file ug jw iyd	1
-图形核心系统	rhw file ekh hx tis ibp	1
-图形结构	rhw file igd enk	1
-图形库	rhw file xyc	1
-图形设备	rhw file srs hqt	1
-图形识别	rhw file sdh ds	1
-图形适配器	rhw file auc yv dd	1
-图形使用者接口	rhw file jf ty qo uib dk	1
-图形失真	rhw file th nq	1
-图形数据库	rhw file pb uc xyc	1
-图形输入板	rhw file yjv ju exr	1
-图形图表	rhw file rhw ati	1
-图形系统	rhw file tis ibp	1
-图形学	rhw file kw	1
-图形用户界面	rhw file ty mh qjp bm	1
-图形语言	rhw file sw sy	1
-图形字符	rhw file whi rjk	1
-图形字符合成	rhw file whi rjk jdk na	1
+图形	rhw fle	1
+图形包	rhw fle nvs	1
+图形保真	rhw fle jde nq	1
+图形处理	rhw fle hy ndl	1
+图形打印机	rhw fle ua bfz eo	1
+图形符号	rhw fle rjk df	1
+图形工作站	rhw fle ug jw iyd	1
+图形核心系统	rhw fle ekh hx tis ibp	1
+图形结构	rhw fle igd enk	1
+图形库	rhw fle xyc	1
+图形设备	rhw fle srs hqt	1
+图形识别	rhw fle sdh ds	1
+图形适配器	rhw fle auc yv dd	1
+图形使用者接口	rhw fle jf ty qo uib dk	1
+图形失真	rhw fle th nq	1
+图形数据库	rhw fle pb uc xyc	1
+图形输入板	rhw fle yjv ju exr	1
+图形图表	rhw fle rhw ati	1
+图形系统	rhw fle tis ibp	1
+图形学	rhw fle kw	1
+图形用户界面	rhw fle ty mh qjp bm	1
+图形语言	rhw fle sw sy	1
+图形字符	rhw fle whi rjk	1
+图形字符合成	rhw fle whi rjk jdk na	1
 图语法	rhw sw kg	1
 图元	rhw mpe	1
 图元属性	rhw mpe ct hls	1
 团集	rnt ue	1
-团集覆盖问题	rnt ue vwe game adk ot	1
+团集覆盖问题	rnt ue vwe gam adk ot	1
 团块理论	rnt gn ndl sjl	1
 推迟	uu ciu	1
 推迟转移技术	uu ciu ym xll uci eid	1
@@ -6900,20 +6900,20 @@ columns:
 吞吐能力	fmd dg k sl	1
 拖动	uee bs	1
 拖放	uee lh	1
-托管加密标准	utr rwk sd what efs wui	1
+托管加密标准	utr rwk sd wht efs wui	1
 脱机	vhd eo	1
 脱机测试	vhd eo ko sp	1
 脱机处理	vhd eo hy ndl	1
 脱机存储器	vhd eo ng jsq dd	1
 脱机故障检测	vhd eo chp txn ejk ko	1
 脱机设备	vhd eo srs hqt	1
-脱机邮件阅读器	vhd eo dte jq had snam dd	1
+脱机邮件阅读器	vhd eo dte jq ahd snam dd	1
 脱机作业控制	vhd eo jw cy ueu qrp	1
 托架	utr sde	1
-脱密	vhd what	1
+脱密	vhd wht	1
 拓扑检索	ums uyb ejk nwi	1
 拓扑属性	ums uyb ct hls	1
-椭圆曲线密码体制	etn rdo yq ifp what mn jef qrp	1
+椭圆曲线密码体制	etn rdo yq ifp wht mn jef qrp	1
 哇嘎	dgg dfop	1
 哇嘎画时代版	dgg dfop fqmk ok jp ax	1
 外部设备	lyb id srs hqt	1
@@ -6948,7 +6948,7 @@ columns:
 完备化	wmp hqt jvb	1
 完美零知识	wmp gm tjks od sdh	1
 完美零知识证明	wmp gm tjks od sdh sf ov	1
-完全保密	wmp jn jde what	1
+完全保密	wmp jn jde wht	1
 完全二叉树	wmp jn me rid erk	1
 完全函数依赖	wmp jn akmk pb jti xxo	1
 完全恢复	wmp jn hnc eoh	1
@@ -7103,8 +7103,8 @@ columns:
 微逻辑	wvf ylu ydq	1
 微码	wvf mn	1
 位脉冲拥挤	ji vik wdg ut uqq	1
-位密度	ji what xlr	1
-惟密文攻击	hui what vw uh um	1
+位密度	ji wht xlr	1
+惟密文攻击	hui wht vw uh um	1
 微命令	wvf jdz jks	1
 微模块	wvf elo gn	1
 维纳滤波	iu imj kzh krp	1
@@ -7336,7 +7336,7 @@ columns:
 细分	iq hp	1
 析构	etj enk	1
 析构函数	etj enk akmk pb	1
-隙含金属磁头	to jad zj ct mhi wm	1
+隙含金属磁头	tyo jad zj ct mhi wm	1
 细化	iq jvb	1
 细节层次	iq lz cb we	1
 细菌	iq lrx	1
@@ -7400,7 +7400,7 @@ columns:
 系统控制文件	tis ibp ueu qrp vw jq	1
 系统库	tis ibp xyc	1
 系统扩充	tis ibp uxg bpe	1
-系统密钥	tis ibp what zvy	1
+系统密钥	tis ibp wht zvy	1
 系统命令	tis ibp jdz jks	1
 系统命令解释程序	tis ibp jdz jks xt tpr xdn xiv	1
 系统模拟	tis ibp elo uvj	1
@@ -7411,7 +7411,7 @@ columns:
 系统盘	tis ibp ia	1
 系统盘组	tis ibp ia if	1
 系统配置	tis ibp yv yn	1
-系统评价	tis ibp she jjp	1
+系统评价	tis ibp seh jjp	1
 系统破坏者	tis ibp mr gcb qo	1
 系统启动	tis ibp md bs	1
 系统确认	tis ibp mx sj	1
@@ -7449,7 +7449,7 @@ columns:
 系统诊断	tis ibp sje pat	1
 系统执行程序	tis ibp uki p xdn xiv	1
 系统中断	tis ibp d pat	1
-系统中断请求	tis ibp d pat save fk	1
+系统中断请求	tis ibp d pat sav fk	1
 系统中央处理器时间	tis ibp d mm hy ndl dd ok ao	1
 系统驻留卷	tis ibp nin bq hh	1
 系统驻留区	tis ibp nin bq nb	1
@@ -7467,7 +7467,7 @@ columns:
 系值	tis jnq	1
 系主	tis in	1
 下标	fy efs	1
-下标越界	fy efs on qjp	1
+下标越界	fy efs pn qjp	1
 下播状态	fy utp amq mih	1
 瑕点	ncm yd	1
 下降时间	fy thv ok ao	1
@@ -7527,8 +7527,8 @@ columns:
 线路噪声	ifp psg ddde gc	1
 陷门	txp am	1
 陷门单向函数	txp am hq tm akmk pb	1
-陷门密码体制	txp am what mn jef qrp	1
-线密度	ifp what xlr	1
+陷门密码体制	txp am wht mn jef qrp	1
+线密度	ifp wht xlr	1
 线确认	ifp mx sj	1
 显示	ocy fs	1
 显式并行性	ocy pug hl p hls	1
@@ -7646,7 +7646,7 @@ columns:
 小键盘	yx zbu ia	1
 消解规则	kyv xt hej op	1
 小巨型计算机	yx nn flpg sn rql eo	1
-消密	kyv what	1
+消密	kyv wht	1
 小平面	yx eh bm	1
 消失状态	kyv th amq mih	1
 销售点	zyv ud yd	1
@@ -7681,8 +7681,8 @@ columns:
 写后读	wf xf snam	1
 写后写	wf xf wf	1
 写回	wf rd	1
-泄密	kla what	1
-泄密发射	kla what sr zk	1
+泄密	kla wht	1
+泄密发射	kla wht sr zk	1
 斜坡函数	jxj grp akmk pb	1
 写前补偿	wf hv tyb jsb	1
 写任务	wf jt hs	1
@@ -7798,7 +7798,7 @@ columns:
 信息系统安全官	js ohx tis ibp wb jn wk	1
 信息协议	js ohx nsh sib	1
 信息隐蔽	js ohx tx lfh	1
-信息隐形性	js ohx tx file hls	1
+信息隐形性	js ohx tx fle hls	1
 信息源	js ohx kxu	1
 信息增益	js ohx ghr kam	1
 信息中心	js ohx d hx	1
@@ -7822,14 +7822,14 @@ columns:
 心智信息传送	hx odo js ohx jm hm	1
 心智状态	hx odo amq mih	1
 行八位	p hb ji	1
-形参	file kme	1
+形参	fle kme	1
 行程编码	p xdn imi mn	1
 行程长度	p xdn pc xlr	1
 行程长度编码	p xdn pc xlr imi mn	1
 行程长度受限码	p xdn pc xlr ywr tig mn	1
 兴华电视广告管理软件	khb jvn oa fe xg qd rwk ndl yeq jq	1
 星环网	ol nc mbb	1
-行密度	p what xlr	1
+行密度	p wht xlr	1
 性能	hls k	1
 性能保证	hls k jde sf	1
 性能比	hls k vv	1
@@ -7837,18 +7837,18 @@ columns:
 性能管理	hls k rwk ndl	1
 性能规约	hls k hej ini	1
 性能监视	hls k pra fe	1
-性能评价	hls k she jjp	1
+性能评价	hls k seh jjp	1
 性能需求	hls k tle fk	1
 行式打印机	p pug ua bfz eo	1
-形式方法	file pug lf kg	1
-形式规约	file pug hej ini	1
-形式规则	file pug hej op	1
-形式描述	file pug ulq eiu	1
-形式推理	file pug uu ndl	1
-形式系统	file pug tis ibp	1
-形式演算	file pug kwfh rql	1
-形式语言	file pug sw sy	1
-形式语义学	file pug sw ib kw	1
+形式方法	fle pug lf kg	1
+形式规约	fle pug hej ini	1
+形式规则	fle pug hej op	1
+形式描述	fle pug ulq eiu	1
+形式推理	fle pug uu ndl	1
+形式系统	fle pug tis ibp	1
+形式演算	fle pug kwfh rql	1
+形式语言	fle pug sw sy	1
+形式语义学	fle pug sw ib kw	1
 行首	p ho	1
 性态	hls mih	1
 星特性	ol qg hls	1
@@ -7861,13 +7861,13 @@ columns:
 型业务	flpg cy hs	1
 型语言	flpg sw sy	1
 行政安全	p fsh wb jn	1
-形状分割	file amq hp wadp	1
-形状描述	file amq ulq eiu	1
-形状曲线	file amq yq ifp	1
-形状特征	file amq qg wfsi	1
-形状推理	file amq uu ndl	1
+形状分割	fle amq hp wadp	1
+形状描述	fle amq ulq eiu	1
+形状曲线	fle amq yq ifp	1
+形状特征	fle amq qg wfsi	1
+形状推理	fle amq uu ndl	1
 星状网	ol amq mbb	1
-形状因子	file amq rm hi	1
+形状因子	fle amq rm hi	1
 修补	jgh tyb	1
 修订版	jgh sad ax	1
 修改	jgh vh	1
@@ -7901,7 +7901,7 @@ columns:
 许可权清单	se z er kav hq	1
 虚跨步	zcy pmm ssi	1
 序列号	xiv gp df	1
-序列密码	xiv gp what mn	1
+序列密码	xiv gp wht mn	1
 虚拟	zcy uvj	1
 虚拟安全网络	zcy uvj wb jn mbb is	1
 虚拟操作系统	zcy uvj udd jw tis ibp	1
@@ -7979,7 +7979,7 @@ columns:
 选通信号	qpu kt js df	1
 选项	qpu uw	1
 选择	qpu uru	1
-选择密文攻击	qpu uru what vw uh um	1
+选择密文攻击	qpu uru wht vw uh um	1
 选择明文攻击	qpu uru ov vw uh um	1
 选择通道	qpu uru kt h	1
 选择网络	qpu uru mbb is	1
@@ -8072,7 +8072,7 @@ columns:
 样本	egy ef	1
 样本分布	egy ef hp nrj	1
 样本集	egy ef ue	1
-样本矩	egy ef on	1
+样本矩	egy ef onn	1
 样本均值	egy ef gnw jnq	1
 样本空间	egy ef eu ao	1
 样本离差	egy ef zb gu	1
@@ -8157,7 +8157,7 @@ columns:
 遗传算法	cou jm rql kg	1
 遗传学习	cou jm kw zx	1
 译词选择	sru saf qpu uru	1
-一次一密乱数本	f we f what aae pb ef	1
+一次一密乱数本	f we f wht aae pb ef	1
 依存	jti ng	1
 依存关系合一语法	jti ng hmd tis jdk f sw kg	1
 依存关系句法分析	jti ng hmd tis gj kg hp etj	1
@@ -8182,7 +8182,7 @@ columns:
 易管理性	one rwk ndl hls	1
 一阶参数连续	f tjp kme pb yu ina	1
 一阶几何连续	f tjp oj jz yu ina	1
-一阶矩	f tjp on	1
+一阶矩	f tjp onn	1
 一阶理论	f tjp ndl sjl	1
 一阶逻辑	f tjp ylu ydq	1
 已开文件	vi fl vw jq	1
@@ -8194,9 +8194,9 @@ columns:
 依赖边	jti xxo su	1
 依赖方	jti xxo lf	1
 依赖弧	jti xxo byg	1
-依赖集的覆盖	jti xxo ue u vwe game	1
-依赖集的最小覆盖	jti xxo ue u oq yx vwe game	1
-依赖集的最优覆盖	jti xxo ue u oq joy vwe game	1
+依赖集的覆盖	jti xxo ue u vwe gam	1
+依赖集的最小覆盖	jti xxo ue u oq yx vwe gam	1
+依赖集的最优覆盖	jti xxo ue u oq joy vwe gam	1
 依赖图	jti xxo rhw	1
 依赖学习	jti xxo kw zx	1
 译码	sru mn	1
@@ -8297,7 +8297,7 @@ columns:
 因特网主体	rm qg mbb in jef	1
 隐线	tx ifp	1
 音效	xy abh	1
-音形结合编码	xy file igd jdk imi mn	1
+音形结合编码	xy fle igd jdk imi mn	1
 阴影	tvy og	1
 音乐	xy byx	1
 银兆信安	zig pww js wb	1
@@ -8381,14 +8381,14 @@ columns:
 用户分区	ty mh hp nb	1
 用户分时	ty mh hp ok	1
 用户合同管理员	ty mh jdk mf rwk ndl do	1
-用户加密	ty mh sd what	1
+用户加密	ty mh sd wht	1
 用户简介	ty mh ra jpd	1
 用户建筑群设备	ty mh bu ruo bt srs hqt	1
 用户建筑群网络	ty mh bu ruo bt mbb is	1
 用户界面	ty mh qjp bm	1
 用户界面管理系统	ty mh qjp bm rwk ndl tis ibp	1
 用户进入时间	ty mh qu ju ok ao	1
-用户密钥	ty mh what zvy	1
+用户密钥	ty mh wht zvy	1
 用户内存	ty mh mj ng	1
 用户区	ty mh nb	1
 用户任务	ty mh jt hs	1
@@ -8434,18 +8434,18 @@ columns:
 优化	joy jvb	1
 优化操作	joy jvb udd jw	1
 优化大师	joy jvb m pf	1
-右键	and zbu	1
+右键	nd zbu	1
 邮件发送清单	dte jq sr hm kav hq	1
 邮件分发器	dte jq hp sr dd	1
 邮件管理员	dte jq rwk ndl do	1
 有界网	nv qjp mbb	1
 有界性	nv qjp hls	1
 邮局协议	dte cad nsh sib	1
-右句型	and gj flpg	1
+右句型	nd gj flpg	1
 有理贝济埃曲线	nv ndl ob kqq gko yq ifp	1
 有理几何设计	nv ndl oj jz srs sn	1
 有理据拆分	nv ndl uc uti hp	1
-右匹配	and npe yv	1
+右匹配	nd npe yv	1
 有穷性问题	nv esl hls adk ot	1
 有穷转向下推自动机	nv esl ym tm fy uu oi bs eo	1
 有穷状态系统	nv esl amq mih tis ibp	1
@@ -8469,7 +8469,7 @@ columns:
 有限目标	nv tig qm efs	1
 优先数	joy qp pb	1
 有限网	nv tig mbb	1
-右线性文法	and ifp hls vw kg	1
+右线性文法	nd ifp hls vw kg	1
 有限元法	nv tig mpe kg	1
 有限元分析	nv tig mpe hp etj	1
 优先约束	joy qp ini xs	1
@@ -8480,7 +8480,7 @@ columns:
 有向图	nv tm rhw	1
 有效	nv abh	1
 有效过程	nv abh ku xdn	1
-有效请求	nv abh save fk	1
+有效请求	nv abh sav fk	1
 有效时间	nv abh ok ao	1
 有效输入	nv abh yjv ju	1
 有效数字	nv abh pb whi	1
@@ -8493,7 +8493,7 @@ columns:
 有效字符	nv abh whi rjk	1
 有效字数	nv abh whi pb	1
 有序搜索	nv xiv upg nwi	1
-右移	and xll	1
+右移	nd xll	1
 友元	nr mpe	1
 有源底板	nv kxu xbi exr	1
 邮政局长	dte fsh cad pc	1
@@ -8664,7 +8664,7 @@ columns:
 源阻抗	kxu tfq uzo	1
 约定	ini wt	1
 约翰冯诺依曼	ini nonz wnm sln jti oyr	1
-越界记录	on qjp svj bk	1
+越界记录	pn qjp svj bk	1
 乐器数字接口	byx dd pb whi uib dk	1
 约瑟夫效应	ini nnht hf abh xk	1
 约束	ini xs	1
@@ -8672,7 +8672,7 @@ columns:
 约束方程	ini xs lf xdn	1
 约束规则	ini xs hej op	1
 约束函数	ini xs akmk pb	1
-约束矩阵	ini xs on tyc	1
+约束矩阵	ini xs onn tyc	1
 约束满足	ini xs kl pu	1
 约束条件	ini xs he jq	1
 约束推理	ini xs uu ndl	1
@@ -8697,7 +8697,7 @@ columns:
 运算流水线	buc rql kb ks ifp	1
 运算器	buc rql dd	1
 运算速度	buc rql xuc xlr	1
-运算速度评价	buc rql xuc xlr she jjp	1
+运算速度评价	buc rql xuc xlr seh jjp	1
 运行	buc p	1
 运行测试	buc p ko sp	1
 运行方式	buc p lf pug	1
@@ -8721,11 +8721,11 @@ columns:
 再生段	fmg ls uf	1
 在线	n ifp	1
 再压缩	fmg xgi iwj	1
-暂存器	to ng dd	1
-暂时故障	to ok chp txn	1
-暂停	to jga	1
-暂停状态	to jga amq mih	1
-暂驻命令	to nin jdz jks	1
+暂存器	yto ng dd	1
+暂时故障	yto ok chp txn	1
+暂停	yto jga	1
+暂停状态	yto jga amq mih	1
+暂驻命令	yto nin jdz jks	1
 脏读	vxg snam	1
 早期失效	on zhv th abh	1
 噪声	ddde gc	1
@@ -8735,7 +8735,7 @@ columns:
 噪声消除器	ddde gc kyv tjx dd	1
 噪声抑制	ddde gc ubz qrp	1
 噪声种类	ddde gc xd pmd	1
-造形	qdu file	1
+造形	qdu fle	1
 造型变换	qdu flpg zc ux	1
 责任性	aob jt hls	1
 增量编译	ghr ofd imi sru	1
@@ -8823,7 +8823,7 @@ columns:
 帧内压缩	ryo mj xgi iwj	1
 帧频	ryo ssw	1
 针式打印机	zn pug ua bfz eo	1
-真实感图形	nq ww nf rhw file	1
+真实感图形	nq ww nf rhw fle	1
 真实感显示	nq ww nf ocy fs	1
 真实世界	nq ww la qjp	1
 针式输纸	zn pug yjv ibs	1
@@ -8894,7 +8894,7 @@ columns:
 正则表达式	fsi op ati mu pug	1
 正则化	fsi op jvb	1
 正则集	fsi op ue	1
-正则形式	fsi op file pug	1
+正则形式	fsi op fle pug	1
 正则序	fsi op xiv	1
 正则语言	fsi op sw sy	1
 症兆	afs pww	1
@@ -8910,7 +8910,7 @@ columns:
 支持集	ci ugk ue	1
 支持软件	ci ugk yeq jq	1
 支持系统	ci ugk tis ibp	1
-纸带穿孔	ibs lw el have	1
+纸带穿孔	ibs lw el hae	1
 纸带读入机	ibs lw snam ju eo	1
 制导系统	qrp vk tis ibp	1
 值调用	jnq smg ty	1
@@ -8922,7 +8922,7 @@ columns:
 直方图	nqf lf rhw	1
 直方图修正	nqf lf rhw jgh fsi	1
 滞后	klwr xf	1
-置换密码	yn ux what mn	1
+置换密码	yn ux wht mn	1
 直角平面显像管	nqf xty eh bm ocy jwx rwk	1
 直角座标型机器人	nqf xty xjj efs flpg eo dd j	1
 直接插入	nqf uib ulp ju	1
@@ -9026,7 +9026,7 @@ columns:
 知识库系统	od sdh xyc tis ibp	1
 知识块	od sdh gn	1
 知识利用系统	od sdh xp ty tis ibp	1
-知识密集型产业	od sdh what ue flpg ixc cy	1
+知识密集型产业	od sdh wht ue flpg ixc cy	1
 知识模式	od sdh elo pug	1
 知识模型	od sdh elo flpg	1
 指示器	uv fs dd	1
@@ -9048,7 +9048,7 @@ columns:
 知识子系统	od sdh hi tis ibp	1
 知识组织	od sdh if idh	1
 指数变迁	uv pb zc luc	1
-指数密码体制	uv pb what mn jef qrp	1
+指数密码体制	uv pb wht mn jef qrp	1
 指数时间	uv pb ok ao	1
 置位	yn ji	1
 置位脉冲	yn ji vik wdg	1
@@ -9101,7 +9101,7 @@ columns:
 终端接入控制器	ihw ivl uib ju ueu qrp dd	1
 终端控制系统	ihw ivl ueu qrp tis ibp	1
 中断屏蔽	d pat chl lfh	1
-中断请求	d pat save fk	1
+中断请求	d pat sav fk	1
 中断驱动	d pat nnb bs	1
 中断驱动输入输出	d pat nnb bs yjv ju yjv sm	1
 终端设备	ihw ivl srs hqt	1
@@ -9144,7 +9144,7 @@ columns:
 中心词	d hx saf	1
 中心动词	d hx bs saf	1
 中心机构	d hx eo enk	1
-中心矩	d hx on	1
+中心矩	d hx onn	1
 中心名词	d hx ld saf	1
 重心座标	ldl hx xjj efs	1
 中型计算机	d flpg sn rql eo	1
@@ -9200,14 +9200,14 @@ columns:
 主机板	in eo exr	1
 主机操作系统	in eo udd jw tis ibp	1
 主机传送文件	in eo jm hm vw jq	1
-主机密钥	in eo what zvy	1
+主机密钥	in eo wht zvy	1
 主控台	in ueu kd	1
 主库	in xyc	1
 主力类	in sl pmd	1
-主密钥	in what zvy	1
-柱面	in bm	1
+主密钥	in wht zvy	1
+柱面	ein bm	1
 逐面分类法	juc bm hp pmd kg	1
-柱面座标型机器人	in bm xjj efs flpg eo dd j	1
+柱面座标型机器人	ein bm xjj efs flpg eo dd j	1
 主目录	in qm bk	1
 主任务	in jt hs	1
 注释	ki tpr	1
@@ -9250,7 +9250,7 @@ columns:
 转接网	ym uib mbb	1
 转接线	ym uib ifp	1
 转接延迟	ym uib tsu ciu	1
-转轮密码	ym yj what mn	1
+转轮密码	ym yj wht mn	1
 转入转出	ym ju ym sm	1
 转速传感器	ym xuc jm nf dd	1
 专线	ma ifp	1
@@ -9377,7 +9377,7 @@ columns:
 自动进给	oi bs qu ij	1
 自动控制	oi bs ueu qrp	1
 自动逻辑推理	oi bs ylu ydq uu ndl	1
-自动密钥密码	oi bs what zvy what mn	1
+自动密钥密码	oi bs wht zvy wht mn	1
 自动模型获取	oi bs elo flpg lmm qr	1
 自动启动	oi bs md bs	1
 自动任务化	oi bs jt hs jvb	1
@@ -9408,13 +9408,13 @@ columns:
 字符识别	whi rjk sdh ds	1
 字符输入设备	whi rjk yjv ju srs hqt	1
 字符相关	whi rjk eqm hmd	1
-字符阅读机	whi rjk had snam eo	1
+字符阅读机	whi rjk ahd snam eo	1
 自规划	oi hej pp	1
 字号	whi df	1
 自划界块	oi pp qjp gn	1
 字汇	whi kn	1
 子集	hi ue	1
-子集覆盖	hi ue vwe game	1
+子集覆盖	hi ue vwe gam	1
 字计数	whi sn pb	1
 自检电路	oi ejk oa psg	1
 子监控程序	hi pra ueu xdn xiv	1
@@ -9482,7 +9482,7 @@ columns:
 字体	whi jef	1
 自调整	oi smg xhf	1
 自同步	oi mf ssi	1
-自同步密码	oi mf ssi what mn	1
+自同步密码	oi mf ssi wht mn	1
 子图	hi rhw	1
 子图匹配	hi rhw npe yv	1
 子网	hi mbb	1
@@ -9496,8 +9496,8 @@ columns:
 子系统	hi tis ibp	1
 自相交	oi eqm ab	1
 自相似网络业务	oi eqm jvj mbb is cy hs	1
-字形	whi file	1
-字形编码	whi file imi mn	1
+字形	whi fle	1
+字形编码	whi fle imi mn	1
 自省知识	oi ytq od sdh	1
 自修理	oi jgh ndl	1
 字序	whi xiv	1
@@ -9590,7 +9590,7 @@ columns:
 组织界面	if idh qjp bm	1
 组织惟一标识符	if idh hui f efs sdh rjk	1
 组装技术	if agti uci eid	1
-组装密度	if agti what xlr	1
+组装密度	if agti wht xlr	1
 钻取	zyd qr	1
 最大超调	oq m ppd smg	1
 最大低阈值输入电压	oq m jbi apdf jnq yjv ju oa xgi	1
@@ -9628,7 +9628,7 @@ columns:
 最优估计	oq joy jcg sn	1
 最优归并树	oq joy pbj hl erk	1
 最优控制	oq joy ueu qrp	1
-最右派生	oq and kx ls	1
+最右派生	oq nd kx ls	1
 最优凸分解	oq joy vfi hp xt	1
 最优性	oq joy hls	1
 最优圆弧插值	oq joy rdo byg ulp jnq	1

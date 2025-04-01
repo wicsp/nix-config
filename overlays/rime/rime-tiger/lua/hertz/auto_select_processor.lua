@@ -14,19 +14,19 @@ function split(str,delimiter)
       newDeli = newDeli .. "["..string.sub(delimiter,i,i).."]"
   end
 
-  local localStart,localEnd = string.find(str,newDeli)
+  local locaStart,locaEnd = string.find(str,newDeli)
   local arr = {}
   local n = 1
   -- 循环查找分隔符并分割字符串
-  while localStart ~= nil
+  while locaStart ~= nil
   do
-      if localStart>0 then
-          arr[n] = string.sub(str,1,localStart-1)
+      if locaStart>0 then
+          arr[n] = string.sub(str,1,locaStart-1)
           n = n + 1
       end
 
-      str = string.sub(str,localEnd+1,string.len(str))
-      localStart,localEnd = string.find(str,newDeli)
+      str = string.sub(str,locaEnd+1,string.len(str))
+      locaStart,locaEnd = string.find(str,newDeli)
   end
   if str ~= nil then
       arr[n] = str

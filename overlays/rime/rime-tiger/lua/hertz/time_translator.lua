@@ -2,7 +2,7 @@
 -- CC-BY-4.0
 
 ------------------------------------
-------writing by 98wubi Group-------
+------wirting by 98wubi Group-------
 ------http://98wb.ys168.com/--------
 ------------------------------------
 -- *******农历节气计算部分
@@ -1260,7 +1260,7 @@ local GetLunarSichen = function(time, t)
 end
 
 ------------------------------------
-------writing by 98wubi Group-------
+------wirting by 98wubi Group-------
 ------http://98wb.ys168.com/--------
 ------------------------------------
 
@@ -1449,7 +1449,7 @@ function Date2LunarDate(Gregorian)
                        "56A00D6", "A6C00CB", "55D047B", "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F",
                        "AD500D7", "55A00CD", "ABA047C", "A5A00D4", "52B00CA", "B27037A", "69300D1", "7330781",
                        "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB", "54E047C", "D1600D2", "E960882",
-                       "D5200DA", "DATA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D", "A2D00D4", "D1500C9",
+                       "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D", "A2D00D4", "D1500C9",
                        "F250279", "D5200D1"}
   Gregorian = tostring(Gregorian)
   local Year, Month, Day, Pos, Data0, Data1, MonthInfo, LeapInfo, Leap, Newyear, Data2, Data3, LYear, thisMonthInfo
@@ -1614,7 +1614,7 @@ function LunarDate2Date(Gregorian, IsLeap)
                "D2E0379", "C9600D1", "D550781", "D4A00D9", "DA400CD", "5D5057E", "56A00D6", "A6C00CB", "55D047B",
                "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F", "AD500D7", "55A00CD", "ABA047C", "A5A00D4",
                "52B00CA", "B27037A", "69300D1", "7330781", "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB",
-               "54E047C", "D1600D2", "E960882", "D5200DA", "DATA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D",
+               "54E047C", "D1600D2", "E960882", "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D",
                "A2D00D4", "D1500C9", "F250279", "D5200D1"}
   Gregorian = tostring(Gregorian)
   local Year, Month, Day, Pos, Data, MonthInfo, LeapInfo, Leap, Newyear, Sum, thisMonthInfo, GDate

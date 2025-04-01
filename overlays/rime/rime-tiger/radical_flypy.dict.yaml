@@ -28,7 +28,7 @@
 # '厶': [['si1']],
 # '爿': [['pian4']], # 牁 鼎
 # '乂': [['yi4']],
-# '亠': [['you2','yi1']],
+# '亠': [['tou2','yi1']],
 # '廾': [['gong4','nong4']],
 # '灬': [['huo3']], # 然
 # '⺄': [['yi3']], # 飞去掉点，「乙」的变体
@@ -265,7 +265,7 @@ sort: original
 𬴊	malb
 𬴃	mafgui
 𬴂	mafw
-𬳿	may
+𬳿	mayu
 𬳽	maxm
 𬳶	matskz
 𬳶	majskz
@@ -425,7 +425,7 @@ sort: original
 𬍤	whxy
 𬍡	thyu
 𬍛	yule
-𬍛	while
+𬍛	whle
 𬌗	yahe
 𬊤	hodj
 𬊜	holo
@@ -590,7 +590,7 @@ sort: original
 𫘨	maui
 𫘧	malu
 𫘦	mayc
-𫘦	match
+𫘦	matc
 𫘦	mabcfz
 𫘤	mayi
 𫘣	mahj
@@ -865,7 +865,7 @@ sort: original
 𩩍	guyzhgve
 𩩍	gupk
 𩨊	maqm
-𩨈	may
+𩨈	mayu
 𩨄	masz
 𩨃	majm
 𩨀	mahe
@@ -985,7 +985,7 @@ sort: original
 𨏿	ieiejuie
 𨏿	ieieieju
 𨏿	ieieieie
-𨋢	july
+𨋢	juli
 𨋢	ieli
 𨈓	ufxn
 𨈇	zulj
@@ -1876,7 +1876,7 @@ sort: original
 龥	ytxp
 龤	ytjp
 龣	ytlu
-龢	the
+龢	ythe
 龡	ytqm
 龠	rfhgkzkzkzce
 龟	dcdm
@@ -2808,7 +2808,7 @@ sort: original
 鶄	qknn
 鶃	nnni
 鶃	nnjqer
-鶃	inner
+鶃	nner
 鶂	ninn
 鶂	jqernn
 鶂	ernn
@@ -2896,7 +2896,7 @@ sort: original
 鵀	rfnn
 鴿	henn
 鴾	mznn
-鴽	run
+鴽	runn
 鴼	nnge
 鴻	uvgsnn
 鴺	yinn
@@ -2991,7 +2991,7 @@ sort: original
 鳳	jihgnn
 鳲	uinn
 鳱	gjnn
-鳰	run
+鳰	runn
 鳯	jinn
 鳮	yznn
 鳭	dcnn
@@ -3294,7 +3294,7 @@ sort: original
 鰹	yujm
 鰸	yuqu
 鰸	yuqq
-鰸	you
+鰸	yuou
 鰸	yukz
 鰸	yugz
 鰷	yutn
@@ -4925,7 +4925,7 @@ sort: original
 驊	makx
 驊	mahx
 驉	maxu
-驈	may
+驈	mayu
 驈	mamctsbakz
 驈	mamcjsbakz
 驈	mamcjs
@@ -4995,7 +4995,7 @@ sort: original
 騢	majx
 騡	maqr
 騠	maui
-騟	may
+騟	mayu
 騞	maho
 騞	mafgui
 騝	majm
@@ -5021,7 +5021,7 @@ sort: original
 騌	mazs
 騋	mald
 騊	mayc
-騊	match
+騊	matc
 騊	mabcfz
 騉	maky
 騈	mabk
@@ -5042,7 +5042,7 @@ sort: original
 駾	madv
 駽	mayr
 駽	makzyt
-駼	may
+駼	mayu
 駻	mahj
 駺	mall
 駹	mamh
@@ -5873,7 +5873,7 @@ sort: original
 頠	wwxp
 頟	geye
 頟	gexp
-頞	any
+頞	anye
 頞	anxp
 頝	jnye
 頝	jnxp
@@ -6728,8 +6728,8 @@ sort: original
 陱	erbcmi
 陰	fuyb
 陰	eryb
-陯	fully
-陯	early
+陯	fuly
+陯	erly
 陮	fuvv
 陮	ervv
 陭	fuqi
@@ -8821,9 +8821,9 @@ sort: original
 鄦	wuyi
 鄦	wuer
 鄦	moyi
-鄦	more
+鄦	moer
 鄥	nnyi
-鄥	inner
+鄥	nner
 鄤	mjyi
 鄤	mjer
 鄣	vhyi
@@ -8861,7 +8861,7 @@ sort: original
 鄛	icyi
 鄛	icer
 鄚	moyi
-鄚	more
+鄚	moer
 鄙	tuyi
 鄙	tuer
 鄙	kzuihvyi
@@ -8879,7 +8879,7 @@ sort: original
 鄕	xllhyi
 鄕	xllher
 鄔	yayi
-鄔	year
+鄔	yaer
 鄔	wuyi
 鄔	wuer
 鄓	izyi
@@ -9151,7 +9151,7 @@ sort: original
 邬	wuer
 邫	fgyi
 邪	yayi
-邪	year
+邪	yaer
 邩	hoyi
 邩	hoer
 邨	tyyi
@@ -9191,7 +9191,7 @@ sort: original
 邛	gsyi
 邛	gser
 邚	nvyi
-邚	never
+邚	nver
 邙	whyi
 邙	wher
 邘	yuyi
@@ -9459,7 +9459,7 @@ sort: original
 遍	vibm
 遍	iobm
 遌	vikzkzkv
-遌	view
+遌	viee
 遌	iokzkzkv
 遌	ioee
 運	vijy
@@ -9941,7 +9941,7 @@ sort: original
 轤	ielv
 轤	ielu
 轤	ielw
-轣	july
+轣	juli
 轣	ieli
 轢	juyt
 轢	juyc
@@ -10001,7 +10001,7 @@ sort: original
 轗	iegj
 轖	juse
 轖	iese
-轕	judge
+轕	juge
 轕	iege
 轔	jumixikluu
 轔	jumixifhuu
@@ -10055,7 +10055,7 @@ sort: original
 轍	juiiyuwf
 轍	ierfyuwf
 轍	ieiiyuwf
-轌	just
+轌	juxt
 轌	iext
 轋	julm
 轋	julj
@@ -10233,7 +10233,7 @@ sort: original
 輘	julk
 輘	ietubawf
 輘	ielk
-輗	june
+輗	juni
 輗	jujqer
 輗	juer
 輗	ieni
@@ -10281,7 +10281,7 @@ sort: original
 輇	ieqr
 輆	juhd
 輆	iehd
-輅	judge
+輅	juge
 輅	iege
 輄	jugl
 輄	iegl
@@ -13160,7 +13160,7 @@ sort: original
 蠄	isqb
 蠃	whkzytisfj
 蠂	isye
-蠂	issue
+蠂	isue
 蠁	xlis
 蠀	iszi
 蟿	juxsuuis
@@ -13191,7 +13191,7 @@ sort: original
 蟲	isisis
 蟱	iswu
 蟱	ismo
-蟰	issue
+蟰	issu
 蟯	isycwu
 蟯	isyc
 蟯	istututuwu
@@ -13304,7 +13304,7 @@ sort: original
 螫	ueis
 螪	isuh
 螨	isccll
-螦	issue
+螦	issu
 螥	isch
 螤	wfyu
 螤	wfjqrf
@@ -13606,7 +13606,7 @@ sort: original
 蛠	islp
 蛠	islilili
 蛟	isjn
-蛞	issue
+蛞	isue
 蛝	isgf
 蛜	isyi
 蛛	isvu
@@ -13697,7 +13697,7 @@ sort: original
 蚗	isveda
 蚗	isgk
 蚖	isyr
-蚕	this
+蚕	tmis
 蚔	isui
 蚓	isyb
 蚒	isdj
@@ -14388,7 +14388,7 @@ sort: original
 蓌	cosv
 蓌	ccco
 蓋	ccqumb
-蓋	cache
+蓋	cche
 蓊	ccwg
 蓉	ccrs
 蓈	cclh
@@ -14533,7 +14533,7 @@ sort: original
 葤	ccvz
 董	ccvs
 葢	cctdmb
-葢	cache
+葢	cche
 葡	ccpu
 葠	ccqb
 葟	cchl
@@ -14544,7 +14544,7 @@ sort: original
 葜	ccqi
 葛	ccrigd
 葛	ccribcverf
-葛	cache
+葛	cche
 葚	ccuf
 葙	ccxl
 葘	cczdhg
@@ -14602,7 +14602,7 @@ sort: original
 萵	cctsvejskz
 萵	ccjsvetskz
 萵	ccjsvejskz
-萵	cache
+萵	cche
 萵	ccgo
 萵	ccgx
 萴	ccze
@@ -14685,7 +14685,7 @@ sort: original
 萄	cctc
 萄	ccbcfz
 萃	cczu
-萂	cache
+萂	cche
 萁	ccqi
 萀	cchu
 菿	ccdc
@@ -14752,7 +14752,7 @@ sort: original
 菑	ccuytm
 菑	ccirtm
 菐	yebasjrf
-菏	cache
+菏	cche
 菎	ccky
 菍	ccnm
 菌	ccwwhe
@@ -14863,7 +14863,7 @@ sort: original
 荸	ccuimizi
 荸	ccuibczi
 荸	ccbw
-荷	cache
+荷	cche
 荶	ccyb
 荵	ccrf
 荴	ccfu
@@ -14926,7 +14926,7 @@ sort: original
 荈	ccir
 荇	ccxk
 荆	jkdc
-荅	cache
+荅	cche
 荄	cchd
 荃	ccqr
 荂	cckx
@@ -15774,7 +15774,7 @@ sort: original
 膓	rzrfdjwu
 膒	ytqu
 膒	ytqq
-膒	you
+膒	ytou
 膒	ytkz
 膒	ytgz
 膑	ytbb
@@ -15937,7 +15937,7 @@ sort: original
 腡	yttsvejskz
 腡	ytjsvetskz
 腡	ytjsvejskz
-腡	the
+腡	ythe
 腡	ytgo
 腡	ytgx
 腡	rzwo
@@ -16922,7 +16922,7 @@ sort: original
 羅	ghyi
 羅	ghww
 羄	whio
-羄	which
+羄	whic
 羄	siio
 羄	siic
 羃	whmu
@@ -16945,7 +16945,7 @@ sort: original
 罼	sibi
 罻	whww
 罻	siww
-罺	which
+罺	whic
 罺	siic
 罹	whxbvv
 罹	sixbvv
@@ -17958,7 +17958,7 @@ sort: original
 線	siqr
 線	miqr
 緙	sige
-緙	midge
+緙	mige
 緘	sixm
 緘	mixm
 緗	sixl
@@ -18084,7 +18084,7 @@ sort: original
 綱	sigh
 綱	mitsbahguj
 綱	mijsbahguj
-綱	might
+綱	migh
 綰	sigr
 綰	migr
 綯	siyc
@@ -18298,7 +18298,7 @@ sort: original
 絢	sixy
 絢	mixy
 絡	sige
-絡	midge
+絡	mige
 絠	siyz
 絠	miyz
 絟	siqr
@@ -18552,7 +18552,7 @@ sort: original
 糶	tndi
 糵	xtmi
 糴	diyuvv
-糴	did
+糴	didi
 糳	vojquumi
 糳	vojqjiyzmi
 糳	yebagjjquumi
@@ -18756,7 +18756,7 @@ sort: original
 粐	mihu
 粏	mitd
 粎	miii
-粍	mimic
+粍	mimc
 粌	miyb
 粋	mizu
 粊	bimi
@@ -19661,7 +19661,7 @@ sort: original
 穣	heyibajkhg
 穢	heso
 穢	hesv
-穡	these
+穡	hese
 穠	hequif
 穠	hens
 穟	hesv
@@ -19684,7 +19684,7 @@ sort: original
 穓	heyi
 穓	hetmgs
 穑	hetubahv
-穑	these
+穑	hese
 穐	hegv
 穏	hevxujxb
 穏	hevcujxb
@@ -19876,7 +19876,7 @@ sort: original
 秈	heuj
 秇	hewj
 秆	hegj
-秅	have
+秅	heve
 秅	heto
 秅	heppqi
 秄	hezi
@@ -21689,7 +21689,7 @@ sort: original
 疾	bkui
 疽	neqp
 疽	bkqp
-疼	needs
+疼	neds
 疼	bkds
 疻	nevi
 疻	bkvi
@@ -22223,7 +22223,7 @@ sort: original
 瓅	whyc
 瓅	whlo
 瓅	whln
-瓅	while
+瓅	whle
 瓄	yumd
 瓄	whmd
 瓃	yutmtmtm
@@ -22429,7 +22429,7 @@ sort: original
 璆	whlu
 璆	whlq
 璅	yuic
-璅	which
+璅	whic
 璄	yujk
 璄	whjk
 璃	yuli
@@ -22462,7 +22462,7 @@ sort: original
 瑻	whwj
 瑻	whgr
 瑺	yuih
-瑺	which
+瑺	whih
 瑹	yutu
 瑹	whtu
 瑸	yubb
@@ -22481,7 +22481,7 @@ sort: original
 瑳	yuia
 瑳	whia
 瑲	yuch
-瑲	which
+瑲	whch
 瑱	yuvf
 瑱	whvf
 瑰	yugv
@@ -22491,7 +22491,7 @@ sort: original
 瑮	yuli
 瑮	whli
 瑭	yuth
-瑭	with
+瑭	whth
 瑬	lqyu
 瑫	yuyc
 瑫	whyc
@@ -22665,7 +22665,7 @@ sort: original
 琪	yuqi
 琪	whqi
 琩	yuih
-琩	which
+琩	whih
 琨	yuky
 琨	whky
 琧	yayu
@@ -22941,7 +22941,7 @@ sort: original
 玲	yulk
 玲	whlk
 玱	yuch
-玱	which
+玱	whch
 现	yujm
 现	whjm
 环	yubu
@@ -26412,7 +26412,7 @@ sort: original
 檼	muyb
 檻	mukj
 檻	mujm
-檺	much
+檺	muhc
 檹	muyi
 檹	mufhrfqi
 檸	munk
@@ -27543,7 +27543,7 @@ sort: original
 枸	muju
 枷	mujx
 架	jxmu
-枵	much
+枵	muhc
 枴	mukzdc
 枳	muvi
 枲	tdmu
@@ -27824,7 +27824,7 @@ sort: original
 曯	rivu
 曯	riuu
 曮	riyj
-曭	with
+曭	rith
 曭	ridh
 曭	riig
 曬	risi
@@ -32216,7 +32216,7 @@ sort: original
 庣	glvc
 庢	glvi
 庡	glyi
-庠	glyph
+庠	glyh
 废	glfa
 庞	glls
 庝	glds
@@ -33676,7 +33676,7 @@ sort: original
 嬮	yanv
 嬭	nvni
 嬭	nvmi
-嬭	never
+嬭	nver
 嬬	nvxu
 嬫	nvrs
 嬪	nvbb
@@ -34015,7 +34015,7 @@ sort: original
 婘	nvjr
 婗	nvni
 婗	nvjqer
-婗	never
+婗	nver
 婖	nvtmxnna
 婖	nvtmxndm
 婖	nvtm
@@ -34214,7 +34214,7 @@ sort: original
 妴	xixmnv
 妴	xijpnv
 妴	wjnv
-妳	never
+妳	nver
 妲	nvdj
 妱	nvvc
 妰	nvva
@@ -34383,7 +34383,7 @@ sort: original
 奉	uznahgui
 奉	iyhgui
 奈	daui
-奇	take
+奇	dake
 奆	daju
 奅	damc
 奄	dadm
@@ -34393,7 +34393,7 @@ sort: original
 奂	dctsda
 奂	dcjsda
 奁	daqu
-奀	buddha
+奀	buda
 夿	daba
 夾	darfrf
 夾	dacs
@@ -37203,7 +37203,7 @@ sort: original
 勯	yihvdjli
 勯	tzhvdjli
 勯	djli
-勮	july
+勮	juli
 勭	tsli
 勬	jrli
 勫	fjli
@@ -37308,7 +37308,7 @@ sort: original
 劯	uili
 劮	uili
 劭	vcli
-劬	july
+劬	juli
 劫	quli
 努	nuli
 助	qpli
@@ -37794,7 +37794,7 @@ sort: original
 冊	jshguuuu
 冉	tstu
 冉	tsuihg
-冉	just
+冉	jstu
 冉	jsuihg
 冈	tsyi
 冈	jsyi
@@ -37837,7 +37837,7 @@ sort: original
 兰	basj
 兮	bayu
 兮	baqn
-兮	back
+兮	bakc
 兮	bahgve
 六	yiba
 六	tzba
@@ -37852,7 +37852,7 @@ sort: original
 全	rfwh
 內	tsru
 內	jsru
-兦	very
+兦	veru
 兦	uuhgru
 入	napp
 兤	glkl
