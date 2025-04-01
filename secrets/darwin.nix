@@ -95,17 +95,17 @@
     #   // user_readable;
 
     # # alias-for-work
-    # "alias-for-work.nushell" =
-    #   {
-    #     file = "${mysecrets}/alias-for-work.nushell.age";
-    #   }
-    #   // user_readable;
+    "alias-for-work.nushell" =
+      {
+        file = "${mysecrets}/alias-for-work.nushell.age";
+      }
+      // user_readable;
 
-    # "alias-for-work.bash" =
-    #   {
-    #     file = "${mysecrets}/alias-for-work.bash.age";
-    #   }
-    #   // user_readable;
+    "alias-for-work.bash" =
+      {
+        file = "${mysecrets}/alias-for-work.bash.age";
+      }
+      // user_readable;
   };
 
   # place secrets in /etc/
@@ -132,12 +132,12 @@
     # # The following secrets are used by home-manager modules
     # # But nix-darwin doesn't support environment.etc.<name>.mode
     # # So we need to change its mode manually
-    # "agenix/alias-for-work.nushell" = {
-    #   source = config.age.secrets."alias-for-work.nushell".path;
-    # };
-    # "agenix/alias-for-work.bash" = {
-    #   source = config.age.secrets."alias-for-work.bash".path;
-    # };
+    "agenix/alias-for-work.nushell" = {
+      source = config.age.secrets."alias-for-work.nushell".path;
+    };
+    "agenix/alias-for-work.bash" = {
+      source = config.age.secrets."alias-for-work.bash".path;
+    };
     "agenix/test" = {
       source = config.age.secrets."test".path;
     };
@@ -147,7 +147,6 @@
   };
 
   # both the original file and the symlink should be readable and executable by the user
-
   # activationScripts are executed every time you run `nixos-rebuild` / `darwin-rebuild` or boot your system
   system.activationScripts.postActivation.text = ''
     ${pkgs.nushell}/bin/nu -c '

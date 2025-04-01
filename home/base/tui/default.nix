@@ -8,7 +8,7 @@
     # ./encryption
     # ./gpg
     # ./password-store
-    # ./cloud
+    ./cloud
     ./zellij
     ./editors
   ];

@@ -53,24 +53,6 @@ in {
         ":"
         "${lib.makeSearchPathOutput "dev" "lib/pkgconfig" [stdenv.cc.cc zlib]}"
       ];
-
-      # Currently we use lazy.nvim as neovim's package manager, so comment this one.
-      #
-      # NOTE: These plugins will not be used by astronvim by default!
-      # We should install packages that will compile locally or download FHS binaries via Nix!
-      # and use lazy.nvim's `dir` option to specify the package directory in nix store.
-      # so that these plugins can work on NixOS.
-      #
-
-      # TODO: i dont know how to use this
-      # related project:
-      #  https://github.com/b-src/lazy-nix-helper.nvim
-      # plugins = with pkgs.vimPlugins; [
-      #   # search all the plugins using https://search.nixos.org/packages
-      #   telescope-fzf-native-nvim
-
-      #   nvim-treesitter.withAllGrammars
-      # ];
     };
   };
 }

@@ -100,10 +100,10 @@ $env.config = {
       completer: null # check 'carapace_completer' above as an example
     }
   }
-  filesize: {
-    metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
-    format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
-  }
+  # filesize: {
+  #   metric: true # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
+  #   format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
+  # }
   cursor_shape: {
     emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line (line is the default)
     vi_insert: block # block, underscore, line , blink_block, blink_underscore, blink_line (block is the default)

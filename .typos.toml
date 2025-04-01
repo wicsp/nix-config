@@ -1,7 +1,7 @@
 [files]
 ignore-dot = true
 ignore-files = true
-extend-exclude = ["themes/", "data/", "static-surprises/", "resources/", "rime-data/"]
+extend-exclude = ["themes/", "data/", "static-surprises/", "resources/", "rime-tiger/"]
 
 [default]
 binary = false
@@ -12,7 +12,6 @@ extend-ignore-re = [
   "noice",                                                            # noice.nvim
   "crypted-nixos",
   "daed",
-  "flypy",
 
   # catppuccin theme colors
   "11111b",
