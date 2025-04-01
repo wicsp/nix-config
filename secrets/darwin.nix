@@ -1,9 +1,9 @@
-
 {
   config,
   pkgs,
   agenix,
   mysecrets,
+  myvars,
   ...
 }: {
   imports = [
@@ -147,7 +147,7 @@
   };
 
   # both the original file and the symlink should be readable and executable by the user
-  
+
   # activationScripts are executed every time you run `nixos-rebuild` / `darwin-rebuild` or boot your system
   system.activationScripts.postActivation.text = ''
     ${pkgs.nushell}/bin/nu -c '
