@@ -39,8 +39,8 @@
 
       # replace https with ssh
       url = {
-        "ssh://git@github.com/ryan4yin" = {
-          insteadOf = "https://github.com/ryan4yin";
+        "ssh://git@github.com/wicsp" = {
+          insteadOf = "https://github.com/wicsp";
         };
         # "ssh://git@gitlab.com/" = {
         #   insteadOf = "https://gitlab.com/";

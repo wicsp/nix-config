@@ -1,0 +1,74 @@
+# Rime default settings
+# encoding: utf-8
+# CC-BY-4.0
+
+config_version: '0.40'
+
+schema_list:
+  - schema: tiger_code          # 🐯·单·官方
+  - schema: tiger_chord_popping # 🐯·单·并击·顶功
+  - schema: tiger_code_52p      # 🐯·单·五二顶
+  - schema: tiger_code_53p      # 🐯·单·五三顶
+  - schema: tiger_codes         # 🐯·词·官方
+  - schema: tiger_oni           # 🐯·词·鬼虎
+  - schema: tiger_phrase        # 🐯·单句
+  - schema: tiger_phrase_chord  # 🐯·单句·并击
+  - schema: tiger_phrases       # 🐯·词句
+  - schema: easy_en             # 智能英文
+
+switcher:
+  caption: "〔方案選單〕"
+  hotkeys:
+    - "Control+grave"
+    - "Control+F8"
+  save_options:
+    - full_shape
+    - ascii_punct
+    - traditionalization
+    - emoji
+    - extended_char
+    - mars
+    - prediction
+    - tiger_spelling.off
+    - tiger_spelling.lv1
+    - tiger_spelling.lv2
+    - tiger_spelling.lv3
+    - tiger_spelling.lv4
+  fold_options: true
+  abbreviate_options: true
+  option_list_separator: '／'
+
+menu:
+  #alternative_select_labels: [ ⑴, ⑵, ⑶, ⑷, ⑸, ⑹, ⑺, ⑻, ⑼, ⑽ ]
+  alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩, 〸 ]
+  #alternative_select_labels: [ α, β, γ, δ, ε, ζ, η, θ, ι, κ ]
+  page_size: 5
+
+punctuator:
+  __include: tiger:/punctuator
+
+key_binder:
+  import_preset: default
+  bindings:
+    __patch:
+      - tiger:/keys/emacs_mode
+      - tiger:/keys/tab
+      - tiger:/keys/page_up_down
+      #- tiger:/keys/selector
+      - tiger:/keys/options_toggle
+
+recognizer:
+  patterns:
+    #email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    #uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    #url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Caps_Lock: noop
+    Control_L: noop
+    Control_R: noop
+    Eisu_toggle: clear
+    # Shift_L: commit_code
+    # Shift_R: commit_text

@@ -141,6 +141,7 @@ ha mode="default":
   use {{utils_nu}} *;
   darwin-build "harmonica" {{mode}};
   darwin-switch "harmonica" {{mode}}
+  
 
 # Depoly to macsp(macOS host)
 [macos]

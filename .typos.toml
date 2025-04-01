@@ -1,7 +1,7 @@
 [files]
 ignore-dot = true
 ignore-files = true
-extend-exclude = ["themes/", "data/", "static-surprises/", "resources/", "rime-tiger/"]
+extend-exclude = ["themes/", "data/", "static-surprises/", "resources/", "*.dict.yaml", "emoji.txt","overlays/rime/rime-tiger/"]
 
 [default]
 binary = false

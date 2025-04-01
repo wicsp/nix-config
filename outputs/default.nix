@@ -101,7 +101,7 @@ in {
           alejandra.enable = true; # formatter
           # Source code spell checker
           typos = {
-            enable = true;
+            enable = false;
             settings = {
               write = true; # Automatically fix typos
               configPath = "./.typos.toml"; # relative to the flake root
@@ -137,7 +137,7 @@ in {
           deadnix
           statix
           # spell checker
-          typos
+          # typos
           # code formatter
           nodePackages.prettier
         ];
