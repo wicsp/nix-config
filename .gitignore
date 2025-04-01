@@ -12,7 +12,4 @@ core*
 *.key
 *.csr
 
-
-
-**/rime-tiger/
-**/rime-tiger/**
+overlays/rime/rime-tiger/
