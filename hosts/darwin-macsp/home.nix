@@ -12,7 +12,7 @@
     '';
   };
   # TODO: add emacs
-  # modules.editors.emacs = {
+  # modules.editors.vim = {
   #   enable = true;
   # };
 }

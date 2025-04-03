@@ -11,7 +11,6 @@
   ...
 } @ args: let
   name = "macsp";
-
   modules = {
     darwin-modules =
       (map mylib.relativeToRoot [
