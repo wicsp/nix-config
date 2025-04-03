@@ -11,11 +11,13 @@
   ...
 } @ args: let
   name = "wicsp";
-  modules = map mylib.relativeToRoot [
-    # "hosts/wicsp/home.nix"
-    "home/linux/tui.nix"
-    "modules/nixos/server/homeserver.nix"
-  ];
+  modules = {
+    imports = map mylib.relativeToRoot [
+      # "hosts/wicsp/home.nix"
+      "home/linux/tui.nix"
+      "modules/nixos/server/homeserver.nix"
+    ];
+  };
 
   systemArgs = modules // args;
 in {
