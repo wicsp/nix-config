@@ -22,5 +22,5 @@
   systemArgs = modules // args;
 in {
   # macOS's configuration
-  homeConfigurations.${name} = mylib.homeSystem modules;
+  homeConfigurations.${name} = mylib.homeSystem systemArgs;
 }
