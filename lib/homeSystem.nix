@@ -1,7 +1,6 @@
 {
   lib,
   inputs,
-  darwin-modules,
   home-modules ? [],
   myvars,
   system,
