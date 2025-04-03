@@ -11,7 +11,7 @@
   inherit (inputs) nixpkgs home-manager;
 in
   home-manager.lib.homeManagerConfiguration {
-    inherit system specialArgs;
+    inherit system;
     pkgs = nixpkgs.legacyPackages.${system};
     extraSpecialArgs = specialArgs;
     modules = home-modules;
