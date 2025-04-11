@@ -14,11 +14,10 @@
   modules = {
     imports = map mylib.relativeToRoot [
       # "hosts/wicsp/home.nix"
-      "home/linux/tui.nix"
+      # "home/linux/tui.nix"
       # "modules/nixos/server/homeserver.nix"
+      "temp/temp.nix"
     ];
-
-    home.stateVersion = "24.11";
   };
 
   systemArgs = modules // args;
