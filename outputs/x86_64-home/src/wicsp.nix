@@ -15,7 +15,7 @@
     imports = map mylib.relativeToRoot [
       # "hosts/wicsp/home.nix"
       "home/linux/tui.nix"
-      "modules/nixos/server/homeserver.nix"
+      # "modules/nixos/server/homeserver.nix"
     ];
 
     home.stateVersion = "24.11";
