@@ -17,6 +17,8 @@
       "home/linux/tui.nix"
       "modules/nixos/server/homeserver.nix"
     ];
+
+    home.stateVersion = "24.11";
   };
 
   systemArgs = modules // args;
