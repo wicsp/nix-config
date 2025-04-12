@@ -12,44 +12,34 @@
     # Format in details:
     #   https://www.ssh.com/academy/ssh/config
     extraConfig = ''
-        # a private key that is used during authentication will be added to ssh-agent if it is running
+      # a private key that is used during authentication will be added to ssh-agent if it is running
       AddKeysToAgent yes
 
-        Host 192.168.*
-          # allow to securely use local SSH agent to authenticate on the remote machine.
-          # It has the same effect as adding cli option `ssh -A user@host`
-          ForwardAgent yes
-          # romantic holds my homelab~
-          IdentityFile /etc/agenix/ssh-key-romantic
-          # Specifies that ssh should only use the identity file explicitly configured above
+      Host 192.168.*
+        # allow to securely use local SSH agent to authenticate on the remote machine.
+        # It has the same effect as adding cli option `ssh -A user@host`
+        ForwardAgent yes
+        # romantic holds my homelab~
+        IdentityFile /etc/agenix/ssh-key-romantic
+        # Specifies that ssh should only use the identity file explicitly configured above
           # required to prevent sending default identity files first.
-          IdentitiesOnly yes
-        Include ~/.orbstack/ssh/config
-        Include ~/.ssh/config.d/*
+        IdentitiesOnly yes
 
-        Host gtr5
-          HostName 192.168.5.172
-          Port 22
+      Include ~/.orbstack/ssh/config
+      Include ~/.ssh/config.d/*
 
-        Host um560
-          HostName 192.168.5.173
-          Port 22
 
-        Host s500plus
-          HostName 192.168.5.174
-          Port 22
+      Host chouniu
+        HostName server2
+        User guowenbin
+        Port 8032
+        RemoteCommand bash
+        RequestTTY yes
 
-        Host chouniu
-          HostName server2
-          User guowenbin
-          Port 8032
-          RemoteCommand bash
-          RequestTTY yes
-
-        Host cs
-          HostName 10.50.0.232
-          User wicsp
-          Port 22
+      Host cs
+        HostName 10.50.0.232
+        User wicsp
+        Port 22
 
 
     '';
