@@ -13,10 +13,10 @@
   name = "wicsp@cs";
   modules = {
     home-modules = map mylib.relativeToRoot [
-      # "hosts/wicsp/home.nix"
-      # "home/linux/tui.nix"
+      "hosts/cs/home.nix"
+      "home/linux/tui.nix"
       # "modules/nixos/server/homeserver.nix"
-      "temp/temp.nix"
+      # "temp/temp.nix"
     ];
   };
 

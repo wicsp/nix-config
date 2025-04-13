@@ -25,7 +25,6 @@
         # required to prevent sending default identity files first.
         IdentitiesOnly yes
 
-      Include ~/.orbstack/ssh/config
 
     '';
   };
