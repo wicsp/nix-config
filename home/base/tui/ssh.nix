@@ -22,25 +22,10 @@
         # romantic holds my homelab~
         IdentityFile /etc/agenix/ssh-key-romantic
         # Specifies that ssh should only use the identity file explicitly configured above
-          # required to prevent sending default identity files first.
+        # required to prevent sending default identity files first.
         IdentitiesOnly yes
 
       Include ~/.orbstack/ssh/config
-      Include ~/.ssh/config.d/*
-
-
-      Host chouniu
-        HostName server2
-        User guowenbin
-        Port 8032
-        RemoteCommand bash
-        RequestTTY yes
-
-      Host cs
-        HostName 10.50.0.232
-        User wicsp
-        Port 22
-
 
     '';
   };

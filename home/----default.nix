@@ -114,7 +114,7 @@
         bind 'set completion-ignore-case on'
         source /etc/agenix/secrets_env
 
-        # if [ -e /home/wicsp/.nix-profile/etc/profile.d/nix.sh ]; then . /home/wicsp/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+        if [ -e /home/wicsp/.nix-profile/etc/profile.d/nix.sh ]; then . /home/wicsp/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
       '';
 

@@ -18,6 +18,11 @@ utils_nu := absolute_path("utils.nu")
 default:
     @just --list
 
+system-info:
+  @echo "This is an {{arch()}} machine"
+  @echo "This is an {{os()}} machine"
+  @echo "This is an {{os_family()}} machine"
+  
 # Run eval tests
 [group('nix')]
 test:

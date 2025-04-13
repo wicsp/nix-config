@@ -13,4 +13,4 @@ core*
 *.csr
 
 amz-v1-5-zh-hans.gram
-zh-hans-t-tiger-ugc.gram
+zh-hans-t-tiger-ugc.gram.pre-commit-config.yaml
