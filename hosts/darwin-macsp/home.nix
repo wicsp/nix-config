@@ -165,7 +165,6 @@
         Port 8099
     '';
   };
-  # TODO: add emacs
   # modules.editors.vim = {
   #   enable = true;
   # };

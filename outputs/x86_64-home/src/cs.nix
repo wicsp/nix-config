@@ -10,7 +10,7 @@
   genSpecialArgs,
   ...
 } @ args: let
-  name = "wicsp@cs";
+  name = "cs";
   modules = {
     home-modules = map mylib.relativeToRoot [
       "hosts/cs/home.nix"
