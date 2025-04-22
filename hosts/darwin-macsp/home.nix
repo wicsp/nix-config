@@ -131,8 +131,6 @@
         HostName server2
         User guowenbin
         Port 8032
-        RemoteCommand bash
-        RequestTTY yes
 
       Host yinhu
         HostName server2

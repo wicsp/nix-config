@@ -16,7 +16,6 @@
       "hosts/cs/home.nix"
       "home/linux/tui.nix"
       # "modules/nixos/server/homeserver.nix"
-      # "temp/temp.nix"
     ];
   };
 
