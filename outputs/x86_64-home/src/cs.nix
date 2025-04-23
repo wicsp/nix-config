@@ -15,7 +15,6 @@
     home-modules = map mylib.relativeToRoot [
       "hosts/cs/home.nix"
       "home/linux/tui.nix"
-      # "modules/nixos/server/homeserver.nix"
     ];
   };
 

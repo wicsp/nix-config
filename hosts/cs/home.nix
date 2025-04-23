@@ -5,7 +5,7 @@
       Host github.com
         Hostname github.com
         # github is controlled by macsp~
-        IdentityFile ~/.ssh/id_rsa_github
+        IdentityFile ~/.ssh/id_ed25519
         # Specifies that ssh should only use the identity file explicitly configured above
         # required to prevent sending default identity files first.
         IdentitiesOnly yes
@@ -124,14 +124,12 @@
         HostName server2
         User guowenbin
         Port 8031
-        RemoteCommand bash
         RequestTTY yes
 
       Host chouniu
         HostName server2
         User guowenbin
         Port 8032
-        RemoteCommand bash
         RequestTTY yes
 
       Host yinhu
@@ -148,7 +146,6 @@
         HostName server2
         User guowenbin
         Port 8036
-        RemoteCommand bash
         RequestTTY yes
 
       Host wuma
