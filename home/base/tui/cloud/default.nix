@@ -32,6 +32,6 @@
     # cloud tools that nix do not have cache for.
     # terraform
     # terraformer # generate terraform configs from existing cloud resources
-    packer # machine image builder
+    # packer # machine image builder
   ];
 }
