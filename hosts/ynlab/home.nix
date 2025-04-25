@@ -2,6 +2,7 @@
   programs.bash = {
     enable = true;
     initExtra = ''
+      ~/tools/nix-user-chroot ~/.nix bash
       . /home/wicsp/.nix-profile/etc/profile.d/nix.sh
     '';
   };
