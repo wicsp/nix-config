@@ -4,8 +4,10 @@
 
   # Configure user Systemd service manager settings
   systemd.user.settings = {
-    DefaultTimeoutStartSec = "30s"; # Timeout for service start
-    DefaultRestartSec = "5s"; # Delay before restarting
+    Manager = {
+      DefaultTimeoutStartSec = "30s";
+      DefaultRestartSec = "5s";
+    };
   };
 
   # Set service start timeout (e.g., for slow-starting services)
