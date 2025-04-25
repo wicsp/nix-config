@@ -1,4 +1,8 @@
 {
+  imports = [
+    ./n8n.nix
+  ];
+
   programs.bash = {
     enable = true;
     initExtra = ''
@@ -6,6 +10,7 @@
       export https_proxy=http://macsp.wicsp.top:7890 http_proxy=http://macsp.wicsp.top:7890 all_proxy=socks5://macsp.wicsp.top:7890
     '';
   };
+
   programs.ssh = {
     enable = true;
     extraConfig = ''
