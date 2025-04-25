@@ -32,6 +32,7 @@ in {
   };
   programs.zsh = {
     enable = true;
-    inherit envExtra initExtra;
+    initContent = initExtra;
+    inherit envExtra;
   };
 }

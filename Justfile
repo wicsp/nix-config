@@ -154,7 +154,6 @@ macsp mode="default":
   use {{utils_nu}} *;
   darwin-build "macsp" {{mode}};
   darwin-switch "macsp" {{mode}};
-  bash ~/Temp/test.sh
 
 # Reset launchpad to force it to reindex Applications
 [macos]

@@ -13,7 +13,7 @@
   name = "ynlab";
   modules = {
     home-modules = map mylib.relativeToRoot [
-      "hosts/ynlab/home.nix"
+      "hosts/home-ynlab/home.nix"
       "home/linux/tui.nix"
     ];
   };
