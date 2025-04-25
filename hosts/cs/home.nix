@@ -1,4 +1,10 @@
 {
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      . /home/wicsp/.nix-profile/etc/profile.d/nix.sh
+    '';
+  };
   programs.ssh = {
     enable = true;
     extraConfig = ''

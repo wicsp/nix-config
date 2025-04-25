@@ -136,9 +136,7 @@ darwin-set-proxy:
 darwin-rollback:
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  darwin-rollback
-
-# Deploy to harmonica(macOS host)
+  darwin-rollback# Deploy to harmonica(macOS host)
 [macos]
 [group('desktop')]
 ha mode="default":
