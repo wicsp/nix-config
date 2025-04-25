@@ -3,7 +3,7 @@
     enable = true;
     initExtra = ''
       ~/tools/nix-user-chroot ~/.nix bash
-      . /home/wicsp/.nix-profile/etc/profile.d/nix.sh
+      . /public/guowenbin/.nix-profile/etc/profile.d/nix.sh
     '';
   };
   programs.ssh = {
