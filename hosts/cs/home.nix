@@ -3,6 +3,7 @@
     enable = true;
     initExtra = ''
       . /home/wicsp/.nix-profile/etc/profile.d/nix.sh
+      export https_proxy=http://macsp.wicsp.top:7890 http_proxy=http://macsp.wicsp.top:7890 all_proxy=socks5://macsp.wicsp.top:7890
     '';
   };
   programs.ssh = {
@@ -130,13 +131,11 @@
         HostName server2
         User guowenbin
         Port 8031
-        RequestTTY yes
 
       Host chouniu
         HostName server2
         User guowenbin
         Port 8032
-        RequestTTY yes
 
       Host yinhu
         HostName server2

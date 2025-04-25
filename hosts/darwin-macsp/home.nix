@@ -124,8 +124,6 @@
         HostName server2
         User guowenbin
         Port 8031
-        RemoteCommand bash
-        RequestTTY yes
 
       Host chouniu
         HostName server2
@@ -146,8 +144,6 @@
         HostName server2
         User guowenbin
         Port 8036
-        RemoteCommand bash
-        RequestTTY yes
 
       Host wuma
         HostName server2
