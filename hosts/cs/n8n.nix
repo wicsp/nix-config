@@ -16,22 +16,27 @@
   # Automatically start/stop services during home-manager switch
   systemd.user.startServices = "sd-switch";
 
-  # Define a per-user service for a Node.js app
+  # Define the n8n service using the explicit Unit/Service/Install structure
   systemd.user.services.n8n = {
+    # Corresponds to [Unit] section
     Unit = {
       Description = "n8n Workflow Automation Tool";
-      #   Documentation = [ "man:example(1)" "man:example(5)" ];
+      # Add other [Unit] options here if needed, e.g., After=network.target
     };
-
-    wantedBy = ["default.target"]; # Start with user session
-    serviceConfig = {
+    # Corresponds to [Service] section
+    Service = {
       ExecStart = "~/.nix-profile/bin/npx n8n";
-      Restart = "always"; # Restart on failure
-      RestartSec = "5"; # Wait 5 seconds before restarting
+      Restart = "always";
+      RestartSec = "5s"; # Using "5s" is generally preferred for clarity
       Environment = [
         "NODE_ENV=production"
         "PORT=5678"
       ];
+      # Add other [Service] options here if needed
+    };
+    # Corresponds to [Install] section
+    Install = {
+      WantedBy = ["default.target"]; # Start with user session
     };
   };
 }
