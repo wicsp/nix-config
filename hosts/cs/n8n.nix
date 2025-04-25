@@ -18,7 +18,11 @@
 
   # Define a per-user service for a Node.js app
   systemd.user.services.n8n = {
-    description = "n8n Workflow Automation Tool";
+    Unit = {
+      Description = "n8n Workflow Automation Tool";
+      #   Documentation = [ "man:example(1)" "man:example(5)" ];
+    };
+
     wantedBy = ["default.target"]; # Start with user session
     serviceConfig = {
       ExecStart = "~/.nix-profile/bin/npx n8n";
