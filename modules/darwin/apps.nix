@@ -195,6 +195,7 @@ in {
 
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
       "macfuse" # for rclone to mount a fuse filesystem
+      "sshfs"
 
       # mactex
       "mactex"
