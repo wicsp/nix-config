@@ -15,6 +15,7 @@
   #############################################################
 
   home.packages = with pkgs; [
+    sshfs # mount remote file system via ssh
     colmena # nixos's remote deployment tool
 
     # db related
