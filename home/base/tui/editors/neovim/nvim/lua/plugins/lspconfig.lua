@@ -2,7 +2,7 @@ local map = vim.keymap.set
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
-    { 'williamboman/mason.nvim' },
+    { 'mason-org/mason.nvim' },
     { 'mason-org/mason-lspconfig.nvim' },
     { 'MysticalDevil/inlay-hints.nvim', event = 'LspAttach' },
   },
@@ -15,7 +15,7 @@ return {
         'marksman',
         'rust_analyzer',
         'pylsp',
-        -- "gopls",
+        'gopls',
       },
       automatic_enable = {
         exclude = {},

@@ -1,30 +1,33 @@
 return {
   'saghen/blink.cmp',
-  -- optional: provides snippets for the snippet source
-  dependencies = { 'rafamadriz/friendly-snippets' },
-
-  -- use a release tag to download pre-built binaries
+  dependencies = {
+    'rafamadriz/friendly-snippets',
+    -- "Kaiser-Yang/blincmp-avante",
+  },
   version = '*',
-  -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-  -- build = 'cargo build --release',
-  -- If you use nix, you can build from source using latest nightly rust with:
-  -- build = 'nix run .#build-plugin',
-
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
-    -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-    -- 'super-tab' for mappings similar to vscode (tab to accept)
-    -- 'enter' for enter to accept
-    -- 'none' for no mappings
-    --
-    -- All presets have the following mappings:
-    -- C-space: Open menu or open docs if already open
-    -- C-n/C-p or Up/Down: Select next/previous item
-    -- C-e: Hide menu
-    -- C-k: Toggle signature help (if signature.enabled = true)
-    --
-    -- See :h blink-cmp-config-keymap for defining your own keymap
+    cmdline = {
+      keymap = {
+        -- 选择并接受预选择的第一个
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
+      },
+      completion = {
+        -- 不预选第一个项目，选中后自动插入该项目文本
+        list = { selection = { preselect = false, auto_insert = true } },
+        -- 自动显示补全窗口，仅在输入命令时显示菜单，而搜索或使用其他输入菜单时则不显示
+        menu = {
+          auto_show = function(ctx)
+            return vim.fn.getcmdtype() == ':'
+            -- enable for inputs as well, with:
+            -- or vim.fn.getcmdtype() == '@'
+          end,
+        },
+        -- 不在当前行上显示所选项目的预览
+        ghost_text = { enabled = false },
+      },
+    },
     keymap = {
       preset = 'none',
       ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
@@ -39,28 +42,64 @@ return {
       ['<C-n>'] = { 'snippet_forward', 'select_next', 'fallback' }, -- 同时存在补全列表和snippet时，snippet跳转优先级更高
       ['<C-p>'] = { 'snippet_backward', 'select_prev', 'fallback' },
     },
+    completion = {
+      -- 示例：使用'prefix'对于'foo_|_bar'单词将匹配'foo_'(光标前面的部分),使用'full'将匹配'foo__bar'(整个单词)
+      keyword = { range = 'full' },
+      -- 选择补全项目时显示文档(0.5秒延迟)
+      documentation = { auto_show = true, auto_show_delay_ms = 500 },
+      -- 不预选第一个项目，选中后自动插入该项目文本
+      list = { selection = { preselect = false, auto_insert = true } },
+    },
+    -- 指定文件类型启用/禁用
+    enabled = function()
+      return not vim.tbl_contains({
+        -- "lua",
+        -- "markdown"
+      }, vim.bo.filetype) and vim.bo.buftype ~= 'prompt' and vim.b.completion ~= false
+    end,
 
     appearance = {
-      -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-      -- Adjusts spacing to ensure icons are aligned
+      -- 将后备高亮组设置为 nvim-cmp 的高亮组
+      -- 当您的主题不支持blink.cmp 时很有用
+      -- 将在未来版本中删除
+      use_nvim_cmp_as_default = true,
+      -- 将“Nerd Font Mono”设置为“mono”，将“Nerd Font”设置为“normal”
+      -- 调整间距以确保图标对齐
       nerd_font_variant = 'mono',
     },
 
-    -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = false } },
-
-    -- Default list of enabled providers defined so that you can extend it
-    -- elsewhere in your config, without redefining it, due to `opts_extend`
+    -- 已定义启用的提供程序的默认列表，以便您可以扩展它
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = {
+        'buffer',
+        'lsp',
+        'path',
+        'snippets',
+        -- "avante",
+      },
+      providers = {
+        -- score_offset设置优先级数字越大优先级越高
+        buffer = { score_offset = 5 },
+        path = { score_offset = 3 },
+        lsp = { score_offset = 2 },
+        snippets = { score_offset = 1 },
+        cmdline = {
+          min_keyword_length = function(ctx)
+            -- when typing a command, only show when the keyword is 3 characters or longer
+            if ctx.mode == 'cmdline' and string.find(ctx.line, ' ') == nil then
+              return 3
+            end
+            return 0
+          end,
+        },
+        -- avante = {
+        -- 	module = "blink-cmp-avante",
+        -- 	name = "Avante",
+        -- 	score_offset = 6,
+        -- },
+      },
     },
-
-    -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
-    -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
-    -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
-    --
-    -- See the fuzzy documentation for more information
-    fuzzy = { implementation = 'prefer_rust_with_warning' },
   },
+  -- 由于“opts_extend”，您的配置中的其他位置无需重新定义它
   opts_extend = { 'sources.default' },
 }

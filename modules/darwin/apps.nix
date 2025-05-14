@@ -178,10 +178,10 @@ in {
       "raycast" # (HotKey: alt/option + space)search, calculate and run scripts(with many plugins)
       "stats" # beautiful system status monitor in menu bar
       # "reaper"  # audio editor
-      "sonic-pi" # music programming
-      "tencent-lemon" # macOS cleaner
+      # "sonic-pi" # music programming
+      # "tencent-lemon" # macOS cleaner
       "neteasemusic" # music
-      "blender@lts" # 3D creation suite
+      # "blender@lts" # 3D creation suite
       # "ibkr"
       "mihomo-party" # transparent proxy tool
 
