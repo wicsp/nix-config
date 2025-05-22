@@ -120,6 +120,7 @@ in {
       "hashicorp/tap"
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       "FelixKratz/formulae" # janky borders - highlight active window borders
+      "mihomo-party-org/mihomo-party"
     ];
 
     brews = [
@@ -129,6 +130,9 @@ in {
       "aria2" # download tool
       "httpie" # http client
       "wireguard-tools" # wireguard
+
+      # a markdown editor
+      "typst"
 
       "borders" # highlight active window borders
 
