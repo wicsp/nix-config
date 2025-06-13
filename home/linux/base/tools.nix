@@ -6,7 +6,7 @@
     wireguard-tools # manage wireguard vpn manually, via wg-quick
 
     tailscale # connect to tailscale network
-    ventoy # create bootable usb
+    # ventoy # create bootable usb
     virt-viewer # vnc connect to VM, used by kubevirt
     vim
   ];

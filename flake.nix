@@ -23,6 +23,7 @@
       # "https://mirror.sjtu.edu.cn/nix-channels/store"
       "https://cache.nixos.org/"
     ];
+    trusted-users = ["root" "wicsp"];
   };
 
   inputs = {
@@ -30,10 +31,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
 
     # for macos
-    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
+    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -48,16 +49,13 @@
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      # url = "github:nix-community/home-manager/release-24.11";
+      # url = "github:nix-community/home-manager/release-25.05";
 
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs dependencies.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    home-manager-darwin.url = "github:nix-community/home-manager/release-24.11";
-    home-manager-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
@@ -111,17 +109,6 @@
     };
 
     ########################  Some non-flake repositories  #########################################
-
-    # doom-emacs is a configuration framework for GNU Emacs.
-    doomemacs = {
-      url = "github:doomemacs/doomemacs";
-      flake = false;
-    };
-
-    polybar-themes = {
-      url = "github:adi1090x/polybar-themes";
-      flake = false;
-    };
 
     ########################  My own repositories  #########################################
 

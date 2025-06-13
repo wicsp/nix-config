@@ -23,5 +23,5 @@
   # networking.proxy.default = "http://192.168.1.106:7890";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }

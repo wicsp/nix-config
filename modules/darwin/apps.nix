@@ -116,7 +116,6 @@ in {
     };
 
     taps = [
-      # "homebrew/services" # homebrew/services was deprecated.
       "hashicorp/tap"
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       "FelixKratz/formulae" # janky borders - highlight active window borders
@@ -154,6 +153,9 @@ in {
       "git-trim"
       "terraform"
       "terraformer"
+
+      "opencv"
+      "eigen"
     ];
 
     # `brew install --cask`
@@ -172,9 +174,9 @@ in {
       # IM & audio & remote desktop & meeting
       "telegram"
       # "discord" # update too frequently, use the web version instead
-      "microsoft-remote-desktop"
-      "moonlight" # remote desktop client
-      "rustdesk"
+      # "microsoft-remote-desktop"
+      # "moonlight" # remote desktop client
+      # "rustdesk"
 
       # Misc
       # "shadowsocksx-ng" # proxy tool

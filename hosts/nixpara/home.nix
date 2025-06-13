@@ -1,13 +1,16 @@
-{ config, pkgs, username, ... }:
 {
-
- imports = [
+  config,
+  pkgs,
+  username,
+  ...
+}: {
+  imports = [
     ../../home
   ];
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -26,5 +29,4 @@
   # home.file.".xxx".text = ''
   #     xxx
   # '';
-
 }

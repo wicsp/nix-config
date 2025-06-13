@@ -1,18 +1,20 @@
-{ config, pkgs, username, ... }:
 {
-   imports = [
+  config,
+  pkgs,
+  username,
+  ...
+}: {
+  imports = [
     ../../home
     ../../home/kitty.nix
   ];
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-
 
   # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -28,9 +30,4 @@
   # home.file.".xxx".text = ''
   #     xxx
   # '';
-
-
-
-
-
 }

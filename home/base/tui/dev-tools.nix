@@ -28,7 +28,7 @@
     minicom
 
     # ai related
-    pkgs-unstable.python312Packages.huggingface-hub # huggingface-cli
+    pkgs-unstable.python313Packages.huggingface-hub # huggingface-cli
 
     # misc
     pkgs-unstable.devbox
@@ -54,7 +54,7 @@
   programs = {
     direnv = {
       enable = true;
-      nix-direnv.enable = true;
+      # nix-direnv.enable = true;
 
       # enableZshIntegration = true;
       # enableBashIntegration = true;
