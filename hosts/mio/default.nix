@@ -14,8 +14,8 @@ in {
 
   networking = {
     inherit hostName;
-    inherit (myvars.networking) defaultGateway nameservers;
-    inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
+    # inherit (myvars.networking) defaultGateway nameservers;
+    # inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
 
     # Server networking
     networkmanager.enable = true;
