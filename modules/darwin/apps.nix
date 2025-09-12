@@ -82,11 +82,7 @@ in {
     ${homebrew_env_script}
   '';
 
-  # Create /etc/zshrc that loads the nix-darwin environment.
-  # this is required if you want to use darwin's default shell - zsh
-  programs.zsh.enable = true;
   environment.shells = [
-    pkgs.zsh
     pkgs-unstable.nushell # my custom shell
   ];
 
@@ -119,15 +115,16 @@ in {
       "hashicorp/tap"
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       "FelixKratz/formulae" # janky borders - highlight active window borders
-      "mihomo-party-org/mihomo-party"
     ];
 
     brews = [
+      "jj"
+
       # `brew install`
       "wget" # download tool
       "curl" # no not install curl via nixpkgs, it's not working well on macOS!
       "aria2" # download tool
-      "httpie" # http client
+      # "httpie" # http client
       "wireguard-tools" # wireguard
 
       # a markdown editor
@@ -160,6 +157,8 @@ in {
 
     # `brew install --cask`
     casks = [
+      "flashspace"
+
       "squirrel" # input method for Chinese, rime-squirrel
       "firefox"
       "google-chrome"
@@ -189,15 +188,13 @@ in {
       "neteasemusic" # music
       # "blender@lts" # 3D creation suite
       # "ibkr"
-      "mihomo-party" # transparent proxy tool
 
       # Development
       "mitmproxy" # HTTP/HTTPS traffic inspector
       "insomnia" # REST client
-      "wireshark" # network analyzer
       # "jdk-mission-control" # Java Mission Control
       # "google-cloud-sdk" # Google Cloud SDK
-      "miniforge" # Miniconda's community-driven distribution
+      # "miniforge" # Miniconda's community-driven distribution
 
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
       "macfuse" # for rclone to mount a fuse filesystem
