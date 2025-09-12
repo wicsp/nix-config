@@ -30,6 +30,11 @@
     # ============================================
     # Other VMs and Physical Machines
     # ============================================
+    mio = {
+      # Aliyun Server - 用于 SSH 连接的公网 IP
+      iface = "ens5"; # 实际网卡接口
+      ipv4 = "120.76.156.100"; # 公网 IP，用于 SSH 连接
+    };
     ai = {
       # Desktop PC
       iface = "enp5s0";

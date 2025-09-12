@@ -233,6 +233,30 @@ youko-local mode="default":
 
 ############################################################################
 #
+# Commands for General Purpose Servers
+#
+############################################################################
+
+# Deploy mio server
+[group('homelab')]
+mio:
+  colmena apply --on '@mio' --verbose --show-trace
+
+# Build mio configuration locally (works on macOS too)
+[group('homelab')]
+mio-local mode="default":
+  nix build .#nixosConfigurations.mio.config.system.build.toplevel --show-trace {{if mode == "debug" { "--verbose" } else { "" }}}
+
+# Deploy mio locally (Linux only)
+[linux]
+[group('homelab')]
+mio-switch mode="default":
+  #!/usr/bin/env nu
+  use {{utils_nu}} *; 
+  nixos-switch mio {{mode}}
+
+############################################################################
+#
 # Commands for other Virtual Machines
 #
 ############################################################################
