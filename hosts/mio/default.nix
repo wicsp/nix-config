@@ -24,5 +24,8 @@ in {
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
 
+  # Enable tailscale
+  services.tailscale.enable = true;
+
   system.stateVersion = "25.05"; # Did you read the comment?
 }
