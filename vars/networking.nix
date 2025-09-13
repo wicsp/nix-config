@@ -1,14 +1,14 @@
 {lib}: rec {
-  mainGateway = "10.211.55.1"; # main router
-  # use suzi as the default gateway
-  # it's a subrouter with a transparent proxy
-  defaultGateway = "192.168.5.178";
-  nameservers = [
-    "119.29.29.29" # DNSPod
-    "223.5.5.5" # AliDNS
-  ];
+  # mainGateway = "10.211.55.1"; # main router
+  # # use suzi as the default gateway
+  # # it's a subrouter with a transparent proxy
+  # defaultGateway = "192.168.5.178";
+  # nameservers = [
+  #   "119.29.29.29" # DNSPod
+  #   "223.5.5.5" # AliDNS
+  # ];
 
-  prefixLength = 24;
+  # prefixLength = 24;
 
   hostsAddr = {
     # ============================================
@@ -89,6 +89,11 @@
     mitsuha = {
       iface = "enp2s0"; # fake iface, it's not used by the host
       ipv4 = "192.168.5.177";
+    };
+    goudan = {
+      # Desktop PC - NixOS Desktop System
+      iface = "enp2s0";
+      ipv4 = "192.168.5.120";
     };
 
     # ============================================
