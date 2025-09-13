@@ -1,6 +1,6 @@
 {
   pkgs,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }: {
   # refer to https://codeberg.org/dnkl/foot/src/branch/master/foot.ini
@@ -19,7 +19,8 @@
       [mouse]
       hide-when-typing=yes
     ''
-    + (builtins.readFile "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-foot}/catppuccin-mocha.conf");
+    # + (builtins.readFile "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-foot}/catppuccin-mocha.conf")
+    ;
 
   home.packages = [
     # pkgs.firefox-wayland

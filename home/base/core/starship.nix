@@ -1,6 +1,6 @@
 {
   pkgs,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }: {
   programs.starship = {

@@ -125,8 +125,8 @@
       flake = false;
     };
 
-    nur-ryan4yin.url = "github:ryan4yin/nur-packages";
-    nur-ataraxiasjel.url = "github:AtaraxiaSjel/nur";
+    # nur-ryan4yin.url = "github:ryan4yin/nur-packages";
+    # nur-ataraxiasjel.url = "github:AtaraxiaSjel/nur";
 
     vscode-server.url = "github:nix-community/nixos-vscode-server";
   };

@@ -2,7 +2,7 @@
   pkgs,
   pkgs-unstable,
   # pkgs-stable,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }: {
   home.packages = with pkgs; [
@@ -27,7 +27,7 @@
     pkgs-unstable.yosys # fpga synthesis
     pkgs-unstable.nextpnr # fpga place and route
     pkgs-unstable.openfpgaloader # fpga programming
-    nur-ryan4yin.packages.${pkgs.system}.gowin-eda-edu-ide # app: `gowin-env` => `gw_ide` / `gw_pack` / ...
+    # nur-ryan4yin.packages.${pkgs.system}.gowin-eda-edu-ide # app: `gowin-env` => `gw_ide` / `gw_pack` / ...
   ];
 
   programs = {

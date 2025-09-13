@@ -1,7 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }:
 # media - control and enjoy audio/video
@@ -28,7 +28,8 @@
     ''
       # custom cava config
     ''
-    + builtins.readFile "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-cava}/mocha.cava";
+    # + builtins.readFile "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-cava}/mocha.cava"
+    ;
 
   programs = {
     mpv = {
