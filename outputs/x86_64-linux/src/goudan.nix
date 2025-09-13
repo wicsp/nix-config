@@ -46,6 +46,7 @@
 in {
   nixosConfigurations = {
     # host with hyprland compositor
+    "${name}" = mylib.nixosSystem (modules-hyprland // args);
     "${name}-hyprland" = mylib.nixosSystem (modules-hyprland // args);
   };
 
