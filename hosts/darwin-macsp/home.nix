@@ -10,6 +10,11 @@
         # required to prevent sending default identity files first.
         IdentitiesOnly yes
 
+      # Amax server
+      Host amax
+        HostName 172.25.77.228
+        Port 22
+
       # AliCloud server
       Host mio
         HostName 120.76.156.100
