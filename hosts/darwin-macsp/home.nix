@@ -12,7 +12,7 @@
 
       # Amax server
       Host amax
-        HostName 172.25.77.228
+        HostName 100.74.193.128
         Port 22
 
       # AliCloud server
