@@ -93,7 +93,7 @@
     goudan = {
       # Desktop PC - NixOS Desktop System
       iface = "enp2s0";
-      ipv4 = "192.168.5.120";
+      ipv4 = "192.168.124.58";
     };
 
     # ============================================
