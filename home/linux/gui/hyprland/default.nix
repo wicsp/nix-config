@@ -9,7 +9,7 @@ with lib; let
   cfg = config.modules.desktop.hyprland;
 in {
   imports = [
-    anyrun.homeManagerModules.default
+    # anyrun.homeManagerModules.default  # commented out due to conflict with values/anyrun.nix
     ./options
   ];
 
