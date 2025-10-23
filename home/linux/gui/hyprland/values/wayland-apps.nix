@@ -62,7 +62,7 @@
     };
 
     vscode = {
-      enable = true;
+      enable = false; # temporarily disabled due to download issues
       package = (pkgs.vscode.override
         {
           isInsiders = true;
