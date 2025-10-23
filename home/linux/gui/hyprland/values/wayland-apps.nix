@@ -23,9 +23,9 @@
     ;
 
   home.packages = [
-    # pkgs.firefox-wayland
-    pkgs.nixpaks.firefox
-    pkgs.nixpaks.firefox-desktop-item
+    pkgs.firefox-wayland
+    # pkgs.nixpaks.firefox  # temporarily disabled due to nixpaks missing
+    # pkgs.nixpaks.firefox-desktop-item  # temporarily disabled due to nixpaks missing
   ];
 
   programs = {
