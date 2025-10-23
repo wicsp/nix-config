@@ -1,17 +1,5 @@
 {
-  modules.desktop = {
-    hyprland = {
-      enable = true;
-      settings = {
-        # Configure your Display resolution, offset, scale and Monitors here, use `hyprctl monitors` to get the info.
-        #   highres:      get the best possible resolution
-        #   auto:         position automatically
-        #   1.0:          scale to 1.0 times (no scaling)
-        monitor = "DP-1,highres,auto,1.0";
-      };
-    };
-  };
-
+  # TUI/home config like mio; keep SSH setup
   programs.ssh = {
     enable = true;
     extraConfig = ''
