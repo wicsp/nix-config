@@ -31,7 +31,7 @@ test:
 # Update all the flake inputs
 [group('nix')]
 up:
-  nix flake update
+  nix flake update --extra-experimental-features nix-command --extra-experimental-features flakes
 
 # Update specific input
 # Usage: just upp nixpkgs

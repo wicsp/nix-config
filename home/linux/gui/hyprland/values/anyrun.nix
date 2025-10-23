@@ -1,6 +1,6 @@
 {
   pkgs,
-  anyrun,
+  # anyrun,
   ...
 }: {
   # programs.anyrun = {
