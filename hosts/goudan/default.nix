@@ -12,6 +12,20 @@ in {
     ./hardware-configuration.nix
   ];
 
+  # Boot loader configuration for Windows + Linux dual boot
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev"; # For EFI systems
+      useOSProber = true; # 自动检测 Windows
+    };
+  };
+
   networking = {
     inherit hostName;
     # inherit (myvars.networking) defaultGateway nameservers;

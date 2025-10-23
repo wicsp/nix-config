@@ -34,9 +34,9 @@
 
   programs = {
     # The OpenSSH agent remembers private keys for you
-    # so that you don’t have to type in passphrases every time you make an SSH connection.
+    # so that you don't have to type in passphrases every time you make an SSH connection.
     # Use `ssh-add` to add a key to the agent.
-    ssh.startAgent = true;
+    # ssh.startAgent = true;  # Disabled to avoid conflict with gnome.gcr-ssh-agent
     # dconf is a low-level configuration system.
     dconf.enable = true;
 
