@@ -14,26 +14,25 @@
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "vmd" "nvme" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
     fsType = "btrfs";
-    options = ["subvol=root" "compress=zstd"];
-  };
-
-  fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
-    fsType = "btrfs";
-    options = ["subvol=home" "compress=zstd"];
+    options = ["subvol=root"];
   };
 
   fileSystems."/nix" = {
     device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
     fsType = "btrfs";
-    options = ["subvol=nix" "noatime" "compress=zstd"];
+    options = ["subvol=nix"];
+  };
+
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
+    fsType = "btrfs";
+    options = ["subvol=home"];
   };
 
   fileSystems."/boot" = {
@@ -42,19 +41,9 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  # Note: boot loader config is set in hosts/goudan/*.nix to keep this file close to generator output.
-
   swapDevices = [
     {device = "/dev/disk/by-uuid/0c871529-bbb2-45c3-a7e7-f9417ec26915";}
   ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp23s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
