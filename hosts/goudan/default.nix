@@ -34,14 +34,15 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # X11 configuration is handled by modules/nixos/desktop.nix
+  # based on wayland/xorg enable options
+  # services.xserver.enable = true;
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
