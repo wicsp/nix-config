@@ -47,6 +47,11 @@ in {
     networkmanager.enable = true;
   };
 
+  # Disable desktop secrets for this host to avoid agenix activation errors
+  # The upstream outputs enable secrets by default for Hyprland; override here.
+  modules.secrets.desktop.enable = lib.mkForce false;
+  modules.secrets.impermanence.enable = lib.mkDefault false;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
