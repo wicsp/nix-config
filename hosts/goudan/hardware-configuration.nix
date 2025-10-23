@@ -42,6 +42,13 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
+  # UEFI boot via systemd-boot
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    efi.efiSysMountPoint = "/boot";
+    systemd-boot.enable = true;
+  };
+
   swapDevices = [
     {device = "/dev/disk/by-uuid/0c871529-bbb2-45c3-a7e7-f9417ec26915";}
   ];
