@@ -17,7 +17,17 @@ in {
   };
 
   # Conservative kernel choice to improve stability
-  boot.kernelPackages = pkgs.linuxPackages_lts;
+  boot.kernelPackages =
+    if pkgs ? linuxPackages_6_6
+    then pkgs.linuxPackages_6_6
+    else pkgs.linuxPackages_latest;
+
+  # UEFI boot via systemd-boot
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    efi.efiSysMountPoint = "/boot";
+    systemd-boot.enable = true;
+  };
 
   # Basic remote management
   services.openssh.enable = true;
