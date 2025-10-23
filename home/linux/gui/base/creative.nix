@@ -33,13 +33,13 @@
   programs = {
     # live streaming
     obs-studio = {
-      enable = true;
+      enable = false;
       plugins = with pkgs.obs-studio-plugins; [
         # screen capture
         wlrobs
         # obs-ndi
         obs-vaapi
-        obs-nvfbc
+        # obs-nvfbc
         obs-teleport
         # obs-hyperion
         droidcam-obs
