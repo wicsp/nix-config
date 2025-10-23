@@ -16,8 +16,8 @@
   };
 
   i18n.inputMethod = {
-    enabled = true;
-    type = "fcitx5";
+    enabled = "fcitx5";
+    # type = "fcitx5";  # 'type' is deprecated, use 'enabled' instead
     fcitx5.addons = with pkgs; [
       # for flypy chinese input method
       fcitx5-rime
