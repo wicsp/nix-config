@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   myvars,
   ...
 }:
@@ -16,11 +17,12 @@ in {
     ./hardware-configuration.nix
   ];
 
-  # Prefer LTS kernel when available, fallback to latest on channels where LTS alias is absent
-  boot.kernelPackages =
+  # Prefer LTS kernel when available; override hardware-configuration's setting
+  boot.kernelPackages = lib.mkForce (
     if pkgs ? linuxPackages_lts
     then pkgs.linuxPackages_lts
-    else pkgs.linuxPackages_latest;
+    else pkgs.linuxPackages_latest
+  );
 
   # Boot loader configuration for Windows + Linux dual boot
   boot.loader = {
