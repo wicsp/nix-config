@@ -20,7 +20,7 @@
     installBatSyntax = false;
     # installVimSyntax = true;
     settings = {
-      theme = "catppuccin-mocha";
+      # theme = "catppuccin-mocha";  # temporarily disabled - theme not found
 
       font-family = "JetBrains Mono";
       font-size = 13;
