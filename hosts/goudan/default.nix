@@ -1,7 +1,7 @@
 {myvars, ...}:
 #############################################################
 #
-#  Goudan - TUI/Server-like (matches mio)
+#  Goudan - NixOS Desktop System
 #
 #############################################################
 let
@@ -12,19 +12,41 @@ in {
     ./hardware-configuration.nix
   ];
 
+  # Boot loader configuration for Windows + Linux dual boot
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev"; # For EFI systems
+      useOSProber = true; # 自动检测 Windows
+    };
+  };
+
   networking = {
     inherit hostName;
     # inherit (myvars.networking) defaultGateway nameservers;
     # inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
-    # Server networking
+
+    # desktop need its cli for status bar
     networkmanager.enable = true;
   };
 
-  boot.tmp.cleanOnBoot = true;
-  zramSwap.enable = true;
+  # Enable sound with pipewire.
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
-  # Enable tailscale
-  services.tailscale.enable = true;
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
 
   # X11 configuration is handled by modules/nixos/desktop.nix
   # based on wayland/xorg enable options
