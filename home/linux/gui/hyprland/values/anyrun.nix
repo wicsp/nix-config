@@ -4,7 +4,7 @@
   ...
 }: {
   programs.anyrun = {
-    enable = true;
+    enable = false; # TODO: wait to repair
     config = {
       plugins = with anyrun.packages.${pkgs.system}; [
         applications
