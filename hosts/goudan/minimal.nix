@@ -12,7 +12,7 @@ in {
   # Keep it as close to the generated defaults as possible.
   networking = {
     inherit hostName;
-    useDHCP = true;
+    # NetworkManager manages DHCP; avoid conflict with networking.useDHCP
     networkmanager.enable = true;
   };
 
