@@ -22,8 +22,8 @@
     # ventoy # multi-boot usb creator
 
     # my custom hardened packages
-    pkgs.nixpaks.qq
-    pkgs.nixpaks.qq-desktop-item
+    # pkgs.nixpaks.qq  # temporarily disabled due to nixpaks missing
+    # pkgs.nixpaks.qq-desktop-item  # temporarily disabled due to nixpaks missing
 
     wechat-uos
     # pkgs.nixpaks.wechat-uos
