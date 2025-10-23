@@ -16,8 +16,11 @@ in {
     ./hardware-configuration.nix
   ];
 
-  # Use a more conservative(LTS) kernel than hardware-configuration's latest
-  boot.kernelPackages = pkgs.linuxPackages_lts;
+  # Prefer LTS kernel when available, fallback to latest on channels where LTS alias is absent
+  boot.kernelPackages =
+    if pkgs ? linuxPackages_lts
+    then pkgs.linuxPackages_lts
+    else pkgs.linuxPackages_latest;
 
   # Boot loader configuration for Windows + Linux dual boot
   boot.loader = {
