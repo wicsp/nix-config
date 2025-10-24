@@ -420,7 +420,7 @@ gpg --armor --export ryan4yin@linux.com > ryan4yin-gpg-keys.pub
 nix run nixpkgs#pgpdump ryan4yin-gpg-keys.pub
 ```
 
-Export Primary Key(The exported key is still **encrypted** by your passphrase):
+Export Primary Key(The exported key is still encrypted by your passphrase):
 
 > the `!` at the end of the key ID is to force GnuPG to export only the specified key, not the
 > subkeys.

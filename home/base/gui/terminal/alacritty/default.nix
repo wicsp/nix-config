@@ -26,26 +26,32 @@
 {
   programs.alacritty = {
     enable = true;
-    package = pkgs-unstable.alacritty;
+    # package = pkgs-unstable.alacritty;
     # https://alacritty.org/config-alacritty.html
     settings = {
-      general.import = [
-        ./catppuccin-mocha.toml
-      ];
       window = {
         opacity = 0.93;
         startup_mode = "Maximized"; # Maximized window
         dynamic_title = true;
         option_as_alt = "Both"; # Option key acts as Alt on macOS
+        decorations = "None"; # Show neither borders nor title bar
       };
       scrolling = {
         history = 10000;
       };
       font = {
-        bold = {family = "JetBrainsMono Nerd Font";};
-        italic = {family = "JetBrainsMono Nerd Font";};
-        normal = {family = "JetBrainsMono Nerd Font";};
-        bold_italic = {family = "JetBrainsMono Nerd Font";};
+        bold = {
+          family = "Maple Mono NF CN";
+        };
+        italic = {
+          family = "Maple Mono NF CN";
+        };
+        normal = {
+          family = "Maple Mono NF CN";
+        };
+        bold_italic = {
+          family = "Maple Mono NF CN";
+        };
         size =
           if pkgs.stdenv.isDarwin
           then 14
@@ -55,7 +61,11 @@
         # Spawn a nushell in login mode via `bash`
         shell = {
           program = "${pkgs.bash}/bin/bash";
-          args = ["--login" "-c" "nu --login --interactive"];
+          args = [
+            "--login"
+            "-c"
+            "nu --login --interactive"
+          ];
         };
         # Controls the ability to write to the system clipboard with the OSC 52 escape sequence.
         # It's used by zellij to copy text to the system clipboard.

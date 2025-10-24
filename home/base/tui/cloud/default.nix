@@ -1,8 +1,11 @@
 {
-  lib,
+  lib, # TODO
   pkgs,
   ...
 }: {
+  # https://developer.hashicorp.com/terraform/cli/config/config-file
+  home.file.".terraformrc".source = ./terraformrc;
+
   home.packages = with pkgs; [
     # infrastructure as code
     # pulumi
@@ -27,11 +30,15 @@
     # digitalocean
     doctl
     # google cloud
-    google-cloud-sdk
+    (google-cloud-sdk.withExtraComponents (
+      with google-cloud-sdk.components; [
+        gke-gcloud-auth-plugin
+      ]
+    ))
 
     # cloud tools that nix do not have cache for.
-    # terraform
-    # terraformer # generate terraform configs from existing cloud resources
-    # packer # machine image builder
+    terraform
+    terraformer # generate terraform configs from existing cloud resources
+    packer # machine image builder
   ];
 }

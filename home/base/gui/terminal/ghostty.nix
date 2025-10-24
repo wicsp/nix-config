@@ -13,16 +13,14 @@
     enable = true;
     package =
       if pkgs.stdenv.isDarwin
-      then pkgs.emptyDirectory # pkgs.ghostty is currently broken on darwin
+      then pkgs.hello # pkgs.ghostty is currently broken on darwin
       else pkgs.ghostty; # the stable version
     # package = ghostty.packages.${pkgs.system}.default; # the latest version
     enableBashIntegration = false;
     installBatSyntax = false;
     # installVimSyntax = true;
     settings = {
-      # theme = "catppuccin-mocha";  # temporarily disabled - theme not found
-
-      font-family = "JetBrains Mono";
+      font-family = "Maple Mono NF CN";
       font-size = 13;
 
       background-opacity = 0.93;

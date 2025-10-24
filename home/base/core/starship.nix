@@ -1,8 +1,4 @@
 {
-  pkgs,
-  # nur-ryan4yin,
-  ...
-}: {
   programs.starship = {
     enable = true;
 
@@ -10,23 +6,24 @@
     enableZshIntegration = true;
     enableNushellIntegration = true;
 
+    # https://starship.rs/config/
     settings = {
+      # Get editor completions based on the config schema
+      "$schema" = "https://starship.rs/config-schema.json";
       character = {
-        success_symbol = "[›](bold green)";
-        error_symbol = "[›](bold red)";
+        success_symbol = "[➜](bold green)";
+        error_symbol = "[➜](bold red)";
       };
-      aws = {
-        symbol = "🅰 ";
-      };
-      gcloud = {
-        # do not show the account/project's info
-        # to avoid the leak of sensitive information when sharing the terminal
-        format = "on [$symbol$active(\($region\))]($style) ";
-        symbol = "🅶 ️";
-      };
+      # I never rely on the defaults, so this module is useless to me—disabled.
+      # I prefer adding --project, --region to very gcloud/aws command.
+      aws.disabled = true;
+      gcloud.disabled = true;
 
-      # palette = "catppuccin_mocha";
+      kubernetes = {
+        symbol = "⛵";
+        disabled = false;
+      };
+      os.disabled = false;
     };
-    # // builtins.fromTOML (builtins.readFile "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-starship}/palettes/mocha.toml");
   };
 }

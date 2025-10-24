@@ -3,29 +3,22 @@
   pkgs-unstable,
   ...
 }: {
-  nixpkgs.config = {
-    programs.npm.npmrc = ''
-      prefix = ''${HOME}/.npm-global
-    '';
-  };
-
   home.packages = with pkgs; (
     # -*- Data & Configuration Languages -*-#
     [
       #-- nix
       nil
-      # rnix-lsp
-      # nixd
+      nixd
       statix # Lints and suggestions for the nix programming language
       deadnix # Find and remove unused code in .nix source files
-      alejandra # Nix Code Formatter
+      nixfmt # Nix Code Formatter
 
       #-- nickel lang
       nickel
 
       #-- json like
       # terraform  # install via brew on macOS
-      # terraform-ls
+      terraform-ls
       jsonnet
       jsonnet-language-server
       taplo # TOML language server / formatter / validator
@@ -34,7 +27,7 @@
 
       #-- dockerfile
       hadolint # Dockerfile linter
-      nodePackages.dockerfile-language-server-nodejs
+      dockerfile-language-server
 
       #-- markdown
       marksman # language server for markdown
@@ -67,14 +60,16 @@
       vscode-extensions.vadimcn.vscode-lldb.adapter # codelldb - debugger
 
       #-- python
-      pyright # python language server
-
       (python313.withPackages (
         ps:
           with ps; [
+            # python language server
+            pyright
             ruff
+
+            pipx # Install and Run Python Applications in Isolated Environments
             black # python formatter
-            # debugpy
+            uv # python project package manager
 
             # my commonly used python packages
             jupyter
@@ -85,14 +80,9 @@
             pyyaml
             boto3
 
-            ## emacs's lsp-bridge dependenciesge
-            # epc
-            # orjson
-            # sexpdata
-            # six
-            # setuptools
-            # paramiko
-            # rapidfuzz
+            # misc
+            protobuf # protocol buffer compiler
+            numpy
           ]
       ))
 
@@ -135,7 +125,6 @@
     #-*- Web Development -*-#
     ++ [
       nodePackages.nodejs
-      nodePackages.pnpm
       nodePackages.typescript
       nodePackages.typescript-language-server
       # HTML/CSS/JSON/ESLint language servers extracted from vscode
@@ -144,16 +133,16 @@
       emmet-ls
     ]
     # -*- Lisp like Languages -*-#
-    ++ [
-      guile
-      racket-minimal
-      fnlfmt # fennel
-      (
-        if pkgs.stdenv.isDarwin
-        then pkgs.emptyDirectory
-        else pkgs-unstable.akkuPackages.scheme-langserver
-      )
-    ]
+    # ++ [
+    #   guile
+    #   racket-minimal
+    #   fnlfmt # fennel
+    #   (
+    #     if pkgs.stdenv.isLinux && pkgs.stdenv.isx86
+    #     then pkgs-unstable.akkuPackages.scheme-langserver
+    #     else pkgs.emptyDirectory
+    #   )
+    # ]
     ++ [
       proselint # English prose linter
 

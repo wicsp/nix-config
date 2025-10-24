@@ -16,12 +16,8 @@
 {
   programs.kitty = {
     enable = true;
-    # kitty has catppuccin theme built-in,
-    # all the built-in themes are packaged into an extra package named `kitty-themes`
-    # and it's installed by home-manager if `theme` is specified.
-    themeFile = "Catppuccin-Mocha";
     font = {
-      name = "Maple Mono NF CN ExtraLight";
+      name = "Maple Mono NF CN";
       # use different font size on macOS
       size =
         if pkgs.stdenv.isDarwin
@@ -37,7 +33,9 @@
 
     settings = {
       # window settings
-      hide_window_decorations = "titlebar-only"; # show window decorations
+      # do not show title bar & window title
+      hide_window_decorations = "titlebar-and-corners";
+      macos_show_window_title_in = "none";
       window_padding_width = "0";
       background_opacity = "0.93";
       background_blur = "64";

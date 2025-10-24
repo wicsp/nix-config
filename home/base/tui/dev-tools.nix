@@ -15,12 +15,13 @@
   #############################################################
 
   home.packages = with pkgs; [
-    sshfs # mount remote file system via ssh
     colmena # nixos's remote deployment tool
 
+    tokei # count lines of code, alternative to cloc
+
     # db related
-    pkgs-unstable.mycli
-    pkgs-unstable.pgcli
+    mycli
+    pgcli
     mongosh
     sqlite
 
@@ -28,13 +29,12 @@
     minicom
 
     # ai related
-    pkgs-unstable.python313Packages.huggingface-hub # huggingface-cli
+    python313Packages.huggingface-hub # huggingface-cli
 
     # misc
-    pkgs-unstable.devbox
+    devbox
     bfg-repo-cleaner # remove large files from git history
     k6 # load testing tool
-    protobuf # protocol buffer compiler
 
     # solve coding extercises - learn by doing
     exercism
@@ -47,18 +47,17 @@
     # need to run `conda-install` before using it
     # need to run `conda-shell` before using command `conda`
     # conda is not available for MacOS
-    # conda
-    uv
+    conda
   ];
 
   programs = {
     direnv = {
       enable = true;
-      # nix-direnv.enable = true;
+      nix-direnv.enable = true;
 
-      # enableZshIntegration = true;
-      # enableBashIntegration = true;
-      # enableNushellIntegration = true;
+      enableZshIntegration = true;
+      enableBashIntegration = true;
+      enableNushellIntegration = true;
     };
   };
 }
