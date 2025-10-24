@@ -26,6 +26,18 @@
         # To use chrome, we need to allow the installation of non-free software
         config.allowUnfree = true;
       };
+      # i dont have a patched nixpkgs repo yet, so comment this out
+      # pkgs-patched = import inputs.nixpkgs-patched {
+      #   inherit system;
+      #   # To use chrome, we need to allow the installation of non-free software
+      #   config.allowUnfree = true;
+      # };
+      pkgs-x64 = import nixpkgs {
+        system = "x86_64-linux";
+
+        # To use chrome, we need to allow the installation of non-free software
+        config.allowUnfree = true;
+      };
     };
 
   # This is the args for all the haumea modules in this folder.
