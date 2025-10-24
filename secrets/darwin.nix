@@ -37,7 +37,7 @@
     };
     user_readable = {
       mode = "0500";
-      owner = "wicsp";
+      owner = myvars.username;
     };
   in {
     # ---------------------------------------------
