@@ -48,6 +48,12 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Mihomo (Clash Meta) proxy service
+  services.mihomo = {
+    enable = true;
+    configFile = "/home/wicsp/.config/mihomo/config.yaml";
+  };
+
   # X11 configuration is handled by modules/nixos/desktop.nix
   # based on wayland/xorg enable options
   # services.xserver.enable = true;
