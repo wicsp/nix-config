@@ -120,7 +120,7 @@
 
     # add git hooks to format nix code before commit
     pre-commit-hooks = {
-      url = "github:cachix/pgit-hooks.nix";
+      url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

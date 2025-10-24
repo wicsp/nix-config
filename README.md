@@ -8,7 +8,7 @@
 	<a href="https://github.com/ryan4yin/nix-config/stargazers">
 		<img alt="Stargazers" src="https://img.shields.io/github/stars/ryan4yin/nix-config?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
     <a href="https://nixos.org/">
-        <img src="https://img.shields.io/badge/NixOS-24.11-informational.svg?style=for-the-badge&logo=nixos&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"></a>
+        <img src="https://img.shields.io/badge/NixOS-25.05-informational.svg?style=for-the-badge&logo=nixos&color=F2CDCD&logoColor=D9E0EE&labelColor=302D41"></a>
     <a href="https://github.com/ryan4yin/nixos-and-flakes-book">
         <img src="https://img.shields.io/static/v1?label=Nix Flakes&message=learning&style=for-the-badge&logo=nixos&color=DDB6F2&logoColor=D9E0EE&labelColor=302D41"></a>
   </a>
@@ -56,45 +56,38 @@ You don't have to go through the pain I've experienced again! Check out my
 
 |                             | NixOS(Wayland)                                                                                                      |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Window Manager**          | [Hyprland][Hyprland]                                                                                                |
-| **Terminal Emulator**       | [Zellij][Zellij] + [Kitty][Kitty]                                                                                   |
+| **Window Manager**          | [Hyprland][Hyprland] / [Niri][Niri]                                                                                 |
+| **Terminal Emulator**       | [Zellij][Zellij] + [foot][foot]/[Kitty][Kitty]/[Alacritty][Alacritty]/[Ghostty][Ghostty]                            |
 | **Bar**                     | [Waybar][Waybar]                                                                                                    |
 | **Application Launcher**    | [anyrun][anyrun]                                                                                                    |
 | **Notification Daemon**     | [Mako][Mako]                                                                                                        |
-| **Display Manager**         | [GDM][GDM]                                                                                                          |
-| **Color Scheme**            | [Catppuccin][Catppuccin]                                                                                            |
+| **Display Manager**         | [tuigreet][tuigreet]                                                                                                |
+| **Color Scheme**            | [catppuccin-nix][catppuccin-nix]                                                                                    |
 | **network management tool** | [NetworkManager][NetworkManager]                                                                                    |
-| **Input method framework**  | [Fcitx5][Fcitx5]                                                                                                    |
+| **Input method framework**  | [Fcitx5][Fcitx5] + [rime][rime] + [小鹤音形 flypy][flypy]                                                           |
 | **System resource monitor** | [Btop][Btop]                                                                                                        |
 | **File Manager**            | [Yazi][Yazi] + [thunar][thunar]                                                                                     |
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship]                                                                           |
-| **Music Player**            | [mpd][mpd], [ncmpcpp][ncmpcpp], [mpc][mpc]                                                                          |
 | **Media Player**            | [mpv][mpv]                                                                                                          |
-| **Text Editor**             | [Neovim][Neovim] + [DoomEmacs][DoomEmacs]                                                                           |
+| **Text Editor**             | [Neovim][Neovim]                                                                                                    |
 | **Fonts**                   | [Nerd fonts][Nerd fonts]                                                                                            |
 | **Image Viewer**            | [imv][imv]                                                                                                          |
-| **Screenshot Software**     | [flameshot][flameshot] + [grim][grim]                                                                               |
+| **Screenshot Software**     | [hyprshot][hyprshot]                                                                                                |
 | **Screen Recording**        | [OBS][OBS]                                                                                                          |
-| **Filesystem & Encryption** | tmpfs on `/`, [Btrfs][Btrfs] subvolumes on a [LUKS][LUKS] encrypted partition for persistent, unlock via passphrase |
+| **Filesystem & Encryption** | tmpfs as `/`, [Btrfs][Btrfs] subvolumes on a [LUKS][LUKS] encrypted partition for persistent, unlock via passphrase |
 | **Secure Boot**             | [lanzaboote][lanzaboote]                                                                                            |
 
 Wallpapers: https://github.com/ryan4yin/wallpapers
 
-## Hyprland + AstroNvim + DoomEmacs
+## Hyprland + AstroNvim
 
 ![](./_img/hyprland_2023-07-29_1.webp)
 
 ![](./_img/hyprland_2023-07-29_2.webp)
 
-![](./_img/emacs-2024-01-07.webp)
-
 ## Neovim
 
 See [./home/base/tui/editors/neovim/](./home/base/tui/editors/neovim/) for details.
-
-## Emacs
-
-See [./home/base/tui/editors/emacs/](./home/base/tui/editors/emacs/) for details.
 
 ## Secrets Management
 
@@ -116,14 +109,16 @@ For NixOS:
 > To deploy this flake from NixOS's official ISO image (purest installation method), please refer to
 > [./nixos-installer/](./nixos-installer/)
 
-> Need to restart the machine when switching between `wayland` and `xorg`.
-
 ```bash
 # deploy one of the configuration based on the hostname
 sudo nixos-rebuild switch --flake .#ai-hyprland
 
 # deploy via `just`(a command runner with similar syntax to make) & Justfile
-just hypr  # deploy my pc with hyprland compositor
+# Deploy the hyprland nixosConfiguration by hostname match
+just hypr
+
+# Deploy the niri nixosConfiguration by hostname match
+just niri
 
 # or we can deploy with details
 just hypr debug
@@ -139,15 +134,11 @@ nix-shell -p just nushell
 # 3. comment home-manager's code in lib/macosSystem.nix to speed up the first deployment.
 # 4. comment out the proxy settings in scripts/darwin_set_proxy.py if the proxy is not ready yet.
 
-# 4. deploy harmonica's configuration(macOS Intel)
-just ha
-
-# deploy fern's configuration(Apple Silicon)
-just fe
+# Deploy the darwinConfiguration by hostname match
+just local
 
 # deploy with details
-just ha debug
-# just fe debug
+just local debug
 ```
 
 > [What y'all will need when Nix drives you to drink.](https://www.youtube.com/watch?v=Eni9PPPPBpg)
@@ -178,6 +169,7 @@ Other dotfiles that inspired me:
     journey.
   - [HeinzDev/Hyprland-dotfiles](https://github.com/HeinzDev/Hyprland-dotfiles): Refer to the waybar
     configuration here.
+  - [Zeioth/zeioth-hyprland-config](https://github.com/Zeioth/zeioth-hyprland-config)
   - [linuxmobile/kaku](https://github.com/linuxmobile/kaku)
 - Neovim/AstroNvim
   - [maxbrunet/dotfiles](https://github.com/maxbrunet/dotfiles): astronvim with nix flakes.
@@ -185,7 +177,11 @@ Other dotfiles that inspired me:
   - [1amSimp1e/dots](https://github.com/1amSimp1e/dots)
 
 [Hyprland]: https://github.com/hyprwm/Hyprland
+[Niri]: https://github.com/YaLTeR/niri
 [Kitty]: https://github.com/kovidgoyal/kitty
+[foot]: https://codeberg.org/dnkl/foot
+[Alacritty]: https://github.com/alacritty/alacritty
+[Ghostty]: https://github.com/ghostty-org/ghostty
 [Nushell]: https://github.com/nushell/nushell
 [Starship]: https://github.com/starship/starship
 [Waybar]: https://github.com/Alexays/Waybar
@@ -194,27 +190,22 @@ Other dotfiles that inspired me:
 [anyrun]: https://github.com/Kirottu/anyrun
 [Dunst]: https://github.com/dunst-project/dunst
 [Fcitx5]: https://github.com/fcitx/fcitx5
+[rime]: https://wiki.archlinux.org/title/Rime
+[flypy]: https://flypy.cc/
 [Btop]: https://github.com/aristocratos/btop
 [mpv]: https://github.com/mpv-player/mpv
 [Zellij]: https://github.com/zellij-org/zellij
 [Neovim]: https://github.com/neovim/neovim
 [AstroNvim]: https://github.com/AstroNvim/AstroNvim
-[DoomEmacs]: https://github.com/doomemacs/doomemacs
-[flameshot]: https://github.com/flameshot-org/flameshot
-[grim]: https://github.com/emersion/grim
-[flameshot]: https://github.com/flameshot-org/flameshot
+[Hyprshot]: https://github.com/Gustash/Hyprshot
 [imv]: https://sr.ht/~exec64/imv/
 [OBS]: https://obsproject.com
 [Mako]: https://github.com/emersion/mako
 [Nerd fonts]: https://github.com/ryanoasis/nerd-fonts
-[catppuccin]: https://github.com/catppuccin/catppuccin
-[mpd]: https://github.com/MusicPlayerDaemon/MPD
-[ncmpcpp]: https://github.com/ncmpcpp/ncmpcpp
-[mpc]: https://github.com/MusicPlayerDaemon/mpc
-[Netease-cloud-music-gtk]: https://github.com/gmg137/netease-cloud-music-gtk
+[catppuccin-nix]: https://github.com/catppuccin/nix
 [NetworkManager]: https://wiki.gnome.org/Projects/NetworkManager
 [wl-clipboard]: https://github.com/bugaevc/wl-clipboard
-[GDM]: https://wiki.archlinux.org/title/GDM
+[tuigreet]: https://github.com/apognu/tuigreet
 [thunar]: https://gitlab.xfce.org/xfce/thunar
 [Yazi]: https://github.com/sxyazi/yazi
 [Catppuccin]: https://github.com/catppuccin/catppuccin
