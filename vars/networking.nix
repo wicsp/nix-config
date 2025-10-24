@@ -105,7 +105,7 @@
       #     => { x = "bar-a"; y = "bar-b"; }
       lib.attrsets.mapAttrs
       (host: value: {
-        hostNames = [host hostsAddr.${host}.ipv4];
+        hostNames = [host] ++ (lib.optional (hostsAddr ? host) hostsAddr.${host}.ipv4);
         publicKey = value.publicKey;
       })
       {
