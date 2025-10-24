@@ -52,6 +52,8 @@ in {
   services.mihomo = {
     enable = true;
     configFile = "/home/wicsp/.config/mihomo/config.yaml";
+    tunMode = true;
+    webui = pkgs.metacubexd;
   };
 
   # X11 configuration is handled by modules/nixos/desktop.nix
