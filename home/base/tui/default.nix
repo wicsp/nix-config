@@ -9,6 +9,7 @@
     # ./password-store
     # ./cloud
     # ./zellij
+    ./shell
     ./editors
   ];
 }
