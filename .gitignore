@@ -1,4 +1,4 @@
-.vscode
+.Trash-1000/
 result
 result/
 .direnv/
@@ -8,10 +8,4 @@ logs/
 core*
 !core/
 !core.nix
-
-*.key
-*.csr
-
-amz-v1-5-zh-hans.gram
-zh-hans-t-tiger-ugc.gram.pre-commit-config.yaml
-/Users/wicsp/.npm-global/
+!coredns*

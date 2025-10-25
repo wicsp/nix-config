@@ -8,7 +8,7 @@
   modules.desktop.nvidia.enable = true;
 
   modules.desktop.hyprland.settings.source = [
-    "${config.home.homeDirectory}/nix-config/hosts/idols-ai/hypr-hardware.conf"
+    "${config.home.homeDirectory}/nix-config/hosts/goudan/hypr-hardware.conf"
   ];
 
   modules.desktop.niri = {

@@ -18,11 +18,6 @@ utils_nu := absolute_path("utils.nu")
 default:
     @just --list
 
-system-info:
-  @echo "This is an {{arch()}} machine"
-  @echo "This is an {{os()}} machine"
-  @echo "This is an {{os_family()}} machine"
-  
 # Run eval tests
 [group('nix')]
 test:
@@ -31,13 +26,13 @@ test:
 # Update all the flake inputs
 [group('nix')]
 up:
-  nix flake update --extra-experimental-features nix-command --extra-experimental-features flakes
+  nix flake update --commit-lock-file
 
 # Update specific input
 # Usage: just upp nixpkgs
 [group('nix')]
 upp input:
-  nix flake update {{input}}
+  nix flake update {{input}} --commit-lock-file
 
 # List all generations of the system profile
 [group('nix')]
@@ -53,7 +48,10 @@ repl:
 # on darwin, you may need to switch to root user to run this command
 [group('nix')]
 clean:
+  # Wipe out NixOS's history
   sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
+  # Wipe out home-manager's history
+  nix profile wipe-history --profile $"($env.XDG_STATE_HOME)/nix/profiles/home-manager" --older-than 7d
 
 # Garbage collect all unused nix store entries
 [group('nix')]
@@ -79,7 +77,7 @@ shell:
 [group('nix')]
 fmt:
   # format the nix files in this repo
-  nix fmt
+  ls **/*.nix | each { |it| nixfmt $it.name }
 
 # Show all the auto gc roots in the nix store
 [group('nix')]
@@ -99,29 +97,44 @@ verify-store:
 repair-store *paths:
   nix store repair {{paths}}
 
+# Update all Nixpkgs inputs
+[group('nix')]
+up-nix:
+  nix flake update nixpkgs nixpkgs-stable nixpkgs-unstable nixpkgs-darwin nixpkgs-ollama
+
 ############################################################################
 #
 #  NixOS Desktop related commands
 #
 ############################################################################
 
+# Deploy the nixosConfiguration by hostname match
+[linux]
+[group('homelab')]
+local mode="default":
+  #!/usr/bin/env nu
+  use {{utils_nu}} *;
+  nixos-switch (hostname) {{mode}}
+
+# Deploy the hyprland nixosConfiguration by hostname match
 [linux]
 [group('desktop')]
 hypr mode="default":
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  nixos-switch ai-hyprland {{mode}}
+  nixos-switch $"(hostname)-hyprland" {{mode}}
 
+# Deploy the niri nixosConfiguration by hostname match
 [linux]
 [group('desktop')]
-s-hypr mode="default":
+niri mode="default":
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  nixos-switch shoukei-hyprland {{mode}}
+  nixos-switch $"(hostname)-niri" {{mode}}
 
 ############################################################################
 #
-#  Darwin related commands, harmonica is my macbook pro's hostname
+#  Darwin related commands
 #
 ############################################################################
 
@@ -136,24 +149,17 @@ darwin-set-proxy:
 darwin-rollback:
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  darwin-rollback# Deploy to harmonica(macOS host)
-[macos]
-[group('desktop')]
-ha mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  darwin-build "harmonica" {{mode}};
-  darwin-switch "harmonica" {{mode}}
-  
+  darwin-rollback
 
-# Depoly to macsp(macOS host)
+# Deploy the darwinConfiguration by hostname match
 [macos]
 [group('desktop')]
-macsp mode="default": 
+local mode="default": 
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  darwin-build "macsp" {{mode}};
-  darwin-switch "macsp" {{mode}};
+  darwin-build (hostname) {{mode}};
+  darwin-switch (hostname) {{mode}}
+
 
 # Reset launchpad to force it to reindex Applications
 [macos]
@@ -173,13 +179,6 @@ reset-launchpad:
 [group('homelab')]
 col tag:
   colmena apply --on '@{{tag}}' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-local name mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  nixos-switch {{name}} {{mode}}
 
 # Build and upload a vm image
 [linux]
@@ -202,35 +201,13 @@ shoryu:
 
 [linux]
 [group('homelab')]
-shoryu-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch kubevirt-shoryu {{mode}}
-
-[linux]
-[group('homelab')]
 shushou:
   colmena apply --on '@kubevirt-shushou' --verbose --show-trace
 
 [linux]
 [group('homelab')]
-shushou-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch kubevirt-shushou {{mode}}
-
-[linux]
-[group('homelab')]
 youko:
   colmena apply --on '@kubevirt-youko' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-youko-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch kubevirt-youko {{mode}}
-
 
 ############################################################################
 #
@@ -255,34 +232,13 @@ aqua:
 
 [linux]
 [group('homelab')]
-aqua-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch aquamarine {{mode}}
-
-[linux]
-[group('homelab')]
 ruby:
   colmena apply --on '@ruby' --verbose --show-trace
 
 [linux]
 [group('homelab')]
-ruby-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch ruby {{mode}}
-
-[linux]
-[group('homelab')]
 kana:
   colmena apply --on '@kana' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-kana-local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  nixos-switch kana {{mode}}
 
 ############################################################################
 #
@@ -321,39 +277,6 @@ k3s-prod:
 [group('homelab')]
 k3s-test:
   colmena apply --on '@k3s-test-*' --verbose --show-trace
-
-# =================================================
-# Emacs related commands
-# =================================================
-
-[group('emacs')]
-emacs-test:
-  doom clean
-  doom sync
-
-[group('emacs')]
-emacs-purge:
-  doom purge
-  doom clean
-  doom sync
-
-[linux]
-[group('emacs')]
-emacs-reload:
-  doom sync
-  systemctl --user restart emacs.service
-  systemctl --user status emacs.service
-
-
-emacs-plist-path := "~/Library/LaunchAgents/org.nix-community.home.emacs.plist"
-
-[macos]
-[group('emacs')]
-emacs-reload:
-  doom sync
-  launchctl unload {{emacs-plist-path}}
-  launchctl load {{emacs-plist-path}}
-  tail -f ~/Library/Logs/emacs-daemon.stderr.log
 
 # =================================================
 #
@@ -404,3 +327,29 @@ list-failed:
 [group('services')]
 list-systemd:
   systemctl list-units systemd-*
+
+
+# =================================================
+#
+# Nixpkgs Review via Github Action
+# https://github.com/ryan4yin/nixpkgs-review-gha
+#
+# =================================================
+
+# Run nixpkgs-review for PR
+[linux]
+[group('nixpkgs')]
+pkg-review pr:
+  gh workflow run review.yml --repo ryan4yin/nixpkgs-review-gha -f x86_64-darwin=no -f post-result=true -f pr={{pr}}
+
+# Run package tests for PR
+[linux]
+[group('nixpkgs')]
+pkg-test pr pname:
+  gh workflow run review.yml --repo ryan4yin/nixpkgs-review-gha -f x86_64-darwin=no -f post-result=true -f pr={{pr}} -f extra-args="-p {{pname}}.passthru.tests"
+
+# View the summary of a workflow
+[linux]
+[group('nixpkgs')]
+pkg-summary:
+  gh workflow view review.yml --repo ryan4yin/nixpkgs-review-gha
