@@ -5,7 +5,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../modules/core.nix
     ../../modules/darwin.nix

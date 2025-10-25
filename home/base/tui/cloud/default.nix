@@ -2,7 +2,8 @@
   lib, # TODO
   pkgs,
   ...
-}: {
+}:
+{
   # https://developer.hashicorp.com/terraform/cli/config/config-file
   home.file.".terraformrc".source = ./terraformrc;
 
@@ -31,7 +32,8 @@
     doctl
     # google cloud
     (google-cloud-sdk.withExtraComponents (
-      with google-cloud-sdk.components; [
+      with google-cloud-sdk.components;
+      [
         gke-gcloud-auth-plugin
       ]
     ))

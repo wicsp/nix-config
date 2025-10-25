@@ -20,13 +20,13 @@
     vulkan-tools
     glxinfo
     nvitop
-    (pkgs-x64.zoom-us.override {hyprlandXdgDesktopPortalSupport = true;})
+    (pkgs-x64.zoom-us.override { hyprlandXdgDesktopPortalSupport = true; })
   ];
 
   programs.mpv = {
     enable = true;
-    defaultProfiles = ["gpu-hq"];
-    scripts = [pkgs.mpvScripts.mpris];
+    defaultProfiles = [ "gpu-hq" ];
+    scripts = [ pkgs.mpvScripts.mpris ];
   };
 
   services = {

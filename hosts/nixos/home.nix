@@ -3,7 +3,8 @@
   pkgs,
   username,
   ...
-}: {
+}:
+{
   imports = [
     ../../home
     ../../home/kitty.nix

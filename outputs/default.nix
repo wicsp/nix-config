@@ -3,14 +3,16 @@
   nixpkgs,
   pre-commit-hooks,
   ...
-} @ inputs: let
+}@inputs:
+let
   inherit (inputs.nixpkgs) lib;
-  mylib = import ../lib {inherit lib;};
-  myvars = import ../vars {inherit lib;};
+  mylib = import ../lib { inherit lib; };
+  myvars = import ../vars { inherit lib; };
 
   # Add my custom lib, vars, nixpkgs instance, and all the inputs to specialArgs,
   # so that I can use them in all my nixos/home-manager/darwin modules.
-  genSpecialArgs = system:
+  genSpecialArgs =
+    system:
     inputs
     // {
       inherit mylib myvars;
@@ -52,15 +54,15 @@
   };
   # modules for each supported system
   nixosSystems = {
-    x86_64-linux = import ./x86_64-linux (args // {system = "x86_64-linux";});
+    x86_64-linux = import ./x86_64-linux (args // { system = "x86_64-linux"; });
     # aarch64-linux = import ./aarch64-linux (args // {system = "aarch64-linux";});
     # riscv64-linux = import ./riscv64-linux (args // {system = "riscv64-linux";});
   };
   darwinSystems = {
-    aarch64-darwin = import ./aarch64-darwin (args // {system = "aarch64-darwin";});
+    aarch64-darwin = import ./aarch64-darwin (args // { system = "aarch64-darwin"; });
   };
   homeSystems = {
-    x86_64-home = import ./x86_64-home (args // {system = "x86_64-linux";});
+    x86_64-home = import ./x86_64-home (args // { system = "x86_64-linux"; });
   };
 
   # allSystems = nixosSystems // darwinSystems // homeSystems;
@@ -74,7 +76,8 @@
 
   # Helper function to generate a set of attributes for each system
   forAllSystems = func: (nixpkgs.lib.genAttrs allSystemNames func);
-in {
+in
+{
   # Add attribute sets into outputs, for debugging
   # Add attribute sets into outputs, for debugging
   debugAttrs = {
@@ -89,37 +92,37 @@ in {
 
   # NixOS Hosts
   nixosConfigurations = lib.attrsets.mergeAttrsList (
-    map (it: it.nixosConfigurations or {}) nixosSystemValues
+    map (it: it.nixosConfigurations or { }) nixosSystemValues
   );
 
   # Colmena - remote deployment via SSH
-  colmena =
-    {
-      meta =
-        (
-          let
-            system = "x86_64-linux";
-          in {
-            # colmena's default nixpkgs & specialArgs
-            nixpkgs = import nixpkgs {inherit system;};
-            specialArgs = genSpecialArgs system;
-          }
-        )
-        // {
-          # per-node nixpkgs & specialArgs
-          nodeNixpkgs = lib.attrsets.mergeAttrsList (
-            map (it: it.colmenaMeta.nodeNixpkgs or {}) nixosSystemValues
-          );
-          nodeSpecialArgs = lib.attrsets.mergeAttrsList (
-            map (it: it.colmenaMeta.nodeSpecialArgs or {}) nixosSystemValues
-          );
-        };
-    }
-    // lib.attrsets.mergeAttrsList (map (it: it.colmena or {}) nixosSystemValues);
+  colmena = {
+    meta =
+      (
+        let
+          system = "x86_64-linux";
+        in
+        {
+          # colmena's default nixpkgs & specialArgs
+          nixpkgs = import nixpkgs { inherit system; };
+          specialArgs = genSpecialArgs system;
+        }
+      )
+      // {
+        # per-node nixpkgs & specialArgs
+        nodeNixpkgs = lib.attrsets.mergeAttrsList (
+          map (it: it.colmenaMeta.nodeNixpkgs or { }) nixosSystemValues
+        );
+        nodeSpecialArgs = lib.attrsets.mergeAttrsList (
+          map (it: it.colmenaMeta.nodeSpecialArgs or { }) nixosSystemValues
+        );
+      };
+  }
+  // lib.attrsets.mergeAttrsList (map (it: it.colmena or { }) nixosSystemValues);
 
   # macOS Hosts
   darwinConfigurations = lib.attrsets.mergeAttrsList (
-    map (it: it.darwinConfigurations or {}) darwinSystemValues
+    map (it: it.darwinConfigurations or { }) darwinSystemValues
   );
 
   # # Home Manager Configurations
@@ -128,14 +131,14 @@ in {
   # );
 
   # Packages
-  packages = forAllSystems (system: allSystems.${system}.packages or {});
+  packages = forAllSystems (system: allSystems.${system}.packages or { });
 
   # Eval Tests for all NixOS & darwin systems.
-  evalTests = lib.lists.all (it: it.evalTests == {}) allSystemValues;
+  evalTests = lib.lists.all (it: it.evalTests == { }) allSystemValues;
 
   checks = forAllSystems (system: {
     # eval-tests per system
-    eval-tests = allSystems.${system}.evalTests == {};
+    eval-tests = allSystems.${system}.evalTests == { };
 
     pre-commit-check = pre-commit-hooks.lib.${system}.run {
       src = mylib.relativeToRoot ".";
@@ -168,9 +171,11 @@ in {
 
   # Development Shells
   devShells = forAllSystems (
-    system: let
+    system:
+    let
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       default = pkgs.mkShell {
         packages = with pkgs; [
           # fix https://discourse.nixos.org/t/non-interactive-bash-errors-from-flake-nix-mkshell/33310

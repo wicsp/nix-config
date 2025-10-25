@@ -4,16 +4,17 @@
   lib,
   wallpapers,
   ...
-}: {
+}:
+{
   systemd.user.services.wallpaper = {
     Unit = {
       Description = "Wallpaper Switcher daemon";
       After = [
         "graphical-session.target"
       ];
-      Wants = ["graphical-session-pre.target"];
+      Wants = [ "graphical-session-pre.target" ];
     };
-    Install.WantedBy = ["graphical-session.target"];
+    Install.WantedBy = [ "graphical-session.target" ];
     Service = {
       ExecStart = lib.getExe (
         pkgs.writeShellApplication {

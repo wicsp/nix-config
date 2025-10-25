@@ -4,13 +4,15 @@
   sloth,
   config,
   ...
-}: {
+}:
+{
   config = {
-    dbus = let
-      inherit (config.flatpak) appId;
-    in {
-      policies =
-        {
+    dbus =
+      let
+        inherit (config.flatpak) appId;
+      in
+      {
+        policies = {
           "${appId}" = "own";
           "${appId}.*" = "own";
           "org.freedesktop.DBus" = "talk";
@@ -63,125 +65,125 @@
           "org.freedesktop.portal.IBus" = "talk";
           "org.freedesktop.portal.IBus.*" = "talk";
         };
-      rules = {
-        # 'call' rules permit specific method calls on D-Bus interfaces.
-        call = {
-          # --- Accessibility ---
-          "org.a11y.Bus" = [
-            "org.a11y.Bus.GetAddress@/org/a11y/bus"
-            "org.freedesktop.DBus.Properties.Get@/org/a11y/bus"
-          ];
+        rules = {
+          # 'call' rules permit specific method calls on D-Bus interfaces.
+          call = {
+            # --- Accessibility ---
+            "org.a11y.Bus" = [
+              "org.a11y.Bus.GetAddress@/org/a11y/bus"
+              "org.freedesktop.DBus.Properties.Get@/org/a11y/bus"
+            ];
 
-          # --- General Portal Rules ---
-          "org.freedesktop.FileManager1" = ["*"];
-          "org.freedesktop.Notifications.*" = ["*"];
-          "org.freedesktop.portal.Documents" = ["*"];
-          "org.freedesktop.portal.FileTransfer" = ["*"];
-          "org.freedesktop.portal.FileTransfer.*" = ["*"];
-          "org.freedesktop.portal.Fcitx" = ["*"];
-          "org.freedesktop.portal.Fcitx.*" = ["*"];
-          "org.freedesktop.portal.IBus" = ["*"];
-          "org.freedesktop.portal.IBus.*" = ["*"];
-          "org.freedesktop.portal.Notification" = ["*"];
-          "org.freedesktop.portal.OpenURI" = ["*"];
-          "org.freedesktop.portal.OpenURI.OpenFile" = ["*"];
-          "org.freedesktop.portal.OpenURI.OpenURI" = ["*"];
-          "org.freedesktop.portal.Print" = ["*"];
-          "org.freedesktop.portal.Request" = ["*"];
+            # --- General Portal Rules ---
+            "org.freedesktop.FileManager1" = [ "*" ];
+            "org.freedesktop.Notifications.*" = [ "*" ];
+            "org.freedesktop.portal.Documents" = [ "*" ];
+            "org.freedesktop.portal.FileTransfer" = [ "*" ];
+            "org.freedesktop.portal.FileTransfer.*" = [ "*" ];
+            "org.freedesktop.portal.Fcitx" = [ "*" ];
+            "org.freedesktop.portal.Fcitx.*" = [ "*" ];
+            "org.freedesktop.portal.IBus" = [ "*" ];
+            "org.freedesktop.portal.IBus.*" = [ "*" ];
+            "org.freedesktop.portal.Notification" = [ "*" ];
+            "org.freedesktop.portal.OpenURI" = [ "*" ];
+            "org.freedesktop.portal.OpenURI.OpenFile" = [ "*" ];
+            "org.freedesktop.portal.OpenURI.OpenURI" = [ "*" ];
+            "org.freedesktop.portal.Print" = [ "*" ];
+            "org.freedesktop.portal.Request" = [ "*" ];
 
-          # --- Main Desktop Portal Interface ---
-          # A comprehensive list of permissions for interacting with the desktop environment.
-          "org.freedesktop.portal.Desktop" = [
-            # Device Access
-            "org.freedesktop.portal.Camera"
-            "org.freedesktop.portal.Camera.*"
-            "org.freedesktop.portal.Usb"
-            "org.freedesktop.portal.Usb.*"
+            # --- Main Desktop Portal Interface ---
+            # A comprehensive list of permissions for interacting with the desktop environment.
+            "org.freedesktop.portal.Desktop" = [
+              # Device Access
+              "org.freedesktop.portal.Camera"
+              "org.freedesktop.portal.Camera.*"
+              "org.freedesktop.portal.Usb"
+              "org.freedesktop.portal.Usb.*"
 
-            # File Chooser & Documents
-            "org.freedesktop.portal.Documents"
-            "org.freedesktop.portal.Documents.*"
-            "org.freedesktop.portal.FileChooser"
-            "org.freedesktop.portal.FileChooser.*"
-            "org.freedesktop.portal.FileTransfer"
-            "org.freedesktop.portal.FileTransfer.*"
+              # File Chooser & Documents
+              "org.freedesktop.portal.Documents"
+              "org.freedesktop.portal.Documents.*"
+              "org.freedesktop.portal.FileChooser"
+              "org.freedesktop.portal.FileChooser.*"
+              "org.freedesktop.portal.FileTransfer"
+              "org.freedesktop.portal.FileTransfer.*"
 
-            # Input Methods
-            "org.freedesktop.portal.Fcitx"
-            "org.freedesktop.portal.Fcitx.*"
-            "org.freedesktop.portal.IBus"
-            "org.freedesktop.portal.IBus.*"
+              # Input Methods
+              "org.freedesktop.portal.Fcitx"
+              "org.freedesktop.portal.Fcitx.*"
+              "org.freedesktop.portal.IBus"
+              "org.freedesktop.portal.IBus.*"
 
-            # Notifications & Printing
-            "org.freedesktop.portal.Notification"
-            "org.freedesktop.portal.Notification.*"
-            "org.freedesktop.portal.Print"
-            "org.freedesktop.portal.Print.*"
+              # Notifications & Printing
+              "org.freedesktop.portal.Notification"
+              "org.freedesktop.portal.Notification.*"
+              "org.freedesktop.portal.Print"
+              "org.freedesktop.portal.Print.*"
 
-            # Open/Launch Handlers
-            "org.freedesktop.portal.Email.ComposeEmail"
-            "org.freedesktop.portal.OpenURI"
-            "org.freedesktop.portal.OpenURI.*"
+              # Open/Launch Handlers
+              "org.freedesktop.portal.Email.ComposeEmail"
+              "org.freedesktop.portal.OpenURI"
+              "org.freedesktop.portal.OpenURI.*"
 
-            # Properties & Session Management
-            "org.freedesktop.DBus.Properties.GetAll"
-            "org.freedesktop.DBus.Properties.Get@/org/freedesktop/portal/desktop"
-            "org.freedesktop.portal.Session.Close"
+              # Properties & Session Management
+              "org.freedesktop.DBus.Properties.GetAll"
+              "org.freedesktop.DBus.Properties.Get@/org/freedesktop/portal/desktop"
+              "org.freedesktop.portal.Session.Close"
 
-            # Screen Capture & Sharing
-            "org.freedesktop.portal.RemoteDesktop"
-            "org.freedesktop.portal.RemoteDesktop.*"
-            "org.freedesktop.portal.ScreenCast"
-            "org.freedesktop.portal.ScreenCast.*"
-            "org.freedesktop.portal.Screenshot"
-            "org.freedesktop.portal.Screenshot.Screenshot"
+              # Screen Capture & Sharing
+              "org.freedesktop.portal.RemoteDesktop"
+              "org.freedesktop.portal.RemoteDesktop.*"
+              "org.freedesktop.portal.ScreenCast"
+              "org.freedesktop.portal.ScreenCast.*"
+              "org.freedesktop.portal.Screenshot"
+              "org.freedesktop.portal.Screenshot.Screenshot"
 
-            # Secrets (Keyring)
-            "org.freedesktop.portal.Secret"
-            "org.freedesktop.portal.Secret.RetrieveSecret"
+              # Secrets (Keyring)
+              "org.freedesktop.portal.Secret"
+              "org.freedesktop.portal.Secret.RetrieveSecret"
 
-            # Settings
-            "org.freedesktop.portal.Settings.Read"
-            "org.freedesktop.portal.Settings.ReadAll"
+              # Settings
+              "org.freedesktop.portal.Settings.Read"
+              "org.freedesktop.portal.Settings.ReadAll"
 
-            # System Information
-            "org.freedesktop.portal.Account.GetUserInformation"
-            "org.freedesktop.portal.NetworkMonitor"
-            "org.freedesktop.portal.NetworkMonitor.*"
-            "org.freedesktop.portal.ProxyResolver.Lookup"
-            "org.freedesktop.portal.ProxyResolver.Lookup.*"
+              # System Information
+              "org.freedesktop.portal.Account.GetUserInformation"
+              "org.freedesktop.portal.NetworkMonitor"
+              "org.freedesktop.portal.NetworkMonitor.*"
+              "org.freedesktop.portal.ProxyResolver.Lookup"
+              "org.freedesktop.portal.ProxyResolver.Lookup.*"
 
-            # Generic Request Fallback
-            "org.freedesktop.portal.Request"
+              # Generic Request Fallback
+              "org.freedesktop.portal.Request"
 
-            # --- Conditional Portal Rules ---
-            # These would be enabled based on config flags in a real implementation.
+              # --- Conditional Portal Rules ---
+              # These would be enabled based on config flags in a real implementation.
 
-            # Enabled if 'allowGlobalShortcuts = true'
-            "org.freedesktop.portal.GlobalShortcuts"
-            "org.freedesktop.portal.GlobalShortcuts.*"
+              # Enabled if 'allowGlobalShortcuts = true'
+              "org.freedesktop.portal.GlobalShortcuts"
+              "org.freedesktop.portal.GlobalShortcuts.*"
 
-            # Enabled if 'allowInhibit = true'
-            "org.freedesktop.portal.Inhibit"
-            "org.freedesktop.portal.Inhibit.*"
+              # Enabled if 'allowInhibit = true'
+              "org.freedesktop.portal.Inhibit"
+              "org.freedesktop.portal.Inhibit.*"
 
-            # Enabled if 'XDG_CURRENT_DESKTOP = "GNOME"'
-            "org.freedesktop.portal.Location"
-            "org.freedesktop.portal.Location.*"
-          ];
+              # Enabled if 'XDG_CURRENT_DESKTOP = "GNOME"'
+              "org.freedesktop.portal.Location"
+              "org.freedesktop.portal.Location.*"
+            ];
+          };
+
+          # 'broadcast' rules permit receiving signals from D-Bus names.
+          broadcast = {
+            "org.freedesktop.portal.*" = [ "@/org/freedesktop/portal/*" ];
+          };
         };
-
-        # 'broadcast' rules permit receiving signals from D-Bus names.
-        broadcast = {
-          "org.freedesktop.portal.*" = ["@/org/freedesktop/portal/*"];
-        };
+        args = [
+          "--filter"
+          "--sloppy-names"
+          "--log"
+        ];
       };
-      args = [
-        "--filter"
-        "--sloppy-names"
-        "--log"
-      ];
-    };
 
     etc.sslCertificates.enable = true;
     bubblewrap = {
@@ -228,7 +230,7 @@
         (sloth.concat' sloth.xdgConfigHome "/fontconfig")
         (sloth.concat' sloth.xdgConfigHome "/dconf")
       ];
-      bind.dev = ["/dev/shm"] ++ (map (id: "/dev/video${toString id}") (lib.lists.range 0 9));
+      bind.dev = [ "/dev/shm" ] ++ (map (id: "/dev/video${toString id}") (lib.lists.range 0 9));
     };
   };
 }

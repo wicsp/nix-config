@@ -3,29 +3,33 @@
   config,
   lib,
   ...
-} @ args: let
+}@args:
+let
   cfg = config.modules.desktop.hyprland;
-in {
+in
+{
   options.modules.desktop.hyprland = {
     enable = lib.mkEnableOption "hyprland compositor";
     settings = lib.mkOption {
-      type = with lib.types; let
-        valueType =
-          nullOr (oneOf [
-            bool
-            int
-            float
-            str
-            path
-            (attrsOf valueType)
-            (listOf valueType)
-          ])
-          // {
-            description = "Hyprland configuration value";
-          };
-      in
+      type =
+        with lib.types;
+        let
+          valueType =
+            nullOr (oneOf [
+              bool
+              int
+              float
+              str
+              path
+              (attrsOf valueType)
+              (listOf valueType)
+            ])
+            // {
+              description = "Hyprland configuration value";
+            };
+        in
         valueType;
-      default = {};
+      default = { };
     };
   };
 

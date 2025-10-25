@@ -9,7 +9,8 @@
   system,
   genSpecialArgs,
   ...
-} @ args: let
+}@args:
+let
   name = "cs";
   modules = {
     home-modules = map mylib.relativeToRoot [
@@ -19,7 +20,8 @@
   };
 
   systemArgs = modules // args;
-in {
+in
+{
   # macOS's configuration
   homeConfigurations.${name} = mylib.homeSystem systemArgs;
 }

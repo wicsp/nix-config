@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # for security reasons, do not load neovim's user config
   # since EDITOR may be used to edit some critical files
   environment.variables.EDITOR = "nvim --clean";
@@ -41,7 +42,7 @@
     fd
     findutils
     # search for files by its content, replacement of grep
-    (ripgrep.override {withPCRE2 = true;})
+    (ripgrep.override { withPCRE2 = true; })
 
     duf # Disk Usage/Free Utility - a better 'df' alternative
     du-dust # A more intuitive version of `du` in rust

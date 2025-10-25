@@ -6,8 +6,10 @@
   nur-ryan4yin,
   blender-bin,
   ...
-}: {
-  home.packages = with pkgs;
+}:
+{
+  home.packages =
+    with pkgs;
     [
       # creative
       # gimp      # image editing, I prefer using figma in browser instead of this one
@@ -21,7 +23,7 @@
       # aseprite # Animated sprite editor & pixel art tool
 
       # this app consumes a lot of storage, so do not install it currently
-      # kicad     # 3d printing, eletrical engineering
+      # kicad     # 3d printing, electrical engineering
     ]
     ++ (lib.optionals pkgs.stdenv.isx86_64 [
       # https://github.com/edolstra/nix-warez/blob/master/blender/flake.nix
@@ -41,7 +43,8 @@
     # live streaming
     obs-studio = {
       enable = pkgs.stdenv.isx86_64;
-      plugins = with pkgs.obs-studio-plugins;
+      plugins =
+        with pkgs.obs-studio-plugins;
         [
           # screen capture
           wlrobs

@@ -7,9 +7,11 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.desktop.gaming;
-in {
+in
+{
   imports = [
     nix-gaming.nixosModules.pipewireLowLatency
     nix-gaming.nixosModules.platformOptimizations

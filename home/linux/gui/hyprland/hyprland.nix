@@ -2,15 +2,19 @@
   pkgs,
   config,
   ...
-}: let
+}:
+let
   package = pkgs.hyprland;
-in {
-  xdg.configFile = let
-    mkSymlink = config.lib.file.mkOutOfStoreSymlink;
-    confPath = "${config.home.homeDirectory}/nix-config/home/linux/gui/hyprland/conf";
-  in {
-    "hypr/configs".source = mkSymlink confPath;
-  };
+in
+{
+  xdg.configFile =
+    let
+      mkSymlink = config.lib.file.mkOutOfStoreSymlink;
+      confPath = "${config.home.homeDirectory}/nix-config/home/linux/gui/hyprland/conf";
+    in
+    {
+      "hypr/configs".source = mkSymlink confPath;
+    };
 
   # NOTE:
   # We have to enable hyprland/i3's systemd user service in home-manager,
@@ -20,22 +24,24 @@ in {
     inherit package;
     enable = true;
     settings = {
-      source = let
-        configPath = "${config.home.homeDirectory}/.config/hypr/configs";
-      in [
-        "${configPath}/exec.conf"
-        "${configPath}/fcitx5.conf"
-        "${configPath}/keybindings.conf"
-        "${configPath}/settings.conf"
-        "${configPath}/windowrules.conf"
-      ];
+      source =
+        let
+          configPath = "${config.home.homeDirectory}/.config/hypr/configs";
+        in
+        [
+          "${configPath}/exec.conf"
+          "${configPath}/fcitx5.conf"
+          "${configPath}/keybindings.conf"
+          "${configPath}/settings.conf"
+          "${configPath}/windowrules.conf"
+        ];
       env = [
       ];
     };
     # gammastep/wallpaper-switcher need this to be enabled.
     systemd = {
       enable = true;
-      variables = ["--all"];
+      variables = [ "--all" ];
     };
   };
   services.polkit-gnome.enable = true; # polkit

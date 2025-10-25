@@ -2,7 +2,8 @@
   lib,
   inputs,
   ...
-} @ args: let
+}@args:
+let
   inherit (inputs) haumea;
 
   # Contains all the flake outputs of this system architecture.
@@ -15,10 +16,12 @@
 
   # Merge all the machine's data into a single attribute set.
   outputs = {
-    homeConfigurations = lib.attrsets.mergeAttrsList (map (it: it.homeConfigurations or {}) dataWithoutPaths);
+    homeConfigurations = lib.attrsets.mergeAttrsList (
+      map (it: it.homeConfigurations or { }) dataWithoutPaths
+    );
   };
 in
-  outputs
-  // {
-    inherit data; # for debugging purposes
-  }
+outputs
+// {
+  inherit data; # for debugging purposes
+}

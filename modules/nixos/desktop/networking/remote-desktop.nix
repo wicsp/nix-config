@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     moonlight-qt # moonlight client, for streaming games/desktop from a PC
   ];

@@ -36,7 +36,7 @@
     };
     # Corresponds to [Install] section
     Install = {
-      WantedBy = ["default.target"]; # Start with user session
+      WantedBy = [ "default.target" ]; # Start with user session
     };
   };
 }

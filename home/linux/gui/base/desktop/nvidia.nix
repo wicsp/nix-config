@@ -3,9 +3,11 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.desktop.nvidia;
-in {
+in
+{
   options.modules.desktop.nvidia = {
     enable = mkEnableOption "whether nvidia GPU is used";
   };

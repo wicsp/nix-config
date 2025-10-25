@@ -1,17 +1,18 @@
 {
   lib,
   inputs,
-  home-modules ? [],
+  home-modules ? [ ],
   myvars,
   system,
   genSpecialArgs,
   specialArgs ? (genSpecialArgs system),
   ...
-}: let
+}:
+let
   inherit (inputs) nixpkgs home-manager;
 in
-  home-manager.lib.homeManagerConfiguration {
-    pkgs = nixpkgs.legacyPackages.${system};
-    extraSpecialArgs = specialArgs;
-    modules = home-modules;
-  }
+home-manager.lib.homeManagerConfiguration {
+  pkgs = nixpkgs.legacyPackages.${system};
+  extraSpecialArgs = specialArgs;
+  modules = home-modules;
+}

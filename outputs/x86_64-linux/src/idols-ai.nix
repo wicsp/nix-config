@@ -10,7 +10,8 @@
   genSpecialArgs,
   niri,
   ...
-} @ args: let
+}@args:
+let
   # 星野 アイ, Hoshino Ai
   name = "ai";
   base-modules = {
@@ -51,30 +52,27 @@
   };
 
   modules-hyprland = {
-    nixos-modules =
-      [
-      ]
-      ++ base-modules.nixos-modules;
-    home-modules =
-      [
-        {modules.desktop.hyprland.enable = true;}
-      ]
-      ++ base-modules.home-modules;
+    nixos-modules = [
+    ]
+    ++ base-modules.nixos-modules;
+    home-modules = [
+      { modules.desktop.hyprland.enable = true; }
+    ]
+    ++ base-modules.home-modules;
   };
 
   modules-niri = {
-    nixos-modules =
-      [
-        {programs.niri.enable = true;}
-      ]
-      ++ base-modules.nixos-modules;
-    home-modules =
-      [
-        {modules.desktop.niri.enable = true;}
-      ]
-      ++ base-modules.home-modules;
+    nixos-modules = [
+      { programs.niri.enable = true; }
+    ]
+    ++ base-modules.nixos-modules;
+    home-modules = [
+      { modules.desktop.niri.enable = true; }
+    ]
+    ++ base-modules.home-modules;
   };
-in {
+in
+{
   nixosConfigurations = {
     # host with hyprland compositor
     "${name}-hyprland" = mylib.nixosSystem (modules-hyprland // args);

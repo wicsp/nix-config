@@ -5,7 +5,8 @@
   mysecrets,
   myvars,
   ...
-}: {
+}:
+{
   imports = [
     agenix.darwinModules.default
   ];
@@ -26,87 +27,85 @@
     "/etc/ssh/ssh_host_ed25519_key" # macOS, using the host key for decryption
   ];
 
-  age.secrets = let
-    noaccess = {
-      mode = "0000";
-      owner = "root";
-    };
-    high_security = {
-      mode = "0500";
-      owner = "root";
-    };
-    user_readable = {
-      mode = "0500";
-      owner = myvars.username;
-    };
-  in {
-    # ---------------------------------------------
-    # no one can read/write this file, even root.
-    # ---------------------------------------------
+  age.secrets =
+    let
+      noaccess = {
+        mode = "0000";
+        owner = "root";
+      };
+      high_security = {
+        mode = "0500";
+        owner = "root";
+      };
+      user_readable = {
+        mode = "0500";
+        owner = myvars.username;
+      };
+    in
+    {
+      # ---------------------------------------------
+      # no one can read/write this file, even root.
+      # ---------------------------------------------
 
-    # # .age means the decrypted file is still encrypted by age(via a passphrase)
-    # "ryan4yin-gpg-subkeys.priv.age" =
-    #   {
-    #     file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
-    #   }
-    #   // noaccess;
+      # # .age means the decrypted file is still encrypted by age(via a passphrase)
+      # "ryan4yin-gpg-subkeys.priv.age" =
+      #   {
+      #     file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
+      #   }
+      #   // noaccess;
 
-    # ---------------------------------------------
-    # only root can read this file.
-    # ---------------------------------------------
+      # ---------------------------------------------
+      # only root can read this file.
+      # ---------------------------------------------
 
-    # "wg-business.conf" =
-    #   {
-    #     file = "${mysecrets}/wg-business.conf.age";
-    #   }
-    #   // high_security;
+      # "wg-business.conf" =
+      #   {
+      #     file = "${mysecrets}/wg-business.conf.age";
+      #   }
+      #   // high_security;
 
-    # "rclone.conf" =
-    #   {
-    #     file = "${mysecrets}/rclone.conf.age";
-    #   }
-    #   // high_security;
+      # "rclone.conf" =
+      #   {
+      #     file = "${mysecrets}/rclone.conf.age";
+      #   }
+      #   // high_security;
 
-    # "nix-access-tokens" =
-    #   {
-    #     file = "${mysecrets}/nix-access-tokens.age";
-    #   }
-    #   # access-token needs to be readable by the user running the `nix` command
-    #   // user_readable;
+      # "nix-access-tokens" =
+      #   {
+      #     file = "${mysecrets}/nix-access-tokens.age";
+      #   }
+      #   # access-token needs to be readable by the user running the `nix` command
+      #   // user_readable;
 
-    # ---------------------------------------------
-    # user can read this file.
-    # ---------------------------------------------
-    "test" =
-      {
+      # ---------------------------------------------
+      # user can read this file.
+      # ---------------------------------------------
+      "test" = {
         file = "${mysecrets}/test.age";
       }
       // user_readable;
 
-    "secrets_env" =
-      {
+      "secrets_env" = {
         file = "${mysecrets}/secrets_env.age";
       }
       // user_readable;
-    # "ssh-key-romantic" =
-    #   {
-    #     file = "${mysecrets}/ssh-key-romantic.age";
-    #   }
-    #   // user_readable;
+      # "ssh-key-romantic" =
+      #   {
+      #     file = "${mysecrets}/ssh-key-romantic.age";
+      #   }
+      #   // user_readable;
 
-    # # alias-for-work
-    "alias-for-work.nushell" =
-      {
+      # # alias-for-work
+      "alias-for-work.nushell" = {
         file = "${mysecrets}/alias-for-work.nushell.age";
       }
       // user_readable;
 
-    "alias-for-work.bash" =
-      {
+      "alias-for-work.bash" = {
         file = "${mysecrets}/alias-for-work.bash.age";
       }
       // user_readable;
-  };
+    };
 
   # place secrets in /etc/
   # NOTE: this will fail for the first time. cause it's running before "activate-agenix"

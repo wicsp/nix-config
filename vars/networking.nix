@@ -1,4 +1,5 @@
-{lib}: rec {
+{ lib }:
+rec {
   # i dont have a home lab, so i dont need to configure the networking
   # mainGateway = "192.168.5.1"; # main router
   # mainGateway6 = "fe80::5"; # main router's link-local address
@@ -25,7 +26,7 @@
     mio = {
       # Aliyun Server - 用于 SSH 连接的公网 IP
       iface = "tailscale0"; # tailscale 网卡接口
-      ipv4 = "100.87.168.29"; #  tailscale 分配的虚拟 IP
+      ipv4 = "100.87.168.29"; # tailscale 分配的虚拟 IP
     };
     goudan_lab = {
       # Desktop PC - NixOS Desktop System
@@ -35,7 +36,7 @@
     goudan = {
       # Desktop PC - NixOS Desktop System
       iface = "tailscale0";
-      ipv4 = "100.91.203.113"; #  tailscale 分配的虚拟 IP
+      ipv4 = "100.91.203.113"; # tailscale 分配的虚拟 IP
     };
     amax_lab = {
       # Laptop - NixOS Laptop System
@@ -45,7 +46,7 @@
     amax = {
       # Laptop - NixOS Laptop System
       iface = "tailscale0";
-      ipv4 = "100.74.193.128"; #  tailscale 分配的虚拟 IP
+      ipv4 = "100.74.193.128"; # tailscale 分配的虚拟 IP
     };
   };
 
@@ -80,17 +81,17 @@
     #     Port 22
     #   ...
     # '';
-    extraConfig = ( # TODO i dont know
+    extraConfig = (
+      # TODO i dont know
       lib.attrsets.foldlAttrs (
         acc: host: val:
-          acc
-          + ''
-            Host ${host}
-              HostName ${val.ipv4}
-              Port 22
-          ''
-      ) ""
-      hostsAddr
+        acc
+        + ''
+          Host ${host}
+            HostName ${val.ipv4}
+            Port 22
+        ''
+      ) "" hostsAddr
     );
 
     # define the host key for remote builders so that nix can verify all the remote builders
@@ -104,19 +105,20 @@
       #   { x = "a"; y = "b"; }
       #     => { x = "bar-a"; y = "bar-b"; }
       lib.attrsets.mapAttrs
-      (host: value: {
-        hostNames = [host] ++ (lib.optional (hostsAddr ? host) hostsAddr.${host}.ipv4);
-        publicKey = value.publicKey;
-      })
-      {
-        goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";
-        # ruby.publicKey = "";
-        # kana.publicKey = "";
+        (host: value: {
+          hostNames = [ host ] ++ (lib.optional (hostsAddr ? host) hostsAddr.${host}.ipv4);
+          publicKey = value.publicKey;
+        })
+        {
+          goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";
+          # ruby.publicKey = "";
+          # kana.publicKey = "";
 
-        # ==================================== Other SSH Service's Public Key =======================================
+          # ==================================== Other SSH Service's Public Key =======================================
 
-        # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
-        "github.com".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
-      };
+          # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
+          "github.com".publicKey =
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl";
+        };
   };
 }

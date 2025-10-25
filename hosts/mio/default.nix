@@ -1,4 +1,4 @@
-{myvars, ...}:
+{ myvars, ... }:
 #############################################################
 #
 #  Mio - Aliyun Server, for general purpose server tasks.
@@ -6,7 +6,8 @@
 #############################################################
 let
   hostName = "mio"; # Define your hostname.
-in {
+in
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix

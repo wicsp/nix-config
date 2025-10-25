@@ -3,7 +3,8 @@
   pkgs-stable,
   # nur-ryan4yin,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     podman-compose
     dive # explore docker layers

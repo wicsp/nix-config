@@ -1,4 +1,5 @@
-{nu_scripts, ...}: {
+{ nu_scripts, ... }:
+{
   programs.nushell = {
     # load the alias file for work
     # the file must exist, otherwise nushell will complain about it!

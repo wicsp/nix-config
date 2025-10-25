@@ -14,7 +14,8 @@ let
   # inherit (myvars.networking.hostsAddr.${hostName}) iface ipv4 ipv6;
   # ipv4WithMask = "${ipv4}/24";
   # ipv6WithMask = "${ipv6}/64";
-in {
+in
+{
   imports = [
     # ./netdev-mount.nix TODO
     # Include the results of the hardware scan.

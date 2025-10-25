@@ -3,7 +3,8 @@
   pkgs-patched,
   nixpak,
   ...
-}: let
+}:
+let
   callArgs = {
     mkNixPak = nixpak.lib.nixpak {
       inherit (pkgs) lib;
@@ -15,7 +16,8 @@
     ];
   };
   wrapper = _pkgs: path: (_pkgs.callPackage path callArgs);
-in {
+in
+{
   # Add nixpaked Apps into nixpkgs, and reference them in home-manager or other nixos modules
   nixpkgs.overlays = [
     (_: super: {

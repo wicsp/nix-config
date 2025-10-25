@@ -4,29 +4,33 @@
   lib,
   niri,
   ...
-} @ args: let
+}@args:
+let
   cfg = config.modules.desktop.niri;
-in {
+in
+{
   options.modules.desktop.niri = {
     enable = lib.mkEnableOption "niri compositor";
     settings = lib.mkOption {
-      type = with lib.types; let
-        valueType =
-          nullOr (oneOf [
-            bool
-            int
-            float
-            str
-            path
-            (attrsOf valueType)
-            (listOf valueType)
-          ])
-          // {
-            description = "niri configuration value";
-          };
-      in
+      type =
+        with lib.types;
+        let
+          valueType =
+            nullOr (oneOf [
+              bool
+              int
+              float
+              str
+              path
+              (attrsOf valueType)
+              (listOf valueType)
+            ])
+            // {
+              description = "niri configuration value";
+            };
+        in
         valueType;
-      default = {};
+      default = { };
     };
   };
 

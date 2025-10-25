@@ -6,9 +6,11 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.modules.desktop.gaming;
-in {
+in
+{
   options.modules.desktop = {
     gaming = {
       enable = mkEnableOption "Install Game Suite(steam, lutris, etc)";
@@ -52,7 +54,7 @@ in {
       enable = true;
       defaultWinePackage = pkgs-x64.proton-ge-bin;
       steamPackage = osConfig.programs.steam.package;
-      protonPackages = [pkgs-x64.proton-ge-bin];
+      protonPackages = [ pkgs-x64.proton-ge-bin ];
       winePackages = with pkgs-x64; [
         wineWow64Packages.full
         wineWowPackages.stagingFull
