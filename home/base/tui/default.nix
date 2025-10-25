@@ -11,5 +11,6 @@
     # ./zellij
     ./shell
     ./editors
+    ./container.nix
   ];
 }

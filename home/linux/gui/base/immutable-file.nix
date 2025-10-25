@@ -50,16 +50,17 @@ in {
 
   config = mkIf (cfg != {}) {
     home.activation =
-      mapAttrs'
-      (name: {
-        src,
-        dst,
-      }:
-        nameValuePair
-        "make-immutable-${name}"
-        (lib.hm.dag.entryAfter ["writeBoundary"] ''
-          ${mkImmutableFile} ${dst} ${src}
-        ''))
+      mapAttrs' (
+        name: {
+          src,
+          dst,
+        }:
+          nameValuePair "make-immutable-${name}" (
+            lib.hm.dag.entryAfter ["writeBoundary"] ''
+              ${mkImmutableFile} ${dst} ${src}
+            ''
+          )
+      )
       cfg;
   };
 }

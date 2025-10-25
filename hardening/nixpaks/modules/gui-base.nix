@@ -14,12 +14,7 @@ in {
   config = {
     dbus.policies = {
       "${config.flatpak.appId}" = "own";
-      "org.freedesktop.DBus" = "talk";
-      "org.gtk.vfs.*" = "talk";
-      "org.gtk.vfs" = "talk";
-      "ca.desrt.dconf" = "talk";
-      "org.freedesktop.portal.*" = "talk";
-      "org.a11y.Bus" = "talk";
+      # we add other policies in ./common.nix
     };
     # https://github.com/nixpak/nixpak/blob/master/modules/gpu.nix
     # 1. bind readonly - /run/opengl-driver
@@ -64,14 +59,16 @@ in {
         (sloth.concat' sloth.xdgConfigHome "/fontconfig")
 
         "/etc/fonts" # for fontconfig
-        "/etc/machine-id"
-        "/etc/localtime"
+        "/etc/localtime" # this is a symlink to /etc/zoneinfo/xxx
+        "/etc/zoneinfo"
 
         # Fix: libEGL warning: egl: failed to create dri2 screen
         "/etc/egl"
         "/etc/static/egl"
       ];
       bind.dev = [
+        "/dev/shm" # Shared Memory
+
         # seems required when using nvidia as primary gpu
         "/dev/nvidia0"
         "/dev/nvidiactl"
@@ -79,16 +76,24 @@ in {
         "/dev/nvidia-uvm"
       ];
 
+      tmpfs = [
+        "/tmp"
+      ];
+
       env = {
-        XDG_DATA_DIRS = lib.mkForce (lib.makeSearchPath "share" [
-          iconTheme
-          cursorTheme
-          pkgs.shared-mime-info
-        ]);
-        XCURSOR_PATH = lib.mkForce (lib.concatStringsSep ":" [
-          "${cursorTheme}/share/icons"
-          "${cursorTheme}/share/pixmaps"
-        ]);
+        XDG_DATA_DIRS = lib.mkForce (
+          lib.makeSearchPath "share" [
+            iconTheme
+            cursorTheme
+            pkgs.shared-mime-info
+          ]
+        );
+        XCURSOR_PATH = lib.mkForce (
+          lib.concatStringsSep ":" [
+            "${cursorTheme}/share/icons"
+            "${cursorTheme}/share/pixmaps"
+          ]
+        );
       };
     };
   };

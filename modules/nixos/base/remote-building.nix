@@ -16,7 +16,7 @@
   nix.buildMachines = let
     sshUser = myvars.username;
     # ssh key's path on local machine
-    sshKey = "/etc/agenix/ssh-key-romantic";
+    sshKey = "/etc/agenix/ssh-key-romantic"; # TODO ssh key romandic
     systems = [
       # native arch
       "x86_64-linux"

@@ -1,10 +1,4 @@
-{
-  pkgs,
-  # nur-ryan4yin,
-  ...
-}: {
-  # home.file.".local/share/fcitx5/themes".source = "${nur-ryan4yin.packages.${pkgs.system}.catppuccin-fcitx5}/src";
-
+{pkgs, ...}: {
   xdg.configFile = {
     "fcitx5/profile" = {
       source = ./profile;
@@ -12,22 +6,20 @@
       # so we need to force replace it in every rebuild to avoid file conflict.
       force = true;
     };
-    "fcitx5/conf/classicui.conf".source = ./classicui.conf;
   };
 
-  # Temporarily disable fcitx5 due to qt6 build issues
-  # i18n.inputMethod = {
-  #   enable = true;
-  #   type = "fcitx5";
-  #   fcitx5.waylandFrontend = true;
-  #   fcitx5.addons = with pkgs; [
-  #     # for flypy chinese input method
-  #     fcitx5-rime
-  #     # needed enable rime using configtool after installed
-  #     fcitx5-configtool
-  #     # fcitx5-chinese-addons # we use rime instead
-  #     # fcitx5-mozc    # japanese input method
-  #     fcitx5-gtk # gtk im module
-  #   ];
-  # };
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = with pkgs; [
+      # for flypy chinese input method
+      fcitx5-rime
+      # needed enable rime using configtool after installed
+      fcitx5-configtool
+      # fcitx5-chinese-addons # we use rime instead
+      # fcitx5-mozc    # japanese input method
+      fcitx5-gtk # gtk im module
+    ];
+  };
 }

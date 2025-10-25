@@ -5,10 +5,12 @@
   pkgs-unstable,
   ...
 }: {
+  boot.loader.timeout = lib.mkForce 10; # wait for x seconds to select the boot entry
+
   # add user's shell into /etc/shells
   environment.shells = with pkgs; [
     bashInteractive
-    pkgs-unstable.nushell
+    nushell
   ];
   # set user's default shell system-wide
   users.defaultUserShell = pkgs.bashInteractive;
@@ -16,15 +18,11 @@
   # fix for `sudo xxx` in kitty/wezterm/foot and other modern terminal emulators
   security.sudo.keepTerminfo = true;
 
-  environment.variables = {
-    # fix https://github.com/NixOS/nixpkgs/issues/238025
-    TZ = "${config.time.timeZone}";
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gnumake
+    wl-clipboard
   ];
 
   services = {
@@ -33,10 +31,6 @@
   };
 
   programs = {
-    # The OpenSSH agent remembers private keys for you
-    # so that you don't have to type in passphrases every time you make an SSH connection.
-    # Use `ssh-add` to add a key to the agent.
-    # ssh.startAgent = true;  # Disabled to avoid conflict with gnome.gcr-ssh-agent
     # dconf is a low-level configuration system.
     dconf.enable = true;
 

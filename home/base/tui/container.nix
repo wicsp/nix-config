@@ -1,7 +1,7 @@
 {
   pkgs,
   pkgs-stable,
-  nur-ryan4yin,
+  # nur-ryan4yin,
   ...
 }: {
   home.packages = with pkgs; [

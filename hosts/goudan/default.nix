@@ -10,69 +10,64 @@
 #############################################################
 let
   hostName = "goudan"; # Define your hostname.
+  # inherit (myvars.networking) mainGateway mainGateway6 nameservers;
+  # inherit (myvars.networking.hostsAddr.${hostName}) iface ipv4 ipv6;
+  # ipv4WithMask = "${ipv4}/24";
+  # ipv6WithMask = "${ipv6}/64";
 in {
   imports = [
+    # ./netdev-mount.nix TODO
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./nvidia.nix
+    ./ai
+
+    # ./preservation.nix TODO
+    # ./secureboot.nix  TODO
   ];
 
-  # Boot loader configuration for Windows + Linux dual boot
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev"; # For EFI systems
-      useOSProber = true; # 自动检测 Windows
-    };
-  };
+  services.sunshine.enable = lib.mkForce true;
 
   networking = {
     inherit hostName;
-    # inherit (myvars.networking) defaultGateway nameservers;
-    # inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
 
-    # desktop need its cli for status bar
-    networkmanager.enable = true;
+    # we use networkd instead
+    networkmanager.enable = false; # provides nmcli/nmtui for wifi adjustment
+    # useDHCP = false; TODO
   };
 
-  # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  networking.useNetworkd = true;
+  systemd.network.enable = true;
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Mihomo (Clash Meta) proxy service
-  services.mihomo = {
-    enable = true;
-    configFile = "/home/wicsp/.config/mihomo/config.yaml";
-    tunMode = true;
-    webui = pkgs.metacubexd;
-  };
-
-  # X11 configuration is handled by modules/nixos/desktop.nix
-  # based on wayland/xorg enable options
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "";
+  # systemd.network.networks."10-${iface}" = {
+  #   matchConfig.Name = [ iface ];
+  #   networkConfig = {
+  #     Address = [
+  #       ipv4WithMask
+  #       ipv6WithMask
+  #     ];
+  #     DNS = nameservers;
+  #     DHCP = "ipv6"; # enable DHCPv6 only, so we can get a GUA.
+  #     IPv6AcceptRA = true; # for Stateless IPv6 Autoconfiguraton (SLAAC)
+  #     LinkLocalAddressing = "ipv6";
+  #   };
+  #   routes = [
+  #     {
+  #       Destination = "0.0.0.0/0";
+  #       Gateway = mainGateway;
+  #     }
+  #     {
+  #       Destination = "::/0";
+  #       Gateway = mainGateway6;
+  #       GatewayOnLink = true; # it's a gateway on local link.
+  #     }
+  #   ];
+  #   linkConfig.RequiredForOnline = "routable";
   # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
-  # on your system were taken. It's perfectly fine and recommended to leave
+  # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).

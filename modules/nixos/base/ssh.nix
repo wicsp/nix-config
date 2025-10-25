@@ -1,15 +1,6 @@
-{
-  lib,
-  myvars,
-  ...
-}: {
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+{lib, ...}: {
   # Or disable the firewall altogether.
-  # networking.firewall.enable = lib.mkDefault false;
-  networking.firewall.allowedTCPPorts = [4922];
-  programs.ssh = myvars.networking.ssh;
-
+  networking.firewall.enable = lib.mkDefault false;
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
@@ -17,8 +8,7 @@
       X11Forwarding = true;
       # root user is used for remote deployment, so we need to allow it
       PermitRootLogin = "prohibit-password";
-      PasswordAuthentication = true; # disable password login
-      Port = 4922;
+      PasswordAuthentication = false; # disable password login
     };
     openFirewall = true;
   };
