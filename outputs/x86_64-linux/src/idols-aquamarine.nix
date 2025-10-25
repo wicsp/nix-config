@@ -12,7 +12,10 @@
 } @ args: let
   # 星野 愛久愛海, Hoshino Akuamarin
   name = "aquamarine";
-  tags = ["aqua" "homelab-network"];
+  tags = [
+    "aqua"
+    "homelab-network"
+  ];
   ssh-user = "root";
 
   modules = {
@@ -40,8 +43,7 @@
 in {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  colmena.${name} =
-    mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
+  colmena.${name} = mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
 
   packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.kubevirt;
 }

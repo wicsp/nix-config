@@ -11,7 +11,7 @@ with lib; let
 in {
   imports = [
     ./base
-    ../base.nix
+    ../base
 
     ./desktop
   ];

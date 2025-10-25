@@ -11,7 +11,10 @@
   ...
 } @ args: let
   name = "kubevirt-shoryu";
-  tags = [name "virt-shoryu"];
+  tags = [
+    name
+    "virt-shoryu"
+  ];
   ssh-user = "root";
 
   modules = {
@@ -26,7 +29,7 @@
       ++ [
         {
           modules.secrets.server.kubernetes.enable = true;
-          modules.secrets.impermanence.enable = true;
+          modules.secrets.preservation.enable = true;
         }
       ];
     # home-modules = map mylib.relativeToRoot [
@@ -38,8 +41,7 @@
 in {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  colmena.${name} =
-    mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
+  colmena.${name} = mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
 
   packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.iso;
 }

@@ -15,12 +15,18 @@
 
   # Merge all the machine's data into a single attribute set.
   outputs = {
-    nixosConfigurations = lib.attrsets.mergeAttrsList (map (it: it.nixosConfigurations or {}) dataWithoutPaths);
+    nixosConfigurations = lib.attrsets.mergeAttrsList (
+      map (it: it.nixosConfigurations or {}) dataWithoutPaths
+    );
     packages = lib.attrsets.mergeAttrsList (map (it: it.packages or {}) dataWithoutPaths);
     # colmena contains some meta info, which need to be merged carefully.
     colmenaMeta = {
-      nodeNixpkgs = lib.attrsets.mergeAttrsList (map (it: it.colmenaMeta.nodeNixpkgs or {}) dataWithoutPaths);
-      nodeSpecialArgs = lib.attrsets.mergeAttrsList (map (it: it.colmenaMeta.nodeSpecialArgs or {}) dataWithoutPaths);
+      nodeNixpkgs = lib.attrsets.mergeAttrsList (
+        map (it: it.colmenaMeta.nodeNixpkgs or {}) dataWithoutPaths
+      );
+      nodeSpecialArgs = lib.attrsets.mergeAttrsList (
+        map (it: it.colmenaMeta.nodeSpecialArgs or {}) dataWithoutPaths
+      );
     };
     colmena = lib.attrsets.mergeAttrsList (map (it: it.colmena or {}) dataWithoutPaths);
   };
@@ -32,6 +38,10 @@ in
     # NixOS's unit tests.
     evalTests = haumea.lib.loadEvalTests {
       src = ./tests;
-      inputs = args // {inherit outputs;};
+      inputs =
+        args
+        // {
+          inherit outputs;
+        };
     };
   }

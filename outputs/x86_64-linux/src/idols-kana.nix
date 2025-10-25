@@ -12,7 +12,10 @@
 } @ args: let
   # 有馬 かな, Arima Kana
   name = "kana";
-  tags = [name "homelab-app"];
+  tags = [
+    name
+    "homelab-app"
+  ];
   ssh-user = "root";
 
   modules = {
@@ -33,8 +36,7 @@
 in {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  colmena.${name} =
-    mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
+  colmena.${name} = mylib.colmenaSystem (systemArgs // {inherit tags ssh-user;});
 
   packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.kubevirt;
 }
