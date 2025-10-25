@@ -14,8 +14,8 @@ in
     ./hardware-configuration.nix
     ./nvidia.nix
 
-    ./impermanence.nix
-    ./secureboot.nix
+    # ./impermanence.nix
+    # ./secureboot.nix
   ];
 
   networking = {

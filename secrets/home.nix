@@ -47,7 +47,7 @@ in
     server.webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
     server.storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
 
-    impermanence.enable = mkEnableOption "whether use impermanence and ephemeral root file system";
+    # impermanence.enable = mkEnableOption "whether use impermanence and ephemeral root file system";
   };
 
   config = mkIf (cfg.desktop.enable || enabledServerSecrets) (mkMerge [
@@ -93,41 +93,41 @@ in
         # no one can read/write this file, even root.
         # ---------------------------------------------
 
-        # .age means the decrypted file is still encrypted by age(via a passphrase)
-        "ryan4yin-gpg-subkeys.priv.age" = {
-          file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
-        }
-        // noaccess;
+        # # .age means the decrypted file is still encrypted by age(via a passphrase)
+        # "ryan4yin-gpg-subkeys.priv.age" = {
+        #   file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
+        # }
+        # // noaccess;
 
-        # ---------------------------------------------
-        # only root can read this file.
-        # ---------------------------------------------
+        # # ---------------------------------------------
+        # # only root can read this file.
+        # # ---------------------------------------------
 
-        "wg-business.conf" = {
-          file = "${mysecrets}/wg-business.conf.age";
-        }
-        // high_security;
+        # "wg-business.conf" = {
+        #   file = "${mysecrets}/wg-business.conf.age";
+        # }
+        # // high_security;
 
-        # Used only by NixOS Modules
-        # smb-credentials is referenced in /etc/fstab, by ../hosts/ai/cifs-mount.nix
-        "smb-credentials" = {
-          file = "${mysecrets}/smb-credentials.age";
-        }
-        // high_security;
+        # # Used only by NixOS Modules
+        # # smb-credentials is referenced in /etc/fstab, by ../hosts/ai/cifs-mount.nix
+        # "smb-credentials" = {
+        #   file = "${mysecrets}/smb-credentials.age";
+        # }
+        # // high_security;
 
-        "rclone.conf" = {
-          file = "${mysecrets}/rclone.conf.age";
-        }
-        // high_security;
+        # "rclone.conf" = {
+        #   file = "${mysecrets}/rclone.conf.age";
+        # }
+        # // high_security;
 
         # ---------------------------------------------
         # user can read this file.
         # ---------------------------------------------
 
-        "ssh-key-romantic" = {
-          file = "${mysecrets}/ssh-key-romantic.age";
-        }
-        // user_readable;
+        # "ssh-key-romantic" = {
+        #   file = "${mysecrets}/ssh-key-romantic.age";
+        # }
+        # // user_readable;
 
         # alias-for-work
         "alias-for-work.nushell" = {
@@ -144,24 +144,24 @@ in
       # place secrets in /etc/
       environment.etc = {
         # wireguard config used with `wg-quick up wg-business`
-        "wireguard/wg-business.conf" = {
-          source = config.age.secrets."wg-business.conf".path;
-        };
+        # "wireguard/wg-business.conf" = {
+        #   source = config.age.secrets."wg-business.conf".path;
+        # };
 
-        "agenix/rclone.conf" = {
-          source = config.age.secrets."rclone.conf".path;
-        };
+        # "agenix/rclone.conf" = {
+        #   source = config.age.secrets."rclone.conf".path;
+        # };
 
-        "agenix/ssh-key-romantic" = {
-          source = config.age.secrets."ssh-key-romantic".path;
-          mode = "0600";
-          user = myvars.username;
-        };
+        # "agenix/ssh-key-romantic" = {
+        #   source = config.age.secrets."ssh-key-romantic".path;
+        #   mode = "0600";
+        #   user = myvars.username;
+        # };
 
-        "agenix/ryan4yin-gpg-subkeys.priv.age" = {
-          source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
-          mode = "0000";
-        };
+        # "agenix/ryan4yin-gpg-subkeys.priv.age" = {
+        #   source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
+        #   mode = "0000";
+        # };
 
         # The following secrets are used by home-manager modules
         # So we need to make then readable by the user
