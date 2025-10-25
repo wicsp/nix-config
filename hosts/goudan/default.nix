@@ -1,8 +1,4 @@
-{
-  myvars,
-  pkgs,
-  ...
-}:
+{ myvars, lib, ... }:
 #############################################################
 #
 #  Goudan - NixOS Desktop System
