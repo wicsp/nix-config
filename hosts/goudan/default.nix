@@ -13,14 +13,14 @@ let
 in
 {
   imports = [
-    # ./netdev-mount.nix TODO
+    ./netdev-mount.nix # TODO
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
     ./ai
 
     ./preservation.nix # TODO
-    # ./secureboot.nix  TODO
+    ./secureboot.nix # TODO
   ];
 
   services.sunshine.enable = lib.mkForce true;
