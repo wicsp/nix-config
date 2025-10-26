@@ -47,7 +47,7 @@ in
     server.webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
     server.storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
 
-    # impermanence.enable = mkEnableOption "whether use impermanence and ephemeral root file system";
+    impermanence.enable = mkEnableOption "whether use impermanence and ephemeral root file system";
   };
 
   config = mkIf (cfg.desktop.enable || enabledServerSecrets) (mkMerge [
