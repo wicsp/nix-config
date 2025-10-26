@@ -15,7 +15,7 @@
     freerdp # required by remmina
 
     # my custom hardened packages
-    pkgs.nixpaks.qq
+    # pkgs.nixpaks.qq
     pkgs.nixpaks.telegram-desktop
     # qqmusic
     pkgs.bwraps.wechat
