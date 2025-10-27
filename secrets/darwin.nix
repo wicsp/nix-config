@@ -80,11 +80,6 @@
       # ---------------------------------------------
       # user can read this file.
       # ---------------------------------------------
-      "test" = {
-        file = "${mysecrets}/test.age";
-      }
-      // user_readable;
-
       "secrets_env" = {
         file = "${mysecrets}/secrets_env.age";
       }
@@ -135,9 +130,6 @@
     };
     "agenix/alias-for-work.bash" = {
       source = config.age.secrets."alias-for-work.bash".path;
-    };
-    "agenix/test" = {
-      source = config.age.secrets."test".path;
     };
     "agenix/secrets_env" = {
       source = config.age.secrets."secrets_env".path;
