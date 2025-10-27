@@ -17,6 +17,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
   boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.loader.grub.enable = false;
   boot.loader.systemd-boot.enable = true;
 
   boot.initrd.availableKernelModules = [
