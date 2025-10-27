@@ -20,7 +20,7 @@ in
     ./ai
 
     ./preservation.nix # TODO
-    # ./secureboot.nix # TODO
+    ./secureboot.nix # TODO
   ];
 
   services.sunshine.enable = lib.mkForce true;
