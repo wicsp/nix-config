@@ -53,7 +53,7 @@
 
     udev.packages = with pkgs; [
       gnome-settings-daemon
-      android-udev-rules # required by adb
+      # android-udev-rules removed - superseded by built-in systemd uaccess rules
       # platformio # udev rules for platformio
       # openocd # required by paltformio, see https://github.com/NixOS/nixpkgs/issues/224895
       # openfpgaloader
