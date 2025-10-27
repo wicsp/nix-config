@@ -28,13 +28,14 @@ in
   networking = {
     inherit hostName;
 
-    # we use networkd instead
-    networkmanager.enable = false; # provides nmcli/nmtui for wifi adjustment
-    # useDHCP = false; TODO
+    # Use NetworkManager for Wi‑Fi/Ethernet (provides nmcli/nmtui)
+    networkmanager.enable = true;
+    # NetworkManager manages DHCP by default
   };
 
-  networking.useNetworkd = true;
-  systemd.network.enable = true;
+  # Ensure systemd-networkd is not used on this host
+  networking.useNetworkd = false;
+  systemd.network.enable = false;
 
   # systemd.network.networks."10-${iface}" = {
   #   matchConfig.Name = [ iface ];
