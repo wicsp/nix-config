@@ -18,7 +18,7 @@
     # pkgs.nixpaks.qq
     pkgs.nixpaks.telegram-desktop
     # qqmusic
-    pkgs.bwraps.wechat
+    # pkgs.bwraps.wechat
     # discord # update too frequently, use the web version instead
   ];
 
