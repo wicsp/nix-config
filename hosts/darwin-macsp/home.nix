@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  hostName = "fern";
+  hostName = "macsp";
 in
 {
   programs.ssh.matchBlocks."github.com".identityFile =
