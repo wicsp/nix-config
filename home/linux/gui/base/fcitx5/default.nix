@@ -20,8 +20,7 @@
       fcitx5-configtool
       # fcitx5-chinese-addons # we use rime instead
       # fcitx5-mozc    # japanese input method
-      fcitx5-gtk # gtk im module
-      fcitx5-qt # qt im module
+      # fcitx5-gtk # gtk im module
     ];
   };
 }
