@@ -27,7 +27,7 @@
 
   nix.channel.enable = false; # remove nix-channel related tools & configs, we use flakes instead.
   # TODO
-  nix.extraOptions = ''
-    !include ${config.age.secrets.nix-access-tokens.path}
-  '';
+  # nix.extraOptions = ''
+  #   !include ${config.age.secrets.nix-access-tokens.path}
+  # '';
 }
