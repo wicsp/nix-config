@@ -20,7 +20,7 @@ in
     ./ai
 
     ./preservation.nix # TODO
-    ./secureboot.nix # TODO
+    ./secureboot.nix # TODO https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
   ];
 
   services.sunshine.enable = lib.mkForce true;

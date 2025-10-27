@@ -1,7 +1,7 @@
 { mysecrets, ... }:
 {
   # TODO
-  home.file.".ssh/romantic.pub".source = "${mysecrets}/public/romantic.pub";
+  home.file.".ssh/zenith.pub".source = "${mysecrets}/public/zenith.pub";
 
   programs.ssh = {
     enable = true;
@@ -21,8 +21,8 @@
         # allow to securely use local SSH agent to authenticate on the remote machine.
         # It has the same effect as adding cli option `ssh -A user@host`
         ForwardAgent yes
-        # romantic holds my homelab~
-        IdentityFile /etc/agenix/ssh-key-romantic
+        # zenith holds my homelab~
+        IdentityFile /etc/agenix/ssh-key-zenith
         # Specifies that ssh should only use the identity file explicitly configured above
         # required to prevent sending default identity files first.
         IdentitiesOnly yes

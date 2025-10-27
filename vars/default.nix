@@ -27,12 +27,9 @@
     # The main ssh keys for daily usage
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIA7WpKIPJbG8fisvljzVnMi134ET+lVI0dsMZ9jHUiY wicsp@macsp"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIKlN+Q/GxvwxDX/OAjJHaNFEznEN4Tw4E4TwqQu/eD6 ryan@idols-ai"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJwoI5MAogEa726jwwHL5EgM1X/i2A5d2pgV7i7t8fzB ryan@shoukei"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDc1PNTXzzvd93E+e9LXvnEzqgUI5gMTEF/IitvzgmL+ ryan@frieren"
   ];
   secondaryAuthorizedKeys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIA7WpKIPJbG8fisvljzVnMi134ET+lVI0dsMZ9jHUiY wicsp@macsp"
     # the backup ssh keys for disaster recovery
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMzYT0Fpcp681eHY5FJV2G8Mve53iX3hMOLGbVvfL+TF ryan@romantic"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEAmnSeCElMmkfJIiCBXutFeaUK/u8s1v689JUFjBoXs wicsp@zenith"
   ];
 }

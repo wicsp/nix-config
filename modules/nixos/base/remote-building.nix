@@ -18,7 +18,7 @@
     let
       sshUser = myvars.username;
       # ssh key's path on local machine
-      sshKey = "/etc/agenix/ssh-key-romantic"; # TODO ssh key romandic
+      sshKey = "/etc/agenix/ssh-key-zenith"; # ssh key zenith
       systems = [
         # native arch
         "x86_64-linux"

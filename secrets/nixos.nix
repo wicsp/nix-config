@@ -69,14 +69,14 @@ in
             "/etc/ssh/ssh_host_ed25519_key"
           ];
 
-      # secrets that are used by all nixos hosts
-      age.secrets = {
-        "nix-access-tokens" = {
-          file = "${mysecrets}/nix-access-tokens.age";
-        }
-        # access-token needs to be readable by the user running the `nix` command
-        // user_readable;
-      };
+      # # secrets that are used by all nixos hosts
+      # age.secrets = {
+      #   "nix-access-tokens" = {
+      #     file = "${mysecrets}/nix-access-tokens.age";
+      #   }
+      #   # access-token needs to be readable by the user running the `nix` command
+      #   // user_readable;
+      # };
 
       assertions = [
         {
@@ -93,39 +93,39 @@ in
         # no one can read/write this file, even root.
         # ---------------------------------------------
 
-        # .age means the decrypted file is still encrypted by age(via a passphrase)
-        "ryan4yin-gpg-subkeys.priv.age" = {
-          file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
-        }
-        // noaccess;
+        # # .age means the decrypted file is still encrypted by age(via a passphrase)
+        # "ryan4yin-gpg-subkeys.priv.age" = {
+        #   file = "${mysecrets}/ryan4yin-gpg-subkeys-2024-01-27.priv.age.age";
+        # }
+        # // noaccess;
 
-        # ---------------------------------------------
-        # only root can read this file.
-        # ---------------------------------------------
+        # # ---------------------------------------------
+        # # only root can read this file.
+        # # ---------------------------------------------
 
-        "wg-business.conf" = {
-          file = "${mysecrets}/wg-business.conf.age";
-        }
-        // high_security;
+        # "wg-business.conf" = {
+        #   file = "${mysecrets}/wg-business.conf.age";
+        # }
+        # // high_security;
 
         # Used only by NixOS Modules
         # smb-credentials is referenced in /etc/fstab, by ../hosts/ai/cifs-mount.nix
-        "smb-credentials" = {
-          file = "${mysecrets}/smb-credentials.age";
-        }
-        // high_security;
+        # "smb-credentials" = {
+        #   file = "${mysecrets}/smb-credentials.age";
+        # }
+        # // high_security;
 
-        "rclone.conf" = {
-          file = "${mysecrets}/rclone.conf.age";
-        }
-        // high_security;
+        # "rclone.conf" = {
+        #   file = "${mysecrets}/rclone.conf.age";
+        # }
+        # // high_security;
 
         # ---------------------------------------------
         # user can read this file.
         # ---------------------------------------------
 
-        "ssh-key-romantic" = {
-          file = "${mysecrets}/ssh-key-romantic.age";
+        "ssh-key-zenith" = {
+          file = "${mysecrets}/ssh-key-zenith.age";
         }
         // user_readable;
 
@@ -143,25 +143,25 @@ in
 
       # place secrets in /etc/
       environment.etc = {
-        # wireguard config used with `wg-quick up wg-business`
-        "wireguard/wg-business.conf" = {
-          source = config.age.secrets."wg-business.conf".path;
-        };
+        # # wireguard config used with `wg-quick up wg-business`
+        # "wireguard/wg-business.conf" = {
+        #   source = config.age.secrets."wg-business.conf".path;
+        # };
 
-        "agenix/rclone.conf" = {
-          source = config.age.secrets."rclone.conf".path;
-        };
+        # "agenix/rclone.conf" = {
+        #   source = config.age.secrets."rclone.conf".path;
+        # };
 
-        "agenix/ssh-key-romantic" = {
-          source = config.age.secrets."ssh-key-romantic".path;
+        "agenix/ssh-key-zenith" = {
+          source = config.age.secrets."ssh-key-zenith".path;
           mode = "0600";
           user = myvars.username;
         };
 
-        "agenix/ryan4yin-gpg-subkeys.priv.age" = {
-          source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
-          mode = "0000";
-        };
+        # "agenix/ryan4yin-gpg-subkeys.priv.age" = {
+        #   source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
+        #   mode = "0000";
+        # };
 
         # The following secrets are used by home-manager modules
         # So we need to make then readable by the user
@@ -177,96 +177,96 @@ in
       };
     })
 
-    (mkIf cfg.server.network.enable {
-      age.secrets = {
-        "dae-subscription.dae" = {
-          file = "${mysecrets}/server/dae-subscription.dae.age";
-        }
-        // high_security;
-      };
-    })
+    # (mkIf cfg.server.network.enable {
+    #   age.secrets = {
+    #     "dae-subscription.dae" = {
+    #       file = "${mysecrets}/server/dae-subscription.dae.age";
+    #     }
+    #     // high_security;
+    #   };
+    # })
 
-    (mkIf cfg.server.application.enable {
-      age.secrets = {
-        "transmission-credentials.json" = {
-          file = "${mysecrets}/server/transmission-credentials.json.age";
-        }
-        // high_security;
+    # (mkIf cfg.server.application.enable {
+    #   age.secrets = {
+    #     "transmission-credentials.json" = {
+    #       file = "${mysecrets}/server/transmission-credentials.json.age";
+    #     }
+    #     // high_security;
 
-        "sftpgo.env" = {
-          file = "${mysecrets}/server/sftpgo.env.age";
-          mode = "0400";
-          owner = "sftpgo";
-        };
-        "minio.env" = {
-          file = "${mysecrets}/server/minio.env.age";
-          mode = "0400";
-          owner = "minio";
-        };
-      };
-    })
+    #     "sftpgo.env" = {
+    #       file = "${mysecrets}/server/sftpgo.env.age";
+    #       mode = "0400";
+    #       owner = "sftpgo";
+    #     };
+    #     "minio.env" = {
+    #       file = "${mysecrets}/server/minio.env.age";
+    #       mode = "0400";
+    #       owner = "minio";
+    #     };
+    #   };
+    # })
 
-    (mkIf cfg.server.operation.enable {
-      age.secrets = {
-        "grafana-admin-password" = {
-          file = "${mysecrets}/server/grafana-admin-password.age";
-          mode = "0400";
-          owner = "grafana";
-        };
+    # (mkIf cfg.server.operation.enable {
+    #   age.secrets = {
+    #     "grafana-admin-password" = {
+    #       file = "${mysecrets}/server/grafana-admin-password.age";
+    #       mode = "0400";
+    #       owner = "grafana";
+    #     };
 
-        "alertmanager.env" = {
-          file = "${mysecrets}/server/alertmanager.env.age";
-        }
-        // high_security;
-      };
-    })
+    #     "alertmanager.env" = {
+    #       file = "${mysecrets}/server/alertmanager.env.age";
+    #     }
+    #     // high_security;
+    #   };
+    # })
 
-    (mkIf cfg.server.kubernetes.enable {
-      age.secrets = {
-        "k3s-prod-1-token" = {
-          file = "${mysecrets}/server/k3s-prod-1-token.age";
-        }
-        // high_security;
+    # (mkIf cfg.server.kubernetes.enable {
+    #   age.secrets = {
+    #     "k3s-prod-1-token" = {
+    #       file = "${mysecrets}/server/k3s-prod-1-token.age";
+    #     }
+    #     // high_security;
 
-        "k3s-test-1-token" = {
-          file = "${mysecrets}/server/k3s-test-1-token.age";
-        }
-        // high_security;
-      };
-    })
+    #     "k3s-test-1-token" = {
+    #       file = "${mysecrets}/server/k3s-test-1-token.age";
+    #     }
+    #     // high_security;
+    #   };
+    # })
 
-    (mkIf cfg.server.webserver.enable {
-      age.secrets = {
-        "caddy-ecc-server.key" = {
-          file = "${mysecrets}/certs/ecc-server.key.age";
-          mode = "0400";
-          owner = "caddy";
-        };
-        "postgres-ecc-server.key" = {
-          file = "${mysecrets}/certs/ecc-server.key.age";
-          mode = "0400";
-          owner = "postgres";
-        };
-      };
-    })
+    # (mkIf cfg.server.webserver.enable {
+    #   age.secrets = {
+    #     "caddy-ecc-server.key" = {
+    #       file = "${mysecrets}/certs/ecc-server.key.age";
+    #       mode = "0400";
+    #       owner = "caddy";
+    #     };
+    #     "postgres-ecc-server.key" = {
+    #       file = "${mysecrets}/certs/ecc-server.key.age";
+    #       mode = "0400";
+    #       owner = "postgres";
+    #     };
+    #   };
+    # })
 
-    (mkIf cfg.server.storage.enable {
-      age.secrets = {
-        "hdd-luks-crypt-key" = {
-          file = "${mysecrets}/hdd-luks-crypt-key.age";
-          mode = "0400";
-          owner = "root";
-        };
-      };
+    # (mkIf cfg.server.storage.enable {
+    #   age.secrets = {
+    #     "hdd-luks-crypt-key" = {
+    #       file = "${mysecrets}/hdd-luks-crypt-key.age";
+    #       mode = "0400";
+    #       owner = "root";
+    #     };
+    #   };
 
-      # place secrets in /etc/
-      environment.etc = {
-        "agenix/hdd-luks-crypt-key" = {
-          source = config.age.secrets."hdd-luks-crypt-key".path;
-          mode = "0400";
-          user = "root";
-        };
-      };
-    })
+    #   # place secrets in /etc/
+    #   environment.etc = {
+    #     "agenix/hdd-luks-crypt-key" = {
+    #       source = config.age.secrets."hdd-luks-crypt-key".path;
+    #       mode = "0400";
+    #       user = "root";
+    #     };
+    #   };
+    # })
   ]);
 }
