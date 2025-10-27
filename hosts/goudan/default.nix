@@ -19,7 +19,7 @@ in
     ./nvidia.nix
     ./ai
 
-    ./preservation.nix # TODO
+    # ./preservation.nix # TODO
     ./secureboot.nix # TODO
   ];
 
