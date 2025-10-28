@@ -1,6 +1,5 @@
 { mysecrets, ... }:
 {
-  # TODO
   home.file.".ssh/zenith.pub".source = "${mysecrets}/public/zenith.pub";
 
   programs.ssh = {

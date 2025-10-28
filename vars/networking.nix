@@ -36,7 +36,7 @@ rec {
     goudan = {
       # Desktop PC - NixOS Desktop System
       iface = "tailscale0";
-      ipv4 = "100.91.203.113"; # tailscale 分配的虚拟 IP
+      ipv4 = "100.77.192.34"; # tailscale 分配的虚拟 IP
     };
     amax_lab = {
       # Laptop - NixOS Laptop System
