@@ -3,8 +3,7 @@ let
   hostName = "macsp";
 in
 {
-  programs.ssh.matchBlocks."github.com".identityFile =
-    "${config.home.homeDirectory}/.ssh/id_rsa_github";
+  programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/macsp";
 }
 # {
 #   programs.ssh = {

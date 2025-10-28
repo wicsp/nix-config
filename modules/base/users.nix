@@ -16,6 +16,6 @@
     #      ```
     #    2. Never leave the device and never sent over the network.
     # 2. Or just use hardware security keys like Yubikey/CanoKey.
-    openssh.authorizedKeys.keys = myvars.mainSshAuthorizedKeys;
+    openssh.authorizedKeys.keys = myvars.mainSshAuthorizedKeys ++ myvars.secondaryAuthorizedKeys;
   };
 }
