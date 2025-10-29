@@ -20,13 +20,9 @@
   #      ```
   #    2. Never leave the device and never sent over the network.
   # 2. Or just use hardware security keys like Yubikey/CanoKey.
-  sshAuthorizedKeys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIA7WpKIPJbG8fisvljzVnMi134ET+lVI0dsMZ9jHUiY wicsp@macsp"
-  ];
   mainSshAuthorizedKeys = [
     # The main ssh keys for daily usage
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIA7WpKIPJbG8fisvljzVnMi134ET+lVI0dsMZ9jHUiY wicsp@macsp"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIKlN+Q/GxvwxDX/OAjJHaNFEznEN4Tw4E4TwqQu/eD6 ryan@idols-ai"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMEVw62F1F5jnq1h1TpByneCn8SDsM7+DPTC/Qf4CP2A wicsp@macsp"
   ];
   secondaryAuthorizedKeys = [
     # the backup ssh keys for disaster recovery

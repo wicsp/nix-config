@@ -5,7 +5,7 @@
 #
 #############################################################
 let
-  hostName = "mio"; # Define your hostname.
+  hostName = "nexus"; # Define your hostname.
 in
 {
   imports = [
