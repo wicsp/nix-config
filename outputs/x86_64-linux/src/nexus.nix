@@ -12,7 +12,12 @@
 }@args:
 let
   name = "nexus";
-  base-modules = {
+  tags = [
+    name
+    "server"
+  ];
+  ssh-user = "root";
+  modules = {
     nixos-modules =
       (map mylib.relativeToRoot [
         # common
