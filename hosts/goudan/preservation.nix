@@ -70,8 +70,8 @@ in
       "/var/lib/qemu"
       # "/var/lib/waydroid"
 
-      # # nomad
-      /var/lib/nomad
+      # nomad
+      "/var/lib/nomad"
 
       # network
       "/var/lib/tailscale"
