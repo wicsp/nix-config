@@ -70,27 +70,8 @@ in
       "/var/lib/qemu"
       # "/var/lib/waydroid"
 
-      # nomad
-      # Keep the default state dir as a real dir for systemd's StateDirectory handling
-      {
-        directory = "/var/lib/nomad";
-        user = "nomad";
-        group = "nomad";
-        mode = "0750";
-      }
-      # Custom data and alloc dirs used by Nomad's config
-      {
-        directory = "/var/lib/nomad-data";
-        user = "nomad";
-        group = "nomad";
-        mode = "0750";
-      }
-      {
-        directory = "/var/lib/nomad-allocs";
-        user = "nomad";
-        group = "nomad";
-        mode = "0750";
-      }
+      # # nomad
+      /var/lib/nomad
 
       # network
       "/var/lib/tailscale"

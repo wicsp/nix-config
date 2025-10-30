@@ -1,7 +1,7 @@
 {
   services.nomad = {
     enable = true;
-    dropPrivileges = true;
+    dropPrivileges = false;
     settings = {
       server = {
         enabled = true;
