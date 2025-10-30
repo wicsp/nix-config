@@ -1,4 +1,3 @@
 {
-
-  # programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/goudan";
+  programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/nexus";
 }
