@@ -18,7 +18,7 @@ in
     ./hardware-configuration.nix
     ./nvidia.nix
     ./ai
-    ./nomad
+    ./nomad.nix
 
     ./preservation.nix # TODO
     ./secureboot.nix # TODO https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md
