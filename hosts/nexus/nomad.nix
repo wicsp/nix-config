@@ -7,9 +7,10 @@
       rpc = "100.100.10.1:4647";
       serf = "100.100.10.1:4648"; # non-default ports may be specified
     };
-    servers = [ "100.100.1.3:4647" ];
+
     client = {
       enabled = true;
+      servers = [ "100.100.1.3:4647" ];
     };
 
   };
