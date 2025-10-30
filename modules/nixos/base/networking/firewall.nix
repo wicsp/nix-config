@@ -17,4 +17,12 @@
     63089
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
+
+  #tailscale net
+  networking.firewall.interfaces.tailscale0.allowedTCPPorts = [
+    4646
+    4647
+    4648
+  ];
+  networking.firewall.interfaces.tailscale0.allowedUDPPorts = [ 4648 ];
 }

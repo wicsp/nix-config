@@ -1,15 +1,19 @@
 {
+
   services.nomad = {
     enable = true;
     dropPrivileges = false;
-    settings = {
-      server = {
-        enabled = true;
-        bootstrap_expect = 1;
-      };
-      client = {
-        enabled = true;
-      };
-    };
+
+  };
+
+  systemd.services.nomad = {
+    wants = [
+      "network-online.target"
+      "tailscaled.service"
+    ];
+    after = [
+      "network-online.target"
+      "tailscaled.service"
+    ];
   };
 }
