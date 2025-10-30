@@ -139,6 +139,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    daeuniverse.url = "github:daeuniverse/flake.nix";
+
     # i dont need a nixos-apple-silicon repo yet, i am using nix-darwin for my macsp
     # nixos-apple-silicon = {
     #   # 2025-10-07 asahi-6.16.8-1
