@@ -27,10 +27,15 @@
 
   virtualisation = {
     docker.enable = false;
+
+    virtualisation.podman.
+
     podman = {
       enable = true;
       # Create a `docker` alias for podman, to use it as a drop-in replacement
       dockerCompat = true;
+      # Enable Docker compatibility for Podman so lazydocker can connect
+      dockerSocket.enable = true;
       # Required for containers under podman-compose to be able to talk to each other.
       defaultNetwork.settings.dns_enabled = true;
       # Periodically prune Podman resources
