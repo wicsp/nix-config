@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    daeuniverse.nixosModules.dae
+    # daeuniverse.nixosModules.dae
     daeuniverse.nixosModules.daed
   ];
 
