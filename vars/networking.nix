@@ -105,7 +105,7 @@ rec {
           publicKey = value.publicKey;
         })
         {
-          goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";
+          # goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";
           # ruby.publicKey = "";
           # kana.publicKey = "";
 
