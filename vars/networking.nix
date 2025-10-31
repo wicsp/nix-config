@@ -18,36 +18,31 @@ rec {
   # prefixLength = 24;
 
   hostsAddr = {
-    mio_web = {
-      # Aliyun Server - 用于 SSH 连接的公网 IP
-      iface = "ens5"; # 实际网卡接口
-      ipv4 = "120.76.156.100"; # 公网 IP，用于 SSH 连接
-    };
-    mio = {
-      # Aliyun Server - 用于 SSH 连接的公网 IP
-      iface = "tailscale0"; # tailscale 网卡接口
-      ipv4 = "100.87.168.29"; # tailscale 分配的虚拟 IP
-    };
-    goudan_lab = {
-      # Desktop PC - NixOS Desktop System
-      iface = "enp2s0";
-      ipv4 = "192.168.124.58";
-    };
-    goudan = {
-      # Desktop PC - NixOS Desktop System
-      iface = "tailscale0";
-      ipv4 = "100.77.192.34"; # tailscale 分配的虚拟 IP
-    };
-    amax_lab = {
-      # Laptop - NixOS Laptop System
-      iface = "eno1";
-      ipv4 = "172.25.77.228";
-    };
-    amax = {
-      # Laptop - NixOS Laptop System
-      iface = "tailscale0";
-      ipv4 = "100.74.193.128"; # tailscale 分配的虚拟 IP
-    };
+    # mio_web = {
+    #   # Aliyun Server - 用于 SSH 连接的公网 IP
+    #   iface = "ens5"; # 实际网卡接口
+    #   ipv4 = "120.76.156.100"; # 公网 IP，用于 SSH 连接
+    # };
+    # mio = {
+    #   # Aliyun Server - 用于 SSH 连接的公网 IP
+    #   iface = "tailscale0"; # tailscale 网卡接口
+    #   ipv4 = "100.87.168.29"; # tailscale 分配的虚拟 IP
+    # };
+    # goudan = {
+    #   # Desktop PC - NixOS Desktop System
+    #   iface = "tailscale0";
+    #   ipv4 = "100.77.192.34"; # tailscale 分配的虚拟 IP
+    # };
+    # amax_lab = {
+    #   # Laptop - NixOS Laptop System
+    #   iface = "eno1";
+    #   ipv4 = "172.25.77.228";
+    # };
+    # amax = {
+    #   # Laptop - NixOS Laptop System
+    #   iface = "tailscale0";
+    #   ipv4 = "100.74.193.128"; # tailscale 分配的虚拟 IP
+    # };
   };
 
   # i dont need to configure the hosts interface for now, because i am using dhcp or tailscale
