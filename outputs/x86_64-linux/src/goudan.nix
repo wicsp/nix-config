@@ -74,6 +74,7 @@ in
 {
   nixosConfigurations = {
     # host with hyprland compositor
+    "${name}" = mylib.nixosSystem (modules-niri // args);
     "${name}-hyprland" = mylib.nixosSystem (modules-hyprland // args);
     "${name}-niri" = mylib.nixosSystem (modules-niri // args);
   };

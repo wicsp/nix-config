@@ -1,0 +1,7 @@
+- [ ] 修改niri键位
+  - [ ] 修改复制粘贴等常用快捷键，把control改为command
+  - [ ] 修改窗口快捷键为command+option+方向键
+  - [ ] 滚轮逻辑修改为mac风格
+- [ ] mio 和 goudan 的 dae 配置
+  - [ ] dae 配置文件
+  - [ ] 解决 dae 和tailscale的冲突

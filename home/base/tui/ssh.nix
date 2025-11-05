@@ -45,6 +45,7 @@
         identityFile = "/etc/agenix/ssh-key-zenith";
         identitiesOnly = true;
       };
+
     };
   };
 }
