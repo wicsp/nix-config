@@ -35,6 +35,7 @@ let
         { modules.secrets.server.operation.enable = true; }
         { modules.secrets.server.webserver.enable = true; }
         { modules.secrets.server.storage.enable = true; }
+        { modules.secrets.desktop.enable = true; }
       ];
     home-modules = map mylib.relativeToRoot [
       # common
