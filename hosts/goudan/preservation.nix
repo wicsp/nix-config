@@ -42,7 +42,6 @@ in
       "/etc/ssh"
       "/etc/nix/inputs"
       "/etc/secureboot" # lanzaboote - secure boot
-      "/etc/dae" # dae vpn client
       "/etc/daed" # daed vpn client with dashboard
       # my secrets
       "/etc/agenix/"
