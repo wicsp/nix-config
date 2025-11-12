@@ -139,6 +139,11 @@ in
           file = "${mysecrets}/alias-for-work.bash.age";
         }
         // user_readable;
+
+        "config.dae" = {
+          file = "${mysecrets}/config.dae.age";
+        }
+        // user_readable;
       };
 
       # place secrets in /etc/
