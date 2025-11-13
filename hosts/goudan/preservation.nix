@@ -43,6 +43,7 @@ in
       "/etc/nix/inputs"
       "/etc/secureboot" # lanzaboote - secure boot
       "/etc/daed" # daed vpn client with dashboard
+      "/etc/dae" # dae vpn client
       # my secrets
       "/etc/agenix/"
 
