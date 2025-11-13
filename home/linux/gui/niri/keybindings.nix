@@ -28,7 +28,7 @@ niri: {
         (plain "Mod+Return" [ (leaf "spawn" [ "foot" ]) ])
         (plain "Mod+Shift+Return" [ (leaf "spawn" [ "alacritty" ]) ])
         (plain "Mod+D" [ (leaf "spawn" [ "anyrun" ]) ])
-        (plain "CTRL+Alt+L" [ (leaf "spawn" [ "swaylock" ]) ])
+        (plain "Mod+Ctrl+Q" [ (leaf "spawn" [ "swaylock" ]) ])
 
         # You can also use a shell:
         # (plain "Mod+T" [(leaf "spawn" [ "bash" "-c" "notify-send hello && exec alacritty" ])])
@@ -57,19 +57,19 @@ niri: {
         (plain "Mod+Down" [ (flag "focus-window-down") ])
         (plain "Mod+Up" [ (flag "focus-window-up") ])
         (plain "Mod+Right" [ (flag "focus-column-right") ])
-        (plain "Mod+H" [ (flag "focus-column-left") ])
-        (plain "Mod+J" [ (flag "focus-window-down") ])
-        (plain "Mod+K" [ (flag "focus-window-up") ])
-        (plain "Mod+L" [ (flag "focus-column-right") ])
+        (plain "Mod+M" [ (flag "focus-column-left") ])
+        (plain "Mod+N" [ (flag "focus-window-down") ])
+        (plain "Mod+E" [ (flag "focus-window-up") ])
+        (plain "Mod+I" [ (flag "focus-column-right") ])
 
         (plain "Mod+Ctrl+Left" [ (flag "move-column-left") ])
         (plain "Mod+Ctrl+Down" [ (flag "move-window-down") ])
         (plain "Mod+Ctrl+Up" [ (flag "move-window-up") ])
         (plain "Mod+Ctrl+Right" [ (flag "move-column-right") ])
-        (plain "Mod+Ctrl+H" [ (flag "move-column-left") ])
-        (plain "Mod+Ctrl+J" [ (flag "move-window-down") ])
-        (plain "Mod+Ctrl+K" [ (flag "move-window-up") ])
-        (plain "Mod+Ctrl+L" [ (flag "move-column-right") ])
+        (plain "Mod+Ctrl+M" [ (flag "move-column-left") ])
+        (plain "Mod+Ctrl+N" [ (flag "move-window-down") ])
+        (plain "Mod+Ctrl+E" [ (flag "move-window-up") ])
+        (plain "Mod+Ctrl+I" [ (flag "move-column-right") ])
 
         # Alternative commands that move across workspaces when reaching
         # the first or last window in a column.
@@ -87,19 +87,19 @@ niri: {
         (plain "Mod+Shift+Down" [ (flag "focus-monitor-down") ])
         (plain "Mod+Shift+Up" [ (flag "focus-monitor-up") ])
         (plain "Mod+Shift+Right" [ (flag "focus-monitor-right") ])
-        (plain "Mod+Shift+H" [ (flag "focus-monitor-left") ])
-        (plain "Mod+Shift+J" [ (flag "focus-monitor-down") ])
-        (plain "Mod+Shift+K" [ (flag "focus-monitor-up") ])
-        (plain "Mod+Shift+L" [ (flag "focus-monitor-right") ])
+        (plain "Mod+Shift+M" [ (flag "focus-monitor-left") ])
+        (plain "Mod+Shift+N" [ (flag "focus-monitor-down") ])
+        (plain "Mod+Shift+E" [ (flag "focus-monitor-up") ])
+        (plain "Mod+Shift+I" [ (flag "focus-monitor-right") ])
 
         (plain "Mod+Shift+Ctrl+Left" [ (flag "move-column-to-monitor-left") ])
         (plain "Mod+Shift+Ctrl+Down" [ (flag "move-column-to-monitor-down") ])
         (plain "Mod+Shift+Ctrl+Up" [ (flag "move-column-to-monitor-up") ])
         (plain "Mod+Shift+Ctrl+Right" [ (flag "move-column-to-monitor-right") ])
-        (plain "Mod+Shift+Ctrl+H" [ (flag "move-column-to-monitor-left") ])
-        (plain "Mod+Shift+Ctrl+J" [ (flag "move-column-to-monitor-down") ])
-        (plain "Mod+Shift+Ctrl+K" [ (flag "move-column-to-monitor-up") ])
-        (plain "Mod+Shift+Ctrl+L" [ (flag "move-column-to-monitor-right") ])
+        (plain "Mod+Shift+Ctrl+M" [ (flag "move-column-to-monitor-left") ])
+        (plain "Mod+Shift+Ctrl+N" [ (flag "move-column-to-monitor-down") ])
+        (plain "Mod+Shift+Ctrl+E" [ (flag "move-column-to-monitor-up") ])
+        (plain "Mod+Shift+Ctrl+I" [ (flag "move-column-to-monitor-right") ])
 
         # Alternatively, there are commands to move just a single window:
         # (plain "Mod+Shift+Ctrl+Left" [(flag "move-window-to-monitor-left")])
@@ -111,12 +111,12 @@ niri: {
 
         (plain "Mod+Page_Down" [ (flag "focus-workspace-down") ])
         (plain "Mod+Page_Up" [ (flag "focus-workspace-up") ])
-        (plain "Mod+U" [ (flag "focus-workspace-down") ])
-        (plain "Mod+I" [ (flag "focus-workspace-up") ])
+        (plain "Mod+L" [ (flag "focus-workspace-down") ])
+        (plain "Mod+U" [ (flag "focus-workspace-up") ])
         (plain "Mod+Ctrl+Page_Down" [ (flag "move-column-to-workspace-down") ])
         (plain "Mod+Ctrl+Page_Up" [ (flag "move-column-to-workspace-up") ])
-        (plain "Mod+Ctrl+U" [ (flag "move-column-to-workspace-down") ])
-        (plain "Mod+Ctrl+I" [ (flag "move-column-to-workspace-up") ])
+        (plain "Mod+Ctrl+L" [ (flag "move-column-to-workspace-down") ])
+        (plain "Mod+Ctrl+U" [ (flag "move-column-to-workspace-up") ])
 
         # Alternatively, there are commands to move just a single window:
         # (plain "Mod+Ctrl+Page_Down" [(flag "move-window-to-workspace-down")])
@@ -124,8 +124,8 @@ niri: {
 
         (plain "Mod+Shift+Page_Down" [ (flag "move-workspace-down") ])
         (plain "Mod+Shift+Page_Up" [ (flag "move-workspace-up") ])
-        (plain "Mod+Shift+U" [ (flag "move-workspace-down") ])
-        (plain "Mod+Shift+I" [ (flag "move-workspace-up") ])
+        (plain "Mod+Shift+L" [ (flag "move-workspace-down") ])
+        (plain "Mod+Shift+U" [ (flag "move-workspace-up") ])
 
         # You can refer to workspaces by index. However, keep in mind that
         # niri is a dynamic workspace system, so these commands are kind of

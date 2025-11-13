@@ -79,13 +79,6 @@
         (node "workspace" "6file" [ (leaf "open-on-output" "HDMI-A-1") ])
         (node "workspace" "0other" [ (leaf "open-on-output" "HDMI-A-1") ])
 
-        # ============= Key Bindings =============
-        (node "binds" [
-          (node "Mod+Left" [ (leaf "focus-column-left") ])
-          (node "Mod+Right" [ (leaf "focus-column-right") ])
-          (node "Mod+Up" [ (leaf "focus-workspace-up") ])
-          (node "Mod+Down" [ (leaf "focus-workspace-down") ])
-        ])
       ];
   };
 }
