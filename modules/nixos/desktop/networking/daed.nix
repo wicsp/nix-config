@@ -16,7 +16,7 @@
       enable = true;
       port = 12345;
     };
-
+    configFile = "/etc/dae/config.dae";
     /*
       default options
 
