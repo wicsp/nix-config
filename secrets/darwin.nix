@@ -142,7 +142,6 @@
     };
     "dae/config.dae" = {
       source = config.age.secrets."config.dae".path;
-      mode = "0644"; # both the original file and the symlink should be readable and executable by the user
     };
   };
 
