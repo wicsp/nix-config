@@ -159,12 +159,12 @@ niri: {
         # Alternatively, there are commands to move just a single window:
         # (plain "Mod+Ctrl+1" [(leaf "move-window-to-workspace" 1)])
 
-        (plain "Mod+Comma" [ (flag "consume-window-into-column") ])
-        (plain "Mod+Period" [ (flag "expel-window-from-column") ])
+        # (plain "Mod+Comma" [ (flag "consume-window-into-column") ])
+        # (plain "Mod+Period" [ (flag "expel-window-from-column") ])
 
         # There are also commands that consume or expel a single window to the side.
-        # (plain "Mod+BracketLeft"  [(flag "consume-or-expel-window-left")])
-        # (plain "Mod+BracketRight" [(flag "consume-or-expel-window-right")])
+        (plain "Mod+BracketLeft" [ (flag "consume-or-expel-window-left") ])
+        (plain "Mod+BracketRight" [ (flag "consume-or-expel-window-right") ])
 
         (plain "Mod+R" [ (flag "switch-preset-column-width") ])
         (plain "Mod+F" [ (flag "maximize-column") ])
