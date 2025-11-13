@@ -44,7 +44,7 @@ niri: {
         ])
 
         (plain "mouse" [
-          # (flag "natural-scroll") # inverts the scrolling direction.
+          (flag "natural-scroll") # inverts the scrolling direction.
           # (leaf "accel-speed" 0.2)
           # (leaf "accel-profile" "flat")
         ])

@@ -56,6 +56,10 @@ niri: {
         (leaf "open-on-workspace" "3chat")
       ])
       (plain "window-rule" [
+        (leaf "match" { app-id = "telegram"; })
+        (leaf "open-on-workspace" "3chat")
+      ])
+      (plain "window-rule" [
         (leaf "match" { app-id = "wechat"; })
         (leaf "open-on-workspace" "3chat")
       ])
