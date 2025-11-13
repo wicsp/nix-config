@@ -37,7 +37,7 @@ niri: {
           # (flag "tap")  # tap-to-click
           (flag "dwt") # disable-when-typing.
           # (flag "dwtp") # disable-when-trackpointing.
-          (flag "natural-scroll") # inverts the scrolling direction.
+          # (flag "natural-scroll") # inverts the scrolling direction.
           # (leaf "accel-speed" 0.2)
           # (leaf "accel-profile" "flat")
           # (leaf "tap-button-map" "left-middle-right")
