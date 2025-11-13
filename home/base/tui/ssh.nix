@@ -46,6 +46,56 @@
         identitiesOnly = true;
       };
 
+      "goudan" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+
+      "amax" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+      "mio" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+      "falcon" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+      "hydra" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+      "nexus" = {
+        # "allow to securely use local SSH agent to authenticate on the remote machine."
+        # "It has the same effect as adding cli option `ssh -A user@host`"
+        forwardAgent = true;
+        # "zenith holds my homelab~"
+        identityFile = "/etc/agenix/ssh-key-zenith";
+        identitiesOnly = true;
+      };
+
     };
   };
 }
