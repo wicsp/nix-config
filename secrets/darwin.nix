@@ -151,6 +151,7 @@
     ${pkgs.nushell}/bin/nu -c '
       if (ls /etc/agenix/ | length) > 0 {
         sudo chown wicsp /etc/agenix/*
+        sudo chown wicsp /etc/dae/*
       }
     '
   '';
