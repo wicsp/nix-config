@@ -6,7 +6,7 @@
 {
   imports = [
     daeuniverse.nixosModules.dae
-    # daeuniverse.nixosModules.daed
+    daeuniverse.nixosModules.daed
   ];
 
   services.dae = {
