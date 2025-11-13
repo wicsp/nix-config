@@ -201,7 +201,7 @@ niri: {
         # Take a screenshot of the focused window
         (plain "Alt+Print" [ (flag "screenshot-window") ])
 
-        (plain "Mod+Shift+E" [ (leaf "spawn" [ "wlogout" ]) ])
+        # (plain "Mod+Shift+E" [ (leaf "spawn" [ "wlogout" ]) ]) # TODO
 
         (plain "Mod+Shift+P" [ (flag "power-off-monitors") ])
 
