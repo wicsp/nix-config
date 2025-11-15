@@ -115,16 +115,16 @@ cmd-alt-slash = 'layout tiles horizontal vertical'
 cmd-alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-cmd-alt-y = 'focus left'
+cmd-alt-m = 'focus left'
 cmd-alt-n = 'focus down'
-cmd-alt-i = 'focus up'
-cmd-alt-o = 'focus right'
+cmd-alt-e = 'focus up'
+cmd-alt-i = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-cmd-alt-shift-y = 'move left'
+cmd-alt-shift-m = 'move left'
 cmd-alt-shift-n = 'move down'
-cmd-alt-shift-i = 'move up'
-cmd-alt-shift-o = 'move right'
+cmd-alt-shift-e = 'move up'
+cmd-alt-shift-i = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 cmd-alt-minus = 'resize smart -50'
@@ -180,10 +180,10 @@ cmd-alt-shift-9 = 'move-node-to-workspace 9'
 cmd-alt-shift-0 = 'move-node-to-workspace 0'
 
 
-cmd-alt-ctrl-y = ['join-with left', 'mode main']
+cmd-alt-ctrl-m = ['join-with left', 'mode main']
 cmd-alt-ctrl-n = ['join-with down', 'mode main']
-cmd-alt-ctrl-i = ['join-with up', 'mode main']
-cmd-alt-ctrl-o = ['join-with right', 'mode main']
+cmd-alt-ctrl-e = ['join-with up', 'mode main']
+cmd-alt-ctrl-i = ['join-with right', 'mode main']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 cmd-alt-tab = 'workspace-back-and-forth'
@@ -199,10 +199,10 @@ cmd-alt-h = [] # Disable "hide others"
 
 # Declare 'resize' binding mode
 [mode.resize.binding]
-y = 'resize width +50'
+m = 'resize width +50'
 n = 'resize height +50'
-i = 'resize height -50'
-o = 'resize width -50'
+e = 'resize height -50'
+i = 'resize width -50'
 enter = 'mode main'
 esc = 'mode main'
 
