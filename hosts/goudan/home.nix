@@ -24,7 +24,7 @@
       in
       [
         # running `niri msg outputs` to find outputs
-        (node "output" "HDMI-A-1" [
+        (node "output" "DP-1" [
           # Uncomment this line to disable this output.
           # (flag "off")
 
@@ -33,7 +33,7 @@
 
           # Transform allows to rotate the output counter-clockwise, valid values are:
           # normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-          (leaf "transform" "normal")
+          (leaf "transform" "90")
 
           # Resolution and, optionally, refresh rate of the output.
           # The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
@@ -57,27 +57,27 @@
             y = 0;
           })
         ])
-        # (node "output" "HDMI-A-1" [
-        #   (leaf "scale" 1.5)
-        #   (leaf "transform" "normal")
-        #   (leaf "mode" "3840x2160@60")
-        #   (leaf "position" {
-        #     x = 2560; # on the right of DP-2
-        #     y = 0;
-        #   })
-        # ])
+        (node "output" "DP-2" [
+          (leaf "scale" 1.5)
+          (leaf "transform" "normal")
+          (leaf "mode" "3840x2160@60")
+          (leaf "position" {
+            x = 2560; # on the right of DP-2
+            y = 0;
+          })
+        ])
 
         # ============= Named Workspaces =============
         # (node "workspace" "2browser" [ (leaf "open-on-output" "DP-2") ])
         # (node "workspace" "4gaming" [ (leaf "open-on-output" "DP-2") ])
         # (node "workspace" "5music" [ (leaf "open-on-output" "DP-2") ])
-        (node "workspace" "1terminal" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "2browser" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "3chat" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "4gaming" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "5music" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "6file" [ (leaf "open-on-output" "HDMI-A-1") ])
-        (node "workspace" "0other" [ (leaf "open-on-output" "HDMI-A-1") ])
+        (node "workspace" "1terminal" [ (leaf "open-on-output" "DP-1") ])
+        (node "workspace" "2browser" [ (leaf "open-on-output" "DP-2") ])
+        (node "workspace" "3chat" [ (leaf "open-on-output" "DP-1") ])
+        (node "workspace" "4gaming" [ (leaf "open-on-output" "DP-2") ])
+        (node "workspace" "5music" [ (leaf "open-on-output" "DP-2") ])
+        (node "workspace" "6file" [ (leaf "open-on-output" "DP-1") ])
+        (node "workspace" "0other" [ (leaf "open-on-output" "DP-1") ])
 
       ];
   };
