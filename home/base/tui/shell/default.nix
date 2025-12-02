@@ -59,7 +59,7 @@
       # modules
       use modules/argx *
       use modules/lg *
-      use modules/kubernetes *
+      # use modules/kubernetes *
     '';
   };
 }
