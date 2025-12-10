@@ -1,6 +1,7 @@
 {
   myvars,
   config,
+  pkgs,
   ...
 }:
 {
@@ -26,6 +27,7 @@
     inherit (myvars) initialHashedPassword;
     home = "/home/${myvars.username}";
     isNormalUser = true;
+    shell = pkgs.nushell;
     extraGroups = [
       myvars.username
       "users"
