@@ -100,11 +100,6 @@
       }
       // user_readable;
 
-      "config.dae" = {
-        file = "${mysecrets}/config.dae.age";
-      }
-      // user_readable;
-
     };
 
   # place secrets in /etc/
@@ -140,9 +135,6 @@
     "agenix/secrets_env" = {
       source = config.age.secrets."secrets_env".path;
     };
-    "dae/config.dae" = {
-      source = config.age.secrets."config.dae".path;
-    };
   };
 
   # both the original file and the symlink should be readable and executable by the user
@@ -151,7 +143,6 @@
     ${pkgs.nushell}/bin/nu -c '
       if (ls /etc/agenix/ | length) > 0 {
         sudo chown wicsp /etc/agenix/*
-        sudo chown wicsp /etc/dae/*
       }
     '
   '';

@@ -139,11 +139,6 @@ in
           file = "${mysecrets}/alias-for-work.bash.age";
         }
         // user_readable;
-
-        "config.dae" = {
-          file = "${mysecrets}/config.dae.age";
-        }
-        // user_readable;
       };
 
       # place secrets in /etc/
@@ -178,11 +173,6 @@ in
         "agenix/alias-for-work.bash" = {
           source = config.age.secrets."alias-for-work.bash".path;
           mode = "0644"; # both the original file and the symlink should be readable and executable by the user
-        };
-
-        "dae/config.dae" = {
-          source = config.age.secrets."config.dae".path;
-          mode = "0600"; # both the original file and the symlink should be readable and executable by the user
         };
       };
     })
