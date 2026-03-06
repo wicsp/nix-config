@@ -71,7 +71,7 @@
   # Desktop-specific packages like virt-manager should be in desktop modules
   environment.systemPackages = with pkgs; [
     # QEMU/KVM(HostCpuOnly) - essential for VMs
-    qemu_kvm
+    # qemu_kvm
 
     # Only include full QEMU if needed for cross-architecture work
     # qemu

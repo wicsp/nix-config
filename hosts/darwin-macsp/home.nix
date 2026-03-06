@@ -1,9 +1,20 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   hostName = "macsp";
 in
 {
   programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/macsp";
+
+  # Web frontend tools - only needed on local dev machine
+  home.packages = with pkgs; [
+    nodePackages.nodejs
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    # HTML/CSS/JSON/ESLint language servers extracted from vscode
+    nodePackages.vscode-langservers-extracted
+    nodePackages."@tailwindcss/language-server"
+    emmet-ls
+  ];
 }
 # {
 #   programs.ssh = {

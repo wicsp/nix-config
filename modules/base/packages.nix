@@ -15,7 +15,7 @@
     git-lfs # used by huggingface models
 
     # system monitoring
-    procs # a moreden ps
+    # procs # a moreden ps
     btop
 
     # archives
@@ -51,7 +51,7 @@
 
     # networking tools
     mtr # A network diagnostic tool(traceroute)
-    gping # ping, but with a graph(TUI)
+    # gping # ping, but with a graph(TUI)
     dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     doggo # DNS client for humans

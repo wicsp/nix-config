@@ -10,16 +10,16 @@
 
     # ebpf related tools
     # https://github.com/bpftrace/bpftrace
-    bpftrace # powerful tracing tool
-    bpftop # monitor BPF programs
-    bpfmon # BPF based visual packet rate monitor
+    # bpftrace # powerful tracing tool
+    # bpftop # monitor BPF programs
+    # bpfmon # BPF based visual packet rate monitor
 
     # system monitoring
     sysstat
     iotop-c
     iftop
-    nmon
-    sysbench
+    # nmon
+    # sysbench
     systemctl-tui
 
     # system tools
@@ -35,5 +35,5 @@
 
   # BCC - Tools for BPF-based Linux IO analysis, networking, monitoring, and more
   # https://github.com/iovisor/bcc
-  programs.bcc.enable = true;
+  # programs.bcc.enable = true;
 }

@@ -37,11 +37,8 @@ let
         { modules.secrets.server.storage.enable = true; }
       ];
     home-modules = map mylib.relativeToRoot [
-      # common - use minimal set for falcon (40G disk, space constrained)
-      # "home/linux/tui.nix"  # too heavy: pulls in dev-tools, k8s, editors/LSPs
-      "home/base/core" # core CLI tools (eza, bat, fzf, zoxide, atuin, etc.)
-      "home/base/home.nix" # home-manager base config
-      "home/linux/base" # linux-specific base tools
+      # common
+      "home/linux/tui.nix"
       # host specific
       "hosts/${name}/home.nix"
     ];

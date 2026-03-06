@@ -20,8 +20,6 @@
         nickel
 
         #-- json like
-        # terraform  # install via brew on macOS
-        terraform-ls
         jsonnet
         jsonnet-language-server
         taplo # TOML language server / formatter / validator
@@ -105,16 +103,6 @@
           gopls # go language server
           delve # go debugger
 
-          # -- java
-          jdk17
-          gradle
-          maven
-          spring-boot-cli
-          jdt-language-server
-
-          #-- zig
-          zls
-
           #-- lua
           stylua
           lua-language-server
@@ -124,32 +112,8 @@
           shellcheck
           shfmt
         ]
-      #-*- Web Development -*-#
-      ++ [
-        nodePackages.nodejs
-        nodePackages.typescript
-        nodePackages.typescript-language-server
-        # HTML/CSS/JSON/ESLint language servers extracted from vscode
-        nodePackages.vscode-langservers-extracted
-        nodePackages."@tailwindcss/language-server"
-        emmet-ls
-      ]
-      # -*- Lisp like Languages -*-#
-      # ++ [
-      #   guile
-      #   racket-minimal
-      #   fnlfmt # fennel
-      #   (
-      #     if pkgs.stdenv.isLinux && pkgs.stdenv.isx86
-      #     then pkgs-unstable.akkuPackages.scheme-langserver
-      #     else pkgs.emptyDirectory
-      #   )
-      # ]
       ++ [
         proselint # English prose linter
-
-        #-- verilog / systemverilog
-        verible
 
         #-- Optional Requirements:
         nodePackages.prettier # common code formatter
