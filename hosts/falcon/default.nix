@@ -29,7 +29,7 @@ in
 
   # Override nix settings for US server - don't use Chinese mirrors
   nix.settings = {
-    substituters = [
+    substituters = lib.mkForce [
       # Official cache (default)
       "https://cache.nixos.org"
       # Community cache
