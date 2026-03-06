@@ -38,9 +38,6 @@
 
         #-- sql
         sqlfluff
-
-        #-- protocol buffer
-        buf # linting and formatting
       ]
       ++
         #-*- General Purpose Languages -*-#
@@ -66,23 +63,7 @@
               # python language server
               pyright
               ruff
-
-              pipx # Install and Run Python Applications in Isolated Environments
-              black # python formatter
               uv # python project package manager
-
-              # my commonly used python packages
-              jupyter
-              ipython
-              pandas
-              requests
-              pyquery
-              pyyaml
-              boto3
-
-              # misc
-              protobuf # protocol buffer compiler
-              numpy
             ]
           ))
 
