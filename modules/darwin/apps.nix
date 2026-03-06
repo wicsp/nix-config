@@ -159,8 +159,6 @@ in
 
       # misc that nix do not have cache for.
       "git-trim"
-      "terraform"
-      "terraformer"
     ];
 
     # `brew install --cask`
@@ -212,12 +210,9 @@ in
       # "clash-verge-rev" # the same as mihomo-party
 
       # Development
-      "mitmproxy" # HTTP/HTTPS traffic inspector
       "insomnia" # REST client
       # "wireshark-app" # network analyzer
       # "jdk-mission-control" # Java Mission Control
-      # "google-cloud-sdk" # Google Cloud SDK
-      # "miniforge" # Miniconda's community-driven distribution
 
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
       "macfuse" # for rclone to mount a fuse filesystem
