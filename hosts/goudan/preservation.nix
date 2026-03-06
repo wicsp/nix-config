@@ -160,10 +160,6 @@ in
         # ".local/share/doom"
         # ".local/share/emacs"
 
-        # Joplin
-        ".config/joplin" # tui client
-        ".config/Joplin" # joplin-desktop
-
         # ".local/share/jupyter"
 
         # ======================================
