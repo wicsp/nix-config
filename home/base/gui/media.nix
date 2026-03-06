@@ -6,7 +6,7 @@
 # processing audio/video
 {
   home.packages = with pkgs; [
-    ffmpeg-full
+    ffmpeg
 
     # images
     viu # Terminal image viewer with native support for iTerm and Kitty

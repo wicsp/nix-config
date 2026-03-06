@@ -30,13 +30,6 @@
     aliyun-cli
     # digitalocean
     doctl
-    # google cloud
-    (google-cloud-sdk.withExtraComponents (
-      with google-cloud-sdk.components;
-      [
-        gke-gcloud-auth-plugin
-      ]
-    ))
 
     # cloud tools that nix do not have cache for.
     terraform

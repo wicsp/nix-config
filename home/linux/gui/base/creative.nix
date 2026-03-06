@@ -4,7 +4,7 @@
   pkgs-unstable,
   # pkgs-stable,
   nur-ryan4yin,
-  blender-bin,
+  # blender-bin,
   ...
 }:
 {
@@ -13,9 +13,6 @@
     [
       # creative
       # gimp      # image editing, I prefer using figma in browser instead of this one
-      inkscape # vector graphics
-      krita # digital painting
-      musescore # music notation
       # reaper # audio production
       # sonic-pi # music programming
 
@@ -26,9 +23,6 @@
       # kicad     # 3d printing, electrical engineering
     ]
     ++ (lib.optionals pkgs.stdenv.isx86_64 [
-      # https://github.com/edolstra/nix-warez/blob/master/blender/flake.nix
-      blender-bin.packages.${pkgs.system}.blender_4_2 # 3d modeling
-
       ldtk # A modern, versatile 2D level editor
 
       # fpga

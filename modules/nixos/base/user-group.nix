@@ -12,7 +12,6 @@
     "${myvars.username}" = { };
     podman = { };
     docker = { };
-    wireshark = { };
     # for android platform tools's udev rules
     adbusers = { };
     dialout = { };
@@ -35,7 +34,6 @@
       "networkmanager" # for nmtui / nm-connection-editor
       "docker" # for docker daemon access
       "podman"
-      "wireshark"
       "adbusers" # android debugging
       "libvirtd" # virt-viewer / qemu
     ];
