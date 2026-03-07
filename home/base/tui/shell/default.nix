@@ -1,14 +1,7 @@
 { nu_scripts, ... }:
 {
   programs.nushell = {
-    # load the alias file for work
-    # the file must exist, otherwise nushell will complain about it!
-    #
-    # currently, nushell does not support conditional sourcing of files
-    # https://github.com/nushell/nushell/issues/8214
     extraConfig = ''
-      source /etc/agenix/alias-for-work.nushell
-
       # $env.CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC = "1"
       # using claude-code with kimi k2
       # https://platform.moonshot.cn/docs/guide/agent-support

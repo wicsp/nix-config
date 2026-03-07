@@ -89,17 +89,6 @@
       }
       // user_readable;
 
-      # # alias-for-work
-      "alias-for-work.nushell" = {
-        file = "${mysecrets}/alias-for-work.nushell.age";
-      }
-      // user_readable;
-
-      "alias-for-work.bash" = {
-        file = "${mysecrets}/alias-for-work.bash.age";
-      }
-      // user_readable;
-
       "config.dae" = {
         file = "${mysecrets}/config.dae.age";
       }
@@ -128,15 +117,6 @@
     #   source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
     # };
 
-    # # The following secrets are used by home-manager modules
-    # # But nix-darwin doesn't support environment.etc.<name>.mode
-    # # So we need to change its mode manually
-    "agenix/alias-for-work.nushell" = {
-      source = config.age.secrets."alias-for-work.nushell".path;
-    };
-    "agenix/alias-for-work.bash" = {
-      source = config.age.secrets."alias-for-work.bash".path;
-    };
     "agenix/secrets_env" = {
       source = config.age.secrets."secrets_env".path;
     };
