@@ -130,6 +130,7 @@ in
     ];
 
     brews = [
+      "secretive"
       "jj"
 
       # `brew install`
