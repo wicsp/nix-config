@@ -66,6 +66,8 @@ in
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
+    secretive
+
     neovim
     git
     nushell # my custom shell
@@ -130,7 +132,7 @@ in
     ];
 
     brews = [
-      "secretive"
+
       "jj"
 
       # `brew install`
