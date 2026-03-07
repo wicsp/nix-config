@@ -7,7 +7,6 @@ let
   initContent = ''
     # darwin bash/zsh initialization scripts
     arch=$(uname -m)
-
       
   '';
 in
