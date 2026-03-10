@@ -147,8 +147,9 @@ in
 
       };
 
-      home-manager.users.${myvars.username}.home.file.".ssh/zenith" = {
-        source = config.age.secrets."ssh-key-zenith".path;
+      home-manager.users.${myvars.username}.home.file = {
+        ".ssh/zenith".source = config.age.secrets."ssh-key-zenith".path;
+        ".ssh/zenith.pub".source = "${mysecrets}/public/zenith.pub";
       };
     })
 

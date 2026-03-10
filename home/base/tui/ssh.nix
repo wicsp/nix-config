@@ -1,11 +1,7 @@
 {
-  config,
-  mysecrets,
   ...
 }:
 {
-  home.file.".ssh/zenith.pub".source = "${mysecrets}/public/zenith.pub";
-
   programs.ssh = {
     enable = true;
 
