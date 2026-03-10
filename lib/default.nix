@@ -1,6 +1,7 @@
 { lib, ... }:
 {
   colmenaSystem = import ./colmenaSystem.nix;
+  homeSystem = import ./homeSystem.nix;
   macosSystem = import ./macosSystem.nix;
   nixosSystem = import ./nixosSystem.nix;
 
