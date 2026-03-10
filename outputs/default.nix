@@ -70,8 +70,7 @@ let
   allSystemNames = builtins.attrNames allSystems;
   nixosSystemValues = builtins.attrValues nixosSystems;
   darwinSystemValues = builtins.attrValues darwinSystems;
-  # homeSystemValues = builtins.attrValues homeSystems;
-  # allSystemValues = nixosSystemValues ++ darwinSystemValues ++ homeSystemValues;
+  homeSystemValues = builtins.attrValues homeSystems;
   allSystemValues = nixosSystemValues ++ darwinSystemValues;
 
   # Helper function to generate a set of attributes for each system
@@ -84,7 +83,7 @@ in
     inherit
       nixosSystems
       darwinSystems
-      # homeSystems
+      homeSystems
       allSystems
       allSystemNames
       ;
@@ -125,10 +124,10 @@ in
     map (it: it.darwinConfigurations or { }) darwinSystemValues
   );
 
-  # # Home Manager Configurations
-  # homeConfigurations = lib.attrsets.mergeAttrsList (
-  #   map (it: it.homeConfigurations or {}) homeSystemValues
-  # );
+  # Home Manager Configurations
+  homeConfigurations = lib.attrsets.mergeAttrsList (
+    map (it: it.homeConfigurations or { }) homeSystemValues
+  );
 
   # Packages
   packages = forAllSystems (system: allSystems.${system}.packages or { });
