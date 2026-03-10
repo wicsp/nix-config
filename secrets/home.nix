@@ -15,7 +15,6 @@ let
     cfg.server.application.enable
     || cfg.server.network.enable
     || cfg.server.operation.enable
-    || cfg.server.kubernetes.enable
     || cfg.server.webserver.enable
     || cfg.server.storage.enable;
 
@@ -43,7 +42,6 @@ in
     server.network.enable = mkEnableOption "NixOS Secrets for Network Servers";
     server.application.enable = mkEnableOption "NixOS Secrets for Application Servers";
     server.operation.enable = mkEnableOption "NixOS Secrets for Operation Servers(Backup, Monitoring, etc)";
-    server.kubernetes.enable = mkEnableOption "NixOS Secrets for Kubernetes";
     server.webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
     server.storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
 
@@ -142,17 +140,15 @@ in
         #   source = config.age.secrets."rclone.conf".path;
         # };
 
-        "agenix/ssh-key-zenith" = {
-          source = config.age.secrets."ssh-key-zenith".path;
-          mode = "0600";
-          user = myvars.username;
-        };
-
         # "agenix/ryan4yin-gpg-subkeys.priv.age" = {
         #   source = config.age.secrets."ryan4yin-gpg-subkeys.priv.age".path;
         #   mode = "0000";
         # };
 
+      };
+
+      home-manager.users.${myvars.username}.home.file.".ssh/zenith" = {
+        source = config.age.secrets."ssh-key-zenith".path;
       };
     })
 
@@ -195,20 +191,6 @@ in
 
         "alertmanager.env" = {
           file = "${mysecrets}/server/alertmanager.env.age";
-        }
-        // high_security;
-      };
-    })
-
-    (mkIf cfg.server.kubernetes.enable {
-      age.secrets = {
-        "k3s-prod-1-token" = {
-          file = "${mysecrets}/server/k3s-prod-1-token.age";
-        }
-        // high_security;
-
-        "k3s-test-1-token" = {
-          file = "${mysecrets}/server/k3s-test-1-token.age";
         }
         // high_security;
       };

@@ -42,7 +42,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
 
@@ -51,7 +51,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
 
@@ -60,7 +60,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
       "mio" = {
@@ -68,7 +68,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
       "falcon" = {
@@ -76,7 +76,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
       "hydra" = {
@@ -84,7 +84,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
       "nexus" = {
@@ -93,7 +93,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "/etc/agenix/ssh-key-zenith";
+        identityFile = "~/.ssh/zenith";
         identitiesOnly = true;
       };
 

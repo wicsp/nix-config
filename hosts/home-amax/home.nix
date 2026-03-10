@@ -11,14 +11,4 @@
       fi
     '';
   };
-
-  programs.ssh = {
-    enable = true;
-    extraConfig = ''
-      Host github.com
-        Hostname github.com
-        IdentityFile ~/.ssh/id_ed25519
-        IdentitiesOnly yes
-    '';
-  };
 }

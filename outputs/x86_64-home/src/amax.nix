@@ -15,7 +15,7 @@ let
   modules = {
     home-modules = map mylib.relativeToRoot [
       "hosts/home-amax/home.nix"
-      "home/base/home.nix"
+      "home/linux/tui.nix"
     ];
   };
 
