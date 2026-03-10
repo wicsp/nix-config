@@ -62,22 +62,6 @@
         editable = false;
       }
       {
-        # https://grafana.com/docs/grafana/latest/datasources/loki/configure-loki-data-source/
-        name = "loki-k3s-test-1";
-        type = "loki";
-        access = "proxy";
-        url = "https://loki-gateway.writefor.fun";
-        jsonData = {
-          timeout = 30;
-          maxLines = 1000;
-          httpHeaderName1 = "X-Scope-OrgID";
-        };
-        secureJsonData = {
-          httpHeaderValue1 = "fake";
-        };
-        editable = false;
-      }
-      {
         name = "alertmanager-homelab";
         type = "alertmanager";
         url = "http://localhost:9093";
