@@ -28,4 +28,7 @@
     # the backup ssh keys for disaster recovery
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEAmnSeCElMmkfJIiCBXutFeaUK/u8s1v689JUFjBoXs wicsp@zenith"
   ];
+  # Dedicated key for nix remote builds (no passphrase, restricted authorization on builder)
+  # Generated via: ssh-keygen -t ed25519 -f ~/.ssh/nix-remote-builder -N "" -C "nix-remote-builder@nixos"
+  nixRemoteBuilderPublicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO1jdDWa5eKeBsnnFkVhbx6XO7sVIHZivVh4ssuQpFhw nix-remote-builder@nixos";
 }

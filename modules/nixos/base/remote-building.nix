@@ -18,7 +18,7 @@
     let
       sshUser = myvars.username;
       # ssh key's path on local machine
-      sshKey = "/etc/agenix/ssh-key-zenith"; # ssh key zenith
+      sshKey = "/etc/agenix/ssh-key-nix-remote-builder"; # dedicated key for nix remote builds (no passphrase)
       systems = [
         # native arch
         "x86_64-linux"
