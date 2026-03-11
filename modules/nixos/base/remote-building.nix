@@ -38,34 +38,17 @@
     [
       # Nix seems always try to build on the machine remotely
       # to make use of the local machine's high-performance CPU, do not set remote builder's maxJobs too high.
-      # {
-      #   # some of my remote builders are running NixOS
-      #   # and has the same sshUser, sshKey, systems, etc.
-      #   inherit sshUser sshKey systems supportedFeatures;
-      #
-      #   # the hostName should be:
-      #   #   1. a hostname that can be resolved by DNS
-      #   #   2. the ip address of the remote builder
-      #   #   3. a host alias defined globally in /etc/ssh/ssh_config
-      #   hostName = "aquamarine";
-      #   # remote builder's max-job
-      #   maxJobs = 3;
-      #   # speedFactor's a signed integer
-      #   # https://github.com/ryan4yin/nix-config/issues/70
-      #   speedFactor = 1;
-      # }
-      # {
-      #   inherit sshUser sshKey systems supportedFeatures;
-      #   hostName = "ruby";
-      #   maxJobs = 2;
-      #   speedFactor = 1;
-      # }
-      # {
-      #   inherit sshUser sshKey systems supportedFeatures;
-      #   hostName = "kana";
-      #   maxJobs = 2;
-      #   speedFactor = 1;
-      # }
+      {
+        inherit
+          sshUser
+          sshKey
+          systems
+          supportedFeatures
+          ;
+        hostName = "amax";
+        maxJobs = 4; # adjust based on amax's actual CPU core count
+        speedFactor = 2;
+      }
     ];
   # optional, useful when the builder has a faster internet connection than yours
   nix.extraOptions = ''

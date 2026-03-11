@@ -4,6 +4,8 @@
 {
   programs.ssh = {
     enable = true;
+    # default config
+    enableDefaultConfig = false;
 
     matchBlocks."*" = {
       forwardAgent = false;

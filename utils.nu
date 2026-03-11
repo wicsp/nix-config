@@ -4,6 +4,20 @@ def repeat-str [s: string, n: int] {
 
 # ================= NixOS related =========================
 
+export def home-switch [
+    name: string
+    mode: string
+] {
+    print $"home-switch '($name)' in '($mode)' mode..."
+    print (repeat-str "=" 50)
+    if "debug" == $mode {
+        home-manager switch --flake $".#($name)" --show-trace --verbose
+    } else {
+        home-manager switch --flake $".#($name)"
+    }
+}
+
+
 export def nixos-switch [
     name: string
     mode: string

@@ -108,13 +108,17 @@ up-nix:
 #
 ############################################################################
 
-# Deploy the nixosConfiguration by hostname match
+# Deploy by hostname: nixos-rebuild on NixOS, home-manager switch on others
 [linux]
 [group('homelab')]
 local mode="default":
   #!/usr/bin/env nu
   use {{utils_nu}} *;
-  nixos-switch (hostname) {{mode}}
+  if ("/etc/NIXOS" | path exists) {
+    nixos-switch (hostname) {{mode}}
+  } else {
+    home-switch (hostname) {{mode}}
+  }
 
 # Deploy the hyprland nixosConfiguration by hostname match
 [linux]
@@ -168,115 +172,6 @@ reset-launchpad:
   defaults write com.apple.dock ResetLaunchPad -bool true
   killall Dock
 
-############################################################################
-#
-#  Homelab - Kubevirt Cluster related commands
-#
-############################################################################
-
-# Remote deployment via colmena
-[linux]
-[group('homelab')]
-col tag:
-  colmena apply --on '@{{tag}}' --verbose --show-trace
-
-# Build and upload a vm image
-[linux]
-[group('homelab')]
-upload-vm name mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  upload-vm {{name}} {{mode}}
-
-# Deploy all the KubeVirt nodes(Physical machines running KubeVirt)
-[linux]
-[group('homelab')]
-lab:
-  colmena apply --on '@virt-*' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-shoryu:
-  colmena apply --on '@kubevirt-shoryu' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-shushou:
-  colmena apply --on '@kubevirt-shushou' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-youko:
-  colmena apply --on '@kubevirt-youko' --verbose --show-trace
-
-############################################################################
-#
-# Commands for other Virtual Machines
-#
-############################################################################
-
-# Build and upload a vm image
-[linux]
-[group('homelab')]
-upload-idols mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  upload-vm aquamarine {{mode}}
-  upload-vm ruby {{mode}}
-  upload-vm kana {{mode}}
-
-[linux]
-[group('homelab')]
-aqua:
-  colmena apply --on '@aqua' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-ruby:
-  colmena apply --on '@ruby' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-kana:
-  colmena apply --on '@kana' --verbose --show-trace
-
-############################################################################
-#
-# Kubernetes related commands
-#
-############################################################################
-
-# Build and upload a vm image
-[linux]
-[group('homelab')]
-upload-k3s-prod mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  upload-vm k3s-prod-1-master-1 {{mode}}; 
-  upload-vm k3s-prod-1-master-2 {{mode}}; 
-  upload-vm k3s-prod-1-master-3 {{mode}}; 
-  upload-vm k3s-prod-1-worker-1 {{mode}}; 
-  upload-vm k3s-prod-1-worker-2 {{mode}}; 
-  upload-vm k3s-prod-1-worker-3 {{mode}};
-
-[linux]
-[group('homelab')]
-upload-k3s-test mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *; 
-  upload-vm k3s-test-1-master-1 {{mode}}; 
-  upload-vm k3s-test-1-master-2 {{mode}}; 
-  upload-vm k3s-test-1-master-3 {{mode}};
-
-[linux]
-[group('homelab')]
-k3s-prod:
-  colmena apply --on '@k3s-prod-*' --verbose --show-trace
-
-[linux]
-[group('homelab')]
-k3s-test:
-  colmena apply --on '@k3s-test-*' --verbose --show-trace
 
 # =================================================
 #
@@ -307,11 +202,6 @@ ggc:
 [group('git')]
 game:
   git commit --amend -a --no-edit
-
-# Delete all failed pods
-[group('k8s')]
-del-failed:
-  kubectl delete pod --all-namespaces --field-selector="status.phase==Failed"
 
 [linux]
 [group('services')]
