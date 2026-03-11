@@ -5,7 +5,7 @@
 # - Firefox's flatpak manifest: https://hg.mozilla.org/mozilla-central/file/tip/taskcluster/docker/firefox-flatpak/runme.sh#l151
 {
   lib,
-  firefox-wayland,
+  firefox,
   mkNixPak,
   buildEnv,
   makeDesktopItem,
@@ -22,7 +22,7 @@ let
       }:
       {
         app = {
-          package = firefox-wayland;
+          package = firefox;
           binPath = "bin/firefox";
         };
         flatpak.appId = appId;
