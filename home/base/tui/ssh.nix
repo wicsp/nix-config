@@ -28,9 +28,8 @@
         hostname = "ssh.github.com";
         port = 443;
         user = "git";
-        # Specifies that ssh should only use the identity file explicitly configured above
-        # required to prevent sending default identity files first.
-        identitiesOnly = true;
+        # Use forwarded agent from local machine (e.g. macbook) when available
+        forwardAgent = true;
       };
 
       "100.100.*" = {
