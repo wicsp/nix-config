@@ -1,6 +1,4 @@
-{
-  ...
-}:
+{ pkgs, ... }:
 {
   programs.ssh = {
     enable = true;
@@ -19,7 +17,11 @@
       controlMaster = "no";
       controlPath = "~/.ssh/master-%r@%n:%p";
       controlPersist = "no";
-    };
+    }
+    // (pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
+      # Use Secretive as SSH agent on macOS (keys stored in Secure Enclave)
+      identityAgent = "/Users/wicsp/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
+    });
 
     matchBlocks = {
       "github.com" = {
