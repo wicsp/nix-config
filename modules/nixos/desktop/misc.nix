@@ -29,6 +29,7 @@
   services = {
     gvfs.enable = true; # Mount, trash, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
+    power-profiles-daemon.enable = true; # standard power management
   };
 
   programs = {

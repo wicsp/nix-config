@@ -214,6 +214,8 @@ in
       # "wireshark-app" # network analyzer
       # "jdk-mission-control" # Java Mission Control
 
+      "orbstack" # lightweight container/Linux VM alternative to Docker Desktop
+
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
       "macfuse" # for rclone to mount a fuse filesystem
 

@@ -21,6 +21,9 @@
     mesa-demos
     nvitop
     (pkgs-x64.zoom-us.override { hyprlandXdgDesktopPortalSupport = true; })
+
+    # media download
+    yt-dlp
   ];
 
   programs.mpv = {
