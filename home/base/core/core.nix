@@ -15,6 +15,7 @@
     nix-tree # A TUI to visualize the dependency graph of a nix derivation
 
     # misc
+    just # command runner (used by Justfile in nix-config)
     cowsay
     gnupg
     caddy # A webserver with automatic HTTPS via Let's Encrypt(replacement of nginx)
