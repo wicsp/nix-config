@@ -1,8 +1,5 @@
 { myvars, ... }:
 {
-  imports = [
-    ./packages.nix
-  ];
   home.homeDirectory = "/home/${myvars.username}";
 
   programs.bash = {
