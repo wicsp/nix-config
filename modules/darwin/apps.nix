@@ -150,7 +150,7 @@ in
       #  https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS#run-the-tailscaled-daemon
       # 1. `sudo tailscaled install-system-daemon`
       # 2. `tailscale up --accept-routes`
-      # "tailscale" # tailscale
+      "tailscale" # tailscale CLI
 
       # https://github.com/rgcr/m-cli
       "m-cli" #  Swiss Army Knife for macOS
@@ -179,7 +179,6 @@ in
       "aerospace" # an i3-like tiling window manager for macOS
       "ghostty" # terminal emulator
 
-      "tailscale-app" # tailscale macos app (with gui)
       # "netbirdio/tap/netbird-ui" # netbird gui app
 
       # AI
