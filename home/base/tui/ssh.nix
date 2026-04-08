@@ -48,7 +48,7 @@
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
         # "zenith holds my homelab~"
-        identityFile = "~/.ssh/zenith";
+        identityFile = "~/.ssh/id_ed25519";
         identitiesOnly = true;
       };
 
