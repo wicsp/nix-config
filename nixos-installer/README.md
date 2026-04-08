@@ -1,16 +1,13 @@
-# Nix Environment Setup for Host: Idols - Ai
+# Nix Environment Setup for New Hosts
 
 > :red_circle: **IMPORTANT**: **Once again, you should NOT deploy this flake directly on your
 > machine :exclamation: Please write your own configuration from scratch, and use my configuration
 > and documentation for reference only.**
 
-This flake prepares a Nix environment for setting my desktop [/hosts/idols_ai](/hosts/idols_ai/)(in
-main flake) up on a new machine.
+This flake prepares a small bootstrap environment for setting up a new NixOS machine before moving
+to the main flake.
 
-Other docs:
-
-- README for [/hosts/12kingdoms_shoukei](/hosts/12kingdoms_shoukei):
-  [./README.shoukei.md](./README.shoukei.md)
+Bootstrap host profiles live under [./hosts](./hosts/README.md).
 
 TODOs:
 
@@ -19,7 +16,7 @@ TODOs:
 ## Why an extra flake is needed?
 
 The configuration of the main flake, [/flake.nix](/flake.nix), is heavy, and it takes time to debug
-& deploy. This simplified flake is tiny and can be deployed very quickly, it helps me to:
+& deploy. This simplified flake is tiny and can be deployed very quickly. It helps me to:
 
 1. Adjust & verify my `hardware-configuration.nix` modification quickly before deploying the main
    flake.
@@ -27,6 +24,8 @@ The configuration of the main flake, [/flake.nix](/flake.nix), is heavy, and it 
    Secure Boot, TPM2, Encryption, etc.
 
 ## Steps to Deploying this flake
+
+Before building, add a host profile under `nixos-installer/hosts/<name>.nix`.
 
 First, create a USB install medium from NixOS's official ISO image and boot from it.
 
@@ -257,9 +256,9 @@ that the new machine can pull my private secrets repo:
 
 ```bash
 # 1. Generate a new SSH key with a strong passphrase
-ssh-keygen -t ed25519 -a 256 -C "ryan@idols-ai" -f ~/.ssh/idols_ai
+ssh-keygen -t ed25519 -a 256 -C "ryan@<host>" -f ~/.ssh/<host>
 # 2. Add the ssh key to the ssh-agent, so that nixos-rebuild can use it to pull my private secrets repo.
-ssh-add ~/.ssh/idols_ai
+ssh-add ~/.ssh/<host>
 ```
 
 Then follow the instructions in [../secrets/README.md](../secrets/README.md) to rekey all my secrets

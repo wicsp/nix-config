@@ -97,10 +97,7 @@ See [./secrets](./secrets) for details.
 
 <!-- prettier-ignore -->
 > :red_circle: **IMPORTANT**: **You should NOT deploy this flake directly on your machine :exclamation:
-> It will not succeed.** This flake contains my hardware configuration(such as
-> [hardware-configuration.nix](hosts/idols-ai/hardware-configuration.nix),
-> [Nvidia Support](https://github.com/ryan4yin/nix-config/blob/v0.1.1/hosts/idols-ai/default.nix#L77-L91),
-> etc.) which is not suitable for your hardware, and requires my private secrets repository
+> It will not succeed.** This flake contains host-specific hardware settings and requires my private secrets repository
 > [ryan4yin/nix-secrets](https://github.com/ryan4yin/nix-config/tree/main/secrets) to deploy. You
 > may use this repo as a reference to build your own configuration.
 
@@ -111,7 +108,7 @@ For NixOS:
 
 ```bash
 # deploy one of the configuration based on the hostname
-sudo nixos-rebuild switch --flake .#ai-hyprland
+sudo nixos-rebuild switch --flake .#goudan
 
 # deploy via `just`(a command runner with similar syntax to make) & Justfile
 # Deploy the hyprland nixosConfiguration by hostname match
@@ -139,6 +136,17 @@ just local
 
 # deploy with details
 just local debug
+```
+
+To deploy a remote NixOS host from this checkout directly, without pushing the repo to the target
+machine first:
+
+```bash
+# build on the target host via SSH and activate it
+just remote mio
+
+# deploy multiple nodes or tags with more logs
+just remote '@server' switch debug
 ```
 
 > [What y'all will need when Nix drives you to drink.](https://www.youtube.com/watch?v=Eni9PPPPBpg)

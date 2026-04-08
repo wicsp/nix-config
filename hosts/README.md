@@ -1,18 +1,13 @@
 # Hosts
 
-1. `12kingdoms`:
-   1. `shoukei`: NixOS on Macbook Pro 2020 Intel i5, 13.3-inch, 16G RAM + 512G SSD.
 1. `darwin`(macOS)
-   1. `fern`: MacBook Pro 2022 13-inch M2 16G, mainly for business.
-   1. `harmonica`: MacBook Pro 2020 13-inch i5 16G, for personal use.
-1. `k8s`: My Kubevirt & Kubernetes Clusters
-1. `idols`
-   1. `ai`: My main computer, with NixOS + I5-13600KF + RTX 4090 GPU, for gaming & daily use.
-   2. `aquamarine`: Kubevirt Virtual Machine.
-      - Monitoring(prometheus, grafana, exporters), CI/CD(gitea, runner), homepage, file browser,
-        and other services.
-   3. `ruby`: Not used now.
-   4. `kana`: Not used now.
+   1. `macsp`: current nix-darwin machine.
+1. `linux`
+   1. `goudan`: main desktop, default profile is `niri`.
+   2. `falcon`
+   3. `hydra`
+   4. `mio`
+   5. `nexus`
 1. Other aarch64/riscv64 SBCs:
    [ryan4yin/nixos-config-sbc](https://github.com/ryan4yin/nixos-config-sbc)
 
@@ -36,10 +31,6 @@
    1. Add the new host's static IP address.
    1. Skip this step if the new host is not in the local network or is a mobile device.
 
-## idols - Oshi no Ko
-
-These four servers are named after the four main characters of the mange/anime Oshi no Ko.
-
 ## rolling girls
 
 My All RISCV64 hosts.
@@ -62,16 +53,8 @@ cool!
 
 ## References
 
-[Oshi no Ko 【推しの子】 - Wikipedia](https://en.wikipedia.org/wiki/Oshi_no_Ko):
-
-![](/_img/idols-famaily.webp) ![](/_img/idols-ai.webp)
-
 [The Rolling Girls【ローリング☆ガールズ】 - Wikipedia](https://en.wikipedia.org/wiki/The_Rolling_Girls):
 
 ![](/_img/rolling_girls.webp)
-
-[List of Twelve Kingdoms characters](https://en.wikipedia.org/wiki/List_of_Twelve_Kingdoms_characters)
-
-![](/_img/12kingdoms-1.webp) ![](/_img/12kingdoms-Youko-Rakushun.webp)
 
 [List of Frieren characters](https://en.wikipedia.org/wiki/List_of_Frieren_characters)

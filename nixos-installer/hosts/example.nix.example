@@ -1,0 +1,25 @@
+{ inputs, lib }:
+{
+  # The flake output name, e.g. .#newbox
+  name = "newbox";
+
+  # Optional. Defaults to x86_64-linux.
+  system = "x86_64-linux";
+
+  # Optional. Defaults to `name`.
+  hostname = "newbox";
+
+  # Optional. Used for myvars in shared modules.
+  username = "wicsp";
+  userfullname = "WICSP";
+
+  # Extra modules used only during the installer/bootstrap phase.
+  modules = [
+    ../../hosts/newbox/hardware-configuration.nix
+
+    # Add host-specific bootstrap modules here when needed.
+    # ../../hosts/newbox/impermanence.nix
+    # inputs.nixos-hardware.nixosModules.common-cpu-intel
+    # ({ pkgs, ... }: { boot.kernelPackages = pkgs.linuxPackages_latest; })
+  ];
+}

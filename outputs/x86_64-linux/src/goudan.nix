@@ -13,6 +13,11 @@
 }@args:
 let
   name = "goudan";
+  tags = [
+    name
+    "desktop"
+  ];
+  ssh-user = "root";
   base-modules = {
     nixos-modules =
       (map mylib.relativeToRoot [
@@ -78,6 +83,8 @@ in
     "${name}-hyprland" = mylib.nixosSystem (modules-hyprland // args);
     "${name}-niri" = mylib.nixosSystem (modules-niri // args);
   };
+
+  colmena.${name} = mylib.colmenaSystem ((modules-niri // args) // { inherit tags ssh-user; });
 
   # generate iso image for hosts with desktop environment
   packages = {

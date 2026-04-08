@@ -72,7 +72,7 @@ shell:
 [macos]
 [group('nix')]
 shell:
-  nix shell nixpkgs#git nixpkgs#neovim
+  nix shell nixpkgs#git nixpkgs#neovim nixpkgs#colmena
 
 [group('nix')]
 fmt:
@@ -163,6 +163,16 @@ local mode="default":
   use {{utils_nu}} *;
   darwin-build (hostname) {{mode}};
   darwin-switch (hostname) {{mode}}
+
+# Deploy remote NixOS nodes directly from the current checkout via colmena.
+[group('homelab')]
+remote nodes goal="switch" mode="default":
+  #!/usr/bin/env nu
+  if "debug" == "{{mode}}" {
+    colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}" --verbose --show-trace
+  } else {
+    colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}"
+  }
 
 
 # Reset launchpad to force it to reindex Applications

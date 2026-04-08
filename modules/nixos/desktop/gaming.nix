@@ -51,8 +51,10 @@ in
       # https://github.com/Winetricks/winetricks
       # Whether to enable protontricks, a simple wrapper for running Winetricks commands for Proton-enabled games.
       protontricks.enable = true;
-      # Whether to enable Load the extest library into Steam, to translate X11 input events to uinput events (e.g. for using Steam Input on Wayland) .
-      extest.enable = true;
+      # Current nixpkgs/Steam runtime combinations can emit ELFCLASS32 preload errors
+      # here and break startup on some systems. Re-enable only if you specifically need
+      # Steam Input's extest bridge on Wayland and have verified it still works.
+      extest.enable = false;
       fontPackages = [
         pkgs.wqy_zenhei # Need by steam for Chinese
       ];

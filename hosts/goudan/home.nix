@@ -1,10 +1,18 @@
 {
   config,
+  lib,
   niri,
+  pkgs,
   ...
 }:
 {
+  catppuccin.enable = lib.mkForce false;
+
   programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/goudan";
+
+  home.packages = with pkgs; [
+    xh
+  ];
 
   modules.desktop.nvidia.enable = true;
 

@@ -8,6 +8,10 @@
   system,
   tags,
   ssh-user,
+  targetHost ? null,
+  targetPort ? null,
+  buildOnTarget ? true,
+  replaceUnknownProfiles ? true,
   genSpecialArgs,
   specialArgs ? (genSpecialArgs system),
   ...
@@ -20,8 +24,13 @@ in
   deployment = {
     inherit tags;
     targetUser = ssh-user;
-    targetHost = name; # hostName or IP address
-  };
+    targetHost = if targetHost != null then targetHost else name; # hostName or IP address
+    inherit
+      buildOnTarget
+      replaceUnknownProfiles
+      ;
+  }
+  // (lib.optionalAttrs (targetPort != null) { inherit targetPort; });
 
   imports =
     nixos-modules

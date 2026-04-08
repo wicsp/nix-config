@@ -6,9 +6,9 @@
 let
   username = myvars.username;
   hosts = [
-    "ai-hyprland"
-    "ai-niri"
-    "ruby"
+    "goudan"
+    "goudan-hyprland"
+    "mio"
   ];
 in
 lib.genAttrs hosts (

@@ -67,12 +67,8 @@ rec {
     # define the host alias for remote builders
     # this config will be written to /etc/ssh/ssh_config
     # ''
-    #   Host ruby
-    #     HostName 192.168.5.102
-    #     Port 22
-    #
-    #   Host kana
-    #     HostName 192.168.5.103
+    #   Host goudan
+    #     HostName 192.168.5.100
     #     Port 22
     #   ...
     # '';
@@ -106,9 +102,6 @@ rec {
         })
         {
           # goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";
-          # ruby.publicKey = "";
-          # kana.publicKey = "";
-
           # ==================================== Other SSH Service's Public Key =======================================
 
           # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
