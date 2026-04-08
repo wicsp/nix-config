@@ -23,6 +23,7 @@
     settings = {
       font-family = "Maple Mono NF CN";
       font-size = 13;
+      window-decoration = "none";
 
       background-opacity = 0.93;
       # only supported on macOS;
