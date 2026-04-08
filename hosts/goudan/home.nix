@@ -41,7 +41,7 @@
 
           # Transform allows to rotate the output counter-clockwise, valid values are:
           # normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-          (leaf "transform" "270")
+          (leaf "transform" "normal")
 
           # Resolution and, optionally, refresh rate of the output.
           # The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
