@@ -22,7 +22,7 @@
   # 2. Or just use hardware security keys like Yubikey/CanoKey.
   mainSshAuthorizedKeys = [
     # The main ssh keys for daily usage
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMEVw62F1F5jnq1h1TpByneCn8SDsM7+DPTC/Qf4CP2A wicsp@macsp"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMu0yXtyEBI39LoO1w1SJsXr7RsqauFGievMs+d2ZERv wicsp@macsp"
   ];
   secondaryAuthorizedKeys = [
     # the backup ssh keys for disaster recovery
