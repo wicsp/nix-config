@@ -12,5 +12,10 @@
     flavor = "mocha";
     # one of "blue", "flamingo", "green", "lavender", "maroon", "mauve", "peach", "pink", "red", "rosewater", "sapphire", "sky", "teal", "yellow"
     accent = "pink";
+
+    # We already manage starship settings ourselves. Keeping the upstream
+    # Catppuccin starship module enabled forces local evaluation to realize a
+    # target-platform store path, which breaks cross-platform colmena evals.
+    starship.enable = false;
   };
 }

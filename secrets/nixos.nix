@@ -54,6 +54,18 @@ in
         agenix.packages."${pkgs.system}".default
       ];
 
+      age.secrets."ssh-key-nix-remote-builder" = {
+        file = "${mysecrets}/ssh-key-nix-remote-builder.age";
+        mode = "0400";
+        owner = "root";
+      };
+
+      environment.etc."agenix/ssh-key-nix-remote-builder" = {
+        source = config.age.secrets."ssh-key-nix-remote-builder".path;
+        mode = "0400";
+        user = "root";
+      };
+
       # if you changed this key, you need to regenerate all encrypt files from the decrypt contents!
       age.identityPaths =
         if cfg.preservation.enable then
@@ -127,12 +139,6 @@ in
         }
         // user_readable;
 
-        "ssh-key-nix-remote-builder" = {
-          file = "${mysecrets}/ssh-key-nix-remote-builder.age";
-          mode = "0400";
-          owner = "root";
-        };
-
         "config.dae" = {
           file = "${mysecrets}/config.dae.age";
         }
@@ -154,12 +160,6 @@ in
           source = config.age.secrets."ssh-key-zenith".path;
           mode = "0600";
           user = myvars.username;
-        };
-
-        "agenix/ssh-key-nix-remote-builder" = {
-          source = config.age.secrets."ssh-key-nix-remote-builder".path;
-          mode = "0400";
-          user = "root";
         };
 
         # "agenix/ryan4yin-gpg-subkeys.priv.age" = {

@@ -11,7 +11,7 @@
   programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/goudan";
 
   home.packages = with pkgs; [
-    xh
+    procs
   ];
 
   modules.desktop.nvidia.enable = true;
