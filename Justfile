@@ -166,7 +166,7 @@ local mode="default":
 
 # Deploy remote NixOS nodes directly from the current checkout via colmena.
 [group('homelab')]
-remote nodes goal="switch" mode="default":
+remote nodes="*" goal="switch" mode="default":
   #!/usr/bin/env nu
   if "debug" == "{{mode}}" {
     colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}" --verbose --show-trace

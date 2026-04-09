@@ -46,9 +46,6 @@ in
 {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  # Enable colmena for remote deployment
-  colmena.${name} = mylib.colmenaSystem (systemArgs // { inherit tags ssh-user; });
-
   # Generate ISO for server installation
   packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.iso;
 }
