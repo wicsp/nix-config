@@ -3,7 +3,6 @@ let
   homeDir = config.home.homeDirectory;
   configDir = "${homeDir}/.config";
   dataDir = "${homeDir}/.local/share";
-  nodeExporterPort = 9100;
   prometheusPort = 9091;
   grafanaPort = 3000;
 
@@ -46,7 +45,6 @@ in
       - job_name: nixos_nodes
         static_configs:
           - targets:
-              - 127.0.0.1:${toString nodeExporterPort}
               - goudan:9100
               - falcon:9100
   '';
@@ -94,36 +92,14 @@ in
     };
   };
 
-  systemd.user.services.node-exporter = {
-    Unit = {
-      Description = "Prometheus Node Exporter";
-      After = [ "network.target" ];
-    };
-    Service = {
-      ExecStart = lib.concatStringsSep " " [
-        "${pkgs.prometheus-node-exporter}/bin/node_exporter"
-        "--web.listen-address=127.0.0.1:${toString nodeExporterPort}"
-      ];
-      Restart = "always";
-      RestartSec = "5s";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
-
   systemd.user.services.grafana = {
     Unit = {
       Description = "Grafana";
       After = [
         "network.target"
-        "node-exporter.service"
         "prometheus.service"
       ];
-      Wants = [
-        "node-exporter.service"
-        "prometheus.service"
-      ];
+      Wants = [ "prometheus.service" ];
     };
     Service = {
       Environment = [
