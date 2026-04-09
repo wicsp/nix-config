@@ -18,6 +18,7 @@ in
     networkmanager.enable = true;
   };
 
+
   # Minimal remote management baseline.
   services.openssh = {
     enable = true;
