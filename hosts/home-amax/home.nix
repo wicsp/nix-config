@@ -1,5 +1,9 @@
 { myvars, ... }:
 {
+  imports = [
+    ./monitoring.nix
+  ];
+
   home.homeDirectory = "/home/${myvars.username}";
 
   programs.bash = {
