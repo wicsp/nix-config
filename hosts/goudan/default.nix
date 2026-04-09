@@ -34,6 +34,8 @@ in
     # NetworkManager manages DHCP by default
   };
 
+  networking.firewall.enable = true;
+
   # Ensure systemd-networkd is not used on this host
   networking.useNetworkd = false;
   systemd.network.enable = false;

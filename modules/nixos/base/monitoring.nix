@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   # enable the node exporter on all nixos hosts
   # https://github.com/NixOS/nixpkgs/blob/nixos-25.05/nixos/modules/services/monitoring/prometheus/exporters/node.nix
@@ -33,4 +34,8 @@
       "--collector.filesystem.mount-points-exclude=^(/|/persistent/)(dev|proc|sys|run/credentials/.+|run/user/.+|var/lib/docker/.+|var/lib/containers/.+|var/lib/kubelet/.+|home/wicsp/.+)($|/)"
     ];
   };
+
+  networking.firewall.interfaces.tailscale0.allowedTCPPorts = [
+    config.services.prometheus.exporters.node.port
+  ];
 }

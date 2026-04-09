@@ -24,6 +24,8 @@ in
     networkmanager.enable = true;
   };
 
+  networking.firewall.enable = true;
+
   # Enable tailscale
   services.tailscale.enable = true;
 
