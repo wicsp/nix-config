@@ -3,6 +3,8 @@ let
   homeDir = config.home.homeDirectory;
   configDir = "${homeDir}/.config";
   dataDir = "${homeDir}/.local/share";
+  prometheusPort = 9091;
+  grafanaPort = 3000;
 
   prometheusConfigPath = "${configDir}/prometheus/prometheus.yml";
   prometheusDataDir = "${dataDir}/prometheus";
@@ -38,7 +40,7 @@ in
       - job_name: prometheus
         static_configs:
           - targets:
-              - 127.0.0.1:9090
+              - 127.0.0.1:${toString prometheusPort}
 
       - job_name: nixos_nodes
         static_configs:
@@ -50,7 +52,7 @@ in
   home.file.".config/grafana/grafana.ini".text = ''
     [server]
     http_addr = 0.0.0.0
-    http_port = 3000
+    http_port = ${toString grafanaPort}
 
     [users]
     allow_sign_up = false
@@ -63,7 +65,7 @@ in
       - name: Prometheus
         type: prometheus
         access: proxy
-        url: http://127.0.0.1:9090
+        url: http://127.0.0.1:${toString prometheusPort}
         isDefault: true
         editable: true
   '';
@@ -79,7 +81,7 @@ in
         "--config.file=${prometheusConfigPath}"
         "--storage.tsdb.path=${prometheusDataDir}"
         "--storage.tsdb.retention.time=15d"
-        "--web.listen-address=127.0.0.1:9090"
+        "--web.listen-address=127.0.0.1:${toString prometheusPort}"
       ];
       Restart = "always";
       RestartSec = "5s";
