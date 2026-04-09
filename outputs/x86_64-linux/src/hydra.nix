@@ -17,8 +17,6 @@ let
     "server"
   ];
   ssh-user = "root";
-  # Public IP for bootstrap phase before tailscale is ready.
-  targetHost = "149.88.65.84";
   modules = {
     nixos-modules = (
       map mylib.relativeToRoot [
@@ -47,7 +45,6 @@ in
       inherit
         tags
         ssh-user
-        targetHost
         ;
     }
   );
