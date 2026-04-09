@@ -706,10 +706,10 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1773244678,
-        "narHash": "sha256-limV4br1IjeKgyFF75RjKR68KNvi2ii6Mtoofd0wCWs=",
+        "lastModified": 1775738547,
+        "narHash": "sha256-75fnfu3SSAelz25k3Sg4Gr/OGhVJdxdrEJ0BFuX1r/A=",
         "ref": "refs/heads/main",
-        "rev": "d2aec1df6ed4b8be043785ed3e90cc49e2b7b104",
+        "rev": "32fb9abbda0d5186f71d667d5389f8d584b19e8e",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/wicsp/nix-secrets.git"
