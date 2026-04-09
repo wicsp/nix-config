@@ -21,13 +21,20 @@ let
   targetHost = "8.135.45.26";
 
   modules = {
-    nixos-modules =
-      (map mylib.relativeToRoot [
+    nixos-modules = (
+      map mylib.relativeToRoot [
         # minimal bootstrap stack
         "modules/nixos/server/server.nix"
         # host specific
         "hosts/${name}"
-      ]);
+      ]
+    );
+    home-modules = map mylib.relativeToRoot [
+      # common
+      "home/linux/tui.nix"
+      # host specific
+      "hosts/${name}/home.nix"
+    ];
   };
 
   systemArgs = modules // args;

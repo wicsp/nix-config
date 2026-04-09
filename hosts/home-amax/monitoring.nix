@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   homeDir = config.home.homeDirectory;
   configDir = "${homeDir}/.config";

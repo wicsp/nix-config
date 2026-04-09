@@ -8,6 +8,7 @@ let
   hosts = [
     "goudan"
     "goudan-hyprland"
+    "hydra"
     "mio"
   ];
 in

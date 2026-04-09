@@ -20,13 +20,20 @@ let
   # Public IP for bootstrap phase before tailscale is ready.
   targetHost = "149.88.65.84";
   modules = {
-    nixos-modules =
-      (map mylib.relativeToRoot [
+    nixos-modules = (
+      map mylib.relativeToRoot [
         # minimal bootstrap stack
         "modules/nixos/server/server.nix"
         # host specific
         "hosts/${name}"
-      ]);
+      ]
+    );
+    home-modules = map mylib.relativeToRoot [
+      # common
+      "home/linux/tui.nix"
+      # host specific
+      "hosts/${name}/home.nix"
+    ];
   };
 
   systemArgs = modules // args;

@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  default_nixos_identity_file = "~/.ssh/id_ed25519";
+in
 {
   programs.ssh = {
     enable = true;
@@ -38,8 +41,7 @@
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/zenith";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
 
@@ -47,8 +49,7 @@
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/id_ed25519";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
 
@@ -56,32 +57,28 @@
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/id_ed25519";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
       "mio" = {
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/zenith";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
       "falcon" = {
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/id_ed25519";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
       "hydra" = {
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/zenith";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
       "nexus" = {
@@ -89,8 +86,7 @@
         # "allow to securely use local SSH agent to authenticate on the remote machine."
         # "It has the same effect as adding cli option `ssh -A user@host`"
         forwardAgent = true;
-        # "zenith holds my homelab~"
-        identityFile = "~/.ssh/zenith";
+        identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
 
