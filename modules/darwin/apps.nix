@@ -153,7 +153,7 @@ in
       "tailscale" # tailscale CLI
 
       # https://github.com/rgcr/m-cli
-      "m-cli" #  Swiss Army Knife for macOS
+      # "m-cli" #  Swiss Army Knife for macOS
       "proxychains-ng"
 
       # commands like `gsed` `gtar` are required by some tools
@@ -166,8 +166,6 @@ in
 
     # `brew install --cask`
     casks = [
-      "flashspace"
-
       "squirrel-app" # input method for Chinese, rime-squirrel
       "firefox"
       "google-chrome"
@@ -176,7 +174,6 @@ in
       "zed" # zed editor
       "cursor" # cursor ai editor
 
-      "aerospace" # an i3-like tiling window manager for macOS
       "ghostty" # terminal emulator
 
       # "netbirdio/tap/netbird-ui" # netbird gui app
@@ -204,7 +201,7 @@ in
       # "reaper"  # audio editor
       # "sonic-pi" # music programming
       # "tencent-lemon" # macOS cleaner
-      "neteasemusic" # music
+      # "neteasemusic" # music
       # "blender@lts" # 3D creation suite
       # "clash-verge-rev" # the same as mihomo-party
 
@@ -216,7 +213,7 @@ in
       "orbstack" # lightweight container/Linux VM alternative to Docker Desktop
 
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
-      "macfuse" # for rclone to mount a fuse filesystem
+      # "macfuse" # for rclone to mount a fuse filesystem
 
       # mactex
       "mactex"
