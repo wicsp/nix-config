@@ -72,9 +72,6 @@ in
       "/var/lib/qemu"
       # "/var/lib/waydroid"
 
-      # nomad
-      "/var/lib/nomad"
-
       # network
       "/var/lib/tailscale"
       "/var/lib/netbird-homelab" # netbird's homelab client
