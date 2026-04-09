@@ -17,28 +17,17 @@ let
     "server"
   ];
   ssh-user = "root";
+  # Public IP for bootstrap phase before tailscale is ready.
+  targetHost = "8.135.45.26";
 
   modules = {
     nixos-modules =
       (map mylib.relativeToRoot [
-        # common
-        "secrets/nixos.nix"
+        # minimal bootstrap stack
         "modules/nixos/server/server.nix"
         # host specific
         "hosts/${name}"
-      ])
-      ++ [
-        {
-          # Enable any specific secrets or features for mio here
-          # modules.secrets.server.enable = true;
-        }
-      ];
-    home-modules = map mylib.relativeToRoot [
-      # Basic home manager config for server (minimal TUI tools)
-      "home/linux/tui.nix"
-      # host specific home config
-      "hosts/${name}/home.nix"
-    ];
+      ]);
   };
 
   systemArgs = modules // args;
@@ -46,6 +35,17 @@ in
 {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  # Generate ISO for server installation
+  colmena.${name} = mylib.colmenaSystem (
+    systemArgs
+    // {
+      inherit
+        tags
+        ssh-user
+        targetHost
+        ;
+    }
+  );
+
+  # Generate ISO for bootstrap/recovery scenarios.
   packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.iso;
 }

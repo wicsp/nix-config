@@ -17,32 +17,16 @@ let
     "server"
   ];
   ssh-user = "root";
+  # Public IP for bootstrap phase before tailscale is ready.
+  targetHost = "149.88.65.84";
   modules = {
     nixos-modules =
       (map mylib.relativeToRoot [
-        # common
-        "secrets/nixos.nix" # TODO
+        # minimal bootstrap stack
         "modules/nixos/server/server.nix"
         # host specific
         "hosts/${name}"
-        # nixos hardening
-        # "hardening/profiles/default.nix"
-        # "hardening/nixpaks"
-        # "hardening/bwraps"
-      ])
-      ++ [
-        { modules.secrets.server.application.enable = true; }
-        { modules.secrets.server.operation.enable = true; }
-        { modules.secrets.server.webserver.enable = true; }
-        { modules.secrets.server.storage.enable = true; }
-      ];
-    home-modules = map mylib.relativeToRoot [
-      # common
-      "home/linux/tui.nix"
-      # host specific
-      "hosts/${name}/home.nix"
-    ];
-
+      ]);
   };
 
   systemArgs = modules // args;
@@ -50,5 +34,17 @@ in
 {
   nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.kubevirt; # TODO
+  colmena.${name} = mylib.colmenaSystem (
+    systemArgs
+    // {
+      inherit
+        tags
+        ssh-user
+        targetHost
+        ;
+    }
+  );
+
+  # Keep ISO format for a simple bootstrap artifact.
+  packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.iso;
 }

@@ -174,6 +174,17 @@ remote nodes="*" goal="switch" mode="default":
     colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}"
   }
 
+# Deploy remote NixOS nodes by building locally and copying closures to targets.
+# Useful for bootstrap stage when target nix-daemon is too old/broken.
+[group('homelab')]
+remote-local nodes="*" goal="switch" mode="default":
+  #!/usr/bin/env nu
+  if "debug" == "{{mode}}" {
+    colmena apply --impure --on "{{nodes}}" "{{goal}}" --verbose --show-trace
+  } else {
+    colmena apply --impure --on "{{nodes}}" "{{goal}}"
+  }
+
 
 # Reset launchpad to force it to reindex Applications
 [macos]

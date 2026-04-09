@@ -1,9 +1,18 @@
 { modulesPath, ... }:
 {
   imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
-
-  boot.loader.grub.device = "/dev/vda";
-  boot.tmp.cleanOnBoot = true;
+  boot.loader = {
+    efi.efiSysMountPoint = "/boot/efi";
+    grub = {
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+      device = "nodev";
+    };
+  };
+  fileSystems."/boot/efi" = {
+    device = "/dev/disk/by-uuid/FC06-C0FA";
+    fsType = "vfat";
+  };
   boot.initrd.availableKernelModules = [
     "ata_piix"
     "uhci_hcd"
@@ -15,4 +24,6 @@
     device = "/dev/vda3";
     fsType = "ext4";
   };
+
 }
+
