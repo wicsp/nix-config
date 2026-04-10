@@ -18,14 +18,21 @@ let
   ];
   ssh-user = "root";
   modules = {
-    nixos-modules = (
-      map mylib.relativeToRoot [
+    nixos-modules =
+      (map mylib.relativeToRoot [
+        # common
+        "secrets/nixos.nix"
         # minimal bootstrap stack
         "modules/nixos/server/server.nix"
         # host specific
         "hosts/${name}"
-      ]
-    );
+      ])
+      ++ [
+        # Enable the shared agenix chain and operational secrets such as the
+        # remote-builder SSH key. Additional server secret categories can be
+        # turned on later as the host starts consuming them.
+        { modules.secrets.server.operation.enable = true; }
+      ];
     home-modules = map mylib.relativeToRoot [
       # common
       "home/linux/tui.nix"
