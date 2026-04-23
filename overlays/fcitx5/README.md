@@ -1,4 +1,4 @@
-# rime-data for flypy input method
+# rime-data for yuling input method
 
 Useful for Linux(fcitx5-rime) & macOS(squirrel).
 

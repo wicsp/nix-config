@@ -14,22 +14,19 @@ overlays/
 └── fcitx5/              # Chinese input method configuration
     ├── README.md
     ├── default.nix      # fcitx5 overlay definition
-    └── rime-data-flypy/ # Custom rime data for 小鹤音形输入法
+    └── rime-data-yuling/ # Custom rime data for 灵明输入法
         └── share/
             └── rime-data/
-                ├── build/
                 ├── default.custom.yaml
-                ├── default.yaml
-                ├── flypy.schema.yaml
-                ├── flypy_full全码字.txt
-                ├── flypy_sys.txt
-                ├── flypy_top.txt
-                ├── flypy_user.txt
                 ├── lua/
-                │   └── calculator_translator.lua
-                ├── rime.lua
+                │   └── yuhao/
                 ├── squirrel.custom.yaml
-                └── squirrel.yaml
+                ├── yuhao/
+                ├── yuling.custom.yaml
+                ├── yuling.dict.yaml
+                ├── yuling.schema.yaml
+                ├── yuling_fluency.schema.yaml
+                └── ...
 ```
 
 ## Components
@@ -41,10 +38,10 @@ the given args.
 
 ### 2. `fcitx5`
 
-fcitx5's overlay, add my customized Chinese input method - [小鹤音形输入法](https://flypy.com/)
+fcitx5's overlay, add my customized Chinese input method - [灵明输入法](https://shurufa.app/)
 
 This overlay provides:
 
-- Custom rime data for 小鹤音形输入法 (Flypy input method)
+- Custom rime data for 灵明输入法 (Yuling input method)
 - Cross-platform support for both Linux (fcitx5-rime) and macOS (squirrel)
 - Pre-configured input method settings

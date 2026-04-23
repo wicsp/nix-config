@@ -64,7 +64,7 @@ You don't have to go through the pain I've experienced again! Check out my
 | **Display Manager**         | [tuigreet][tuigreet]                                                                                                |
 | **Color Scheme**            | [catppuccin-nix][catppuccin-nix]                                                                                    |
 | **network management tool** | [NetworkManager][NetworkManager]                                                                                    |
-| **Input method framework**  | [Fcitx5][Fcitx5] + [rime][rime] + [小鹤音形 flypy][flypy]                                                           |
+| **Input method framework**  | [Fcitx5][Fcitx5] + [rime][rime] + [灵明输入法 yuling][yuling]                                                      |
 | **System resource monitor** | [Btop][Btop]                                                                                                        |
 | **File Manager**            | [Yazi][Yazi] + [thunar][thunar]                                                                                     |
 | **Shell**                   | [Nushell][Nushell] + [Starship][Starship]                                                                           |
@@ -199,7 +199,7 @@ Other dotfiles that inspired me:
 [Dunst]: https://github.com/dunst-project/dunst
 [Fcitx5]: https://github.com/fcitx/fcitx5
 [rime]: https://wiki.archlinux.org/title/Rime
-[flypy]: https://flypy.cc/
+[yuling]: https://shurufa.app/
 [Btop]: https://github.com/aristocratos/btop
 [mpv]: https://github.com/mpv-player/mpv
 [Zellij]: https://github.com/zellij-org/zellij
