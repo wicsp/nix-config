@@ -7,12 +7,12 @@ in
 
   # Web frontend tools - only needed on local dev machine
   home.packages = with pkgs; [
-    nodePackages.nodejs
-    nodePackages.typescript
-    nodePackages.typescript-language-server
+    nodejs_24
+    typescript
+    typescript-language-server
     # HTML/CSS/JSON/ESLint language servers extracted from vscode
-    nodePackages.vscode-langservers-extracted
-    nodePackages."@tailwindcss/language-server"
+    vscode-langservers-extracted
+    tailwindcss-language-server
     emmet-ls
   ];
 }

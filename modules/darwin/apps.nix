@@ -23,6 +23,11 @@
 #
 ##########################################################################
 let
+  nushell-package = pkgs-unstable.nushell.overrideAttrs (_: {
+    # Nushell 0.112.1 currently fails Darwin sandbox tests.
+    doCheck = false;
+  });
+
   # Homebrew Mirror
   # NOTE: is only useful when you run `brew install` manually! (not via nix-darwin)
   homebrew_mirror_env = {
@@ -70,7 +75,7 @@ in
 
     neovim
     git
-    nushell # my custom shell
+    nushell-package # my custom shell
     gnugrep # replacee macos's grep
     gnutar # replacee macos's tar
 
@@ -97,7 +102,7 @@ in
   programs.zsh.enable = true;
   environment.shells = [
     pkgs.zsh
-    pkgs-unstable.nushell # my custom shell
+    nushell-package # my custom shell
   ];
 
   # homebrew need to be installed manually, see https://brew.sh
@@ -129,6 +134,7 @@ in
       "hashicorp/tap"
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       "FelixKratz/formulae" # janky borders - highlight active window borders
+      "farion1231/ccswitch"
     ];
 
     brews = [
@@ -175,6 +181,7 @@ in
       "cursor" # cursor ai editor
 
       "ghostty" # terminal emulator
+      "cc-switch" # Control Center toggle utility
 
       # "netbirdio/tap/netbird-ui" # netbird gui app
 

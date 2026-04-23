@@ -23,7 +23,7 @@
         jsonnet
         jsonnet-language-server
         taplo # TOML language server / formatter / validator
-        nodePackages.yaml-language-server
+        yaml-language-server
         actionlint # GitHub Actions linter
 
         #-- dockerfile
@@ -81,7 +81,11 @@
           iferr # generate error handling code for go
           impl # generate function implementation for go
           gotools # contains tools like: godoc, goimports, etc.
-          gopls # go language server
+          (gopls.overrideAttrs (old: {
+            postInstall = (old.postInstall or "") + ''
+              rm -f $out/bin/modernize
+            '';
+          })) # go language server
           delve # go debugger
 
           #-- lua
@@ -89,7 +93,7 @@
           lua-language-server
 
           #-- bash
-          nodePackages.bash-language-server
+          bash-language-server
           shellcheck
           shfmt
         ]
@@ -110,7 +114,7 @@
         proselint # English prose linter
 
         #-- Optional Requirements:
-        nodePackages.prettier # common code formatter
+        prettier # common code formatter
         fzf
         gdu # disk usage analyzer, required by AstroNvim
         (ripgrep.override { withPCRE2 = true; }) # recursively searches directories for a regex pattern

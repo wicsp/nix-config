@@ -1,4 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
+let
+  nushell-package =
+    if pkgs.stdenv.hostPlatform.isDarwin then
+      pkgs-unstable.nushell.overrideAttrs (_: {
+        # Nushell 0.112.1 currently fails Darwin sandbox tests.
+        doCheck = false;
+      })
+    else
+      pkgs.nushell;
+in
 {
   # for security reasons, do not load neovim's user config
   # since EDITOR may be used to edit some critical files
@@ -6,7 +16,7 @@
 
   environment.systemPackages = with pkgs; [
     # core tools
-    nushell # nushell
+    nushell-package # nushell
     fastfetch
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     gnumake # Makefile

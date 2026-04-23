@@ -15,12 +15,9 @@ let
     v = "nvim";
     vdiff = "nvim -d";
   };
-  # the path to nvim directory
-  # to make this symlink work, we need to git clone this repo to your home directory.
-  configPath = "${config.home.homeDirectory}/nix-config/home/base/tui/editors/neovim/nvchad";
 in
 {
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink configPath;
+  xdg.configFile."nvim".source = ./nvchad;
   # Disable catppuccin to avoid conflict with my non-nix config.
   catppuccin.nvim.enable = false;
 

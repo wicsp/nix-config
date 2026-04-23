@@ -20,6 +20,10 @@ let
   npmBin = "${config.home.homeDirectory}/.npm/bin";
 
   GOPATH = "${config.home.homeDirectory}/Projects/go";
+  nushell-package = pkgs-unstable.nushell.overrideAttrs (_: {
+    # Nushell 0.112.1 currently fails Darwin sandbox tests.
+    doCheck = false;
+  });
 in
 {
   programs.bash = {
@@ -36,7 +40,7 @@ in
   # NOTE: nushell will be launched in bash, so it can inherit all the eenvironment variables.
   programs.nushell = {
     enable = true;
-    # package = pkgs-unstable.nushell;
+    package = nushell-package;
     configFile.source = ./config.nu;
     inherit shellAliases;
   };
