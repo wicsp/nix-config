@@ -11,6 +11,7 @@ in
   imports = [
     # Keep only hardware scan for bootstrap phase.
     ./hardware-configuration.nix
+    ./hysteria.nix
   ];
 
   networking = {
