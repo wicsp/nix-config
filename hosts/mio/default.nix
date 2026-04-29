@@ -31,19 +31,18 @@ in
   # Bootstrap stage: avoid depending on remote-builder secrets.
   # Re-enable distributed builds when amax builder key is provisioned.
 
-  # Override nix settings for US server - don't use Chinese mirrors
-
+  # Aliyun mainland host: prefer a domestic cache mirror, keep official
+  # cache and nix-community as fallbacks for paths the mirror lacks.
   nix.settings = {
     substituters = lib.mkForce [
-      # Official cache (default)
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://cache.nixos.org"
-      # Community cache
       "https://nix-community.cachix.org"
-      # Optional: Add US-based mirrors if available
-      # "https://nixos-cache.example.com"
     ];
+    connect-timeout = 10;
+    fallback = true;
 
-    trusted-public-keys = [
+    trusted-public-keys = lib.mkForce [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];

@@ -10,7 +10,7 @@
     };
   };
   fileSystems."/boot/efi" = {
-    device = "/dev/disk/by-uuid/FC06-C0FA";
+    device = "/dev/disk/by-uuid/D1D1-9C4E";
     fsType = "vfat";
   };
   boot.initrd.availableKernelModules = [

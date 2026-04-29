@@ -53,6 +53,7 @@ in
               - goudan:9100
               - falcon:9100
               - hydra:9100
+              - mio:9100
   '';
 
   home.file.".config/grafana/grafana.ini".text = ''

@@ -18,27 +18,20 @@ let
   ];
   ssh-user = "root";
   modules = {
-    nixos-modules =
-      (map mylib.relativeToRoot [
-        # common
-        "secrets/nixos.nix" # TODO
-        "modules/nixos/server/server.nix"
-        # host specific
-        "hosts/${name}"
-        # nixos hardening
-        # "hardening/profiles/default.nix"
-        # "hardening/nixpaks"
-        # "hardening/bwraps"
-      ])
-      ++ [
-        { modules.secrets.server.application.enable = true; }
-        { modules.secrets.server.operation.enable = true; }
-        { modules.secrets.server.webserver.enable = true; }
-        { modules.secrets.server.storage.enable = true; }
-      ];
+    nixos-modules = map mylib.relativeToRoot [
+      # common
+      "secrets/nixos.nix" # TODO
+      "modules/nixos/server/server.nix"
+      # host specific
+      "hosts/${name}"
+      # nixos hardening
+      # "hardening/profiles/default.nix"
+      # "hardening/nixpaks"
+      # "hardening/bwraps"
+    ];
     home-modules = map mylib.relativeToRoot [
       # common
-      "home/linux/tui.nix"
+      "home/linux/server.nix"
       # host specific
       "hosts/${name}/home.nix"
     ];

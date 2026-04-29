@@ -12,30 +12,24 @@
 }@args:
 let
   name = "mio";
+  targetHost = "100.100.10.2";
   tags = [
     name
     "server"
   ];
   ssh-user = "root";
   modules = {
-    nixos-modules =
-      (map mylib.relativeToRoot [
-        # common
-        "secrets/nixos.nix"
-        # minimal bootstrap stack
-        "modules/nixos/server/server.nix"
-        # host specific
-        "hosts/${name}"
-      ])
-      ++ [
-        # Enable the shared agenix chain and operational secrets such as the
-        # remote-builder SSH key. Additional server secret categories can be
-        # turned on later as the host starts consuming them.
-        { modules.secrets.server.operation.enable = true; }
-      ];
+    nixos-modules = map mylib.relativeToRoot [
+      # common
+      "secrets/nixos.nix"
+      # minimal bootstrap stack
+      "modules/nixos/server/server.nix"
+      # host specific
+      "hosts/${name}"
+    ];
     home-modules = map mylib.relativeToRoot [
       # common
-      "home/linux/tui.nix"
+      "home/linux/server.nix"
       # host specific
       "hosts/${name}/home.nix"
     ];
@@ -52,6 +46,7 @@ in
       inherit
         tags
         ssh-user
+        targetHost
         ;
     }
   );
