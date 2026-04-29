@@ -23,10 +23,14 @@ let
   serverConfig = pkgs.writeText "hysteria-server.yaml" ''
     listen: :${toString cfg.port}
 
-    tls:
-      cert: /var/lib/hysteria/server.crt
-      key: /var/lib/hysteria/server.key
-      sniGuard: disable
+    acme:
+      domains:
+        - ${cfg.serverName}
+      email: ${cfg.acme.email}
+      ca: ${cfg.acme.ca}
+      dir: /var/lib/hysteria/acme
+      type: tls
+      tls: {}
 
     auth:
       type: command
@@ -52,7 +56,24 @@ in
     serverName = lib.mkOption {
       type = lib.types.str;
       default = "${config.networking.hostName}.wicsp.top";
-      description = "Name written into the generated self-signed certificate.";
+      description = "Domain name used by clients and ACME certificates.";
+    };
+
+    acme = {
+      email = lib.mkOption {
+        type = lib.types.str;
+        default = "wicspa@gmail.com";
+        description = "Email address used for ACME registration.";
+      };
+
+      ca = lib.mkOption {
+        type = lib.types.enum [
+          "letsencrypt"
+          "zerossl"
+        ];
+        default = "letsencrypt";
+        description = "ACME CA used to issue the Hysteria certificate.";
+      };
     };
 
     masquerade = {
@@ -85,6 +106,10 @@ in
       cfg.port
     ];
 
+    networking.firewall.allowedTCPPorts = [
+      cfg.port
+    ];
+
     systemd.services.hysteria-server = {
       description = "Hysteria 2 proxy server";
       after = [ "network-online.target" ];
@@ -97,17 +122,6 @@ in
 
         if [ ! -s /var/lib/hysteria/auth ]; then
           ${pkgs.openssl}/bin/openssl rand -base64 32 > /var/lib/hysteria/auth
-        fi
-
-        if [ ! -s /var/lib/hysteria/server.crt ] || [ ! -s /var/lib/hysteria/server.key ]; then
-          ${pkgs.coreutils}/bin/rm -f /var/lib/hysteria/server.crt /var/lib/hysteria/server.key
-          ${pkgs.openssl}/bin/openssl ecparam -genkey -name prime256v1 -out /var/lib/hysteria/server.key
-          ${pkgs.openssl}/bin/openssl req -new -x509 -sha256 \
-            -key /var/lib/hysteria/server.key \
-            -out /var/lib/hysteria/server.crt \
-            -days 3650 \
-            -subj "/CN=${cfg.serverName}" \
-            -addext "subjectAltName=DNS:${cfg.serverName}"
         fi
       '';
 
