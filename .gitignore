@@ -9,3 +9,8 @@ core*
 !core/
 !core.nix
 !coredns*
+
+# Rime input method data files (too large for git)
+overlays/fcitx5/rime-data-yuling/share/rime-data/*.txt
+overlays/fcitx5/rime-data-yuling/share/rime-data/*.dict.yaml
+overlays/fcitx5/rime-data-yuling/share/rime-data/yuhao/*.dict.yaml
