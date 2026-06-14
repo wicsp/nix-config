@@ -77,9 +77,7 @@ All the outputs of this flake are defined here.
     ├── default.nix
     ├── nixos-tests
     ├── src           # every host has its own file in this directory
-    │   ├── falcon.nix
     │   ├── goudan.nix
-    │   ├── hydra.nix
     │   ├── mio.nix
     │   └── nexus.nix
     └── tests         # eval tests

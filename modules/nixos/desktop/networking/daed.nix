@@ -47,4 +47,16 @@
       listen = "127.0.0.1:2023";
     */
   };
+
+  systemd.services.daed = {
+    after = [
+      "network-online.target"
+      "NetworkManager-wait-online.service"
+    ];
+    wants = [ "network-online.target" ];
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = "5s";
+    };
+  };
 }

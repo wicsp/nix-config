@@ -4,10 +4,8 @@
    1. `macsp`: current nix-darwin machine.
 1. `linux`
    1. `goudan`: main desktop, default profile is `niri`.
-   2. `falcon`
-   3. `hydra`
-   4. `mio`
-   5. `nexus`
+   2. `mio`
+   3. `nexus`
 1. Other aarch64/riscv64 SBCs:
    [ryan4yin/nixos-config-sbc](https://github.com/ryan4yin/nixos-config-sbc)
 

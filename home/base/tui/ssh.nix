@@ -67,20 +67,6 @@ in
         identityFile = default_nixos_identity_file;
         identitiesOnly = true;
       };
-      "falcon" = {
-        # "allow to securely use local SSH agent to authenticate on the remote machine."
-        # "It has the same effect as adding cli option `ssh -A user@host`"
-        forwardAgent = true;
-        identityFile = default_nixos_identity_file;
-        identitiesOnly = true;
-      };
-      "hydra" = {
-        # "allow to securely use local SSH agent to authenticate on the remote machine."
-        # "It has the same effect as adding cli option `ssh -A user@host`"
-        forwardAgent = true;
-        identityFile = default_nixos_identity_file;
-        identitiesOnly = true;
-      };
       "nexus" = {
         user = "root";
         # "allow to securely use local SSH agent to authenticate on the remote machine."

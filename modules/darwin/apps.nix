@@ -133,7 +133,7 @@ in
     taps = [
       "hashicorp/tap"
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
-      "FelixKratz/formulae" # janky borders - highlight active window borders
+      # "FelixKratz/formulae" # janky borders - highlight active window borders
       "farion1231/ccswitch"
     ];
 
@@ -150,7 +150,7 @@ in
       # a markdown editor
       "typst"
 
-      "borders" # highlight active window borders
+      # "borders" # highlight active window borders
 
       # Usage:
       #  https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS#run-the-tailscaled-daemon
