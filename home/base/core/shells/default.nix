@@ -31,6 +31,12 @@ in
     enableCompletion = true;
     bashrcExtra = ''
       export PATH="$PATH:${localBin}:${goBin}:${rustBin}:${npmBin}"
+
+      if [ -r /etc/agenix/secrets_env ]; then
+        set -a
+        . /etc/agenix/secrets_env
+        set +a
+      fi
     '';
   };
 
