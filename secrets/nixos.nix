@@ -79,14 +79,14 @@ in
             "/etc/ssh/ssh_host_ed25519_key"
           ];
 
-      # # secrets that are used by all nixos hosts
-      # age.secrets = {
-      #   "nix-access-tokens" = {
-      #     file = "${mysecrets}/nix-access-tokens.age";
-      #   }
-      #   # access-token needs to be readable by the user running the `nix` command
-      #   // user_readable;
-      # };
+      # secrets that are used by all nixos hosts
+      age.secrets = {
+        "nix-access-tokens" = {
+          file = "${mysecrets}/nix-access-tokens.age";
+        }
+        # access-token needs to be readable by the user running the `nix` command
+        // user_readable;
+      };
 
       assertions = [
         {

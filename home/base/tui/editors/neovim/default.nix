@@ -28,6 +28,10 @@ in
     enable = true;
     package = pkgs-unstable.neovim-unwrapped;
 
+    # Disable Ruby/Python support (not needed by our plugins)
+    withRuby = false;
+    withPython3 = false;
+
     # defaultEditor = true; # set EDITOR at system-wide level
     viAlias = true;
     vimAlias = true;

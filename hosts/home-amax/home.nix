@@ -6,7 +6,7 @@
 
   home.homeDirectory = "/home/${myvars.username}";
 
-  programs.ssh.matchBlocks."github.com".identityFile = "/home/wicsp/.ssh/id_ed25519";
+  programs.ssh.settings."github.com".identityFile = "/home/wicsp/.ssh/id_ed25519";
 
   programs.bash = {
     enable = true;

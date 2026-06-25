@@ -8,6 +8,8 @@
   catppuccin = {
     # The default `enable` value for all available programs.
     enable = true;
+    # Explicitly set to match `enable` and suppress upcoming migration warning
+    autoEnable = true;
     # one of "latte", "frappe", "macchiato", "mocha"
     flavor = "mocha";
     # one of "blue", "flamingo", "green", "lavender", "maroon", "mauve", "peach", "pink", "red", "rosewater", "sapphire", "sky", "teal", "yellow"

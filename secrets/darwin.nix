@@ -77,12 +77,11 @@ in
       #   }
       #   // high_security;
 
-      # "nix-access-tokens" =
-      #   {
-      #     file = "${mysecrets}/nix-access-tokens.age";
-      #   }
-      #   # access-token needs to be readable by the user running the `nix` command
-      #   // user_readable;
+      "nix-access-tokens" = {
+        file = "${mysecrets}/nix-access-tokens.age";
+      }
+      # access-token needs to be readable by the user running the `nix` command
+      // user_readable;
 
       # ---------------------------------------------
       # user can read this file.
@@ -126,6 +125,9 @@ in
 
     "agenix/secrets_env" = {
       source = config.age.secrets."secrets_env".path;
+    };
+    "agenix/nix-access-tokens" = {
+      source = config.age.secrets."nix-access-tokens".path;
     };
     "dae/config.dae" = {
       source = config.age.secrets."config.dae".path;

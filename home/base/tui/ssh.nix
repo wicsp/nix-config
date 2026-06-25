@@ -8,7 +8,7 @@ in
     # default config
     enableDefaultConfig = false;
 
-    matchBlocks."*" = {
+    settings."*" = {
       forwardAgent = false;
       # "a private key that is used during authentication will be added to ssh-agent if it is running"
       addKeysToAgent = "yes";
@@ -26,7 +26,7 @@ in
       identityAgent = "/Users/wicsp/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
     });
 
-    matchBlocks = {
+    settings = {
       "github.com" = {
         # "Using SSH over the HTTPS port for GitHub"
         # "(port 22 is banned by some proxies / firewalls)"

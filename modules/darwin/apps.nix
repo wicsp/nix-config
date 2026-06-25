@@ -135,6 +135,7 @@ in
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       # "FelixKratz/formulae" # janky borders - highlight active window borders
       "farion1231/ccswitch"
+      "skorokithakis/tap" # gnosis - knowledge base tool
     ];
 
     brews = [
@@ -218,6 +219,9 @@ in
       # "jdk-mission-control" # Java Mission Control
 
       "orbstack" # lightweight container/Linux VM alternative to Docker Desktop
+
+      # gnosis - knowledge base tool (from skorokithakis/tap)
+      "gnosis"
 
       # Setup macfuse: https://github.com/macfuse/macfuse/wiki/Getting-Started
       # "macfuse" # for rclone to mount a fuse filesystem

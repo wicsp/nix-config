@@ -3,5 +3,5 @@
   ...
 }:
 {
-  programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/nexus";
+  programs.ssh.settings."github.com".identityFile = "${config.home.homeDirectory}/.ssh/nexus";
 }

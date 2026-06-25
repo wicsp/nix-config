@@ -8,7 +8,7 @@
 {
   catppuccin.enable = lib.mkForce false;
 
-  programs.ssh.matchBlocks."github.com".identityFile = "${config.home.homeDirectory}/.ssh/goudan";
+  programs.ssh.settings."github.com".identityFile = "${config.home.homeDirectory}/.ssh/goudan";
 
   home.packages = with pkgs; [
     procs
