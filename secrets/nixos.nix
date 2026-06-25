@@ -51,7 +51,7 @@ in
   config = mkIf (cfg.desktop.enable || enabledServerSecrets) (mkMerge [
     {
       environment.systemPackages = [
-        agenix.packages."${pkgs.system}".default
+        agenix.packages."${pkgs.stdenv.hostPlatform.system}".default
       ];
 
       age.secrets."ssh-key-nix-remote-builder" = {

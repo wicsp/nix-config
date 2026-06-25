@@ -25,7 +25,7 @@ in
   };
 
   environment.systemPackages = [
-    agenix.packages."${pkgs.system}".default
+    agenix.packages."${pkgs.stdenv.hostPlatform.system}".default
   ];
 
   # if you changed this key, you need to regenerate all encrypt files from the decrypt contents!

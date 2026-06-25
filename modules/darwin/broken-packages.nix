@@ -4,12 +4,8 @@
 # ===================================================================
 let
   brokenPackages = [
-    "git-trim"
-    "jsonnet"
     "zls"
     "verible"
-    "gdb"
-    "ncdu"
     "racket-minimal"
   ];
 in
