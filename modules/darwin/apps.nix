@@ -135,7 +135,10 @@ in
       "nikitabobko/tap" # aerospace - an i3-like tiling window manager for macOS
       # "FelixKratz/formulae" # janky borders - highlight active window borders
       "farion1231/ccswitch"
-      "skorokithakis/tap" # gnosis - knowledge base tool
+      {
+        name = "skorokithakis/tap"; # gnosis - knowledge base tool
+        trusted = true;
+      }
     ];
 
     brews = [
@@ -146,6 +149,7 @@ in
       "wget" # download tool
       "curl" # no not install curl via nixpkgs, it's not working well on macOS!
       "aria2" # download tool
+      "yt-dlp" # video downloader
       "wireguard-tools" # wireguard
 
       # a markdown editor
