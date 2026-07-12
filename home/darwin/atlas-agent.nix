@@ -7,6 +7,7 @@
 { config, lib, ... }:
 let
   atlasDir = "${config.home.homeDirectory}/.config/atlas";
+  atlasArtifactRoot = "${config.xdg.dataHome}/atlas/artifacts";
 in
 {
   # Link the agenix-decrypted token into ~/.config/atlas/.
@@ -20,10 +21,17 @@ in
     To rotate: update the secret in nix-secrets, rekey, and rebuild.
   '';
 
+  # Artifact bytes live outside Atlas SQLite and remain private to the user.
+  home.activation.atlasArtifactRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg atlasArtifactRoot}
+    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg atlasArtifactRoot}
+  '';
+
   # Expose Atlas configuration to interactive pi/Lumio sessions.
   home.sessionVariables = {
     ATLAS_URL = "http://100.100.10.3:8000";
     ATLAS_AGENT_TOKEN_FILE = "${atlasDir}/atlas-agent-token";
+    ATLAS_ARTIFACT_ROOT = atlasArtifactRoot;
     ATLAS_NODE_ID = "macsp";
   };
 }
