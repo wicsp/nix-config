@@ -441,24 +441,6 @@
         "type": "github"
       }
     },
-    "flake-utils_3": {
-      "inputs": {
-        "systems": "systems_6"
-      },
-      "locked": {
-        "lastModified": 1681202837,
-        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "ghostty": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -752,10 +734,10 @@
     "mysecrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1782382458,
-        "narHash": "sha256-sRZTly6Niq/65rXqTLNXwymogcepbCMyaJ3pILlUkqg=",
+        "lastModified": 1783856134,
+        "narHash": "sha256-UyBHusJrqqrErKmsnrZ1XVpOoG+NTa1MVSGKYr0HNU0=",
         "ref": "refs/heads/main",
-        "rev": "9bb899dfc193a45c7bbfa58094a8fe7dbf86201c",
+        "rev": "b785de999397084190ee823111f2bf26d5dbe4d2",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/wicsp/nix-secrets.git"
@@ -1156,43 +1138,6 @@
         "type": "indirect"
       }
     },
-    "nu_scripts": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1782071756,
-        "narHash": "sha256-OfcKKaoVOdI7y+LZp3MajAPWF0QyuBllwJkCCTe1Y1Q=",
-        "owner": "nushell",
-        "repo": "nu_scripts",
-        "rev": "800e6223ab0f91bf1097c4be2b9a3647b9d666e3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nushell",
-        "repo": "nu_scripts",
-        "type": "github"
-      }
-    },
-    "nuenv": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay_4"
-      },
-      "locked": {
-        "lastModified": 1731006591,
-        "narHash": "sha256-zCh7F0XKC5IEJKBTSNnUQ3SwJz3izPdxEU3C4udG8qI=",
-        "owner": "DeterminateSystems",
-        "repo": "nuenv",
-        "rev": "45693a438df82b3a604f855c3372f4f7d9efb3eb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "DeterminateSystems",
-        "repo": "nuenv",
-        "type": "github"
-      }
-    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_5",
@@ -1282,8 +1227,6 @@
         "nixpkgs-ollama": "nixpkgs-ollama",
         "nixpkgs-stable": "nixpkgs-stable_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "nu_scripts": "nu_scripts",
-        "nuenv": "nuenv",
         "pre-commit-hooks": "pre-commit-hooks",
         "preservation": "preservation",
         "vscode-server": "vscode-server",
@@ -1345,28 +1288,6 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "rev": "0be641045af6d8666c11c2c40e45ffc9667839b5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
-      }
-    },
-    "rust-overlay_4": {
-      "inputs": {
-        "flake-utils": "flake-utils_2",
-        "nixpkgs": [
-          "nuenv",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1701397143,
-        "narHash": "sha256-nYUJxZXwCWWVBYZXPgRxGDuQcZRhKTtD/Jp5Jl+9EWU=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "bb71557c93cad40f5921b2342d7fd69f9e6497ab",
         "type": "github"
       },
       "original": {
@@ -1451,24 +1372,9 @@
         "type": "github"
       }
     },
-    "systems_6": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
     "vscode-server": {
       "inputs": {
-        "flake-utils": "flake-utils_3",
+        "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
