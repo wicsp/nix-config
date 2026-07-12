@@ -6,7 +6,6 @@
 
   environment.systemPackages = with pkgs; [
     # core maintenance
-    nushell
     neovim
     git
     just

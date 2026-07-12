@@ -282,8 +282,6 @@ in
 
         # Digital Painting
         ".local/share/krita"
-
-        ".config/nushell"
       ];
       files = [
         {

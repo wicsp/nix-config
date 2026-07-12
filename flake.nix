@@ -115,11 +115,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nuenv = {
-      url = "github:DeterminateSystems/nuenv";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     haumea = {
       url = "github:nix-community/haumea/v0.2.2";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -158,12 +153,6 @@
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ########################  Some non-flake repositories  #########################################
-    nu_scripts = {
-      url = "github:nushell/nu_scripts";
-      flake = false;
     };
 
     ########################  My own repositories  #########################################

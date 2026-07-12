@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 ##########################################################################
@@ -23,11 +22,6 @@
 #
 ##########################################################################
 let
-  nushell-package = pkgs-unstable.nushell.overrideAttrs (_: {
-    # Nushell 0.112.1 currently fails Darwin sandbox tests.
-    doCheck = false;
-  });
-
   # Homebrew Mirror
   # NOTE: is only useful when you run `brew install` manually! (not via nix-darwin)
   homebrew_mirror_env = {
@@ -75,7 +69,6 @@ in
 
     neovim
     git
-    nushell-package # my custom shell
     gnugrep # replacee macos's grep
     gnutar # replacee macos's tar
 
@@ -102,7 +95,7 @@ in
   programs.zsh.enable = true;
   environment.shells = [
     pkgs.zsh
-    nushell-package # my custom shell
+    pkgs.bashInteractive
   ];
 
   # homebrew need to be installed manually, see https://brew.sh

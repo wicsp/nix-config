@@ -9,7 +9,7 @@ systems.
 
 - **core/**: Essential cross-platform configurations
   - **core.nix**: Minimal home-manager configuration
-  - **shells/**: Shell configurations (bash, zsh, fish, nu)
+  - **shells/**: Shell configurations (bash, zsh, fish)
   - **editors/**: Text editor configurations
     - **neovim/**: Neovim with custom plugins and settings
     - **helix/**: Helix editor configuration

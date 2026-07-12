@@ -1,18 +1,11 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   agenix,
   mysecrets,
   myvars,
   ...
 }:
-let
-  nushell-package = pkgs-unstable.nushell.overrideAttrs (_: {
-    # Nushell 0.112.1 currently fails Darwin sandbox tests.
-    doCheck = false;
-  });
-in
 {
   imports = [
     agenix.darwinModules.default
@@ -100,6 +93,11 @@ in
       }
       // user_readable;
 
+      "atlas-agent-token" = {
+        file = "${mysecrets}/atlas-agent-token.age";
+      }
+      // user_readable;
+
     };
 
   # place secrets in /etc/
@@ -126,6 +124,9 @@ in
     "agenix/secrets_env" = {
       source = config.age.secrets."secrets_env".path;
     };
+    "agenix/atlas-agent-token" = {
+      source = config.age.secrets."atlas-agent-token".path;
+    };
     "agenix/nix-access-tokens" = {
       source = config.age.secrets."nix-access-tokens".path;
     };
@@ -137,11 +138,11 @@ in
   # both the original file and the symlink should be readable and executable by the user
   # activationScripts are executed every time you run `nixos-rebuild` / `darwin-rebuild` or boot your system
   system.activationScripts.postActivation.text = ''
-    ${nushell-package}/bin/nu -c '
-      if (ls /etc/agenix/ | length) > 0 {
-        sudo chown wicsp /etc/agenix/*
-        sudo chown wicsp /etc/dae/*
-      }
-    '
+    if [ -d /etc/agenix ]; then
+      find /etc/agenix -mindepth 1 -maxdepth 1 -exec chown ${myvars.username} {} +
+    fi
+    if [ -d /etc/dae ]; then
+      find /etc/dae -mindepth 1 -maxdepth 1 -exec chown ${myvars.username} {} +
+    fi
   '';
 }

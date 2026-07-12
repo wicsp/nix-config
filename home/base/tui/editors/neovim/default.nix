@@ -22,7 +22,6 @@ in
   catppuccin.nvim.enable = false;
 
   home.shellAliases = shellAliases;
-  programs.nushell.shellAliases = shellAliases;
 
   programs.neovim = {
     enable = true;

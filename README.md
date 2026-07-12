@@ -64,10 +64,10 @@ You don't have to go through the pain I've experienced again! Check out my
 | **Display Manager**         | [tuigreet][tuigreet]                                                                                                |
 | **Color Scheme**            | [catppuccin-nix][catppuccin-nix]                                                                                    |
 | **network management tool** | [NetworkManager][NetworkManager]                                                                                    |
-| **Input method framework**  | [Fcitx5][Fcitx5] + [rime][rime] + [灵明输入法 yuling][yuling]                                                      |
+| **Input method framework**  | [Fcitx5][Fcitx5] + [rime][rime] + [灵明输入法 yuling][yuling]                                                       |
 | **System resource monitor** | [Btop][Btop]                                                                                                        |
 | **File Manager**            | [Yazi][Yazi] + [thunar][thunar]                                                                                     |
-| **Shell**                   | [Nushell][Nushell] + [Starship][Starship]                                                                           |
+| **Shell**                   | Bash + [Starship][Starship]                                                                                         |
 | **Media Player**            | [mpv][mpv]                                                                                                          |
 | **Text Editor**             | [Neovim][Neovim]                                                                                                    |
 | **Fonts**                   | [Nerd fonts][Nerd fonts]                                                                                            |
@@ -127,7 +127,7 @@ For macOS:
 # If you are deploying for the first time,
 # 1. install nix & homebrew manually.
 # 2. prepare the deployment environment with essential packages available
-nix-shell -p just nushell
+nix-shell -p just
 # 3. comment home-manager's code in lib/macosSystem.nix to speed up the first deployment.
 # 4. comment out the proxy settings in scripts/darwin_set_proxy.py if the proxy is not ready yet.
 
@@ -190,7 +190,6 @@ Other dotfiles that inspired me:
 [foot]: https://codeberg.org/dnkl/foot
 [Alacritty]: https://github.com/alacritty/alacritty
 [Ghostty]: https://github.com/ghostty-org/ghostty
-[Nushell]: https://github.com/nushell/nushell
 [Starship]: https://github.com/starship/starship
 [Waybar]: https://github.com/Alexays/Waybar
 [polybar]: https://github.com/polybar/polybar

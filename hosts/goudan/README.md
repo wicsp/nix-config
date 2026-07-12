@@ -75,7 +75,6 @@ nvme0n1           259:0    0  1.8T  0 disk
                                             /etc/agenix
                                             /etc/NetworkManager/system-connections
                                             /etc/machine-id
-                                            /home/ryan/.config/nushell/history.txt
                                             /home/ryan/.wakatime.cfg
                                             /nix/store
                                             /var/log

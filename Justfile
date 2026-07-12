@@ -1,12 +1,12 @@
 # just is a command runner, Justfile is very similar to Makefile, but simpler.
 
-# Use nushell for shell commands
-# To use this justfile, you need to enter a shell with just & nushell installed:
+# Use bash for shell commands
+# To use this justfile, you need to enter a shell with just installed:
 # 
-#   nix shell nixpkgs#just nixpkgs#nushell
-set shell := ["nu", "-c"]
+#   nix shell nixpkgs#just
+set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 
-utils_nu := absolute_path("utils.nu")
+utils_sh := absolute_path("utils.sh")
 
 ############################################################################
 #
@@ -51,7 +51,7 @@ clean:
   # Wipe out NixOS's history
   sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
   # Wipe out home-manager's history
-  nix profile wipe-history --profile $"($env.XDG_STATE_HOME)/nix/profiles/home-manager" --older-than 7d
+  nix profile wipe-history --profile "${XDG_STATE_HOME:-${HOME}/.local/state}/nix/profiles/home-manager" --older-than 7d
 
 # Garbage collect all unused nix store entries
 [group('nix')]
@@ -76,8 +76,12 @@ shell:
 
 [group('nix')]
 fmt:
-  # format the nix files in this repo
-  ls **/*.nix | each { |it| nixfmt $it.name }
+  #!/usr/bin/env bash
+  set -euo pipefail
+  git ls-files -z '*.nix' | while IFS= read -r -d '' file; do
+    [[ -e "$file" ]] || continue
+    nixfmt "$file"
+  done
 
 # Show all the auto gc roots in the nix store
 [group('nix')]
@@ -112,29 +116,32 @@ up-nix:
 [linux]
 [group('homelab')]
 local mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  if ("/etc/NIXOS" | path exists) {
-    nixos-switch (hostname) {{mode}}
-  } else {
-    home-switch (hostname) {{mode}}
-  }
+  #!/usr/bin/env bash
+  set -euo pipefail
+  source "{{utils_sh}}"
+  if [[ -e /etc/NIXOS ]]; then
+    nixos_switch "$(hostname)" "{{mode}}"
+  else
+    home_switch "$(hostname)" "{{mode}}"
+  fi
 
 # Deploy the hyprland nixosConfiguration by hostname match
 [linux]
 [group('desktop')]
 hypr mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  nixos-switch $"(hostname)-hyprland" {{mode}}
+  #!/usr/bin/env bash
+  set -euo pipefail
+  source "{{utils_sh}}"
+  nixos_switch "$(hostname)-hyprland" "{{mode}}"
 
 # Deploy the niri nixosConfiguration by hostname match
 [linux]
 [group('desktop')]
 niri mode="default":
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  nixos-switch $"(hostname)-niri" {{mode}}
+  #!/usr/bin/env bash
+  set -euo pipefail
+  source "{{utils_sh}}"
+  nixos_switch "$(hostname)-niri" "{{mode}}"
 
 ############################################################################
 #
@@ -146,44 +153,48 @@ niri mode="default":
 [group('desktop')]
 darwin-set-proxy:
   sudo python3 scripts/darwin_set_proxy.py
-  sleep 1sec
+  sleep 1
 
 [macos]
 [group('desktop')]
 darwin-rollback:
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  darwin-rollback
+  #!/usr/bin/env bash
+  set -euo pipefail
+  source "{{utils_sh}}"
+  darwin_rollback
 
 # Deploy the darwinConfiguration by hostname match
 [macos]
 [group('desktop')]
 local mode="default": 
-  #!/usr/bin/env nu
-  use {{utils_nu}} *;
-  darwin-build (hostname) {{mode}};
-  darwin-switch (hostname) {{mode}}
+  #!/usr/bin/env bash
+  set -euo pipefail
+  source "{{utils_sh}}"
+  darwin_build "$(hostname)" "{{mode}}"
+  darwin_switch "$(hostname)" "{{mode}}"
 
 # Deploy remote NixOS nodes directly from the current checkout via colmena.
 [group('homelab')]
 remote nodes="*" goal="switch" mode="default":
-  #!/usr/bin/env nu
-  if "debug" == "{{mode}}" {
-    colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}" --verbose --show-trace
-  } else {
-    colmena apply --impure --build-on-target --on "{{nodes}}" "{{goal}}"
-  }
+  #!/usr/bin/env bash
+  set -euo pipefail
+  args=(apply --impure --build-on-target --on "{{nodes}}" "{{goal}}")
+  if [[ "{{mode}}" == "debug" ]]; then
+    args+=(--verbose --show-trace)
+  fi
+  colmena "${args[@]}"
 
 # Deploy remote NixOS nodes by building locally and copying closures to targets.
 # Useful for bootstrap stage when target nix-daemon is too old/broken.
 [group('homelab')]
 remote-local nodes="*" goal="switch" mode="default":
-  #!/usr/bin/env nu
-  if "debug" == "{{mode}}" {
-    colmena apply --impure --on "{{nodes}}" "{{goal}}" --verbose --show-trace
-  } else {
-    colmena apply --impure --on "{{nodes}}" "{{goal}}"
-  }
+  #!/usr/bin/env bash
+  set -euo pipefail
+  args=(apply --impure --on "{{nodes}}" "{{goal}}")
+  if [[ "{{mode}}" == "debug" ]]; then
+    args+=(--verbose --show-trace)
+  fi
+  colmena "${args[@]}"
 
 
 # Reset launchpad to force it to reindex Applications
@@ -202,16 +213,21 @@ reset-launchpad:
 
 [group('common')]
 path:
-   $env.PATH | split row ":"
+   printf '%s\n' "${PATH//:/$'\n'}"
 
 [group('common')]
 trace-access app *args:
-  strace -f -t -e trace=file {{app}} {{args}} | complete | $in.stderr | lines | find -v -r "(/nix/store|/newroot|/proc)" | parse --regex '"(/.+)"' | sort | uniq
+  #!/usr/bin/env bash
+  set -euo pipefail
+  { strace -f -t -e trace=file "{{app}}" {{args}} 2>&1 1>/dev/null || true; } \
+    | grep -vE '(/nix/store|/newroot|/proc)' \
+    | sed -nE 's/.*"([^"]+)".*/\1/p' \
+    | sort -u
 
 [linux]
 [group('common')]
 penvof pid:
-  sudo cat $"/proc/($pid)/environ" | tr '\0' '\n'
+  sudo tr '\0' '\n' < "/proc/{{pid}}/environ"
 
 # Remove all reflog entries and prune unreachable objects
 [group('git')]

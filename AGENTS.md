@@ -10,12 +10,12 @@
   layers.
 - Overlays & lib: `overlays/` (package overrides), `lib/` helpers.
 - Infra & hardening: `infra/`, `hardening/` (apparmor, firejail, nixpaks), `certs/`, `secrets/`.
-- Scripts & tools: `scripts/` (e.g., macOS helpers), `utils.nu` (nushell helpers), `Justfile` task
+- Scripts & tools: `scripts/` (e.g., macOS helpers), `utils.sh` (bash helpers), `Justfile` task
   runner.
 
 ## Build, Test, and Development Commands
 
-- List tasks: `just` (shows groups). If needed: `nix shell nixpkgs#just nixpkgs#nushell`.
+- List tasks: `just` (shows groups). If needed: `nix shell nixpkgs#just`.
 - Format Nix: `just fmt` (runs `nix fmt`).
 - Eval tests: `just test` (runs `nix eval .#evalTests`).
 - REPL: `just repl` → `nix repl -f flake:nixpkgs`.

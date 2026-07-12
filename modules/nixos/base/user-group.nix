@@ -26,7 +26,7 @@
     inherit (myvars) initialHashedPassword;
     home = "/home/${myvars.username}";
     isNormalUser = true;
-    shell = pkgs.nushell;
+    shell = pkgs.bashInteractive;
     extraGroups = [
       myvars.username
       "users"

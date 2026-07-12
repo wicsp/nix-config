@@ -27,11 +27,8 @@
   ];
 
   # A modern replacement for ‘ls’
-  # useful in bash/zsh prompt, not in nushell.
   programs.eza = {
     enable = true;
-    # do not enable aliases in nushell!
-    enableNushellIntegration = false;
     git = true;
     icons = "auto";
   };
@@ -84,7 +81,6 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-    enableNushellIntegration = true;
   };
 
   # Atuin replaces your existing shell history with a SQLite database,
@@ -95,6 +91,5 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-    enableNushellIntegration = true;
   };
 }

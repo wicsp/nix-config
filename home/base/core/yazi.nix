@@ -7,7 +7,6 @@
     shellWrapperName = "y";
     # Changing working directory when exiting Yazi
     enableBashIntegration = true;
-    enableNushellIntegration = true;
     settings = {
       manager = {
         show_hidden = true;

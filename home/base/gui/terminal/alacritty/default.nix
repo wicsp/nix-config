@@ -55,13 +55,11 @@
         size = if pkgs.stdenv.isDarwin then 14 else 13;
       };
       terminal = {
-        # Spawn a nushell in login mode via `bash`
         shell = {
           program = "${pkgs.bash}/bin/bash";
           args = [
             "--login"
-            "-c"
-            "nu --login --interactive"
+            "-i"
           ];
         };
         # Controls the ability to write to the system clipboard with the OSC 52 escape sequence.

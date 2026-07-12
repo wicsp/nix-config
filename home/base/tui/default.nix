@@ -10,7 +10,6 @@
     # ./password-store
     # ./cloud
     # ./zellij
-    ./shell
     ./editors
     ./container.nix
   ];
