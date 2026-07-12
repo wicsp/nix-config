@@ -9,22 +9,16 @@ let
   atlasDir = "${config.home.homeDirectory}/.config/atlas";
 in
 {
-  # Create the atlas config directory and token file.
-  # The token is decrypted by agenix at system level and placed in /etc/agenix/.
-  # We reference /etc/agenix/ directly because config.age is a darwin-level
-  # option not available in home-manager context.
-  home.file."atlas-agent-token" = {
-    target = "${atlasDir}/atlas-agent-token";
-    source = "/etc/agenix/atlas-agent-token";
-  };
+  # Link the agenix-decrypted token into ~/.config/atlas/.
+  # agenix decrypts at activation time, so we use mkOutOfStoreSymlink
+  # (resolved at runtime) rather than home.file.source (resolved at build time).
+  xdg.configFile."atlas/atlas-agent-token".source =
+    config.lib.file.mkOutOfStoreSymlink "/etc/agenix/atlas-agent-token";
 
-  home.file."atlas-dir-readme" = {
-    target = "${atlasDir}/README";
-    text = ''
-      Atlas agent token — managed by nix-config (agenix). Do not edit manually.
-      To rotate: update the secret in nix-secrets, rekey, and rebuild.
-    '';
-  };
+  xdg.configFile."atlas/README".text = ''
+    Atlas agent token — managed by nix-config (agenix). Do not edit manually.
+    To rotate: update the secret in nix-secrets, rekey, and rebuild.
+  '';
 
   # Expose Atlas configuration to interactive pi/Lumio sessions.
   home.sessionVariables = {
