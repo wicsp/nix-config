@@ -11,9 +11,11 @@ in
 {
   # Create the atlas config directory and token file.
   # The token is decrypted by agenix at system level and placed in /etc/agenix/.
+  # We reference /etc/agenix/ directly because config.age is a darwin-level
+  # option not available in home-manager context.
   home.file."atlas-agent-token" = {
     target = "${atlasDir}/atlas-agent-token";
-    source = config.age.secrets."atlas-agent-token".path;
+    source = "/etc/agenix/atlas-agent-token";
   };
 
   home.file."atlas-dir-readme" = {
