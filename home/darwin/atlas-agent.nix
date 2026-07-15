@@ -8,6 +8,7 @@
 let
   atlasDir = "${config.home.homeDirectory}/.config/atlas";
   atlasArtifactRoot = "${config.xdg.dataHome}/atlas/artifacts";
+  atlasObsidianVault = "${config.home.homeDirectory}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vortex Next";
 in
 {
   # Link the agenix-decrypted token into ~/.config/atlas/.
@@ -32,6 +33,9 @@ in
     ATLAS_URL = "http://100.100.10.3:8000";
     ATLAS_AGENT_TOKEN_FILE = "${atlasDir}/atlas-agent-token";
     ATLAS_ARTIFACT_ROOT = atlasArtifactRoot;
+    # RFC 0003: Lumio writes only rebuildable Resource Cards and explicit empty
+    # comment templates here. Human Knowledge prose remains user-owned.
+    ATLAS_OBSIDIAN_VAULT = atlasObsidianVault;
     ATLAS_NODE_ID = "macsp";
   };
 }
