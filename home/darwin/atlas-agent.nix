@@ -8,7 +8,7 @@
 let
   atlasDir = "${config.home.homeDirectory}/.config/atlas";
   atlasArtifactRoot = "${config.xdg.dataHome}/atlas/artifacts";
-  atlasObsidianVault = "${config.home.homeDirectory}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vortex Next";
+  atlasObsidianVault = "${config.home.homeDirectory}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vortex";
 in
 {
   # Link the agenix-decrypted token into ~/.config/atlas/.
