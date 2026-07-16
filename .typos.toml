@@ -23,6 +23,7 @@ extend-ignore-re = [
   "noice",                                                            # noice.nvim
   "crypted-nixos",
   "daed",
+  "\\+oHcVylLXFJTRR6jXF6IXvgntXJz0tRdtnwTruRPkoc=", # fixed-output hash
 
   # catppuccin theme colors
   "11111b",

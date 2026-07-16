@@ -1,6 +1,17 @@
 { config, pkgs, ... }:
 let
   hostName = "macsp";
+  # nixpkgs 2026.06.09 receives HTTP 412 from Bilibili for the verified M3.3
+  # source. Pin the current upstream stable release until the lock catches up.
+  ytDlpForBilibili = pkgs.yt-dlp.overrideAttrs {
+    version = "2026.07.04";
+    src = pkgs.fetchFromGitHub {
+      owner = "yt-dlp";
+      repo = "yt-dlp";
+      tag = "2026.07.04";
+      hash = "sha256-+oHcVylLXFJTRR6jXF6IXvgntXJz0tRdtnwTruRPkoc=";
+    };
+  };
 in
 {
   programs.ssh.settings."github.com".identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
@@ -14,6 +25,9 @@ in
     vscode-langservers-extracted
     tailwindcss-language-server
     emmet-ls
+    # Lumio bilibili-summary-v4: subtitle-free public videos use local ASR.
+    ytDlpForBilibili
+    whisper-cpp
   ];
 }
 # {

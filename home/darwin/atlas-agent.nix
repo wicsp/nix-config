@@ -9,6 +9,8 @@ let
   atlasDir = "${config.home.homeDirectory}/.config/atlas";
   atlasArtifactRoot = "${config.xdg.dataHome}/atlas/artifacts";
   atlasObsidianVault = "${config.home.homeDirectory}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vortex";
+  bilibiliAsrRoot = "${config.home.homeDirectory}/Library/Caches/Lumio/asr/whisper";
+  bilibiliAsrModel = "${bilibiliAsrRoot}/ggml-small.bin";
 in
 {
   # Link the agenix-decrypted token into ~/.config/atlas/.
@@ -28,6 +30,13 @@ in
     $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg atlasArtifactRoot}
   '';
 
+  # Model weights are rebuildable cache data, not Git/Nix state. The package
+  # provides whisper-cpp-download-ggml-model for the explicit one-time fetch.
+  home.activation.bilibiliAsrRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg bilibiliAsrRoot}
+    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg bilibiliAsrRoot}
+  '';
+
   # Expose Atlas configuration to interactive pi/Lumio sessions.
   home.sessionVariables = {
     ATLAS_URL = "http://100.100.10.3:8000";
@@ -37,5 +46,7 @@ in
     # comment templates here. Human Knowledge prose remains user-owned.
     ATLAS_OBSIDIAN_VAULT = atlasObsidianVault;
     ATLAS_NODE_ID = "macsp";
+    BILIBILI_ASR_MODEL = bilibiliAsrModel;
+    BILIBILI_ASR_MAX_DURATION_SECONDS = "7200";
   };
 }
