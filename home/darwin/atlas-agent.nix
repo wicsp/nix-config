@@ -11,6 +11,9 @@ let
   atlasObsidianVault = "${config.home.homeDirectory}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vortex";
   bilibiliAsrRoot = "${config.home.homeDirectory}/Library/Caches/Lumio/asr/whisper";
   bilibiliAsrModel = "${bilibiliAsrRoot}/ggml-small.bin";
+  lumioDir = "${config.home.homeDirectory}/Projects/lumio";
+  lumioLogDir = "${config.home.homeDirectory}/Library/Logs/Lumio";
+  profileBin = "${config.home.profileDirectory}/bin";
 in
 {
   # Link the agenix-decrypted token into ~/.config/atlas/.
@@ -37,6 +40,11 @@ in
     $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg bilibiliAsrRoot}
   '';
 
+  home.activation.lumioLogDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg lumioLogDir}
+    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg lumioLogDir}
+  '';
+
   # Expose Atlas configuration to interactive pi/Lumio sessions.
   home.sessionVariables = {
     ATLAS_URL = "http://100.100.10.3:8000";
@@ -48,5 +56,44 @@ in
     ATLAS_NODE_ID = "macsp";
     BILIBILI_ASR_MODEL = bilibiliAsrModel;
     BILIBILI_ASR_MAX_DURATION_SECONDS = "7200";
+  };
+
+  # RFC 0006: one bounded controller run at 02:00 (or the next wake after a
+  # missed calendar event). The controller starts and stops its own headless
+  # Pi RPC child, so no permanent second Lumio worker is needed.
+  launchd.agents.lumio-bilibili-atlas-queue = {
+    enable = true;
+    config = {
+      ProgramArguments = [
+        "${profileBin}/uv"
+        "run"
+        "--project"
+        "${lumioDir}/skills/bilibili-video-summary"
+        "python"
+        "${lumioDir}/skills/bilibili-video-summary/scripts/nightly_atlas_queue.py"
+      ];
+      WorkingDirectory = lumioDir;
+      ProcessType = "Background";
+      StartCalendarInterval = {
+        Hour = 2;
+        Minute = 0;
+      };
+      EnvironmentVariables = {
+        HOME = config.home.homeDirectory;
+        PATH = "${profileBin}:${config.home.homeDirectory}/.npm/bin:/usr/bin:/bin:/usr/sbin:/sbin";
+        ATLAS_URL = "http://100.100.10.3:8000";
+        ATLAS_AGENT_TOKEN_FILE = "${atlasDir}/atlas-agent-token";
+        ATLAS_ARTIFACT_ROOT = atlasArtifactRoot;
+        ATLAS_OBSIDIAN_VAULT = atlasObsidianVault;
+        ATLAS_NODE_ID = "macsp";
+        BILIBILI_ASR_MODEL = bilibiliAsrModel;
+        BILIBILI_ASR_MAX_DURATION_SECONDS = "7200";
+        LUMIO_PI_BIN = "${config.home.homeDirectory}/.npm/bin/pi";
+        LUMIO_BILIBILI_BROWSER = "dia";
+        LUMIO_BILIBILI_NIGHTLY_SECONDS = "21600";
+      };
+      StandardOutPath = "${lumioLogDir}/bilibili-atlas-queue.log";
+      StandardErrorPath = "${lumioLogDir}/bilibili-atlas-queue.error.log";
+    };
   };
 }
