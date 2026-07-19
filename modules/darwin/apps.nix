@@ -137,6 +137,7 @@ in
     brews = [
 
       "jj"
+      "herdr" # terminal agent multiplexer
 
       # `brew install`
       "wget" # download tool
