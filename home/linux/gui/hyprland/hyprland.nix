@@ -23,6 +23,8 @@ in
   wayland.windowManager.hyprland = {
     inherit package;
     enable = true;
+    # Keep the existing Hyprland configuration language across HM 26.05.
+    configType = "hyprlang";
     settings = {
       source =
         let

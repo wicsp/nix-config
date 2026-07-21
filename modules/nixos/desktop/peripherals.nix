@@ -13,41 +13,22 @@
   # It support for PulseAudio-, JACK-, ALSA- and GStreamer-based applications.
   # PipeWire has a great bluetooth support, it can be a good alternative to PulseAudio.
   #     https://nixos.wiki/wiki/PipeWire
-  services.pipewire = {
-    enable = true;
-    # package = pkgs-unstable.pipewire;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    jack.enable = true;
-    wireplumber.enable = true;
-  };
-  # rtkit is optional but recommended
-  security.rtkit.enable = true;
-  # Disable pulseaudio, it conflicts with pipewire too.
-  services.pulseaudio.enable = false;
-
-  #============================= Bluetooth =============================
-
-  # enable bluetooth & gui paring tools - blueman
-  # or you can use cli:
-  # $ bluetoothctl
-  # [bluetooth] # power on
-  # [bluetooth] # agent on
-  # [bluetooth] # default-agent
-  # [bluetooth] # scan on
-  # ...put device in pairing mode and wait [hex-address] to appear here...
-  # [bluetooth] # pair [hex-address]
-  # [bluetooth] # connect [hex-address]
-  # Bluetooth devices automatically connect with bluetoothctl as well:
-  # [bluetooth] # trust [hex-address]
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
-  #================================= Misc =================================
-
   services = {
+    pipewire = {
+      enable = true;
+      # package = pkgs-unstable.pipewire;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      jack.enable = true;
+      wireplumber.enable = true;
+    };
+    # Disable pulseaudio, it conflicts with pipewire too.
+    pulseaudio.enable = false;
+    # enable bluetooth & gui paring tools - blueman
+    blueman.enable = true;
+
     printing.enable = true; # Enable CUPS to print documents.
     geoclue2.enable = true; # Enable geolocation services.
 
@@ -72,4 +53,22 @@
       };
     };
   };
+  # rtkit is optional but recommended
+  security.rtkit.enable = true;
+
+  #============================= Bluetooth =============================
+
+  # enable bluetooth & gui paring tools - blueman
+  # or you can use cli:
+  # $ bluetoothctl
+  # [bluetooth] # power on
+  # [bluetooth] # agent on
+  # [bluetooth] # default-agent
+  # [bluetooth] # scan on
+  # ...put device in pairing mode and wait [hex-address] to appear here...
+  # [bluetooth] # pair [hex-address]
+  # [bluetooth] # connect [hex-address]
+  # Bluetooth devices automatically connect with bluetoothctl as well:
+  # [bluetooth] # trust [hex-address]
+  hardware.bluetooth.enable = true;
 }

@@ -1,0 +1,51 @@
+name: Flake checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+
+      - name: Create evaluation-only secrets fixture
+        shell: bash
+        run: |
+          fixture="$RUNNER_TEMP/nix-secrets"
+          mkdir -p "$fixture/public"
+          touch \
+            "$fixture/atlas-agent-token.age" \
+            "$fixture/config.dae.age" \
+            "$fixture/nix-access-tokens.age" \
+            "$fixture/secrets_env.age" \
+            "$fixture/ssh-key-nix-remote-builder.age" \
+            "$fixture/ssh-key-zenith.age" \
+            "$fixture/public/zenith.pub"
+
+      - name: Check formatting
+        run: nix fmt -- --check
+
+      - name: Run static checks
+        run: nix develop --command statix check .
+
+      - name: Run evaluation tests
+        run: >-
+          nix eval .#lib.evalTests --show-trace --override-input mysecrets
+          "path:$RUNNER_TEMP/nix-secrets"
+
+      - name: Validate flake outputs
+        run: >-
+          nix flake check --no-build --show-trace --override-input mysecrets
+          "path:$RUNNER_TEMP/nix-secrets"

@@ -1,6 +1,5 @@
 {
   daeuniverse,
-  pkgs,
   ...
 }:
 {

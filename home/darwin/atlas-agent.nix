@@ -28,34 +28,35 @@ in
   '';
 
   # Artifact bytes live outside Atlas SQLite and remain private to the user.
-  home.activation.atlasArtifactRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg atlasArtifactRoot}
-    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg atlasArtifactRoot}
-  '';
-
-  # Model weights are rebuildable cache data, not Git/Nix state. The package
-  # provides whisper-cpp-download-ggml-model for the explicit one-time fetch.
-  home.activation.bilibiliAsrRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg bilibiliAsrRoot}
-    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg bilibiliAsrRoot}
-  '';
-
-  home.activation.lumioLogDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg lumioLogDir}
-    $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg lumioLogDir}
-  '';
-
-  # Expose Atlas configuration to interactive pi/Lumio sessions.
-  home.sessionVariables = {
-    ATLAS_URL = "http://100.100.10.3:8000";
-    ATLAS_AGENT_TOKEN_FILE = "${atlasDir}/atlas-agent-token";
-    ATLAS_ARTIFACT_ROOT = atlasArtifactRoot;
-    # RFC 0003: Lumio writes only rebuildable Resource Cards and explicit empty
-    # comment templates here. Human Knowledge prose remains user-owned.
-    ATLAS_OBSIDIAN_VAULT = atlasObsidianVault;
-    ATLAS_NODE_ID = "macsp";
-    BILIBILI_ASR_MODEL = bilibiliAsrModel;
-    BILIBILI_ASR_MAX_DURATION_SECONDS = "7200";
+  home = {
+    activation = {
+      atlasArtifactRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg atlasArtifactRoot}
+        $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg atlasArtifactRoot}
+      '';
+      # Model weights are rebuildable cache data, not Git/Nix state. The package
+      # provides whisper-cpp-download-ggml-model for the explicit one-time fetch.
+      bilibiliAsrRoot = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg bilibiliAsrRoot}
+        $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg bilibiliAsrRoot}
+      '';
+      lumioLogDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        $DRY_RUN_CMD mkdir -p ${lib.escapeShellArg lumioLogDir}
+        $DRY_RUN_CMD chmod 700 ${lib.escapeShellArg lumioLogDir}
+      '';
+    };
+    # Expose Atlas configuration to interactive pi/Lumio sessions.
+    sessionVariables = {
+      ATLAS_URL = "http://100.100.10.3:8000";
+      ATLAS_AGENT_TOKEN_FILE = "${atlasDir}/atlas-agent-token";
+      ATLAS_ARTIFACT_ROOT = atlasArtifactRoot;
+      # RFC 0003: Lumio writes only rebuildable Resource Cards and explicit empty
+      # comment templates here. Human Knowledge prose remains user-owned.
+      ATLAS_OBSIDIAN_VAULT = atlasObsidianVault;
+      ATLAS_NODE_ID = "macsp";
+      BILIBILI_ASR_MODEL = bilibiliAsrModel;
+      BILIBILI_ASR_MAX_DURATION_SECONDS = "7200";
+    };
   };
 
   # RFC 0006: one bounded controller run at 02:00 (or the next wake after a

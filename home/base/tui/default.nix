@@ -1,4 +1,4 @@
-{ mylib, ... }:
+{ ... }:
 {
   # TODO: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   # imports = mylib.scanPaths ./.;

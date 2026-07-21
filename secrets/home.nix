@@ -17,11 +17,6 @@ let
     || cfg.server.operation.enable
     || cfg.server.webserver.enable
     || cfg.server.storage.enable;
-
-  noaccess = {
-    mode = "0000";
-    owner = "root";
-  };
   high_security = {
     mode = "0500";
     owner = "root";
@@ -39,11 +34,13 @@ in
   options.modules.secrets = {
     desktop.enable = mkEnableOption "NixOS Secrets for Desktops";
 
-    server.network.enable = mkEnableOption "NixOS Secrets for Network Servers";
-    server.application.enable = mkEnableOption "NixOS Secrets for Application Servers";
-    server.operation.enable = mkEnableOption "NixOS Secrets for Operation Servers(Backup, Monitoring, etc)";
-    server.webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
-    server.storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
+    server = {
+      network.enable = mkEnableOption "NixOS Secrets for Network Servers";
+      application.enable = mkEnableOption "NixOS Secrets for Application Servers";
+      operation.enable = mkEnableOption "NixOS Secrets for Operation Servers(Backup, Monitoring, etc)";
+      webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
+      storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
+    };
 
     # impermanence.enable = mkEnableOption "whether use impermanence and ephemeral root file system";
   };

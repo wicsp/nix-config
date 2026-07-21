@@ -17,15 +17,6 @@ let
     || cfg.server.operation.enable
     || cfg.server.webserver.enable
     || cfg.server.storage.enable;
-
-  noaccess = {
-    mode = "0000";
-    owner = "root";
-  };
-  high_security = {
-    mode = "0500";
-    owner = "root";
-  };
   user_readable = {
     mode = "0500";
     owner = myvars.username;
@@ -39,11 +30,13 @@ in
   options.modules.secrets = {
     desktop.enable = mkEnableOption "NixOS Secrets for Desktops";
 
-    server.network.enable = mkEnableOption "NixOS Secrets for Network Servers";
-    server.application.enable = mkEnableOption "NixOS Secrets for Application Servers";
-    server.operation.enable = mkEnableOption "NixOS Secrets for Operation Servers(Backup, Monitoring, etc)";
-    server.webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
-    server.storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
+    server = {
+      network.enable = mkEnableOption "NixOS Secrets for Network Servers";
+      application.enable = mkEnableOption "NixOS Secrets for Application Servers";
+      operation.enable = mkEnableOption "NixOS Secrets for Operation Servers(Backup, Monitoring, etc)";
+      webserver.enable = mkEnableOption "NixOS Secrets for Web Servers(contains tls cert keys)";
+      storage.enable = mkEnableOption "NixOS Secrets for HDD Data's LUKS Encryption";
+    };
 
     preservation.enable = mkEnableOption "whether use preservation and ephemeral root file system";
   };
@@ -54,12 +47,6 @@ in
         agenix.packages."${pkgs.stdenv.hostPlatform.system}".default
       ];
 
-      age.secrets."ssh-key-nix-remote-builder" = {
-        file = "${mysecrets}/ssh-key-nix-remote-builder.age";
-        mode = "0400";
-        owner = "root";
-      };
-
       environment.etc."agenix/ssh-key-nix-remote-builder" = {
         source = config.age.secrets."ssh-key-nix-remote-builder".path;
         mode = "0400";
@@ -67,25 +54,31 @@ in
       };
 
       # if you changed this key, you need to regenerate all encrypt files from the decrypt contents!
-      age.identityPaths =
-        if cfg.preservation.enable then
-          [
-            # To decrypt secrets on boot, this key should exists when the system is booting,
-            # so we should use the real key file path(prefixed by `/persistent/`) here, instead of the path mounted by preservation.
-            "/persistent/etc/ssh/ssh_host_ed25519_key" # Linux
-          ]
-        else
-          [
-            "/etc/ssh/ssh_host_ed25519_key"
-          ];
-
-      # secrets that are used by all nixos hosts
-      age.secrets = {
-        "nix-access-tokens" = {
-          file = "${mysecrets}/nix-access-tokens.age";
-        }
-        # access-token needs to be readable by the user running the `nix` command
-        // user_readable;
+      age = {
+        identityPaths =
+          if cfg.preservation.enable then
+            [
+              # To decrypt secrets on boot, this key should exists when the system is booting,
+              # so we should use the real key file path(prefixed by `/persistent/`) here, instead of the path mounted by preservation.
+              "/persistent/etc/ssh/ssh_host_ed25519_key" # Linux
+            ]
+          else
+            [
+              "/etc/ssh/ssh_host_ed25519_key"
+            ];
+        # secrets that are used by all nixos hosts
+        secrets = {
+          "ssh-key-nix-remote-builder" = {
+            file = "${mysecrets}/ssh-key-nix-remote-builder.age";
+            mode = "0400";
+            owner = "root";
+          };
+          "nix-access-tokens" = {
+            file = "${mysecrets}/nix-access-tokens.age";
+          }
+          # access-token needs to be readable by the user running the `nix` command
+          // user_readable;
+        };
       };
 
       assertions = [

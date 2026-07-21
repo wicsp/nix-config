@@ -36,10 +36,8 @@
 
     # Official NixOS package source, using nixos's unstable branch by default
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
-
+    # Keep a separate pin only where a package genuinely needs an independent
+    # update cadence.
     nixpkgs-ollama.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # nixpkgs-patched.url = "github:ryan4yin/nixpkgs/nixos-unstable-patched";  # custom nixpkgs with some patches，i dont have one yet
@@ -186,99 +184,4 @@
     };
   };
 
-  # outputs = { self, nixpkgs, nixpkgs-darwin, darwin, home-manager, home-manager-darwin, vscode-server, ... } @ inputs: let
-  # username = "wicsp";
-  # usermail = "wicspa@gmail.com";
-  # specialArgs = inputs // {inherit username usermail;};
-  # in{
-  #   homeConfigurations = {
-  #     wicsp = home-manager.lib.homeManagerConfiguration {
-  #       pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  #       extraSpecialArgs = specialArgs;
-  #       modules = [
-  #         ./hosts/cs/home.nix
-  #       ];
-  #     };
-  #   };
-
-  #   nixosConfigurations = {
-  #     mio= nixpkgs.lib.nixosSystem {
-  #       inherit specialArgs;
-  #       system = "x86_64-linux";
-  #       modules = [
-  #         ./hosts/mio
-  #         home-manager.nixosModules.home-manager
-  #         {
-  #           home-manager.useGlobalPkgs = true;
-  #           home-manager.useUserPackages = true;
-  #           home-manager.extraSpecialArgs = inputs // specialArgs;
-  #           home-manager.users.${username} = import ./hosts/mio/home.nix;
-  #           home-manager.backupFileExtension = "backup";
-  #         }
-  #         vscode-server.nixosModules.default
-  #         ({ config, pkgs, ... }: {
-  #           services.vscode-server.enable = true;
-  #         })
-  #       ];
-  #     };
-  #     nixpara= nixpkgs.lib.nixosSystem {
-  #       inherit specialArgs;
-  #       system = "aarch64-linux";
-  #       modules = [
-  #         ./hosts/nixpara
-  #         home-manager.nixosModules.home-manager
-  #         {
-  #           home-manager.useGlobalPkgs = true;
-  #           home-manager.useUserPackages = true;
-  #           home-manager.extraSpecialArgs = inputs // specialArgs;
-  #           home-manager.users.${username} = import ./hosts/nixpara/home.nix;
-  #           home-manager.backupFileExtension = "backup";
-  #         }
-  #         vscode-server.nixosModules.default
-  #         ({ config, pkgs, ... }: {
-  #           services.vscode-server.enable = true;
-  #         })
-  #       ];
-  #     };
-
-  #     nixos=nixpkgs.lib.nixosSystem {
-  #       inherit specialArgs;
-  #       system = "x86_64-linux";
-  #       modules = [
-  #         ./hosts/nixos
-  #         home-manager.nixosModules.home-manager
-  #         {
-  #           home-manager.useGlobalPkgs = true;
-  #           home-manager.useUserPackages = true;
-  #           home-manager.extraSpecialArgs = inputs // specialArgs;
-  #           home-manager.users.${username} = import ./hosts/nixos/home.nix;
-  #                       home-manager.backupFileExtension = "backup";
-  #         }
-  #         vscode-server.nixosModules.default
-  #         ({ config, pkgs, ... }: {
-  #           services.vscode-server.enable = true;
-  #         })
-  #       ];
-  #     };
-  #   };
-
-  #   darwinConfigurations = {
-  #     macsp =  darwin.lib.darwinSystem {
-  #       inherit specialArgs;
-  #       system = "aarch64-darwin";
-  #       modules = [
-  #         ./hosts/macsp
-  #         home-manager.darwinModules.home-manager
-  #         {
-  #           home-manager.useGlobalPkgs = true;
-  #           home-manager.useUserPackages = true;
-  #           home-manager.extraSpecialArgs =  specialArgs;
-  #           home-manager.users.${username} = import ./hosts/macsp/home.nix;
-  #           home-manager.backupFileExtension = "backup";
-  #         }
-  #       ];
-  #     };
-  #   };
-  #   system.configurationRevision = self.rev or self.dirtyRev or null;
-  # };
 }

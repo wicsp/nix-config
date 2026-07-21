@@ -19,7 +19,7 @@ let
         ];
         app.package = telegram-desktop;
         flatpak = {
-          appId = appId;
+          inherit appId;
         };
         dbus = {
           enable = true;

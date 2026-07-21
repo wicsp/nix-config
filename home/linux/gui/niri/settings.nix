@@ -2,7 +2,6 @@ niri: {
   programs.niri.config =
     let
       inherit (niri.lib.kdl)
-        node
         plain
         leaf
         flag
@@ -186,9 +185,12 @@ niri: {
         # (flag "skip-at-startup")
       ])
 
+      # Noctalia needs activation tokens for notification actions and places
+      # its overview wallpaper inside Niri's backdrop.
+      (plain "debug" [ (flag "honor-xdg-activation-with-invalid-serial") ])
       (plain "layer-rule" [
-        (leaf "match" { namespace = "waybar"; })
-        (leaf "opacity" 0.8)
+        (leaf "match" { namespace = "^noctalia-overview.*"; })
+        (flag "place-within-backdrop")
       ])
 
       # Animation settings.

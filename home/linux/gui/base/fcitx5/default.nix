@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+_: {
   # TODO: goudan 上部署不通过，先暂时注释掉，后续再研究一下
   # xdg.configFile = {
   #   "fcitx5/profile" = {

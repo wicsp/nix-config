@@ -10,7 +10,7 @@
   outputs =
     inputs@{ nixpkgs, ... }:
     let
-      lib = nixpkgs.lib;
+      inherit (nixpkgs) lib;
       installerHostsDir = ./hosts;
       installerHostFiles = lib.attrNames (
         lib.filterAttrs (name: type: type == "regular" && lib.hasSuffix ".nix" name) (

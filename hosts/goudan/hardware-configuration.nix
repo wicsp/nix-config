@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -14,50 +13,56 @@
   ];
 
   # Use the EFI boot loader.
-  boot.loader.efi.canTouchEfiVariables = true;
-  # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
-  boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.loader.grub.enable = false;
-  boot.loader.systemd-boot.enable = true;
-
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "ahci"
-    "vmd"
-    "nvme"
-    "usbhid"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
-    fsType = "btrfs";
-    options = [ "subvol=root" ];
+  boot = {
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        # depending on how you configured your disk mounts, change this to /boot or /boot/efi.
+        efiSysMountPoint = "/boot";
+      };
+      grub.enable = false;
+      systemd-boot.enable = true;
+    };
+    initrd = {
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "vmd"
+        "nvme"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
   };
 
-  fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
-    fsType = "btrfs";
-    options = [ "subvol=nix" ];
-  };
-
-  fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
-    fsType = "btrfs";
-    options = [ "subvol=home" ];
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/842A-AE73";
-    fsType = "vfat";
-    options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
+      fsType = "btrfs";
+      options = [ "subvol=root" ];
+    };
+    "/nix" = {
+      device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
+    };
+    "/home" = {
+      device = "/dev/disk/by-uuid/7ea94bca-10ec-4a88-9006-fbd3ff99dbf3";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+    "/boot" = {
+      device = "/dev/disk/by-uuid/842A-AE73";
+      fsType = "vfat";
+      options = [
+        "fmask=0022"
+        "dmask=0022"
+      ];
+    };
   };
 
   swapDevices = [

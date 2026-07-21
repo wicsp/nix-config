@@ -34,7 +34,7 @@
             inherit system;
             overlays = [ fenix.overlays.default ];
           };
-          lib = pkgs.lib;
+          inherit (pkgs) lib;
         in
         {
           default = pkgs.mkShell rec {

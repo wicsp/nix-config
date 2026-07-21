@@ -17,23 +17,11 @@ let
     // {
       inherit mylib myvars;
 
-      # use unstable branch for some packages to get the latest updates
-      pkgs-unstable = import inputs.nixpkgs-unstable {
-        inherit system; # refer the `system` parameter form outer scope recursively
-        # To use chrome, we need to allow the installation of non-free software
-        config.allowUnfree = true;
-      };
-      pkgs-stable = import inputs.nixpkgs-stable {
+      # Preserve the existing special argument while sharing the primary pin.
+      pkgs-unstable = import inputs.nixpkgs {
         inherit system;
-        # To use chrome, we need to allow the installation of non-free software
         config.allowUnfree = true;
       };
-      # i dont have a ed nixpkgs repo yet, so comment this out
-      # pkgs-ed = import inputs.nixpkgs-ed {
-      #   inherit system;
-      #   # To use chrome, we need to allow the installation of non-free software
-      #   config.allowUnfree = true;
-      # };
       pkgs-x64 = import nixpkgs {
         system = "x86_64-linux";
 
@@ -77,16 +65,9 @@ let
   forAllSystems = func: (nixpkgs.lib.genAttrs allSystemNames func);
 in
 {
-  # Add attribute sets into outputs, for debugging
-  # Add attribute sets into outputs, for debugging
-  debugAttrs = {
-    inherit
-      nixosSystems
-      darwinSystems
-      homeSystems
-      allSystems
-      allSystemNames
-      ;
+  # Project helpers and aggregate test status use the standard `lib` output.
+  lib = mylib // {
+    evalTests = lib.lists.all (it: it.evalTests == { }) (allSystemValues ++ homeSystemValues);
   };
 
   # NixOS Hosts
@@ -132,41 +113,61 @@ in
   # Packages
   packages = forAllSystems (system: allSystems.${system}.packages or { });
 
-  # Eval Tests for all NixOS & darwin systems.
-  evalTests = lib.lists.all (it: it.evalTests == { }) allSystemValues;
+  checks = forAllSystems (
+    system:
+    let
+      pkgs = nixpkgs.legacyPackages.${system};
+      evalTestsPassed = allSystems.${system}.evalTests == { };
+    in
+    {
+      # A standard flake check must be a derivation, not a boolean.
+      eval-tests = pkgs.runCommand "eval-tests" { } (
+        if evalTestsPassed then
+          ''
+            touch "$out"
+          ''
+        else
+          ''
+            echo "evaluation tests failed" >&2
+            exit 1
+          ''
+      );
 
-  checks = forAllSystems (system: {
-    # eval-tests per system
-    eval-tests = allSystems.${system}.evalTests == { };
-
-    pre-commit-check = pre-commit-hooks.lib.${system}.run {
-      src = mylib.relativeToRoot ".";
-      hooks = {
-        nixfmt = {
-          enable = true;
-          settings.width = 100;
-        };
-        # Source code spell checker
-        typos = {
-          enable = true;
-          settings = {
-            write = true; # Automatically fix typos
-            configPath = ".typos.toml"; # relative to the flake root
-            exclude = "rime-data/";
+      pre-commit-check = pre-commit-hooks.lib.${system}.run {
+        src = mylib.relativeToRoot ".";
+        hooks = {
+          nixfmt = {
+            enable = true;
+            settings.width = 100;
           };
-        };
-        prettier = {
-          enable = true;
-          settings = {
-            write = true; # Automatically format files
-            configPath = ".prettierrc.yaml"; # relative to the flake root
+          # Checks report drift; explicit formatting commands perform writes.
+          typos = {
+            enable = true;
+            settings = {
+              write = false;
+              configPath = ".typos.toml";
+              exclude = "rime-data/";
+            };
           };
+          prettier = {
+            enable = true;
+            settings = {
+              write = false;
+              configPath = ".prettierrc.yaml";
+            };
+          };
+          deadnix = {
+            enable = true;
+            excludes = [
+              "outputs/.*/src/.*\\.nix"
+              "home/linux/gui/hyprland/default\\.nix"
+            ];
+          };
+          statix.enable = true;
         };
-        # deadnix.enable = true; # detect unused variable bindings in `*.nix`
-        # statix.enable = true; # lints and suggestions for Nix code(auto suggestions)
       };
-    };
-  });
+    }
+  );
 
   # Development Shells
   devShells = forAllSystems (

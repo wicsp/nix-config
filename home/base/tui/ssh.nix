@@ -22,8 +22,8 @@ in
       controlPersist = "no";
     }
     // (pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
-      # Use Secretive as SSH agent on macOS (keys stored in Secure Enclave)
-      identityAgent = "/Users/wicsp/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
+      # Store SSH key passphrases in the macOS Keychain.
+      useKeychain = true;
     });
 
     settings = {

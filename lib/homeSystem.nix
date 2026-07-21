@@ -1,8 +1,6 @@
 {
-  lib,
   inputs,
   home-modules ? [ ],
-  myvars,
   system,
   genSpecialArgs,
   specialArgs ? (genSpecialArgs system),

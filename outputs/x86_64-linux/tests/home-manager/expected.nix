@@ -3,7 +3,7 @@
   lib,
 }:
 let
-  username = myvars.username;
+  inherit (myvars) username;
   hosts = [
     "goudan"
     "goudan-hyprland"

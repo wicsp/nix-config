@@ -2,7 +2,6 @@ niri: {
   programs.niri.config =
     let
       inherit (niri.lib.kdl)
-        node
         plain
         leaf
         flag
@@ -27,8 +26,24 @@ niri: {
         # Suggested binds for running programs: terminal, app launcher, screen locker.
         (plain "Mod+Return" [ (leaf "spawn" [ "foot" ]) ])
         (plain "Mod+Shift+Return" [ (leaf "spawn" [ "alacritty" ]) ])
-        (plain "Mod+D" [ (leaf "spawn" [ "anyrun" ]) ])
-        (plain "Mod+Ctrl+Q" [ (leaf "spawn" [ "swaylock" ]) ])
+        (plain "Mod+D" [
+          (leaf "spawn" [
+            "noctalia-shell"
+            "ipc"
+            "call"
+            "launcher"
+            "toggle"
+          ])
+        ])
+        (plain "Mod+Ctrl+Q" [
+          (leaf "spawn" [
+            "noctalia-shell"
+            "ipc"
+            "call"
+            "lockScreen"
+            "lock"
+          ])
+        ])
 
         # You can also use a shell:
         # (plain "Mod+T" [(leaf "spawn" [ "bash" "-c" "notify-send hello && exec alacritty" ])])
@@ -201,7 +216,15 @@ niri: {
         # Take a screenshot of the focused window
         (plain "Alt+Print" [ (flag "screenshot-window") ])
 
-        # (plain "Mod+Shift+E" [ (leaf "spawn" [ "wlogout" ]) ]) # TODO
+        (plain "Mod+Shift+E" [
+          (leaf "spawn" [
+            "noctalia-shell"
+            "ipc"
+            "call"
+            "sessionMenu"
+            "toggle"
+          ])
+        ])
 
         (plain "Mod+Shift+P" [ (flag "power-off-monitors") ])
 

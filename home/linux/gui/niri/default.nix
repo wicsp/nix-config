@@ -4,7 +4,7 @@
   lib,
   niri,
   ...
-}@args:
+}:
 let
   cfg = config.modules.desktop.niri;
 in

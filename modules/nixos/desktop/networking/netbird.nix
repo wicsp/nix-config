@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}:
+_:
 # =============================================================
 #
 # NetBird - your own private network(VPN) that uses WireGuard, Coturn, etc.

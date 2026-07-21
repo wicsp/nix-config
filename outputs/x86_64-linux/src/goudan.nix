@@ -4,8 +4,8 @@
   # and these arguments are used in the functions like `mylib.nixosSystem`, `mylib.colmenaSystem`, etc.
   inputs,
   lib,
-  myvars,
   mylib,
+  myvars,
   system,
   genSpecialArgs,
   niri,
@@ -34,11 +34,17 @@ let
       ++ [
         inputs.niri.nixosModules.niri
         {
-          modules.desktop.fonts.enable = true;
-          modules.desktop.wayland.enable = true;
-          modules.secrets.desktop.enable = true;
-          modules.secrets.preservation.enable = true;
-          modules.desktop.gaming.enable = true;
+          modules = {
+            desktop = {
+              fonts.enable = true;
+              wayland.enable = true;
+              gaming.enable = true;
+            };
+            secrets = {
+              desktop.enable = true;
+              preservation.enable = true;
+            };
+          };
         }
       ];
     home-modules =
@@ -51,14 +57,13 @@ let
       ++ [
         {
           modules.desktop.gaming.enable = true;
+          modules.desktop.noctalia.enable = true;
         }
       ];
   };
 
   modules-hyprland = {
-    nixos-modules = [
-    ]
-    ++ base-modules.nixos-modules;
+    inherit (base-modules) nixos-modules;
     home-modules = [
       { modules.desktop.hyprland.enable = true; }
     ]

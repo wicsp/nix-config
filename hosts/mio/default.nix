@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 #############################################################
 #
 #  Mio - Aliyun Server, for general purpose server tasks.

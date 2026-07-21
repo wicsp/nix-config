@@ -4,19 +4,14 @@
   # and these arguments are used in the functions like `mylib.nixosSystem`, `mylib.colmenaSystem`, etc.
   inputs,
   lib,
-  myvars,
   mylib,
+  myvars,
   system,
   genSpecialArgs,
   ...
 }@args:
 let
   name = "nexus";
-  tags = [
-    name
-    "server"
-  ];
-  ssh-user = "root";
   modules = {
     nixos-modules = map mylib.relativeToRoot [
       # common

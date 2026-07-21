@@ -5,7 +5,7 @@
   wallpapers,
   ...
 }:
-{
+lib.mkIf (!config.modules.desktop.noctalia.enable) {
   systemd.user.services.wallpaper = {
     Unit = {
       Description = "Wallpaper Switcher daemon";

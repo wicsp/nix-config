@@ -2,13 +2,12 @@ niri: {
   programs.niri.config =
     let
       inherit (niri.lib.kdl)
-        node
-        plain
         leaf
-        flag
         ;
     in
     [
+      # Noctalia replaces Waybar, Mako, Anyrun, Swaylock, and Wlogout.
+      (leaf "spawn-at-startup" [ "noctalia-shell" ])
       # Add lines like this to spawn processes at startup.
       # Note that running niri as a session supports xdg-desktop-autostart,
       # which may be more convenient to use.

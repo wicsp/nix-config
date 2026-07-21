@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 let
-  hostName = "macsp";
   # nixpkgs 2026.06.09 receives HTTP 412 from Bilibili for the verified M3.3
   # source. Pin the current upstream stable release until the lock catches up.
   ytDlpForBilibili = pkgs.yt-dlp.overrideAttrs {
@@ -12,6 +11,20 @@ let
       hash = "sha256-+oHcVylLXFJTRR6jXF6IXvgntXJz0tRdtnwTruRPkoc=";
     };
   };
+  # CoreML is optional, and its small Objective-C shim currently crashes the
+  # nixpkgs Darwin linker. Keep the Metal backend used for local ASR.
+  whisperCppForLumio =
+    (pkgs.whisper-cpp.override {
+      coreMLSupport = false;
+    }).overrideAttrs
+      (previousAttrs: {
+        # nixpkgs appends this target on every Darwin build, even when CoreML is
+        # disabled. Remove the resulting references to the nonexistent target.
+        postPatch = previousAttrs.postPatch + ''
+          substituteInPlace src/CMakeLists.txt \
+            --replace-fail 'install(TARGETS whisper.coreml LIBRARY)' ""
+        '';
+      });
 in
 {
   programs.ssh.settings."github.com".identityFile = "${config.home.homeDirectory}/.ssh/id_ed25519";
@@ -27,7 +40,7 @@ in
     emmet-ls
     # Lumio bilibili-summary-v4: subtitle-free public videos use local ASR.
     ytDlpForBilibili
-    whisper-cpp
+    whisperCppForLumio
   ];
 }
 # {

@@ -14,8 +14,6 @@ let
   goBin = "${config.home.homeDirectory}/go/bin";
   rustBin = "${config.home.homeDirectory}/.cargo/bin";
   npmBin = "${config.home.homeDirectory}/.npm/bin";
-
-  GOPATH = "${config.home.homeDirectory}/Projects/go";
 in
 {
   programs.bash = {

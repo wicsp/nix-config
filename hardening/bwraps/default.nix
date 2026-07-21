@@ -1,6 +1,6 @@
 {
   nixpkgs.overlays = [
-    (_: super: {
+    (_: _super: {
       bwraps = {
         # wechat = super.callPackage ./wechat.nix { };
       };

@@ -64,25 +64,32 @@ in
   # But on macOS, it's less stable than homebrew.
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
-  environment.systemPackages = with pkgs; [
-    secretive
+  environment = {
+    systemPackages = with pkgs; [
+      secretive
 
-    neovim
-    git
-    gnugrep # replacee macos's grep
-    gnutar # replacee macos's tar
+      neovim
+      git
+      gnugrep # replacee macos's grep
+      gnutar # replacee macos's tar
 
-    # darwin only apps
-    utm # virtual machine
-  ];
-  environment.variables = {
-    # Fix https://github.com/LnL7/nix-darwin/wiki/Terminfo-issues
-    TERMINFO_DIRS = map (path: path + "/share/terminfo") config.environment.profiles ++ [
-      "/usr/share/terminfo"
+      # darwin only apps
+      utm # virtual machine
     ];
-  }
-  # Set variables for you to manually install homebrew packages.
-  // homebrew_mirror_env;
+    variables = {
+      # Fix https://github.com/LnL7/nix-darwin/wiki/Terminfo-issues
+      TERMINFO_DIRS = map (path: path + "/share/terminfo") config.environment.profiles ++ [
+        "/usr/share/terminfo"
+      ];
+    }
+    # Set variables for you to manually install homebrew packages.
+    // homebrew_mirror_env;
+
+    shells = [
+      pkgs.zsh
+      pkgs.bashInteractive
+    ];
+  };
 
   # Set environment variables for nix-darwin before run `brew bundle`.
   system.activationScripts.homebrew.text = lib.mkBefore ''
@@ -93,11 +100,6 @@ in
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh
   programs.zsh.enable = true;
-  environment.shells = [
-    pkgs.zsh
-    pkgs.bashInteractive
-  ];
-
   # homebrew need to be installed manually, see https://brew.sh
   # https://github.com/LnL7/nix-darwin/blob/master/modules/homebrew.nix
   homebrew = {

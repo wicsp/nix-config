@@ -72,18 +72,15 @@ rec {
     #     Port 22
     #   ...
     # '';
-    extraConfig = (
-      # TODO i dont know
-      lib.attrsets.foldlAttrs (
-        acc: host: val:
-        acc
-        + ''
-          Host ${host}
-            HostName ${val.ipv4}
-            Port 22
-        ''
-      ) "" hostsAddr
-    );
+    extraConfig = lib.attrsets.foldlAttrs (
+      acc: host: val:
+      acc
+      + ''
+        Host ${host}
+          HostName ${val.ipv4}
+          Port 22
+      ''
+    ) "" hostsAddr;
 
     # define the host key for remote builders so that nix can verify all the remote builders
     # this config will be written to /etc/ssh/ssh_known_hosts
@@ -98,7 +95,7 @@ rec {
       lib.attrsets.mapAttrs
         (host: value: {
           hostNames = [ host ] ++ (lib.optional (hostsAddr ? host) hostsAddr.${host}.ipv4);
-          publicKey = value.publicKey;
+          inherit (value) publicKey;
         })
         {
           # goudan.publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMwm5K8g85ifo76RwvBDSZmuECK0I0hec3w/WMbSZzxU root@goudan";

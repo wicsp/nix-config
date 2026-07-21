@@ -15,18 +15,18 @@
 
   # Determinate uses its own daemon to manage the Nix installation that
   # conflicts with nix-darwin's native Nix management. so we should disable this option.
-  nix.enable = false;
-
-  # Disable auto-optimise-store because of this issue:
-  #   https://github.com/NixOS/nix/issues/7273
-  # "error: cannot link '/nix/store/.tmp-link-xxxxx-xxxxx' to '/nix/store/.links/xxxx': File exists"
-  nix.settings.auto-optimise-store = false;
-
-  nix.gc.automatic = false;
+  nix = {
+    enable = false;
+    # Disable auto-optimise-store because of this issue:
+    #   https://github.com/NixOS/nix/issues/7273
+    # "error: cannot link '/nix/store/.tmp-link-xxxxx-xxxxx' to '/nix/store/.links/xxxx': File exists"
+    settings.auto-optimise-store = false;
+    gc.automatic = false;
+    extraOptions = ''
+      !include ${config.age.secrets.nix-access-tokens.path}
+    '';
+  };
 
   system.stateVersion = 5;
 
-  nix.extraOptions = ''
-    !include ${config.age.secrets.nix-access-tokens.path}
-  '';
 }

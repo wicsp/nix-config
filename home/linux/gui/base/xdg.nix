@@ -98,8 +98,10 @@
     userDirs = {
       enable = true;
       createDirectories = true;
+      # Preserve the pre-26.05 behavior explicitly across the Home Manager upgrade.
+      setSessionVariables = true;
       extraConfig = {
-        XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/Screenshots";
+        SCREENSHOTS = "${config.xdg.userDirs.pictures}/Screenshots";
       };
     };
   };

@@ -17,7 +17,7 @@
 
 - List tasks: `just` (shows groups). If needed: `nix shell nixpkgs#just`.
 - Format Nix: `just fmt` (runs `nix fmt`).
-- Eval tests: `just test` (runs `nix eval .#evalTests`).
+- Eval tests: `just test` (runs `nix eval .#lib.evalTests`).
 - REPL: `just repl` → `nix repl -f flake:nixpkgs`.
 - Update inputs: `just up` or `just upp <input>`.
 - Build examples (no side effects):
@@ -39,7 +39,7 @@
 ## Testing Guidelines
 
 - Place eval tests under `outputs/<system>/tests` and expose via `haumea.lib.loadEvalTests` (already
-  wired to `.#evalTests`).
+  aggregated under `.#lib.evalTests`).
 - Run `just test` locally; add minimal, fast eval checks for critical modules.
 
 ## Commit & Pull Request Guidelines

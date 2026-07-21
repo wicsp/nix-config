@@ -24,4 +24,11 @@ in
 outputs
 // {
   inherit data; # for debugging purposes
+
+  evalTests = haumea.lib.loadEvalTests {
+    src = ./tests;
+    inputs = args // {
+      inherit outputs;
+    };
+  };
 }

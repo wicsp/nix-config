@@ -1,4 +1,4 @@
-{ myvars, ... }:
+_:
 #############################################################
 #
 #  Mio - Aliyun Server, for general purpose server tasks.

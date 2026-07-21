@@ -21,7 +21,7 @@ default:
 # Run eval tests
 [group('nix')]
 test:
-  nix eval .#evalTests --show-trace --print-build-logs --verbose
+  nix eval .#lib.evalTests --show-trace --print-build-logs --verbose
 
 # Update all the flake inputs
 [group('nix')]
@@ -104,7 +104,7 @@ repair-store *paths:
 # Update all Nixpkgs inputs
 [group('nix')]
 up-nix:
-  nix flake update nixpkgs nixpkgs-stable nixpkgs-unstable nixpkgs-darwin nixpkgs-ollama
+  nix flake update nixpkgs nixpkgs-darwin nixpkgs-ollama
 
 ############################################################################
 #

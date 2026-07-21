@@ -1,9 +1,4 @@
-{
-  config,
-  mysecrets,
-  ...
-}:
-{
+_: {
   # TODO
   # programs.gpg = {
   #   enable = true;
