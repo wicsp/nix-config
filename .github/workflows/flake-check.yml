@@ -35,7 +35,7 @@ jobs:
             "$fixture/public/zenith.pub"
 
       - name: Check formatting
-        run: nix fmt -- --check
+        run: git ls-files -z '*.nix' | xargs -0 nix fmt -- --check
 
       - name: Run static checks
         run: nix develop --command statix check .
